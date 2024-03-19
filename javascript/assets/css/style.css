@@ -150,15 +150,48 @@ li {
 /* 헤더 영역 */
 #header {
     text-align: center;
+    padding: 40px;
+    border-bottom: 1px dashed #bcbcbc;
 
     h1 {
-        a {}
+        margin-bottom: 20px;
+
+        a {
+            font-family: var(--fontG);
+            font-size: 4vw;
+            color: rgb(51, 102, 0);
+
+            @media (max-width: 800px) {
+                font-size: 30px;
+
+            }
+
+        }
     }
 
     nav {
         ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+
             li {
-                a {}
+                margin: 2px;
+
+                a {
+                    font-family: var(--fontN);
+                    border: 1px solid rgb(51, 102, 0);
+                    padding: 10px 20px;
+                    display: inline-block;
+                    color: rgb(51, 102, 0);
+                    transition: all 0.3s;
+
+                    &:hover {
+                        background-color: rgb(118, 200, 0);
+                        color: white;
+                    }
+
+                }
             }
         }
 
