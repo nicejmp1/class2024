@@ -143,6 +143,8 @@ body {
         }
     }
 
+    /* //내컴퓨터 아이콘*/
+
     .javaicon {
         width: 75px;
         height: 75px;
@@ -152,19 +154,27 @@ body {
         flex-direction: column;
         margin: 30px;
         cursor: pointer;
+        text-align: center;
 
         img {
             width: 50px;
         }
 
         span {
+            display: block;
             font-family: var(--fontN);
             /* font-family: "nanumSquareNeo"; */
             margin-top: 8px;
             color: white;
             font-size: 13px;
         }
+
+        a {
+            text-decoration: none;
+        }
     }
+
+    /* //자바스크립트 아이콘 */
 }
 
 /* layer__wrap */
