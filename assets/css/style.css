@@ -126,7 +126,7 @@ body {
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        margin: 10px;
+        margin: 30px;
         cursor: pointer;
 
         img {
@@ -137,8 +137,32 @@ body {
         span {
             font-family: var(--fontN);
             /* font-family: "nanumSquareNeo"; */
-            margin-top: 5px;
+            margin-top: 8px;
             color: white;
+            font-size: 13px;
+        }
+    }
+
+    .javaicon {
+        width: 75px;
+        height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 30px;
+        cursor: pointer;
+
+        img {
+            width: 50px;
+        }
+
+        span {
+            font-family: var(--fontN);
+            /* font-family: "nanumSquareNeo"; */
+            margin-top: 8px;
+            color: white;
+            font-size: 13px;
         }
     }
 }
