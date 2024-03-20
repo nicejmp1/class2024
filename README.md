@@ -13,6 +13,10 @@
 - 사이드 바 : ctrl + b
 - compact view
 - 줄복사 : alt + shift + 화살표
+- vscode 단축키 모음 : https://demun.github.io/vscode-tutorial/shortcuts/
+- 다중 선택 : alt + shift + 클릭
+- 다중 키워드 선택 : ctrl + D
+- 줄 왼쪽으로 보내가 : shift + tap
 # 수업 규칙
 1. 지각, 결석, 조퇴 ---> 발표1
 2. 수업시간, 카톡, 쇼핑, 웹툰, 게임 ---> 발표1
