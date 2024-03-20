@@ -274,6 +274,7 @@ body {
                     line-height: 2;
                     text-transform: uppercase;
                     margin-bottom: 20px;
+                    margin-top: 20px;
                     width: 100%;
                 }
 
@@ -292,8 +293,106 @@ body {
                     }
                 }
             }
+
+            .picture {
+                h3 {
+                    border-bottom: 1px solid #fff;
+                    font-weight: 100;
+                    font-size: 16px;
+                    line-height: 2;
+                    text-transform: uppercase;
+                    margin-bottom: 20px;
+                    margin-top: 20px;
+                    width: 100%;
+                }
+
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    li {
+                        width: 25%;
+                        list-style: none;
+
+                        img {
+                            width: 100%;
+                            vertical-align: top;
+                        }
+                    }
+                }
+            }
         }
 
         .layer__footer {}
+    }
+}
+
+@media (max-width: 1200px) {
+    .layer__inner {
+        .layer {
+            width: 90vw;
+
+        }
+    }
+}
+
+@media (max-width: 960px) {
+    .layer__inner {
+        .layer {
+            width: 95vw;
+            height: 95vh;
+
+            .layer__conts {
+                .picture {
+                    ul {
+                        li {
+                            width: 33.3333%;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .layer__inner {
+        .layer {
+            .layer__conts {
+                .skill {
+                    flex-direction: column;
+
+                    dl {
+                        width: 100%;
+                    }
+                }
+
+                .picture {
+                    ul {
+                        li {
+                            width: 50%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .layer__inner {
+        .layer {
+            .layer__conts {
+
+                .picture {
+                    ul {
+                        li {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
