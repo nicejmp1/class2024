@@ -1,8 +1,11 @@
 # 오늘의 수업
  [메인 페이지] (https://nicejmp1.github.io/class2024/)   
 
- [자바스크립트] (https://nicejmp1.github.io/class2024/javascript/index.html)     
+ [자바스크립트] (https://nicejmp1.github.io/class2024/javascript/index.html)   
+         
  [MySQL] (https://nicejmp1.github.io/class2024/mysql/index.html)   
+
+ [Quiz] (https://nicejmp1.github.io/class2024/quiz/index.html)   
 # vscode 확장 프로그램
 1. Live Server : 웹페이지 미리보기   
 2. Meterial Icon : 아이콘 설정   
