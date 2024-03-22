@@ -241,10 +241,10 @@ li {
 }
 
 .main__sample .sample h4 {
-    font-size: 30px;
+    font-size: 20px;
     font-family: var(--fontG);
-    margin-bottom: 20px;
-    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-top: 50px;
     font-weight: 500;
 }
 
