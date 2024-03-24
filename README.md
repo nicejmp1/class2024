@@ -30,4 +30,4 @@
 1. 자기소개(5분) --> 자기소개(10분) --> 노래 --> 춤 --> 수업 발표
 
 ## 색상 관련된 사이트
-[브랜드 색상 제너레이션] (https://huemint.com/brand-intersection/)]
+[브랜드 색상 제너레이션] (https://huemint.com/brand-intersection/)
