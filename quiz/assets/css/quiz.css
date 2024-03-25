@@ -146,4 +146,123 @@
 * {
     padding: 0;
     margin: 0;
+    font-family: var(--fontN);
+    box-sizing: border-box;
+    font-size: 16px;
 }
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* body */
+body {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-image: url(../img/bg01.jpg);
+    width: 100%;
+    height: 100vh;
+}
+
+body::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+/* header */
+#header {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header h1 a {
+    display: inline-block;
+    color: #fff;
+    padding: 20px;
+    font-size: 30px;
+}
+
+#header nav {
+    padding-right: 20px;
+}
+
+#header nav li {
+    display: inline-block;
+}
+
+#header nav li a {
+    padding: 10px;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #fff;
+    text-align: center;
+    box-shadow: 1px 1px 0px #fff;
+    line-height: 1;
+    color: #fff;
+}
+
+#header nav li.active a {
+    background-color: #fff;
+    color: #000;
+}
+
+#main {}
+
+/* footer */
+#footer {
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+#footer a {
+    display: inline-block;
+    color: #fff;
+    padding: 40px;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+/* quiz__wrap */
+.quiz__wrap {}
+
+.quiz__wrap .quiz {}
+
+.quiz__wrap .quiz .quiz__header {}
+
+.quiz__wrap .quiz .quiz__header .date {}
+
+.quiz__wrap .quiz .quiz__header .type {}
+
+.quiz__wrap .quiz .quiz__main {}
+
+.quiz__wrap .quiz .quiz__main .quequestioin {}
+
+.quiz__wrap .quiz .quiz__main .input {}
+
+.quiz__wrap .quiz .quiz__main .answer {}
+
+.quiz__wrap .quiz .quiz__main .desc {}
+
+.quiz__wrap .quiz .quiz__footer {}
+
+.quiz__wrap .quiz .quiz__footer .confirm {}
