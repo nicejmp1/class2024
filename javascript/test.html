@@ -9,61 +9,135 @@
 
 <body>
     <script>
-        // 01. 함수 : 선언적 함수
         {
             function func() {
-                console.log("01.함수가 실행되었습니다.");
+                console.log("1. 함수가 실행되었습니다.");
             }
             func();
         }
-        // 02. 함수 : 익명 함수
+
         {
             const func = function () {
-                console.log("02.함수가 실행되었습니다.");
+                console.log("2. 함수가 실행되었습니다.");
             }
             func();
         }
-        // 03. 함수 : 매개변수 함수
+
         {
-            // 선언적 함수
             function func(str) {
                 console.log(str);
             }
-            func("03. 함수가 실행되었습니다.");
+            func("3. 함수가 실행되었습니다.");
+        }
 
-            // 익명 함수
-            const func1 = function (str) {
+        {
+            const func = function (str) {
                 console.log(str);
             }
-            func1("03. 함수가 실행되었습니다.");
+            func("4. 함수가 실행되었습니다.");
         }
-        // 04. 함수 : 리턴값 함수
+
         {
-            // 선언적 함수
             function func() {
-                return ("04. 함수가 실행되었습니다.");
+                return "5. 함수가 실행되었습니다.";
             }
             console.log(func());
-
-            // 익명적 함수
-            const func1 = function () {
-                return ("04. 함수가 실행되었습니다.");
-            }
-            console.log(func1());
         }
-        // 05. 함수 : 매개변수 + 리턴값 함수
+
         {
-            // 선언적 함수
+            const func = function () {
+                return "6. 함수가 실행되었습니다.";
+            }
+            console.log(func());
+        }
+
+        {
             function func(str) {
                 return (str);
             }
-            console.log(func("05. 함수가 실행되었습니다."));
+            console.log(func("7.함수가 실행되었습니다."));
+        }
 
-            const func1 = function (str) {
+        {
+            const func = function (str) {
+                return str;
+            }
+            console.log(func("8. 함수가 실행되었습닏자."));
+        }
+
+        {
+            func = () => {
+                console.log("9. 함수가 실행되었습니다.");
+            }
+            func();
+        }
+
+        {
+            const func = () => {
+                console.log("10. 함수가 실행되었습니다.");
+            }
+            func();
+        }
+
+        {
+            func = (str) => {
+                console.log(str);
+            }
+            func("11. 함수가 실행되었습니다.");
+        }
+
+        {
+            const func = (str) => {
+                console.log(str);
+            }
+            func("12. 함수가 실행되었습니다.");
+        }
+
+        {
+            func = () => {
+                return "13. 함수가 실행되었습니다.";
+            }
+            console.log(func());
+        }
+
+        {
+            const func = () => {
+                return "14. 함수가 실행되었습니다.";
+            }
+            console.log(func());
+        }
+
+        {
+            func = (str) => {
                 return (str);
             }
-            console.log(func1("05. 함수가 실행되었습니다."));
+            console.log(func("15.함수가 실행되었습니다."));
         }
+
+        {
+            const func = (str) => {
+                return str;
+            }
+            console.log(func("16. 함수가 실행되었습니다."));
+        }
+
+        {
+            const func = str => {
+                return str;
+            }
+            console.log(func("17. 함수가 실행되었습니다."));
+        }
+
+        {
+            const func = str => str;
+            console.log(func("18. 함수가 실행 되었습니다."));
+        }
+
+        {
+            func = str => str;
+            console.log(func("19. 함수가 실행 되었습니다."));
+        }
+
 
     </script>
 </body>
