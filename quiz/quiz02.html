@@ -28,14 +28,75 @@
     <!-- //header -->
 
     <main id="main">
+        <div class="quiz__wrap">
+            <div class="quiz">
+                <div class="quiz__header">
+                    <span class="date"></span>
+                    <span class="type"></span>
+                </div>
+                <div class="quiz__main">
+                    <div class="questioin">
+                        <em></em>.
+                        <span></span>
+                    </div>
+                    <div class="input">
+                        <input type="text" placeholder="정답을 입력해주세요!">
+                    </div>
+                    <div class="answer"></div>
+                    <div class="desc"></div>
+                </div>
+                <div class="quiz__footer">
+                    <button class="confirm">정답 확인하기</button>
+                </div>
+            </div>
+        </div>
 
     </main>
     <!-- //main -->
 
     <footer id="footer">
-
+        <a href="mailto:nicejpm@naver.com">nicejpm@naver.com</a>
     </footer>
     <!-- //footer -->
+
+    <script>
+        // 문제 정보
+        // 변수
+        const infoDate = "2021년 1회";
+        const infoType = "정보처리 기능사";
+        const infoNum = "01";
+        const infoQuestion = "CPU의 정보처리 속도 단위 중 초당 100만 개의 연산을 수행한다는 의미의 단위는?";
+        const infoAnswer = "MIPS";
+        const infoDesc = "LIPS는 초당 1개, KIPS는 초당 1000개, MIPS는 초당 1000000의 연산을 수행하는 것을 의미합니다.";
+
+        //문제 출력
+        document.querySelector(".quiz__header .date").innerText = infoDate;
+        document.querySelector(".quiz__header .type").innerText = infoType;
+        document.querySelector(".quiz__main .questioin em").innerText = infoNum;
+        document.querySelector(".quiz__main .questioin span").innerText = infoQuestion;
+        document.querySelector(".quiz__main .answer").innerText = infoAnswer;
+        document.querySelector(".quiz__main .desc").innerText = infoDesc;
+
+
+        // //배열
+        // const info = [
+        //     "2021년 1회",
+        //     "정보처리 기능사",
+        //     "1",
+        //     "CPU의 정보처리 속도 단위 중 초당 100만 개의 연산을 수행한다는 의미의 단위는?",
+        //     "MIPS",
+        //     "LIPS는 초당 1개, KIPS는 초당 1000개, MIPS는 초당 1000000의 연산을 수행하는 것을 의미합니다."
+        // ]
+
+        // const info1 = {
+        //     date: "2021년 1회",
+        //     type: "정보처리 기능사",
+        //     num: "1",
+        //     question: "CPU의 정보처리 속도 단위 중 초당 100만 개의 연산을 수행한다는 의미의 단위는?",
+        //     answer: "MIPS",
+        //     desc: "LIPS는 초당 1개, KIPS는 초당 1000개, MIPS는 초당 1000000의 연산을 수행하는 것을 의미합니다."
+        // }
+    </script>
 </body>
 
 </html>
