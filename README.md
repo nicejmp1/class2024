@@ -5,14 +5,20 @@
          
  [MySQL] (https://nicejmp1.github.io/class2024/mysql/index.html)   
 
- [Quiz] (https://nicejmp1.github.io/class2024/quiz/index.html)   
-# vscode 확장 프로그램
+## 퀴즈 게임
+[퀴즈게임] (https://nicejmp1.github.io/class2024/quiz/index.html)   
+[퀴즈01] (https://nicejmp1.github.io/class2024/quiz/quiz01.html)   
+- 변수(const)
+- 선택자(querySelector)
+- 메서드(innerText(), classList(키워드), addEventListener, if문)  
+
+### vscode 확장 프로그램
 1. Live Server : 웹페이지 미리보기   
 2. Meterial Icon : 아이콘 설정   
 3. ESLint : 문법 정렬 (setting : save -> Format On save 체크)   
 4. ES7 : 자바스크립트 및 리액트 문법 정리   
 
-# vscode 단축키
+### vscode 단축키
 - 설정 : ctrl + , 
 - 사이드 바 : ctrl + b
 - compact view
@@ -29,5 +35,5 @@
 # 벌칙
 1. 자기소개(5분) --> 자기소개(10분) --> 노래 --> 춤 --> 수업 발표
 
-## 색상 관련된 사이트
+### 색상 관련된 사이트
 [브랜드 색상 제너레이션] (https://huemint.com/brand-intersection/)

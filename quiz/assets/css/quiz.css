@@ -182,7 +182,11 @@ body::after {
     z-index: -1;
 }
 
-/* header */
+/* common */
+.none {
+    display: none;
+}
+
 /* header */
 #header {
     color: #fff;

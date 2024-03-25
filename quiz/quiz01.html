@@ -42,8 +42,8 @@
                     <div class="input">
                         <input type="text" placeholder="정답을 입력해주세요!">
                     </div>
-                    <div class="answer"></div>
-                    <div class="desc"></div>
+                    <div class="answer none"></div>
+                    <div class="desc none"></div>
                 </div>
                 <div class="quiz__footer">
                     <button class="confirm">정답 확인하기</button>
@@ -76,6 +76,24 @@
         document.querySelector(".quiz__main .questioin span").innerText = infoQuestion;
         document.querySelector(".quiz__main .answer").innerText = infoAnswer;
         document.querySelector(".quiz__main .desc").innerText = infoDesc;
+
+        // 정답 확인하기
+        document.querySelector(".quiz__footer .confirm").addEventListener("click", function () {
+            const userAnswer = document.querySelector(".quiz__main input").value; // 사용자가 쓴 정답
+
+            // 사용자 정답과 실제 정답을 확인
+            if (infoAnswer == userAnswer) {
+                alert("정답입니다.");
+            } else {
+                alert("오답입니다.");
+            }
+
+            // 정답과 설명을 보여주기
+            document.querySelector(".quiz__main .answer").classList.remove("none");
+            document.querySelector(".quiz__main .desc").classList.remove("none");
+
+        });
+
 
 
         // //배열
