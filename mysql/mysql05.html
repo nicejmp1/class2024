@@ -36,7 +36,7 @@
                 <div class="info">
                     SELECT * FROM members;
                 </div>
-                <pre><code class="language-js">mysql> select * from members3;
+                <pre><code class="language-js">mysql> select * from members;
 +----------+-----------+---------+--------+----------+------------+
 | memberID | youName   | youPass | youAge | youBirth | regTime    |
 +----------+-----------+---------+--------+----------+------------+
@@ -62,7 +62,7 @@
                 <div class="info">
                     SELECT youName FROM members;
                 </div>
-                <pre><code class="language-js">mysql> SELECT youName FROM members3;
+                <pre><code class="language-js">mysql> SELECT youName FROM members;
 +-----------+
 | youName   |
 +-----------+
@@ -102,7 +102,7 @@
                 <div class="info">
                     SELECT youName, youAge FROM members;
                 </div>
-                <pre><code class="language-js">mysql> SELECT youName, youAge FROM members3;
+                <pre><code class="language-js">mysql> SELECT youName, youAge FROM members;
 +-----------+--------+
 | youName   | youAge |
 +-----------+--------+
@@ -242,7 +242,7 @@
 
                 <h4>memberID가 10보다 큰 데이터</h4>
                 <div class="info">
-                    SELECT * FROM members3 where memberID > 10;
+                    SELECT * FROM members where memberID > 10;
                 </div>
                 <pre><code class="language-js">mysql> SELECT * FROM members where memberID > 10;
 +----------+-----------+---------+--------+----------+------------+
@@ -258,7 +258,7 @@
 
                 <h4>memberID가 5보다 크고 10보다 작은 데이터</h4>
                 <div class="info">
-                    SELECT * FROM members3 where memberID &gt; 5 and memberID &lt; 10;
+                    SELECT * FROM members where memberID &gt; 5 and memberID &lt; 10;
                 </div>
                 <pre><code class="language-js">mysql> SELECT * FROM members where memberID &gt; 5 and memberID &lt; 10;
 +----------+-----------+---------+--------+----------+------------+
@@ -273,7 +273,7 @@
 
                 <h4>memberID가 1, 5, 10데이터(IN)</h4>
                 <div class="info">
-                    SELECT * FROM members3 where memberID IN (1,5,10);
+                    SELECT * FROM members where memberID IN (1,5,10);
                 </div>
                 <pre><code class="language-js">mysql> SELECT * FROM members where memberID IN (1,5,10);
 +----------+-----------+---------+--------+----------+------------+
@@ -385,7 +385,7 @@
 
                 <h4>이름 중간에 '상' 텍스트가 들어가는 3글자 이름 불러오기</h4>
                 <div class="info">
-                    SELECT * FROM members where youName like "%상%";
+                    SELECT * FROM members where youName like "_상_";
                 </div>
                 <pre><code class="language-js">mysql> SELECT * FROM members where youName like "_상_";
 +----------+-----------+---------+--------+----------+------------+
