@@ -227,7 +227,6 @@ body::after {
     color: #000;
 }
 
-#main {}
 
 /* footer */
 #footer {
@@ -323,8 +322,6 @@ body::after {
 .quiz__main .desc::before {
     content: '😻 설명 :';
 }
-
-.quiz__footer {}
 
 .quiz__footer .confirm {
     background-color: #0058f0;
