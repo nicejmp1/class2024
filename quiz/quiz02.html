@@ -42,15 +42,96 @@
                     <div class="input">
                         <input type="text" placeholder="정답을 입력해주세요!">
                     </div>
-                    <div class="answer"></div>
-                    <div class="desc"></div>
+                    <div class="answer "></div>
+                    <div class="desc "></div>
                 </div>
                 <div class="quiz__footer">
                     <button class="confirm">정답 확인하기</button>
                 </div>
             </div>
-        </div>
+            <div class="quiz">
+                <div class="quiz__header">
+                    <span class="date"></span>
+                    <span class="type"></span>
+                </div>
+                <div class="quiz__main">
+                    <div class="questioin">
+                        <em></em>.
+                        <span></span>
+                    </div>
+                    <div class="input">
+                        <input type="text" placeholder="정답을 입력해주세요!">
+                    </div>
+                    <div class="answer "></div>
+                    <div class="desc "></div>
+                </div>
+                <div class="quiz__footer">
+                    <button class="confirm">정답 확인하기</button>
+                </div>
+            </div>
 
+            <div class="quiz">
+                <div class="quiz__header">
+                    <span class="date"></span>
+                    <span class="type"></span>
+                </div>
+                <div class="quiz__main">
+                    <div class="questioin">
+                        <em></em>.
+                        <span></span>
+                    </div>
+                    <div class="input">
+                        <input type="text" placeholder="정답을 입력해주세요!">
+                    </div>
+                    <div class="answer "></div>
+                    <div class="desc "></div>
+                </div>
+                <div class="quiz__footer">
+                    <button class="confirm">정답 확인하기</button>
+                </div>
+            </div>
+            <div class="quiz">
+                <div class="quiz__header">
+                    <span class="date"></span>
+                    <span class="type"></span>
+                </div>
+                <div class="quiz__main">
+                    <div class="questioin">
+                        <em></em>.
+                        <span></span>
+                    </div>
+                    <div class="input">
+                        <input type="text" placeholder="정답을 입력해주세요!">
+                    </div>
+                    <div class="answer "></div>
+                    <div class="desc "></div>
+                </div>
+                <div class="quiz__footer">
+                    <button class="confirm">정답 확인하기</button>
+                </div>
+            </div>
+            <div class="quiz">
+                <div class="quiz__header">
+                    <span class="date"></span>
+                    <span class="type"></span>
+                </div>
+                <div class="quiz__main">
+                    <div class="questioin">
+                        <em></em>.
+                        <span></span>
+                    </div>
+                    <div class="input">
+                        <input type="text" placeholder="정답을 입력해주세요!">
+                    </div>
+                    <div class="answer "></div>
+                    <div class="desc "></div>
+                </div>
+                <div class="quiz__footer">
+                    <button class="confirm">정답 확인하기</button>
+                </div>
+            </div>
+
+        </div>
     </main>
     <!-- //main -->
 
@@ -60,42 +141,163 @@
     <!-- //footer -->
 
     <script>
-        // 문제 정보
-        // 변수
-        const infoDate = "2021년 1회";
-        const infoType = "정보처리 기능사";
-        const infoNum = "01";
-        const infoQuestion = "CPU의 정보처리 속도 단위 중 초당 100만 개의 연산을 수행한다는 의미의 단위는?";
-        const infoAnswer = "MIPS";
-        const infoDesc = "LIPS는 초당 1개, KIPS는 초당 1000개, MIPS는 초당 1000000의 연산을 수행하는 것을 의미합니다.";
 
-        //문제 출력
-        document.querySelector(".quiz__header .date").innerText = infoDate;
-        document.querySelector(".quiz__header .type").innerText = infoType;
-        document.querySelector(".quiz__main .questioin em").innerText = infoNum;
-        document.querySelector(".quiz__main .questioin span").innerText = infoQuestion;
-        document.querySelector(".quiz__main .answer").innerText = infoAnswer;
-        document.querySelector(".quiz__main .desc").innerText = infoDesc;
+        //문제정보
+        const quizInfo = [
+            {
+                infoDate: "2021년 1회",
+                infoType: "정보처리기능사",
+                infoNum: "01",
+                infoQuestion: "입출력 조작의 시간과 중앙처리장치의 처리시간과의 불균형을 보완하는 것은?",
+                infoAnswer: "채널장치",
+                infoDesc: "채널장치 : 채널은 중앙처리장치와 입출력장치 사이에 존재하며 서로의 속도 차이를 보완 합니다."
+            },
+            {
+                infoDate: "2020년 2회",
+                infoType: "정보처리기능사",
+                infoNum: "02",
+                infoQuestion: "반가산기(Half-Adder)의 논리회로도에서 자리올림이 발생하는 회로는?",
+                infoAnswer: "AND",
+                infoDesc: "반가산기 구성: S = A XOR B, C = A AND B, <br>S : SUM(합), C : Carry(자리올림)."
+            },
+            {
+                infoDate: "2021년 3회",
+                infoType: "정보처리기능사",
+                infoNum: "03",
+                infoQuestion: "마이크로프로세서의 기능이 아닌 것은?",
+                infoAnswer: "메모리 관리",
+                infoDesc: "마이크로프로세서란 작은 칩 안에 CPU 기능(연산, 제어, 기억)을 넣어 놓은 것을 말합니다. 메모리 관리와는 관계가 없습니다. <br>일반적으로 메모리 관리는 운영체제에서 합니다"
+            },
+            {
+                infoDate: "2021년 4회",
+                infoType: "정보처리기능사",
+                infoNum: "04",
+                infoQuestion: "주기억 장치의 접근 시간과 CPU의 처리 속도 차이를 줄이기 위해 사용되는 것은?",
+                infoAnswer: "Cache Memory",
+                infoDesc: "캐시는 중앙처리장치와 주기억 장치 사이에 존재하며 속도 차이를 보완한다.."
+            },
+            {
+                infoDate: "2021년 5회",
+                infoType: "정보처리기능사",
+                infoNum: "05",
+                infoQuestion: "10진수 23을 2진수로 변환하면?",
+                infoAnswer: "(10111)2",
+                infoDesc: "16 8 4 2 1식으로 자리값이 부여 됩니다. 1 0 1 1 1 이므로 1로 표기된 부분의 값을 다 더하면 23입니다"
+            }
+        ]
+
+        // 선택자
+        const quizWrap = document.querySelector(".quiz__wrap");
+        const quizDate = quizWrap.querySelectorAll(".quiz__header .date");
+        const quizType = quizWrap.querySelectorAll(".quiz__header .type");
+        const quizNum = quizWrap.querySelectorAll(".questioin em");
+        const quizQuestion = quizWrap.querySelectorAll(".questioin span");
+        const quizInput = quizWrap.querySelectorAll(".input input");
+        const quizAnswer = quizWrap.querySelectorAll(".answer");
+        const quizDesc = quizWrap.querySelectorAll(".desc");
+        const quizConfirm = quizWrap.querySelectorAll(".confirm");
+
+        // 문제출력
+        // quizDate[0].textContent = quizInfo[0].infoDate;
+        // quizDate[1].textContent = quizInfo[1].infoDate;
+        // quizDate[2].textContent = quizInfo[2].infoDate;
+        // quizDate[3].textContent = quizInfo[3].infoDate;
+        // quizDate[4].textContent = quizInfo[4].infoDate;
+
+        // quizType[0].textContent = quizInfo[0].infoType;
+        // quizType[1].textContent = quizInfo[1].infoType;
+        // quizType[2].textContent = quizInfo[2].infoType;
+        // quizType[3].textContent = quizInfo[3].infoType;
+        // quizType[4].textContent = quizInfo[4].infoType;
 
 
-        // //배열
-        // const info = [
-        //     "2021년 1회",
-        //     "정보처리 기능사",
-        //     "1",
-        //     "CPU의 정보처리 속도 단위 중 초당 100만 개의 연산을 수행한다는 의미의 단위는?",
-        //     "MIPS",
-        //     "LIPS는 초당 1개, KIPS는 초당 1000개, MIPS는 초당 1000000의 연산을 수행하는 것을 의미합니다."
-        // ]
+        // quizNum[0].textContent = quizInfo[0].infoNum;
+        // quizNum[1].textContent = quizInfo[1].infoNum;
+        // quizNum[2].textContent = quizInfo[2].infoNum;
+        // quizNum[3].textContent = quizInfo[3].infoNum;
+        // quizNum[4].textContent = quizInfo[4].infoNum;
 
-        // const info1 = {
-        //     date: "2021년 1회",
-        //     type: "정보처리 기능사",
-        //     num: "1",
-        //     question: "CPU의 정보처리 속도 단위 중 초당 100만 개의 연산을 수행한다는 의미의 단위는?",
-        //     answer: "MIPS",
-        //     desc: "LIPS는 초당 1개, KIPS는 초당 1000개, MIPS는 초당 1000000의 연산을 수행하는 것을 의미합니다."
+
+        // quizQuestion[0].textContent = quizInfo[0].infoQuestion;
+        // quizQuestion[1].textContent = quizInfo[1].infoQuestion;
+        // quizQuestion[2].textContent = quizInfo[2].infoQuestion;
+        // quizQuestion[3].textContent = quizInfo[3].infoQuestion;
+        // quizQuestion[4].textContent = quizInfo[4].infoQuestion;
+
+        // quizAnswer[0].textContent = quizInfo[0].infoAnswer;
+        // quizAnswer[1].textContent = quizInfo[1].infoAnswer;
+        // quizAnswer[2].textContent = quizInfo[2].infoAnswer;
+        // quizAnswer[3].textContent = quizInfo[3].infoAnswer;
+        // quizAnswer[4].textContent = quizInfo[4].infoAnswer;
+
+        // quizDesc[0].textContent = quizInfo[0].infoDesc;
+        // quizDesc[1].textContent = quizInfo[1].infoDesc;
+        // quizDesc[2].textContent = quizInfo[2].infoDesc;
+        // quizDesc[3].textContent = quizInfo[3].infoDesc;
+        // quizDesc[4].textContent = quizInfo[4].infoDesc;
+
+        // for문을 이용해서 1부터 10까지 출력
+        // for (let i = 0; i <= 4; i++) {
+        //     quizDate[i].textContent = quizInfo[i].infoDate;
+        //     quizType[i].textContent = quizInfo[i].infoType;
+        //     quizNum[i].textContent = quizInfo[i].infoNum;
+        //     quizQuestion[i].textContent = quizInfo[i].infoQuestion;
+        //     quizAnswer[i].textContent = quizInfo[i].infoAnswer;
+        //     quizDesc[i].textContent = quizInfo[i].infoDesc;
         // }
+
+        //foreach() 문 
+        quizInfo.forEach((element, i) => {
+            quizDate[i].textContent = quizInfo[i].infoDate;
+            quizType[i].textContent = quizInfo[i].infoType;
+            quizNum[i].textContent = quizInfo[i].infoNum;
+            quizQuestion[i].textContent = quizInfo[i].infoQuestion;
+            quizAnswer[i].textContent = quizInfo[i].infoAnswer;
+            quizDesc[i].textContent = quizInfo[i].infoDesc;
+        })
+
+        //innerHTML -> br태크 이런게 안보임.
+
+        // // 정답/해설 숨기기
+        // quizAnswer[0].classList.add("none");    //클래스 추가
+        // quizAnswer[1].classList.add("none");    //클래스 추가
+        // quizAnswer[2].classList.add("none");    //클래스 추가
+        // quizAnswer[3].classList.add("none");    //클래스 추가
+        // quizAnswer[4].classList.add("none");    //클래스 추가
+
+        // quizDesc[0].classList.add("none");
+        // quizDesc[1].classList.add("none");
+        // quizDesc[2].classList.add("none");
+        // quizDesc[3].classList.add("none");
+        // quizDesc[4].classList.add("none");
+
+        // // for문
+        // for (let i = 0; i < quizInfo.length; i++) {
+        //     quizAnswer[i].classList.add("none");
+        //     quizDesc[i].classList.add("none");
+        // }
+
+        quizInfo.forEach((e, i) => {
+            quizAnswer[i].classList.add("none");
+            quizDesc[i].classList.add("none");
+        })
+
+        // 정답 확인
+        quizConfirm.forEach(function (button, num) {
+            button.addEventListener("click", function () {
+                const userAnswer = quizInput[num].value         // 사용자가 쓴 정답
+                const correctAnswer = quizInfo[num].infoAnswer //정답지의 정답
+
+                if (userAnswer == correctAnswer) {
+                    alert("정답입니다.");
+                } else {
+                    alert("오답입니다.");
+                }
+
+                quizAnswer[num].classList.remove("none");
+                quizDesc[num].classList.remove("none");
+            })
+        })
     </script>
 </body>
 
