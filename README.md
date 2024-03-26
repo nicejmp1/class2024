@@ -7,8 +7,8 @@
 
 ## 퀴즈 게임
 [퀴즈게임] (https://nicejmp1.github.io/class2024/quiz/index.html)   
-[퀴즈01] (https://nicejmp1.github.io/class2024/quiz/quiz01.html)
-[퀴즈01] (https://nicejmp1.github.io/class2024/quiz/quiz02.html)   
+[퀴즈01] (https://nicejmp1.github.io/class2024/quiz/quiz01.html)   
+[퀴즈02] (https://nicejmp1.github.io/class2024/quiz/quiz02.html)      
 
 - 변수(const)
 - 선택자(querySelector)
