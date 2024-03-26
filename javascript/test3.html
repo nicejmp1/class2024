@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 01. 선언적 함수
+        {
+            function func() {
+                console.log("01.함수실행");
+            }
+            func();
+        }
+        // 02. 익명 함수
+        {
+            const func = function () {
+                console.log("02.함수실행");
+            }
+            func();
+        }
+
+        // 03. 매게변수 함수
+        {
+            function func(str) {
+                console.log(str);
+            }
+            func("03.함수실행");
+        }
+
+        // 04. 리턴값 함수
+        {
+            function func() {
+                return "04.함수실행";
+            }
+            console.log(func());
+        }
+
+        // 05. 매개변수 + 리턴값 함수
+        {
+            function func(str) {
+                return str;
+            }
+            console.log(func("05.함수실행"));
+        }
+        // 06. (화살표 함수) 선언적 함수
+        {
+            func = () => {
+                console.log("06.함수실행");
+            }
+            func();
+        }
+
+        // 07. (화살표 함수) 익명 함수
+        {
+            const func = () => {
+                console.log("07.함수실행");
+            }
+            func();
+        }
+
+        // 08. (화살표 함수) 매게변수 함수
+        {
+            func = (str) => {
+                console.log(str);
+            }
+            func("08.함수실행");
+        }
+        // 09. (화살표 함수) 리턴값 함수
+        {
+            func = () => {
+                return "09.함수실행";
+            }
+            console.log(func());
+        }
+
+
+        // 10. (화살표 함수) 매개변수 + 리턴값 함수
+        {
+            func = str => {
+                return str;
+            }
+            console.log(func("10.함수실행"));
+        }
+
+        // 11. for문
+        {
+            const test = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+            console.log("11.함수실행");
+            for (let a = 0; a < test.length; a++) {
+                console.log(test[a]);
+            }
+        }
+
+
+        // 12. forEach()
+        {
+            const test = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+            console.log("12.함수실행");
+            test.forEach(function (element) {
+                console.log(element);
+            })
+        }
+
+
+        // 13. for in
+        {
+            const test = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+            console.log("13.함수실행");
+            for (let element in test) {
+                console.log(test[element]);
+            }
+        }
+
+
+        // 14. for of
+        {
+            const test = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+            console.log("14.함수실행");
+            for (let element of test) {
+                console.log(element);
+            }
+        }
+
+
+        // 15. map()
+        {
+            const test = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+            console.log("15.함수실행");
+            test.map(function (element) {
+                console.log(element);
+            })
+        }
+    </script>
+
+</body>
+
+</html>
