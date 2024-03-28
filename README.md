@@ -6,13 +6,20 @@
  [MySQL] (https://nicejmp1.github.io/class2024/mysql/index.html)   
 
 ## 퀴즈 게임
-[퀴즈게임] (https://nicejmp1.github.io/class2024/quiz/index.html)   
+[퀴즈게임] (https://nicejmp1.github.io/class2024/quiz/index.html)    
+ 
 [퀴즈01] (https://nicejmp1.github.io/class2024/quiz/quiz01.html)   
-[퀴즈02] (https://nicejmp1.github.io/class2024/quiz/quiz02.html)      
-
 - 변수(const)
 - 선택자(querySelector)
-- 메서드(innerText(), classList(키워드), addEventListener, if문)  
+- 메서드(innerText(), classList.remove(키워드), addEventListener, if문)    
+
+[퀴즈02] (https://nicejmp1.github.io/class2024/quiz/quiz02.html)   
+- 배열, 객체
+- 선택자 (querySelectorAll())   
+- 반복문 (for(), forEach())   
+- 메서드(innerText(), classList.add(키워드), addEventListener, if문)      
+
+
 
 ### vscode 확장 프로그램
 1. Live Server : 웹페이지 미리보기   

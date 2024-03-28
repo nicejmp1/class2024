@@ -30,27 +30,35 @@
     <main id="main">
         <div class="quiz__wrap">
             <div class="quiz">
-                <div class="quiz__header">
-                    <span class="date"></span>
-                    <span class="type"></span>
-                </div>
+                <div class="quiz__header"></div>
                 <div class="quiz__main">
-                    <div class="questioin">
-                        <em></em>.
-                        <span></span>
+                    <div class="questioin"></div>
+                    <div class="choices">
+                        <label for="choices1">
+                            <input type="radio" id="choices1" name="chocie" value="1">
+                            <span></span>
+                        </label>
+                        <label for="choices2">
+                            <input type="radio" id="choices2" name="chocie" value="2">
+                            <span></span>
+                        </label>
+                        <label for="choices3">
+                            <input type="radio" id="choices3" name="chocie" value="3">
+                            <span></span>
+                        </label>
+                        <label for="choices4">
+                            <input type="radio" id="choices4" name="chocie" value="4">
+                            <span></span>
+                        </label>
                     </div>
-                    <div class="input">
-                        <input type="text" placeholder="정답을 입력해주세요!">
-                    </div>
-                    <div class="answer"></div>
-                    <div class="desc"></div>
+                    <div class="answer "></div>
+                    <div class="desc "></div>
                 </div>
                 <div class="quiz__footer">
                     <button class="confirm">정답 확인하기</button>
                 </div>
             </div>
         </div>
-
     </main>
     <!-- //main -->
 
@@ -60,42 +68,40 @@
     <!-- //footer -->
 
     <script>
+        // 선택자 
+        const quizWrap = document.querySelector(".quiz__wrap");
+        const quizHeader = quizWrap.querySelector(".quiz__header");
+        const quizQuestioin = quizWrap.querySelector(".quiz__main .questioin");
+        const quizChoices = quizWrap.querySelector(".quiz__main .choices");
+        const quizAnswer = quizWrap.querySelector(".quiz__main .answer");
+        const quizDesc = quizWrap.querySelector(".quiz__main .desc");
+        const quizConfirm = quizWrap.querySelector(".quiz__footer .confirm");
+
         // 문제 정보
-        // 변수
-        const infoDate = "2021년 1회";
-        const infoType = "정보처리 기능사";
-        const infoNum = "01";
-        const infoQuestion = "CPU의 정보처리 속도 단위 중 초당 100만 개의 연산을 수행한다는 의미의 단위는?";
-        const infoAnswer = "MIPS";
-        const infoDesc = "LIPS는 초당 1개, KIPS는 초당 1000개, MIPS는 초당 1000000의 연산을 수행하는 것을 의미합니다.";
+        const quizInfo = {
+            date: "2021년 1회",
+            type: "정보처리기능사",
+            num: "01",
+            question: "프리젠테이션에서 프리젠테이션의 흐름을 기획한 것을 무엇이라 하는가?",
+            choices: ["개체", "시나리오", "슬라이드", "매크로"],
+            answer: "2",
+            desc: "시나리오 : 흐름을 기획한것."
+        }
 
-        //문제 출력
-        document.querySelector(".quiz__header .date").innerText = infoDate;
-        document.querySelector(".quiz__header .type").innerText = infoType;
-        document.querySelector(".quiz__main .questioin em").innerText = infoNum;
-        document.querySelector(".quiz__main .questioin span").innerText = infoQuestion;
-        document.querySelector(".quiz__main .answer").innerText = infoAnswer;
-        document.querySelector(".quiz__main .desc").innerText = infoDesc;
+        // console.log(quizInfo.choices[1]);
 
-
-        // //배열
-        // const info = [
-        //     "2021년 1회",
-        //     "정보처리 기능사",
-        //     "1",
-        //     "CPU의 정보처리 속도 단위 중 초당 100만 개의 연산을 수행한다는 의미의 단위는?",
-        //     "MIPS",
-        //     "LIPS는 초당 1개, KIPS는 초당 1000개, MIPS는 초당 1000000의 연산을 수행하는 것을 의미합니다."
-        // ]
-
-        // const info1 = {
-        //     date: "2021년 1회",
-        //     type: "정보처리 기능사",
-        //     num: "1",
-        //     question: "CPU의 정보처리 속도 단위 중 초당 100만 개의 연산을 수행한다는 의미의 단위는?",
-        //     answer: "MIPS",
-        //     desc: "LIPS는 초당 1개, KIPS는 초당 1000개, MIPS는 초당 1000000의 연산을 수행하는 것을 의미합니다."
+        // for (let i = 0; i < quizInfo.choices.length; i++) {
+        //     console.log(quizInfo.choices[i]);
         // }
+
+        // quizInfo.choices.forEach(function (e, i) {
+        //     console.log(e);
+        // })
+
+        // 문제 출력
+        quizHeader.innerHTML = quizInfo.date + "" + quizInfo.type;
+        quizQuestioin.innerHTML = quizInfo.num + ". " + quizInfo.question;
+
     </script>
 </body>
 
