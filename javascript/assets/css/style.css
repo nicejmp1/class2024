@@ -197,12 +197,12 @@ li {
 }
 
 #header nav ul li.active a {
-    background-color: #76c800;
+    background-color: #336600;
     color: #fff;
 }
 
 #header nav ul li a:hover {
-    background-color: #76c800;
+    background-color: #336600;
     color: white;
 }
 
