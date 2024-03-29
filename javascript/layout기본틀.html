@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #header {
+            height: 100px;
+            background-color: #f9d4d4;
+        }
+
+        #header .container .logo {
+            width: 20%;
+            height: 100px;
+            background-color: #b23737;
+        }
+
+        #header .container .menu {
+            width: 80%;
+            height: 100px;
+            background-color: #f17a7a;
+        }
+
+        #slider {
+            height: 300px;
+        }
+
+        #slider .container .slider1 {
+            width: 50%;
+            height: 300px;
+            background-color: #555;
+        }
+
+        #slider .container .slider2 {
+            width: 50%;
+        }
+
+        #slider .container .slider2 .slider2-1 {
+            width: 100%;
+            height: 150px;
+            background-color: #868631;
+        }
+
+        #slider .container .slider2 .slider2-2 {
+            width: 100%;
+            height: 150px;
+            background-color: #696902;
+        }
+
+        #contents {
+            height: 200px;
+            background-color: #ff9494;
+        }
+
+        #contents .container .conteainer1 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #787171;
+        }
+
+        #contents .container .conteainer2 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #4b3434;
+        }
+
+        #contents .container .conteainer3 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #542525;
+        }
+
+        #footer {
+            height: 100px;
+            background-color: #f86f6f;
+        }
+
+        #footer .container .footer1 {
+            width: 20%;
+            bottom: 100px;
+            background-color: rgb(109, 71, 71);
+        }
+
+        #footer .container .footer2 {
+            width: 60%;
+            bottom: 100px;
+            background-color: rgb(141, 67, 67);
+        }
+
+        #footer .container .footer3 {
+            width: 20%;
+            bottom: 100px;
+            background-color: rgb(122, 41, 41);
+        }
+
+        .container {
+            width: 1200px;
+            /* inherit 부모값을 상속 받음 */
+            height: inherit;
+            margin: 0 auto;
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container">
+                <h1 class="logo"></h1>
+                <nav class="menu"></nav>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <article id="slider">
+            <div class="container">
+                <div class="slider1"></div>
+                <div class="slider2">
+                    <div class="slider2-1"></div>
+                    <div class="slider2-2"></div>
+                </div>
+            </div>
+        </article>
+        <!-- //slider -->
+
+        <main id="contents">
+            <div class="container">
+                <div class="conteainer1"></div>
+                <div class="conteainer2"></div>
+                <div class="conteainer3"></div>
+            </div>
+        </main>
+        <!-- //contetns -->
+
+        <footer id="footer">
+            <div class="container">
+                <div class="footer1"></div>
+                <div class="footer2"></div>
+                <div class="footer3"></div>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>
