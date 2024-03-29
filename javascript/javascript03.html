@@ -386,6 +386,7 @@
                 </div>
             </div>
             <!-- //sample09 -->
+            <button id="topBtn" onclick="topFunction()">TOP</button>
     </main>
     <!-- //main -->
     <footer id="footer">
@@ -537,6 +538,25 @@
             // 선언적 함수(가독성X)
             func4 = str => str;
             console.log(func4("10. 함수가 실행되었습니다."));
+        }
+
+        let mybutton = document.getElementById("topBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
         }
     </script>
 
