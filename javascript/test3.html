@@ -4,115 +4,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Test</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #header {
+            width: 100%;
+            background-color: #111;
+        }
+
+        #header .header-content {
+            width: 1200px;
+            display: flex;
+            margin: 0 auto;
+        }
+
+        #header .header-content .logo {
+            width: 20%;
+            height: 100px;
+            background-color: #999;
+        }
+
+        #header .header-content .nav {
+            width: 80%;
+            height: 100px;
+            background-color: #888;
+        }
+
+        #slider {
+            width: 100%;
+        }
+
+        #slider .slider-content {
+            width: 1200px;
+            display: flex;
+            margin: 0 auto;
+        }
+
+        #slider .slider-content .section1 {
+            width: 50%;
+            height: 300px;
+            background-color: #735f5f;
+        }
+
+        #slider .slider-content .section2 {
+            width: 50%;
+            height: 300px;
+            background-color: #984b4b;
+        }
+
+        #slider .slider-content .section2 .section2-1 {
+            width: 100%;
+            height: 150px;
+            background-color: #812d2d;
+        }
+
+        #slider .slider-content .section2 .section2-2 {
+            width: 100%;
+            height: 150px;
+            background-color: #cf7777;
+        }
+
+
+        #contents {
+            width: 100%;
+            background-color: #333;
+        }
+
+        #contents .contents-content {
+            width: 1200px;
+            display: flex;
+            margin: 0 auto;
+        }
+
+        #contents .contents-content .content1 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #bb6d6d;
+        }
+
+        #contents .contents-content .content2 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #7c5454;
+        }
+
+        #contents .contents-content .content3 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #8c1515;
+        }
+
+
+        #footer {
+            width: 100%;
+            background-color: #444;
+        }
+
+        #footer .footer-content {
+            width: 1200px;
+            display: flex;
+            margin: 0 auto;
+        }
+
+        #footer .footer-content .footer1 {
+            width: 20%;
+            height: 100px;
+            background-color: #964f4f;
+        }
+
+        #footer .footer-content .footer2 {
+            width: 60%;
+            height: 100px;
+            background-color: #7a2323;
+        }
+
+        #footer .footer-content .footer3 {
+            width: 20%;
+            height: 100px;
+            background-color: #aa0b0b;
+        }
+    </style>
 </head>
 
 <body>
-    <script>
-        // 01. 선언적 함수(화살표)
-        {
-            func = () => {
-                console.log("01");
-            }
-            func();
-        }
-        // 02. 익명 함수(화살표)
-        {
-            const func = () => {
-                console.log("02.");
-            }
-            func();
-        }
-        // 03. 매게변수 함수(화살표)
-        {
-            func = str => {
-                console.log(str);
-            }
-            func("03");
-        }
-        // 04. 리턴값 함수(화살표)
-        {
-            func = () => {
-                return "04";
-            }
-            console.log(func());
-        }
-        // 05. 매개변수 + 리턴값 함수(화살표)
-        {
-            func = str => {
-                return str;
-            }
-            console.log(func("05"));
-        }
-        // 06. for문(1부터 20까지 출력)
-        {
-            console.log("06");
-            for (let i = 1; i <= 20; i++) {
-                console.log(i);
-            }
-        }
-        // 07. for문(let num = [1,2,3,4,5,6,7,8])출력
-        {
-            const num = [1, 2, 3, 4, 5, 6, 7, 8];
-
-            console.log("07")
-            for (let i = 0; i < num.length; i++) {
-                console.log(num[i]);
-            }
-        }
-        // 08. forEach()(let num = [1,2,3,4,5,6,7,8])출력
-        {
-            const num = [1, 2, 3, 4, 5, 6, 7, 8];
-
-            console.log("======08")
-            num.forEach(function (element) {
-                console.log(element);
-            })
-        }
-        // 09. for in(let num = [1,2,3,4,5,6,7,8])출력
-        {
-            const num = [1, 2, 3, 4, 5, 6, 7, 8];
-
-            console.log("======09")
-            for (let element in num) {
-                console.log(num[element]);
-            }
-        }
-        // 10. for of(let num = [1,2,3,4,5,6,7,8])출력
-        {
-            const num = [1, 2, 3, 4, 5, 6, 7, 8];
-
-            console.log("======10")
-            for (let element of num) {
-                console.log(element);
-            }
-        }
-        // 11. map(let num = [1,2,3,4,5,6,7,8])출력
-        {
-            const num = [1, 2, 3, 4, 5, 6, 7, 8];
-
-            console.log("======11")
-            num.map(function (element) {
-                console.log(element);
-            })
-        }
-        // 12. filter(let num = [1,2,3,4,5,6,7,8])출력 
-        {
-            const num = [1, 2, 3, 4, 5, 6, 7, 8];
-
-            console.log("======12")
-            num.filter(function (element) {
-                console.log(element);
-            })
-        }
-
-        {
-            func = () => {
-                console.log();
-            }
-        }
-
-    </script>
+    <header id="header">
+        <div class="header-content">
+            <h1 class="logo"></h1>
+            <nav class="nav"></nav>
+        </div>
+    </header>
+    <article id="slider">
+        <div class="slider-content">
+            <section class="section1"></section>
+            <section class="section2">
+                <div class="section2-1"></div>
+                <div class="section2-2"></div>
+            </section>
+        </div>
+    </article>
+    <main id="contents">
+        <div class="contents-content">
+            <div class="content1"></div>
+            <div class="content2"></div>
+            <div class="content3"></div>
+        </div>
+    </main>
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer1"></div>
+            <div class="footer2"></div>
+            <div class="footer3"></div>
+        </div>
+    </footer>
 
 </body>
 
