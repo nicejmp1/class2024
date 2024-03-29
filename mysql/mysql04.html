@@ -108,6 +108,77 @@ Query OK, 0 rows affected (0.01 sec)
 Query OK, 0 rows affected (0.01 sec)
 </code></pre>
             </div>
+            <div id="sample06" class="sample">
+                <h3>테이블 합치기(JOIN)</h3>
+                <div class="info">
+                    SELECT [필드명] FROM [A테이블.앨리어스] JOIN [B테이블.앨리어스] ON [기준이 되는 조건문]
+                </div>
+
+                <pre><code class="language-js">mysql> SELECT m.youName, m.youAge, r.youText, r.regTime FROM members m JOIN reviews r ON (m.memberID = r.memberID);
++-----------+--------+----------------------------------+------------+
+| youName   | youAge | youText                          | regTime    |
++-----------+--------+----------------------------------+------------+
+| 김진우    |     21 | 정말 감사합니다.                 | 1023958375 |
+| 황상연    |     33 | 훌륭합니다.                      | 1023958375 |
+| 최선화    |     26 | 감사합니다.                      | 1023958375 |
+| 김현민    |     32 | 정말 놀랍네요.                   | 1023958375 |
+| 박정민    |     29 | 정말 멋져요.                     | 1023958375 |
+| 박소현    |     29 | 좋아용.                          | 1023958375 |
+| 이재혁    |     24 | 구독과 알람설정.                 | 1023958375 |
+| 황인지    |     20 | 피그+마그마=피그마               | 1023958375 |
+| 남윤서    |     19 | 용이넘어지면?띠용                | 1023958375 |
+| 박진아    |     33 | 용이올라가면?올라가용.           | 1023958375 |
+| 안지은    |     33 | 용용용                           | 1023958375 |
++-----------+--------+----------------------------------+------------+
+11 rows in set (0.02 sec)</code></pre>
+
+                <pre><code class="language-js">create table members(
+    memberID int(10) unsigned auto_increment,
+    youName varchar(10) NOT NULL,       
+    youPass varchar(10) NOT NULL,
+    youAge int(5) NOT NULL,
+    youBirth int(5) NOT NULL,
+    regTime int(30) NOT NULL,
+    PRIMARY KEY(memberID)
+)charset=utf8;
+
+create table reviews(
+    reviewID int(10) unsigned auto_increment,
+    memberID int(10) unsigned,
+    youText tinytext NOT NULL,
+    regTime int(30) NOT NULL,
+    PRIMARY KEY(reviewID)
+)charset=utf8;
+
+                    INSERT INTO members(youName, youPass, youAge, youBirth, regTime) VALUES("황상연", "1234", "33", "990304", "1023958375");
+INSERT INTO members(youName, youPass, youAge, youBirth, regTime) VALUES("남윤서", "1234", "19", "060121", "1023958375");
+INSERT INTO members(youName, youPass, youAge, youBirth, regTime) VALUES("김진우", "1234", "21", "040416", "1231231233");
+INSERT INTO members(youName, youPass, youAge, youBirth, regTime) VALUES("최선화", "1234", "26", "990123", "1104781152");
+INSERT INTO members(youName, youPass, youAge, youBirth, regTime) VALUES("서대원", "1234", "26", "011019", "1111100000");
+INSERT INTO members(youName, youPass, youAge, youBirth, regTime) VALUES("김현민", "1234", "32", "930604", "1023958375");
+INSERT INTO members(youName, youPass, youAge, youBirth, regTime) VALUES("황인지", "1234", "20", "990315", "1474187756");
+INSERT INTO members(youName, youPass, youAge, youBirth, regTime) VALUES("박정민", "1234", "29", "961017", "1023958375");
+INSERT INTO members(youName, youPass, youAge, youBirth, regTime) VALUES("강서연", "1234", "27", "980420", "0123456744");
+INSERT INTO members(youName, youPass, youAge, youBirth, regTime) VALUES("이재혁", "1215", "24", "010712", "1023958375");
+INSERT INTO members(youName, youPass, youAge, youBirth, regTime) VALUES("박소현", "1234", "29", "960917", "1231223123");
+INSERT INTO members(youName, youPass, youAge, youBirth, regTime) VALUES("김혜지", "1234", "28", "951002", "0123456789");
+INSERT INTO members(youName, youPass, youAge, youBirth, regTime) VALUES("강경민", "1234", "28", "970611", "1023952467");
+INSERT INTO members(youName, youPass, youAge, youBirth, regTime) VALUES("안지은", "1234", "33", "840816", "1023958375");
+INSERT INTO members(youName, youPass, youAge, youBirth, regTime) VALUES("박진아", "1232", "33", "990304", "1023958375");
+
+INSERT INTO reviews(memberID, youText, regTime) VALUES("3", "정말 감사합니다.", "1023958375");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("1", "훌륭합니다.", "1023958375");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("4", "감사합니다.", "1023958375");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("6", "정말 놀랍네요.", "1023958375");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("8", "정말 멋져요.", "1023958375");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("11", "좋아용.", "1023958375");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("10", "구독과 알람설정.", "1023958375");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("7", "피그+마그마=피그마", "1023958375");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("2", "용이넘어지면?띠용", "1023958375");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("15", "용이올라가면?올라가용.", "1023958375");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("14", "용용용", "1023958375");
+</code></pre>
+            </div>
         </div>
     </main>
     <!-- //main -->
