@@ -190,8 +190,7 @@
         const quizWrap = document.querySelector(".quiz__wrap");
         const quizDate = quizWrap.querySelectorAll(".quiz__header .date");
         const quizType = quizWrap.querySelectorAll(".quiz__header .type");
-        const quizNum = quizWrap.querySelectorAll(".questioin em");
-        const quizQuestion = quizWrap.querySelectorAll(".questioin span");
+        const quizQuestion = quizWrap.querySelectorAll(".questioin");
         const quizInput = quizWrap.querySelectorAll(".input input");
         const quizAnswer = quizWrap.querySelectorAll(".answer");
         const quizDesc = quizWrap.querySelectorAll(".desc");
@@ -250,8 +249,7 @@
         quizInfo.forEach((element, i) => {
             quizDate[i].textContent = quizInfo[i].infoDate;
             quizType[i].textContent = quizInfo[i].infoType;
-            quizNum[i].textContent = quizInfo[i].infoNum;
-            quizQuestion[i].textContent = quizInfo[i].infoQuestion;
+            quizQuestion[i].textContent = quizInfo[i].infoNum + ". " + quizInfo[i].infoQuestion;
             quizAnswer[i].textContent = quizInfo[i].infoAnswer;
             quizDesc[i].textContent = quizInfo[i].infoDesc;
         })

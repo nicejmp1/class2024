@@ -36,8 +36,6 @@
                 </div>
                 <div class="quiz__main">
                     <div class="questioin">
-                        <em></em>.
-                        <span></span>
                     </div>
                     <div class="input">
                         <input type="text" placeholder="정답을 입력해주세요!">
@@ -72,8 +70,7 @@
         //문제 출력
         document.querySelector(".quiz__header .date").innerText = infoDate;
         document.querySelector(".quiz__header .type").innerText = infoType;
-        document.querySelector(".quiz__main .questioin em").innerText = infoNum;
-        document.querySelector(".quiz__main .questioin span").innerText = infoQuestion;
+        document.querySelector(".quiz__main .questioin").innerText = infoNum + ". " + infoQuestion;
         document.querySelector(".quiz__main .answer").innerText = infoAnswer;
         document.querySelector(".quiz__main .desc").innerText = infoDesc;
 
