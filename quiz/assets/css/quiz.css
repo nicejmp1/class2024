@@ -249,7 +249,7 @@ body::after {
 /* quiz__wrap */
 .quiz__wrap {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -267,12 +267,21 @@ body::after {
     margin-bottom: 20px;
 }
 
-.quiz__main {}
-
 .quiz__main .questioin {
     margin-bottom: 20px;
     font-size: 24px;
     font-style: normal;
+    line-height: 1.4;
+}
+
+.quiz__main .questioin em {
+    font-size: 24px;
+    font-style: normal;
+    line-height: 1.4;
+}
+
+.quiz__main .questioin span {
+    font-size: 24px;
     line-height: 1.4;
 }
 

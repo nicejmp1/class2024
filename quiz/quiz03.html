@@ -51,8 +51,8 @@
                             <span></span>
                         </label>
                     </div>
-                    <div class="answer "></div>
-                    <div class="desc "></div>
+                    <div class="answer none"></div>
+                    <div class="desc none"></div>
                 </div>
                 <div class="quiz__footer">
                     <button class="confirm">정답 확인하기</button>
@@ -72,10 +72,11 @@
         const quizWrap = document.querySelector(".quiz__wrap");
         const quizHeader = quizWrap.querySelector(".quiz__header");
         const quizQuestioin = quizWrap.querySelector(".quiz__main .questioin");
-        const quizChoices = quizWrap.querySelector(".quiz__main .choices");
         const quizAnswer = quizWrap.querySelector(".quiz__main .answer");
         const quizDesc = quizWrap.querySelector(".quiz__main .desc");
         const quizConfirm = quizWrap.querySelector(".quiz__footer .confirm");
+        const quizChoices = quizWrap.querySelectorAll(".quiz__main .choices span");
+        const quizSelects = quizWrap.querySelectorAll(".quiz__main .choices input");
 
         // 문제 정보
         const quizInfo = {
@@ -85,7 +86,7 @@
             question: "프리젠테이션에서 프리젠테이션의 흐름을 기획한 것을 무엇이라 하는가?",
             choices: ["개체", "시나리오", "슬라이드", "매크로"],
             answer: "2",
-            desc: "시나리오 : 흐름을 기획한것."
+            desc: " 시나리오 - 흐름을 기획한것."
         }
 
         // console.log(quizInfo.choices[1]);
@@ -101,8 +102,50 @@
         // 문제 출력
         quizHeader.innerHTML = quizInfo.date + "" + quizInfo.type;
         quizQuestioin.innerHTML = quizInfo.num + ". " + quizInfo.question;
+        quizAnswer.innerHTML = quizInfo.answer;
+        quizDesc.innerHTML = quizInfo.desc;
 
+        // quizChoices[0].innerHTML = quizInfo.choices[0]
+        // quizChoices[1].innerHTML = quizInfo.choices[1]
+        // quizChoices[2].innerHTML = quizInfo.choices[2]
+        // quizChoices[3].innerHTML = quizInfo.choices[3]
 
+        for (let i = 0; i < quizInfo.choices.length; i++) {
+            quizChoices[i].innerHTML = quizInfo.choices[i];
+        }
+
+        quizInfo.choices.forEach(function (e, i) {
+            quizChoices[i].innerHTML = quizInfo.choices[i]
+        })
+
+        // 정답확인
+        // 버튼 클릭()
+        quizConfirm.addEventListener("click", () => {
+            let selectedChoice = null;
+
+            // 보기 선택
+            for (let i = 0; i < quizSelects.length; i++) {
+                if (quizSelects[i].checked) {
+                    selectedChoice = quizSelects[i].value;
+                    break;
+                }
+            }
+
+            // 정답 확인 
+            if (selectedChoice !== null) {
+                if (selectedChoice == quizInfo.answer) {
+                    alert("정답입니다.");
+                    quizDesc.classList.remove("none");
+                }
+                else {
+                    alert("오답입니다.");
+                    quizAnswer.classList.remove("none");
+                    quizDesc.classList.remove("none");
+                }
+            } else {
+                alert("보기를 선택해주세요!!");
+            }
+        });
 
     </script>
 </body>

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 :: 연산자</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/default.min.css">
+
+</head>
+
+<body>
+    <header id="header">
+        <h1>
+            <a href="index.html">javascript</a>
+        </h1>
+        <nav>
+            <ul>
+                <li class="active"><a href="javascript05.html">데이터 저장하기 : 연산자</a></li>
+                <li><a href="javascript06.html">데이터 저장하기 : 자료형</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="main__menu container">
+            <ul>
+                <li><a href="#sample01">01. 산술 연산자 </a></li>
+                <li><a href="#sample02">02. 할당 연산자</a></li>
+                <li><a href="#sample03">03. 비교 연산자</a></li>
+                <li><a href="#sample04">04. 논리 연산자</a></li>
+                <li><a href="#sample05">05. 비트 연산자</a></li>
+                <li><a href="#sample06">06. 삼향 연산자</a></li>
+            </ul>
+        </div>
+        <!-- //main__menu -->
+
+        <div class="main__sample container">
+            <div id="sample01" class="sample">
+                <h3>01. 산술 연산자</h3>
+                <p>
+
+                </p>
+                <pre><code>{
+    let sum = 5 + 3; // 덧셈
+    let difference = 8 - 4; // 뺄셈
+    let product = 2 * 6; // 곱셈
+    let quotient = 10 / 2; // 나눗셈
+    let remainder = 11 % 3; // 나머지
+    let power = 2 ** 3; // 거듭제곱                    
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            8 <br>
+                            4 <br>
+                            12 <br>
+                            5 <br>
+                            2 <br>
+                            8 <br>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample01 -->
+
+            <div id="sample01" class="sample">
+                <h3>02. 할당 연산자</h3>
+                <p>
+
+                </p>
+                <pre><code>{
+    let x = 10;
+    x += 5; // x = x + 5;
+    x -= 3; // x = x - 3;
+    x *= 2; // x = x * 2;
+    x /= 4; // x = x / 4;
+    x %= 3; // x = x % 3;                                       
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            8 <br>
+                            4 <br>
+                            12 <br>
+                            5 <br>
+                            2 <br>
+                            8 <br>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample01 -->
+
+            <div id="sample01" class="sample">
+                <h3>03. 비교 연산자</h3>
+                <p>
+
+                </p>
+                <pre><code>{
+    let isEqual = (10 == 5); // 동등 비교
+    let isStrictEqual = (10 === '10'); // 일치 비교
+    let isNotEqual = (5 != 3); // 부등 비교
+    let isNotStrictEqual = (5 !== '5'); // 부등 비교 (타입 비교)
+    let isGreater = (10 > 5); // 크기 비교
+    let isLessOrEqual = (3 <= 3); // 작거나 같음 비교                                                          
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            8 <br>
+                            4 <br>
+                            12 <br>
+                            5 <br>
+                            2 <br>
+                            8 <br>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample01 -->
+
+            <div id="sample01" class="sample">
+                <h3>04. 논리 연산자</h3>
+                <p>
+
+                </p>
+                <pre><code>{
+    let andResult = (true && false); // 논리 AND
+    let orResult = (true || false); // 논리 OR
+    let notResult = !true; // 논리 NOT                                                                            
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            8 <br>
+                            4 <br>
+                            12 <br>
+                            5 <br>
+                            2 <br>
+                            8 <br>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample01 -->
+
+            <div id="sample01" class="sample">
+                <h3>05. 비트 연산자</h3>
+                <p>
+
+                </p>
+                <pre><code>{
+    let bitwiseAnd = 5 & 3; // 비트 AND
+    let bitwiseOr = 5 | 3; // 비트 OR
+    let bitwiseXor = 5 ^ 3; // 비트 XOR
+    let bitwiseNot = ~5; // 비트 NOT
+    let leftShift = 5 &lt;&lt; 1; // 왼쪽 시프트
+    let rightShift = 5 >> 1; // 오른쪽 시프트
+    let unsignedRightShift = -5 >>> 1; // 부호 없는 오른쪽 시프트                                                                                               
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            8 <br>
+                            4 <br>
+                            12 <br>
+                            5 <br>
+                            2 <br>
+                            8 <br>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample01 -->
+
+            <div id="sample01" class="sample">
+                <h3>06. 삼향 연산자</h3>
+                <p>
+
+                </p>
+                <pre><code>{
+    let condition = true;
+    let result = condition ? '참' : '거짓';                                                                                                                 
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            8 <br>
+                            4 <br>
+                            12 <br>
+                            5 <br>
+                            2 <br>
+                            8 <br>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample01 -->
+
+
+        </div>
+        <!-- //main__sample -->
+        <button id="topBtn" onclick="topFunction()">TOP</button>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+
+    </footer>
+    <!-- //footer -->
+    <script src="assets/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <script>
+
+    </script>
+    <!-- 버튼 스크립트 -->
+    <script>
+        let mybutton = document.getElementById("topBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- //script -->
+</body>
+
+
+
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 :: 자료형</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/default.min.css">
+
+</head>
+
+<body>
+    <header id="header">
+        <h1>
+            <a href="index.html">javascript</a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="javascript05.html">데이터 저장하기 : 연산자</a></li>
+                <li class="active"><a href="javascript06.html">데이터 저장하기 : 자료형</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="main__menu container">
+            <ul>
+                <li><a href="#sample01">01. 문자열(String) </a></li>
+                <li><a href="#sample02">02. 숫자(Number)</a></li>
+                <li><a href="#sample03">03. 불리언(Boolean)</a></li>
+                <li><a href="#sample04">04. null </a></li>
+                <li><a href="#sample05">05. undefined </a></li>
+                <li><a href="#sample06">06. 심볼(Symbol)</a></li>
+                <li><a href="#sample06">07. 객체(Object)</a></li>
+                <li><a href="#sample06">08. 배열(Array)</a></li>
+                <li><a href="#sample06">09. 함수(Function)</a></li>
+            </ul>
+        </div>
+        <!-- //main__menu -->
+
+        <div class="main__sample container">
+            <div id="sample01" class="sample">
+                <h3>01. 문자열(String)</h3>
+                <p>
+
+                </p>
+                <pre><code>{
+    let greeting = "Hello, World!";
+    console.log(greeting); // 출력: Hello, World!                                    
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            Hello, World!
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample01 -->
+
+            <div id="sample01" class="sample">
+                <h3>02. 숫자(Number)</h3>
+                <p>
+
+                </p>
+                <pre><code>{
+    let number = 42;
+    console.log(number); // 출력: 42                                                     
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            42
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample01 -->
+
+            <div id="sample01" class="sample">
+                <h3>03. 불리언(Boolean)</h3>
+                <p>
+
+                </p>
+                <pre><code>{
+    let isTrue = true;
+    console.log(isTrue); // 출력: true                                                                           
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            true
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample01 -->
+
+            <div id="sample01" class="sample">
+                <h3>04. null</h3>
+                <p>
+
+                </p>
+                <pre><code>{
+    let nullValue = null;
+    console.log(nullValue); // 출력: null                                                                                              
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            null
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample01 -->
+
+            <div id="sample01" class="sample">
+                <h3>05. undefined</h3>
+                <p>
+
+                </p>
+                <pre><code>{
+    let undefinedValue;
+    console.log(undefinedValue); // 출력: undefined                                                                                                                
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            undefined
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample01 -->
+
+            <div id="sample01" class="sample">
+                <h3>06. 심볼(Symbol)</h3>
+                <p>
+
+                </p>
+                <pre><code>{
+    let key = Symbol('key');
+    let obj = {};
+    obj[key] = 'value';
+    console.log(obj[key]); // 출력: value                                                                                                                                  
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            value
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample06 -->
+
+            <div id="sample01" class="sample">
+                <h3>07. 객체(Object)</h3>
+                <p>
+
+                </p>
+                <pre><code>{
+    let person = {
+        name: 'John',
+        age: 30,
+        city: 'New York'
+    };
+    console.log(person.name); // 출력: John                                                                                                                                                    
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            John
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample06 -->
+
+            <div id="sample01" class="sample">
+                <h3>08. 배열(Array)</h3>
+                <p>
+
+                </p>
+                <pre><code>{
+    let numbers = [1, 2, 3, 4, 5];
+    console.log(numbers.length); // 출력: 5                                                                                                                                                    
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            5
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample06 -->
+
+            <div id="sample01" class="sample">
+                <h3>09. 함수(Function)</h3>
+                <p>
+
+                </p>
+                <pre><code>{
+    function greet(name) {
+        console.log("Hello, " + name + "!");
+    }
+    greet("Alice"); // 출력: Hello, Alice!                                                                                                                                                  
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            Hello, Alice!
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample09 -->
+
+
+        </div>
+        <!-- //main__sample -->
+        <button id="topBtn" onclick="topFunction()">TOP</button>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+
+    </footer>
+    <!-- //footer -->
+    <script src="assets/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+
+    <script>
+
+    </script>
+    <!-- 버튼 스크립트 -->
+    <script>
+        let mybutton = document.getElementById("topBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- //script -->
+</body>
+
+
+
+</html>

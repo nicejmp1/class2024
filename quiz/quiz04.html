@@ -29,35 +29,6 @@
 
     <main id="main">
         <div class="quiz__wrap">
-            <div class="quiz">
-                <div class="quiz__header"></div>
-                <div class="quiz__main">
-                    <div class="questioin"></div>
-                    <div class="choices">
-                        <label for="choices1">
-                            <input type="radio" id="choices1" name="chocie" value="1">
-                            <span></span>
-                        </label>
-                        <label for="choices2">
-                            <input type="radio" id="choices2" name="chocie" value="2">
-                            <span></span>
-                        </label>
-                        <label for="choices3">
-                            <input type="radio" id="choices3" name="chocie" value="3">
-                            <span></span>
-                        </label>
-                        <label for="choices4">
-                            <input type="radio" id="choices4" name="chocie" value="4">
-                            <span></span>
-                        </label>
-                    </div>
-                    <div class="answer "></div>
-                    <div class="desc "></div>
-                </div>
-                <div class="quiz__footer">
-                    <button class="confirm">정답 확인하기</button>
-                </div>
-            </div>
         </div>
     </main>
     <!-- //main -->
@@ -70,39 +41,115 @@
     <script>
         // 선택자 
         const quizWrap = document.querySelector(".quiz__wrap");
-        const quizHeader = quizWrap.querySelector(".quiz__header");
-        const quizQuestioin = quizWrap.querySelector(".quiz__main .questioin");
-        const quizChoices = quizWrap.querySelector(".quiz__main .choices");
-        const quizAnswer = quizWrap.querySelector(".quiz__main .answer");
-        const quizDesc = quizWrap.querySelector(".quiz__main .desc");
-        const quizConfirm = quizWrap.querySelector(".quiz__footer .confirm");
 
         // 문제 정보
-        const quizInfo = {
-            date: "2021년 1회",
-            type: "정보처리기능사",
-            num: "01",
-            question: "프리젠테이션에서 프리젠테이션의 흐름을 기획한 것을 무엇이라 하는가?",
-            choices: ["개체", "시나리오", "슬라이드", "매크로"],
-            answer: "2",
-            desc: "시나리오 : 흐름을 기획한것."
-        }
+        const quizInfo = [
+            {
+                date: "2021년 1회",
+                type: "정보처리기능사",
+                question: "SQL의 DML에 해당하지 않는 것은?",
+                choices: {
+                    1: "INSERT",
+                    2: "SELECT",
+                    3: "CREATE",
+                    4: "UPDATE"
+                },
+                answer: "3",
+                desc: "DML(데이터 조작 언어) SELECT - FROM - WHERE : 검색 INSERT - INTO - VALUES : 삽입 UPDATE - SET - WHERE : 갱신(업데이트) DELETE - FROM - WHERE(삭제) (테이블내의 레코드 조작 언어)"
+            }, {
+                date: "2021년 4회",
+                type: "정보처리기능사",
+                question: "기억 장치 고유의 번지로서 0, 1, 2, 3, ...과 같이 16진수로 약속하여 순서대로 정해 놓은 번지는?",
+                choices: {
+                    1: "상대번지",
+                    2: "필수번지",
+                    3: "슬라이드",
+                    4: "절대번지"
+                },
+                answer: "4",
+                desc: "절대번지는 처음부터 순서대로 0, 1, 2, 3 과같이 주소를 부여 하는 방식입니다."
+            }, {
+                date: "2021년 2회",
+                type: "정보처리기능사",
+                question: "2진수의 1011의 1의 보수는?",
+                choices: {
+                    1: "1000",
+                    2: "0010",
+                    3: "0100",
+                    4: "1010"
+                },
+                answer: "3",
+                desc: " 1의 보수는 1은 0으로, 0은 1로 바꾸어 주면 답이 됩니다."
+            }, {
+                date: "2020년 5회",
+                type: "정보처리기능사",
+                question: "인터넷에 연결되어 있는 수많은 컴퓨터의 주소는 일정한 규칙에 따라 지어진다. 210.103.4.1과 같이 4개의 필드로 끊어서, (.)으로 분리하여 나타내는 컴퓨터 주소는?",
+                choices: {
+                    1: "개인 ID",
+                    2: "IP주소",
+                    3: "전자 우편 ID",
+                    4: "도메인 주소"
+                },
+                answer: "2",
+                desc: "컴퓨터의 주소를 IP주소라고 하며 .(점)으로 구분하는 방식은 IPv4 방식입니다."
+            }, {
+                date: "2021년 8회",
+                type: "정보처리기능사",
+                question: "디스크팩이 6장으로 구성되었을 때 사용하여 기록할 수 있는 면의 수는?",
+                choices: {
+                    1: "10",
+                    2: "8",
+                    3: "6",
+                    4: "12"
+                },
+                answer: "1",
+                desc: "사용 가능 면수는(총 디스크 6장 * 2면) - 2면 입니다. <br>이때 2면은 맨위와 맨 아랫면 2면을 제외하게 됩니다."
+            }
+        ]
 
-        // console.log(quizInfo.choices[1]);
+        // 문제 출력 (함수)
+        const updateQuiz = () => {
+            const quizArray = [];
 
-        // for (let i = 0; i < quizInfo.choices.length; i++) {
-        //     console.log(quizInfo.choices[i]);
-        // }
+            quizInfo.forEach((quiz, index) => {
+                quizArray.push(`
+                 <div class="quiz">
+                    <div class="quiz__header">${quiz.date} ${quiz.type}</div>
+                    <div class="quiz__main">
+                        <div class="questioin">${index + 1}. ${quiz.question}</div>
+                        <div class="choices">
+                            <label for="choices1-${index}">
+                                <input type="radio" id="choices1-${index}" name="chocie-${index}" value="1">
+                                <span>${quiz.choices[1]}</span>
+                            </label>
+                            <label for="choices2-${index}">
+                                <input type="radio" id="choices2-${index}" name="chocie-${index}" value="2">
+                                <span>${quiz.choices[2]}</span>
+                            </label>
+                            <label for="choices3-${index}">
+                                <input type="radio" id="choices3-${index}" name="chocie-${index}" value="3">
+                                <span>${quiz.choices[3]}</span>
+                            </label>
+                            <label for="choices4-${index}">
+                                <input type="radio" id="choices4-${index}" name="chocie-${index}" value="4">
+                                <span>${quiz.choices[4]}</span>
+                            </label>
+                        </div>
+                        <div class="answer none"> ${quiz.answer}</div>
+                        <div class="desc none">${quiz.desc}</div>
+                    </div>
+                    <div class="quiz__footer">
+                        <button class="confirm">정답 확인하기</button>
+                    </div>
+                </div>
+                `);
 
-        // quizInfo.choices.forEach(function (e, i) {
-        //     console.log(e);
-        // })
+                quizWrap.innerHTML = quizArray.join("");
+            });
 
-        // 문제 출력
-        quizHeader.innerHTML = quizInfo.date + "" + quizInfo.type;
-        quizQuestioin.innerHTML = quizInfo.num + ". " + quizInfo.question;
-
-
+            console.log(quizArray);
+        };
+        updateQuiz();
 
     </script>
 </body>
