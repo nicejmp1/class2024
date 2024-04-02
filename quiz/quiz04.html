@@ -118,20 +118,20 @@
                     <div class="quiz__main">
                         <div class="questioin">${index + 1}. ${quiz.question}</div>
                         <div class="choices">
-                            <label for="choices1-${index}">
-                                <input type="radio" id="choices1-${index}" name="chocie-${index}" value="1">
+                            <label for="choices${index}-1">
+                                <input type="radio" id="choices${index}-1" name="chocie-${index}" value="1">
                                 <span>${quiz.choices[1]}</span>
                             </label>
-                            <label for="choices2-${index}">
-                                <input type="radio" id="choices2-${index}" name="chocie-${index}" value="2">
+                            <label for="choices${index}-2">
+                                <input type="radio" id="choices${index}-2" name="chocie-${index}" value="2">
                                 <span>${quiz.choices[2]}</span>
                             </label>
-                            <label for="choices3-${index}">
-                                <input type="radio" id="choices3-${index}" name="chocie-${index}" value="3">
+                            <label for="choices${index}-3">
+                                <input type="radio" id="choices${index}-3" name="chocie-${index}" value="3">
                                 <span>${quiz.choices[3]}</span>
                             </label>
-                            <label for="choices4-${index}">
-                                <input type="radio" id="choices4-${index}" name="chocie-${index}" value="4">
+                            <label for="choices${index}-4">
+                                <input type="radio" id="choices${index}-4" name="chocie-${index}" value="4">
                                 <span>${quiz.choices[4]}</span>
                             </label>
                         </div>
@@ -146,9 +146,19 @@
 
                 quizWrap.innerHTML = quizArray.join("");
             });
-
-            console.log(quizArray);
         };
+
+        // 정답 확인
+        const answerQuiz = (index) => {
+            //사용자가 체크한 정답
+            const quizChecked = quizWrap.querySelectorAll(`.quiz__main .choices input[name="chocie - ${index}"]:checked`);
+            const quizElement = quizWrap.querySelectorAll(".quiz")[index];
+            const answerElement = quizWrap.querySelectorAll(".answer")[index];
+            const descElement = quizWrap.querySelectorAll(".desc")[index];
+            const confirmElement = quizWrap.querySelectorAll(".confirm")[index];
+        }
+
+        answerQuiz(5);
         updateQuiz();
 
     </script>
