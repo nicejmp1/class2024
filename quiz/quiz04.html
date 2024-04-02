@@ -161,13 +161,14 @@
                 const userAnswer = quizChecked[0].value;
                 if (userAnswer === quizInfo[index].answer) {
                     quizElement.classList.add("good");  // 0 표시
-                    descElement.classList.remove("none");   // 해설보기
+
                 } else {
                     quizElement.classList.add("bad");           // X 표시
                     answerElement.classList.remove("none");     // 정답 보기
-                    descElement.classList.remove("none");       // 해설 보기
                 }
-                confirmElement.classList.add("none");
+                confirmElement.classList.add("none");       // 정답 버튼없애기
+                descElement.classList.remove("none");       // 해설보기
+                confirmElement.style.display = "none"       // 정답 확인 버튼 숨기기
 
             } else {
                 alert("🙀 보기를 선택해주세요!! 🙀");
