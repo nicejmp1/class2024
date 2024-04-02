@@ -151,15 +151,41 @@
         // 정답 확인
         const answerQuiz = (index) => {
             //사용자가 체크한 정답
-            const quizChecked = quizWrap.querySelectorAll(`.quiz__main .choices input[name="chocie - ${index}"]:checked`);
+            const quizChecked = quizWrap.querySelectorAll(`.quiz__main .choices input[name="chocie-${index}"]:checked`);
             const quizElement = quizWrap.querySelectorAll(".quiz")[index];
             const answerElement = quizWrap.querySelectorAll(".answer")[index];
             const descElement = quizWrap.querySelectorAll(".desc")[index];
             const confirmElement = quizWrap.querySelectorAll(".confirm")[index];
+
+            if (quizChecked.length > 0) {       // 사용자가 체크한것
+                const userAnswer = quizChecked[0].value;
+                if (userAnswer === quizInfo[index].answer) {
+                    quizElement.classList.add("good");  // 0 표시
+                    descElement.classList.remove("none");   // 해설보기
+                } else {
+                    quizElement.classList.add("bad");           // X 표시
+                    answerElement.classList.remove("none");     // 정답 보기
+                    descElement.classList.remove("none");       // 해설 보기
+                }
+                confirmElement.classList.add("none");
+
+            } else {
+                alert("🙀 보기를 선택해주세요!! 🙀");
+            }
         }
 
-        answerQuiz(5);
-        updateQuiz();
+        // 페이지가 로드된 후 실행 순서대로 해놔야 작동
+        document.addEventListener("DOMContentLoaded", () => {
+            // 문제 출력
+            updateQuiz();
+
+            // 정답확인
+            quizWrap.querySelectorAll(".confirm").forEach((button, index) => {
+                button.addEventListener("click", () => {
+                    answerQuiz(index);
+                })
+            })
+        })
 
     </script>
 </body>
