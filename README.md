@@ -19,6 +19,18 @@
 - 반복문 (for(), forEach())   
 - 메서드(innerText(), classList.add(키워드), addEventListener, if문)      
 
+[퀴즈03] (https://nicejmp1.github.io/class2024/quiz/quiz03.html)     
+- 변수, 배열, 객체    
+- 선택자(querySelector(), querySelectorAll());
+- 반복문(for(), break문)
+- 메소드 (innerText(), classList.add(키워드), addEventListener, if문)
+
+[퀴즈04] (https://nicejmp1.github.io/class2024/quiz/quiz04.html)     
+- 변수, 배열, 객체, 템플릿 리터럴    
+- 선택자(querySelector(), querySelectorAll());   
+- 반복문(forEach())   
+- 메소드 (join(), push(), innerText())      
+
 
 
 ### vscode 확장 프로그램
