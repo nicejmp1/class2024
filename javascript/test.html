@@ -4,169 +4,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>자바스크립트 :: 문자열 객체</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/default.min.css">
+
 </head>
 
 <body>
+    <header id="header">
+        <h1>
+            <a href="index.html">javascript</a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="javascript01.html">데이터 저장하기</a></li>
+                <li><a href="javascript02.html">데이터 불러오기</a></li>
+                <li><a href="javascript03.html">데이터 실행하기</a></li>
+                <li><a href="javascript04.html">데이터 제어하기</a></li>
+            </ul>
+            <ul>
+                <li><a href="object01.html">문자열 객체</a></li>
+                <li><a href="object02.html">배열 객체</a></li>
+                <li><a href="object03.html">수학 객체</a></li>
+                <li><a href="object04.html">숫자 객체</a></li>
+                <li><a href="object05.html">브라우저 객체</a></li>
+                <li><a href="object06.html">요소 객체</a></li>
+                <li><a href="object07.html">이벤트 객체</a></li>
+                <li class="active"><a href="test.html">연습 </a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
+        <div class="main__menu container">
+            <ul>
+                <li><a href="#sample01">01. 1부터 100까지 출력하기 (for문, while문, do while)</a></li>
+            </ul>
+        </div>
+        <!-- //main__menu -->
+
+        <div class="main__sample container">
+            <div id="sample01" class="sample">
+                <h3>01. 1부터 100까지 출력하기 (for문, while문, do while)</h3>
+                <p>
+
+                </p>
+                <pre><code>{
+    for (let i = 1; i &lt;= 100; i++) {
+        console.log(i);
+    }
+==========================================
+while 문
+    {
+        let num = 1;
+            
+        while (num &lt;= 100) {
+            console.log(num);
+            num++;
+        }
+    }
+==========================================
+do while 문
+    {
+        let num = 1;
+        do {
+            console.log(num);
+            num++;
+        } while (num &lt;= 100);
+    }
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            for 문 <br>
+                            1~100 <br>
+                            while문 <br>
+                            1~100 <br>
+                            do while문 <br>
+                            1~100
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample01 -->
+
+            <button id="topBtn" onclick="topFunction()">TOP</button>
+    </main>
+    <!-- //main -->
+    <footer id="footer">
+
+    </footer>
+    <!-- //footer -->
+    <script src="assets/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
     <script>
-        // 01. 선언적 함수
-        {
-            function test() {
-                console.log("01. 함수 실행");
-            }
-            test();
-        }
+        // 01. 1부터 100까지 출력하기 (for문, while문, do while)
 
-        // 02. 익명 함수
-        {
-            const test = function () {
-                console.log("02. 함수 실행");
-            }
-            test();
-        }
-
-        // 03. 매게변수 함수
-        {
-            function test(str) {
-                console.log(str);
-            }
-            test("03.함수 실행");
-
-            const test1 = function (str) {
-                console.log(str)
-            }
-            test("04.함수 실행")
-        }
-
-        // 04. 리턴값 함수
-        {
-            function test() {
-                return "05.함수 실행";
-            }
-            console.log(test());
-
-            const test1 = function () {
-                return "06.함수 실행";
-            }
-            console.log(test1());
-        }
-
-        // 05. 매개변수 + 리턴값 함수
-        {
-            function test(str) {
-                return str;
-            }
-            console.log(test("07.함수 실행"));
-
-            const test1 = function (str) {
-                return str;
-            }
-            console.log(test1("08.함수 실행"));
-        }
-        // 06. (화살표 함수) 선언적 함수
-        {
-            test = () => {
-                console.log("09. 함수 실행하기");
-            }
-            test();
-        }
-        // 07. (화살표 함수) 익명 함수
-        {
-            const test = () => {
-                console.log("10.함수 실행");
-            }
-            test();
-        }
-        // 08. (화살표 함수) 매게변수 함수
-        {
-            test = (str) => {
-                console.log(str);
-            }
-            test("11. 함수 실행하기");
-
-            const test1 = (str) => {
-                console.log(str);
-            }
-            test("12.함수 실행")
-        }
-        // 09. (화살표 함수) 리턴값 함수
-        {
-            test = () => {
-                return "09.함수 실행";
-            }
-            console.log(test());
-
-            const test1 = () => {
-                return "10.함수 실행";
-            }
-            console.log(test1());
-        }
-        // 10. (화살표 함수) 매개변수 + 리턴값 함수
-        {
-            test = (str) => {
-                return str;
-            }
-            console.log(test("10.함수 실행"));
-        }
-
-        // 11. for문
-        {
-            const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-            for (let i = 0; i < arr.length; i++) {
-                console.log(arr[i]);
-            };
-        }
-
-        // 12. forEach()
-        {
-            const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-            arr.forEach(function (element) {
-                console.log(element);
-            })
-        }
-        // 13. for in
-        {
-            const arr = [10, 2, 3, 4, 5, 6, 7, 8, 9];
-
-            for (let element in arr) {
-                console.log(arr[element]);
-            }
-        }
-        // 14. for of
-        {
-            const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-            for (let element of arr) {
-                console.log(element);
-            }
-        }
-        // 15. map()
-        {
-            const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-            console.log("15. map()")
-            arr.map(function (element) {
-                console.log(element);
-            })
+        for (let i = 1; i <= 100; i++) {
+            console.log(i);
         }
 
         {
-            const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+            let num = 1;
 
-            console.log("for문")
-            for (let i = 0; i < arr.length; i++) {
-                console.log(arr[i]);
+            while (num <= 100) {
+                console.log(num);
+                num++;
             }
         }
 
         {
-            const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+            let num = 1;
+            do {
+                console.log(num);
+                num++;
+            } while (num <= 100);
+        }
 
-            arr.forEach(function (element) {
-                console.log(element);
-            })
+    </script>
+    <script>
+        let mybutton = document.getElementById("topBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
         }
     </script>
 </body>
