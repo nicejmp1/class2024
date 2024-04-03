@@ -32,7 +32,7 @@
             <div class="quiz">
                 <div class="quiz__header"></div>
                 <div class="quiz__main">
-                    <div class="questioin"></div>
+                    <div class="question"></div>
                     <div class="choices">
                         <label for="choices1">
                             <input type="radio" id="choices1" name="chocie" value="1">
@@ -71,7 +71,7 @@
         // 선택자 
         const quizWrap = document.querySelector(".quiz__wrap");
         const quizHeader = quizWrap.querySelector(".quiz__header");
-        const quizQuestioin = quizWrap.querySelector(".quiz__main .questioin");
+        const quizQuestion = quizWrap.querySelector(".quiz__main .question");
         const quizAnswer = quizWrap.querySelector(".quiz__main .answer");
         const quizDesc = quizWrap.querySelector(".quiz__main .desc");
         const quizConfirm = quizWrap.querySelector(".quiz__footer .confirm");
@@ -101,7 +101,7 @@
 
         // 문제 출력
         quizHeader.innerHTML = quizInfo.date + "" + quizInfo.type;
-        quizQuestioin.innerHTML = quizInfo.num + ". " + quizInfo.question;
+        quizQuestion.innerHTML = quizInfo.num + ". " + quizInfo.question;
         quizAnswer.innerHTML = quizInfo.answer;
         quizDesc.innerHTML = quizInfo.desc;
 

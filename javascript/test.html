@@ -41,6 +41,9 @@
         <div class="main__menu container">
             <ul>
                 <li><a href="#sample01">01. 1부터 100까지 출력하기 (for문, while문, do while)</a></li>
+                <li><a href="#sample02">02. 0부터 100까지 짝수만 출력하기 (for문, if문)</a></li>
+                <li><a href="#sample03">03. 1부터 100까지 짝수만 파랑색, 홀수는 빨간색 출력하기 (for문, if문)</a></li>
+                <li><a href="#sample04">04. 중첩 for문을 이용해서 구구단 출력하기</a></li>
             </ul>
         </div>
         <!-- //main__menu -->
@@ -48,9 +51,6 @@
         <div class="main__sample container">
             <div id="sample01" class="sample">
                 <h3>01. 1부터 100까지 출력하기 (for문, while문, do while)</h3>
-                <p>
-
-                </p>
                 <pre data-line="2, 9-10" class="line-numbers"><code class="language-js">{
     for (let i = 1; i &lt;= 100; i++) {
         console.log(i);
@@ -90,6 +90,97 @@ do while 문
             </div>
             <!-- //sample01 -->
 
+            <div id="sample02" class="sample">
+                <h3>02. 0부터 100까지 짝수만 출력하기</h3>
+                <pre data-line="2, 9-10" class="line-numbers"><code class="language-js">{
+    for (let i = 1; i &lt;= 100; i++) {
+        if (i % 2 == 0) {
+            console.log(i);
+        }
+    }
+        
+    for (let i = 1; i &lt;= 100; i++) {
+        if (i % 2 == 1) {
+            console.log(i);
+        }
+    }
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            짝수 <br>
+                            홀수
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample02 -->
+
+            <div id="sample03" class="sample">
+                <h3>03. 1부터 100까지는 짝수는 파랑색, 홀수는 빨간색 출력 </h3>
+                <pre data-line="2, 9-10" class="line-numbers"><code class="language-js">{
+    for (let i = 1; i &lt;= 100; i++) {
+        if (i % 2 == 0) {
+            document.write("<span style= 'color:blue'>" + i + "</span>");
+        } else {
+            document.write("<span style= 'color:red'>" + i + "</span>");
+        }
+    }
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            짝수 <br>
+                            홀수
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample03 -->
+
+            <div id="sample04" class="sample">
+                <h3>04. 중첩 for 문을 이용하여 구구단 짜기 </h3>
+                <pre data-line="2, 9-10" class="line-numbers"><code class="language-js">{
+    for (let i = 2; i &lt;= 9; i++) {
+        for (let j = 1; j &lt;= 9; j++) {
+            console.log(i + '*' + j + '=' + i * j);
+        }
+    }
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            구구단
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample04 -->
+
+            <div id="sample05" class="sample">
+                <h3>05. 중첩 for 문을 이용하여 8단 구구단 짜기 </h3>
+                <pre data-line="2, 9-10" class="line-numbers"><code class="language-js">{
+    for (let i = 8; i &lt;= 8; i++) {
+        for (let j = 1; j &lt;= 9; j++) {
+            console.log(i + "*" + j + "=" + i * j);
+        }
+    }
+}</code></pre>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            짝수 <br>
+                            홀수
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- //sample03 -->
+
             <button id="topBtn" onclick="topFunction()">TOP</button>
     </main>
     <!-- //main -->
@@ -99,18 +190,20 @@ do while 문
     <!-- //footer -->
     <script src="assets/js/prism.js"></script>
     <script>
+
         // 01. 1부터 100까지 출력하기 (for문, while문, do while)
-
-        for (let i = 1; i <= 100; i++) {
-            console.log(i);
-        }
-
         {
-            let num = 1;
+            for (let i = 1; i <= 100; i++) {
+                console.log(i);
+            }
 
-            while (num <= 100) {
-                console.log(num);
-                num++;
+            {
+                let num = 1;
+
+                while (num <= 100) {
+                    console.log(num);
+                    num++;
+                }
             }
         }
 
@@ -122,6 +215,48 @@ do while 문
             } while (num <= 100);
         }
 
+        // 02. 0부터 100까지 짝수만 출력하기
+        {
+            for (let i = 1; i <= 100; i++) {
+                if (i % 2 == 0) {
+                    console.log(i);
+                }
+            }
+
+            for (let i = 1; i <= 100; i++) {
+                if (i % 2 == 1) {
+                    console.log(i);
+                }
+            }
+        }
+        // 03. 1부터 100까지는 짝수는 파랑색, 홀수는 빨간색 출력 
+        {
+            for (let i = 1; i <= 100; i++) {
+                if (i % 2 == 0) {
+                    document.write("<span style= 'color:blue'>" + i + "</span>");
+                } else {
+                    document.write("<span style= 'color:red'>" + i + "</span>");
+                }
+            }
+        }
+
+        // 04. 중첩 for 문을 이용하여 구구단 짜기
+        {
+            for (let i = 2; i <= 9; i++) {
+                for (let j = 1; j <= 9; j++) {
+                    console.log(i + '*' + j + '=' + i * j);
+                }
+            }
+        }
+
+        // 05. 중첩 for 문을 이용하여 8단 구구단 짜기
+        {
+            for (let i = 8; i <= 8; i++) {
+                for (let j = 1; j <= 9; j++) {
+                    console.log(i + "*" + j + "=" + i * j);
+                }
+            }
+        }
     </script>
     <script>
         let mybutton = document.getElementById("topBtn");

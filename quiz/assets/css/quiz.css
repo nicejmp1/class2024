@@ -267,20 +267,20 @@ body::after {
     margin-bottom: 20px;
 }
 
-.quiz__main .questioin {
+.quiz__main .question {
     margin-bottom: 20px;
     font-size: 24px;
     font-style: normal;
     line-height: 1.4;
 }
 
-.quiz__main .questioin em {
+.quiz__main .question em {
     font-size: 24px;
     font-style: normal;
     line-height: 1.4;
 }
 
-.quiz__main .questioin span {
+.quiz__main .question span {
     font-size: 24px;
     line-height: 1.4;
 }
@@ -397,6 +397,25 @@ body::after {
     background-color: transparent;
     border: 1px dashed #0058f0;
     color: #0058f0;
+    cursor: pointer;
+}
+
+.quiz__footer .next {
+    background-color: #21488c;
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    border: 0;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s;
+}
+
+.quiz__footer .next:hover {
+    background-color: transparent;
+    border: 1px dashed #21488c;
+    color: #21488c;
     cursor: pointer;
 }
 
