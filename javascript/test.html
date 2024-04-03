@@ -120,13 +120,15 @@ do while 문
             <div id="sample03" class="sample">
                 <h3>03. 1부터 100까지는 짝수는 파랑색, 홀수는 빨간색 출력 </h3>
                 <pre data-line="2, 9-10" class="line-numbers"><code class="language-js">{
-    for (let i = 1; i &lt;= 100; i++) {
-        if (i % 2 == 0) {
-            document.write("<span style= 'color:blue'>" + i + "</span>");
-        } else {
-            document.write("<span style= 'color:red'>" + i + "</span>");
+   {
+            for (let i = 1; i &lt;= 100; i++) {
+                if (i % 2 == 0) {
+                    document.write("&lt;span style= 'color:blue&gt;" + i + "&lt;/span&gt;");
+                } else {
+                    document.write("&lt;span style= 'color:red'&gt;" + i + "&lt;/span&gt;");
+                }
+            }
         }
-    }
 }</code></pre>
                 <div class="result">
                     <details>
