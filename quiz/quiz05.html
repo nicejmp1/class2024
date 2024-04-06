@@ -84,7 +84,7 @@
         ]
         // 변수
         let currentIndex = 0;   // 현재 문제애 대한 값
-        z
+
         // 문제 출력
         const updateQuiz = (index) => {
             let quizWrapTag = `
@@ -92,10 +92,6 @@
                     <div class="quiz__header">${quizInfo[index].date} ${quizInfo[index].type}</div>
                     <div class="quiz__main">
                         <div class="question">${index + 1}. ${quizInfo[index].question}</div>
-                        <pre><code> {
-                            javascript
-                        }
-                        </code></pre>
                         <div class="choices">
                             <label for="choice1">
                                 <input type="radio" id="choice1" name="choice" value="1">
@@ -123,8 +119,6 @@
                     </div>
                 </div >
             `
-
-
             quizWrap.innerHTML = quizWrapTag;
 
             // 선택자 

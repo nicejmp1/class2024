@@ -109,6 +109,7 @@ body {
     position: relative;
     width: 100%;
     min-height: 100vh;
+    overflow: hidden;
 }
 
 body::after {
@@ -221,38 +222,39 @@ body::after {
 
 }
 
-.quiz__main {
+.quiz .quiz__main {
     float: left;
     width: 60%;
     height: 50%;
     box-sizing: border-box;
 }
 
-.quiz__main .question {
+.quiz .quiz__main .question {
     margin-bottom: 20px;
     font-size: 24px;
     font-style: normal;
     line-height: 1.4;
 }
 
-.quiz__main .question-precode pre,
-.quiz__main .question-precode code {
+/* .question-precode */
+.quiz .quiz__main .question-precode pre,
+.quiz .quiz__main .question-precode code {
     height: calc(100vh - 600px);
     font-size: 20px;
 }
 
-.quiz__main .question em {
+.quiz .quiz__main .question em {
     font-size: 24px;
     font-style: normal;
     line-height: 1.4;
 }
 
-.quiz__main .question span {
+.quiz .quiz__main .question span {
     font-size: 24px;
     line-height: 1.4;
 }
 
-.quiz__main .input input {
+.quiz .quiz__main .input input {
     width: 100%;
     padding: 20px;
     border: 1px solid #0058f0;
@@ -325,7 +327,6 @@ body::after {
     color: #0058f0;
     box-shadow: 1px 1px 3px #0058f071;
     background-color: #0058f044;
-
 }
 
 .quiz__footer {

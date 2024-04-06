@@ -25,44 +25,42 @@
         </nav>
     </header>
     <!-- //header -->
-
-    <main id="main">
-        <div class="quiz__wrap">
-            <div class="quiz">
-                <div class="quiz__main">
-                    <div class="question"></div>
-                    <div class="question-precode">
-                        <pre><code>
+    <div class="quiz__wrap">
+        <!-- <div class="quiz">
+            <div class="quiz__main">
+                <div class="question"></div>
+                <div class="question-precode">
+                    <pre><code>
     </code></pre>
-                    </div>
-                </div>
-                <div class="quiz__main2">
-                    <div class="choices">
-                        <label for="choices1">
-                            <input type="radio" id="choices1" name="chocie" value="1">
-                            <span></span>
-                        </label>
-                        <label for="choices2">
-                            <input type="radio" id="choices2" name="chocie" value="2">
-                            <span></span>
-                        </label>
-                        <label for="choices3">
-                            <input type="radio" id="choices3" name="chocie" value="3">
-                            <span></span>
-                        </label>
-                        <label for="choices4">
-                            <input type="radio" id="choices4" name="chocie" value="4">
-                            <span></span>
-                        </label>
-                    </div>
-                </div>
-                <div class="quiz__footer">
-                    <div class="answer none"></div>
-                    <div class="desc none"></div>
-                    <button class="confirm">정답 확인하기</button>
                 </div>
             </div>
-        </div>
+            <div class="quiz__main2">
+                <div class="choices">
+                    <label for="choices1">
+                        <input type="radio" id="choices1" name="chocie" value="1">
+                        <span></span>
+                    </label>
+                    <label for="choices2">
+                        <input type="radio" id="choices2" name="chocie" value="2">
+                        <span></span>
+                    </label>
+                    <label for="choices3">
+                        <input type="radio" id="choices3" name="chocie" value="3">
+                        <span></span>
+                    </label>
+                    <label for="choices4">
+                        <input type="radio" id="choices4" name="chocie" value="4">
+                        <span></span>
+                    </label>
+                </div>
+            </div>
+            <div class="quiz__footer">
+                <div class="answer none"></div>
+                <div class="desc none"></div>
+                <button class="confirm">정답 확인하기</button>
+            </div>
+        </div> -->
+    </div>
     </main>
     <!-- //main -->
 
@@ -73,7 +71,7 @@
     <script src="assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
 
-    <script>
+    <!-- <script>
         // 선택자 
         const quizWrap = document.querySelector(".quiz__wrap");
         const quizHeader = quizWrap.querySelector(".quiz__header");
@@ -101,26 +99,11 @@
             desc: " 시나리오 - 흐름을 기획한것."
         }
 
-        // console.log(quizInfo.choices[1]);
-
-        // for (let i = 0; i < quizInfo.choices.length; i++) {
-        //     console.log(quizInfo.choices[i]);
-        // }
-
-        // quizInfo.choices.forEach(function (e, i) {
-        //     console.log(e);
-        // })
-
         // 문제 출력
         quizQuestion.innerHTML = quizInfo.num + ". " + quizInfo.question;
         quizAnswer.innerHTML = quizInfo.answer;
         quizDesc.innerHTML = quizInfo.desc;
         quizPrecode.querySelector("code").innerHTML = quizInfo.precode;
-
-        // quizChoices[0].innerHTML = quizInfo.choices[0]
-        // quizChoices[1].innerHTML = quizInfo.choices[1]
-        // quizChoices[2].innerHTML = quizInfo.choices[2]
-        // quizChoices[3].innerHTML = quizInfo.choices[3]
 
         for (let i = 0; i < quizInfo.choices.length; i++) {
             quizChoices[i].innerHTML = quizInfo.choices[i];
@@ -158,8 +141,202 @@
                 alert("보기를 선택해주세요!!");
             }
         });
-
     </script>
+    //script Type No.1 -->
+
+    <script>
+        // 선택자
+        const quizWrap = document.querySelector(".quiz__wrap");
+
+        // 문제 입력
+        const quizInfo = [
+            {
+                question: "프리젠테이션에서 프리젠테이션의 흐름을 기획한 것을 무엇이라 하는가?",
+                precode: `{
+    const arr = new Array () {
+        arr[0] = 100;
+
+        console.log(arr[0]);
+    }
+}`,
+                choices: ["개체", "시나리오", "슬라이드", "매크로"],
+                answer: "2",
+                desc: " 시나리오 - 흐름을 기획한것."
+            },
+            {
+                question: "프리젠테이션에서 프리젠테이션의 흐름을 기획한 것을 무엇이라 하는가?",
+                precode: `{
+    const arr = new Array () {
+        arr[0] = 100;
+
+        console.log(arr[0]);
+    }
+}`, choices: ["개체", "시나리오", "슬라이드", "매크로"],
+                answer: "4",
+                desc: " 시나리오 - 흐름을 기획한것."
+            },
+            {
+                question: "프리젠테이션에서 프리젠테이션의 흐름을 기획한 것을 무엇이라 하는가?",
+                precode: `{
+    const arr = new Array () {
+        arr[0] = 100;
+
+        console.log(arr[0]);
+    }
+}`, choices: ["개체", "시나리오", "슬라이드", "매크로"],
+                answer: "2",
+                desc: " 시나리오 - 흐름을 기획한것."
+            },
+            {
+                question: "프리젠테이션에서 프리젠테이션의 흐름을 기획한 것을 무엇이라 하는가?",
+                precode: `{
+    const arr = new Array () {
+        arr[0] = 100;
+
+        console.log(arr[0]);
+    }
+}`, choices: ["개체", "시나리오", "슬라이드", "매크로"],
+                answer: "1",
+                desc: " 시나리오 - 흐름을 기획한것."
+            },
+            {
+                question: "프리젠테이션에서 프리젠테이션의 흐름을 기획한 것을 무엇이라 하는가?",
+                precode: `{
+    const arr = new Array () {
+        arr[0] = 100;
+
+        console.log(arr[0]);
+    }
+}`, choices: ["개체", "시나리오", "슬라이드", "매크로"],
+                answer: "3",
+                desc: " 시나리오 - 흐름을 기획한것."
+            },
+        ]
+
+        // 변수
+        let currentIndex = 0;   // 현재 문제애 대한 값
+
+        const updateQuiz = (index) => {
+            let quizWrapTag = `
+            <div class="quiz">
+                <div class="quiz__main">
+                    <div class="question">${index + 1}. ${quizInfo[index].question}</div>
+                    <div class="question-precode"></div>
+                    <pre><code>${quizInfo[index].precode}</code></pre>
+                </div>
+                <div class="quiz__main2">
+                    <div class="choices">
+                        <label for="choices1">
+                            <input type="radio" id="choices1" name="choice" value="1">
+                            <span>${quizInfo[index].choices[0]}</span>
+                        </label>
+                        <label for="choices2">
+                            <input type="radio" id="choices2" name="choice" value="2">
+                            <span>${quizInfo[index].choices[1]}</span>
+                        </label>
+                        <label for="choices3">
+                            <input type="radio" id="choices3" name="choice" value="3">
+                            <span>${quizInfo[index].choices[2]}</span>
+                        </label>
+                        <label for="choices4">
+                            <input type="radio" id="choices4" name="choice" value="4">
+                            <span>${quizInfo[index].choices[3]}</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="quiz__footer">
+                    <div class="answer none">${quizInfo[index].answer}</div>
+                    <div class="desc none">${quizInfo[index].desc}</div>
+                    <button class="confirm">정답 확인하기</button>
+                    <button class="next none">다음 문제</button>
+                </div>
+            </div>
+        `
+
+            quizWrap.innerHTML = quizWrapTag;
+
+            // highlight.min.js 불러오고 실행
+            const highlightScript = document.createElement('script');
+            highlightScript.src = "assets/js/highlight.min.js";
+            document.body.appendChild(highlightScript);
+
+            highlightScript.onload = function () {
+                hljs.highlightAll();
+            };
+
+            // 선택자 
+            const quizConfirm = quizWrap.querySelector(".confirm");
+            const quizNext = quizWrap.querySelector(".next");
+            // 사용자의 답변을 저장하는 배열
+            let userAnswers = [];
+            // 정답 버튼을 클릭
+            quizConfirm.addEventListener("click", () => {
+                // 사용자가 클릭한 정답 확인
+                const quizChecked = quizWrap.querySelector("input[name='choice']:checked"); // 'choice' -> 'chocie' 오타 수정
+                if (quizChecked) {
+                    const userAnswer = quizChecked.value; // 사용자가 선택한 답변 값
+                    const quizAnswer = quizInfo[currentIndex].answer; // 정답
+                    const quizElement = quizWrap.querySelector(".quiz");
+                    const answerElement = quizWrap.querySelector(".answer");
+                    const descElement = quizWrap.querySelector(".desc");
+
+                    // 사용자 답변과 정답 비교
+                    if (userAnswer === quizAnswer) {
+                        quizElement.classList.add("good"); // 정답일 경우 'good' 클래스 추가
+                    } else {
+                        quizElement.classList.add("bad"); // 오답일 경우 'bad' 클래스 추가
+                        answerElement.classList.remove("none"); // 오답일 경우 정답 표시
+                    }
+                    quizConfirm.classList.add("none"); // 정답 확인 버튼 감추기
+                    quizNext.classList.remove("none"); // 다음 문제 버튼 표시
+                    descElement.classList.remove("none"); // 설명 표시
+                    // 마지막 문제인지 확인
+                    if (currentIndex === quizInfo.length - 1) {
+                        showScore(); // 마지막 문제일 경우 결과 표시
+                    }
+                } else {
+                    alert("보기를 선택해 주세요!"); // 사용자가 답변을 선택하지 않은 경우 경고창 표시
+                }
+            });
+
+            // 퀴즈 종료 후에 결과 표시
+            function showScore() {
+                let correctCount = 0; // 맞은 문제 수
+                const totalQuestions = quizInfo.length; // 총 문제 수
+
+                // 각 문제에 대해 사용자의 답변과 정답을 비교하여 맞은 문제 수 계산
+                for (let i = 0; i < totalQuestions; i++) {
+                    if (userAnswers[i] === quizInfo[i].answer) {
+                        correctCount++;
+                    }
+                }
+
+                // 점수 계산
+                const score = Math.round((correctCount / totalQuestions) * 100); // 백분율로 변환하여 점수 계산
+
+                // 점수 출력
+                console.log(`총 ${totalQuestions}문제 중 ${correctCount}문제를 맞추셨습니다.`);
+                console.log(`점수: ${score}점`);
+            }
+
+            quizNext.addEventListener("click", () => {
+                if (currentIndex < quizInfo.length - 1) {
+                    currentIndex++;             // 문제 번호 증가
+                    updateQuiz(currentIndex);   // 퀴즈 반영
+                } else {
+                    alert("퀴즈가 종료되었습니다.");
+                }
+            })
+        }
+        // 퀴즈 종료 후에 결과 표시
+
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            updateQuiz(currentIndex);
+        });
+    </script>
+
 </body>
 
 </html>
