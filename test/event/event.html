@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>합격</title>
+    <style>
+        @font-face {
+            font-family: 'IMHyemin';
+            font-weight: 400;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminRegular.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminRegular.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminRegular.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminRegular.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminRegular.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'IMHyemin';
+            font-weight: 700;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminBold.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminBold.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminBold.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminBold.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminBold.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'UtoImageTree';
+            font-weight: 300;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeLight.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeLight.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeLight.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeLight.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeLight.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'UtoImageTree';
+            font-weight: 400;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeRegular.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeRegular.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeRegular.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeRegular.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeRegular.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: 'UtoImageTree';
+            font-weight: 700;
+            font-style: normal;
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeBold.eot');
+            src: url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeBold.eot?#iefix') format('embedded-opentype'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeBold.woff2') format('woff2'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeBold.woff') format('woff'),
+                url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeBold.ttf') format("truetype");
+            font-display: swap;
+        }
+
+        .UtoImageTree {
+            font-family: "UtoImageTree";
+        }
+
+        .UtoImageTree300 {
+            font-family: "UtoImageTree";
+            font-weight: 300;
+        }
+
+        .UtoImageTree400 {
+            font-family: "UtoImageTree";
+            font-weight: 400;
+        }
+
+        .UtoImageTree700 {
+            font-family: "UtoImageTree";
+            font-weight: 700;
+        }
+
+        :root {
+            --fontC: "IMHyemin";
+            --fontU: "UtoImageTree"
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        body {
+            background-image: url(../assets/img/bg01.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+        }
+
+        body::after {
+            z-index: -1;
+        }
+
+        #quizResult {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1000;
+        }
+
+        main nav {}
+
+        main nav ul {
+            margin-top: 20px;
+        }
+
+        main nav ul li {}
+
+        main nav ul li a {}
+    </style>
+</head>
+
+<body>
+    <div id="quizResult"></div>
+    <script>
+        // 로컬 저장소에서 결과를 가져와 표시
+        const quizScore = localStorage.getItem("quizScore");
+        const quizResult = localStorage.getItem("quizResult");
+        const resultElement = document.getElementById("quizResult");
+
+        resultElement.innerHTML = + `<p>${quizScore}</p>`
+        resultElement.innerHTML += `<h1>총 점수: ${quizScore}점</h1>`;
+        resultElement.innerHTML += `<p>${quizResult}</p>`;
+
+        // URL에서 맞힌 문제의 수를 추출
+        const urlParams = new URLSearchParams(window.location.search);
+        const correctCount = urlParams.get('correct');
+
+        // 결과를 표시할 요소를 가져옴
+        const resultElement = document.getElementById("quizResult");
+
+        // 맞힌 문제의 수를 화면에 표시
+        if (correctCount !== null) {
+            resultElement.innerHTML = `<p>맞힌 문제 수: ${correctCount}개</p>`;
+        } else {
+            resultElement.innerHTML = "<p>맞힌 문제 수 정보를 찾을 수 없습니다.</p>";
+        }
+    </script>
+    </script>
+</body>
+
+</html>

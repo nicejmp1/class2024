@@ -8,6 +8,8 @@
 
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/default.min.css">
+
+
 </head>
 
 <body>
@@ -61,15 +63,14 @@
             </div>
         </div> -->
     </div>
+    <div id="quizResult"></div>
     </main>
     <!-- //main -->
+
 
     <footer id="footer">
         <a href="mailto:nicejpm@naver.com">nicejpm@naver.com</a>
     </footer>
-
-    <script src="assets/js/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
 
     <!-- <script>
         // 선택자 
@@ -143,7 +144,20 @@
         });
     </script>
     //script Type No.1 -->
+    <!-- <script>
+        const password = "qkrwjdals12";
 
+        // document.addEventListener("DOMContentLoaded", () => {
+        //     // 새로고침 시 패스워드 입력
+        //     const userInput = prompt("새로고침을 하려면 패스워드를 입력하세요:");
+        //     if (userInput === null) {
+        //         alert("패스워드 입력이 취소되었습니다. 페이지를 새로 고칠 수 없습니다.");
+        //     } else if (userInput !== password) {
+        //         alert("잘못된 패스워드입니다. 페이지를 새로 고칠 수 없습니다.");
+        //     }
+        // });
+
+    </script> -->
     <script>
         // 선택자
         const quizWrap = document.querySelector(".quiz__wrap");
@@ -215,6 +229,9 @@
 
         // 변수
         let currentIndex = 0;   // 현재 문제애 대한 값
+        let correctAnswers = 0; // 맞춘 문제 수
+        const totalQuestions = quizInfo.length; // 총 문제 수
+
 
         const updateQuiz = (index) => {
             let quizWrapTag = `
@@ -250,7 +267,10 @@
                     <button class="confirm">정답 확인하기</button>
                     <button class="next none">다음 문제</button>
                 </div>
+                <div id="quizResult">
+                </div>
             </div>
+            
         `
 
             quizWrap.innerHTML = quizWrapTag;
@@ -267,8 +287,6 @@
             // 선택자 
             const quizConfirm = quizWrap.querySelector(".confirm");
             const quizNext = quizWrap.querySelector(".next");
-            // 사용자의 답변을 저장하는 배열
-            let userAnswers = [];
             // 정답 버튼을 클릭
             quizConfirm.addEventListener("click", () => {
                 // 사용자가 클릭한 정답 확인
@@ -290,46 +308,43 @@
                     quizConfirm.classList.add("none"); // 정답 확인 버튼 감추기
                     quizNext.classList.remove("none"); // 다음 문제 버튼 표시
                     descElement.classList.remove("none"); // 설명 표시
-                    // 마지막 문제인지 확인
-                    if (currentIndex === quizInfo.length - 1) {
-                        showScore(); // 마지막 문제일 경우 결과 표시
+
+                    // 사용자가 맞췄을 경우
+                    if (userAnswer === quizAnswer) {
+                        correctAnswers++; // 맞춘 문제 수 증가
                     }
+
                 } else {
                     alert("보기를 선택해 주세요!"); // 사용자가 답변을 선택하지 않은 경우 경고창 표시
                 }
             });
-
-            // 퀴즈 종료 후에 결과 표시
-            function showScore() {
-                let correctCount = 0; // 맞은 문제 수
-                const totalQuestions = quizInfo.length; // 총 문제 수
-
-                // 각 문제에 대해 사용자의 답변과 정답을 비교하여 맞은 문제 수 계산
-                for (let i = 0; i < totalQuestions; i++) {
-                    if (userAnswers[i] === quizInfo[i].answer) {
-                        correctCount++;
-                    }
-                }
-
-                // 점수 계산
-                const score = Math.round((correctCount / totalQuestions) * 100); // 백분율로 변환하여 점수 계산
-
-                // 점수 출력
-                console.log(`총 ${totalQuestions}문제 중 ${correctCount}문제를 맞추셨습니다.`);
-                console.log(`점수: ${score}점`);
-            }
 
             quizNext.addEventListener("click", () => {
                 if (currentIndex < quizInfo.length - 1) {
                     currentIndex++;             // 문제 번호 증가
                     updateQuiz(currentIndex);   // 퀴즈 반영
                 } else {
-                    alert("퀴즈가 종료되었습니다.");
-                }
-            })
-        }
-        // 퀴즈 종료 후에 결과 표시
+                    // 모든 문제를 푼 경우
+                    const score = (correctAnswers / totalQuestions) * 100; // 점수 계산
+                    const resultElement = document.getElementById("quizResult");
+                    const correctCount = correctAnswers;
 
+                    alert("퀴즈가 종료되었습니다.");
+                    resultElement.innerHTML = `<p>총 점수: ${score.toFixed(2)}점</p>`;
+                    resultElement.innerHTML += `<p>맞힌 문제 수: ${correctCount}개</p>`;
+                    if (score >= 60) {
+                        resultElement.innerHTML += "<p>합격</p>";
+                    } else {
+                        resultElement.innerHTML += "<p>불합격</p>";
+                    }
+                    // 퀴즈 결과를 URL에 포함하여 다른 페이지로 이동
+                    const quizScore = score.toFixed(2);
+                    const quizResult = score >= 60 ? "Pass" : "Fail";
+                    const url = `event/event.html?score=${quizScore}&result=${quizResult}&correct=${correctCount}`;
+                    window.location.href = url;
+                }
+            });
+        }
 
 
         document.addEventListener("DOMContentLoaded", () => {
