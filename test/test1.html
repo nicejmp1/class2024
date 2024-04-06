@@ -319,6 +319,7 @@
                 }
             });
 
+
             quizNext.addEventListener("click", () => {
                 if (currentIndex < quizInfo.length - 1) {
                     currentIndex++;             // 문제 번호 증가
@@ -332,20 +333,20 @@
                     alert("퀴즈가 종료되었습니다.");
                     resultElement.innerHTML = `<p>총 점수: ${score.toFixed(2)}점</p>`;
                     resultElement.innerHTML += `<p>맞힌 문제 수: ${correctCount}개</p>`;
-                    if (score >= 60) {
-                        resultElement.innerHTML += "<p>합격</p>";
-                    } else {
-                        resultElement.innerHTML += "<p>불합격</p>";
-                    }
+
+                    // 퀴즈 결과를 로컬 저장소에 저장
+                    localStorage.setItem("quizScore", score.toFixed(2));
+                    localStorage.setItem("quizResult", score >= 60 ? "합격" : "불합격");
+                    localStorage.setItem("totalQuestions", totalQuestions); // 총 문제 수 저장
+
                     // 퀴즈 결과를 URL에 포함하여 다른 페이지로 이동
                     const quizScore = score.toFixed(2);
                     const quizResult = score >= 60 ? "Pass" : "Fail";
-                    const url = `event/event.html?score=${quizScore}&result=${quizResult}&correct=${correctCount}`;
+                    const url = `event/event.html?score=${quizScore}&result=${quizResult}&correct=${correctAnswers}&total=${totalQuestions}`;
                     window.location.href = url;
                 }
             });
         }
-
 
         document.addEventListener("DOMContentLoaded", () => {
             updateQuiz(currentIndex);

@@ -144,29 +144,25 @@
 <body>
     <div id="quizResult"></div>
     <script>
-        // 로컬 저장소에서 결과를 가져와 표시
-        const quizScore = localStorage.getItem("quizScore");
-        const quizResult = localStorage.getItem("quizResult");
         const resultElement = document.getElementById("quizResult");
 
-        resultElement.innerHTML = + `<p>${quizScore}</p>`
+        // 로컬 저장소에서 총 점수와 합격 여부를 가져와 표시
+        const quizScore = localStorage.getItem("quizScore");
+        const quizResult = localStorage.getItem("quizResult");
+        const totalQuestions = localStorage.getItem("totalQuestions");
+
+        // 총 점수와 합격 여부를 결과에 추가
         resultElement.innerHTML += `<h1>총 점수: ${quizScore}점</h1>`;
         resultElement.innerHTML += `<p>${quizResult}</p>`;
 
-        // URL에서 맞힌 문제의 수를 추출
+        // 총 문제 수와 맞힌 문제 수를 가져와서 표시
         const urlParams = new URLSearchParams(window.location.search);
         const correctCount = urlParams.get('correct');
 
-        // 결과를 표시할 요소를 가져옴
-        const resultElement = document.getElementById("quizResult");
-
-        // 맞힌 문제의 수를 화면에 표시
-        if (correctCount !== null) {
-            resultElement.innerHTML = `<p>맞힌 문제 수: ${correctCount}개</p>`;
-        } else {
-            resultElement.innerHTML = "<p>맞힌 문제 수 정보를 찾을 수 없습니다.</p>";
-        }
-    </script>
+        // 총 문제 수와 맞힌 문제 수를 결과에 추가
+        resultElement.innerHTML += totalQuestions !== null && correctCount !== null ?
+            `<p>총 문제 수: ${totalQuestions} 중 (${correctCount}개)</p>` :
+            "<p>문제 수 정보를 찾을 수 없습니다.</p>";
     </script>
 </body>
 
