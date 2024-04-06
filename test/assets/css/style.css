@@ -1,0 +1,434 @@
+@font-face {
+    font-family: 'IMHyemin';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminRegular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminRegular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminRegular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminRegular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminRegular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IMHyemin';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/dgb/IMHyeminBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'UtoImageTree';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeLight.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeLight.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeLight.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeLight.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'UtoImageTree';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeRegular.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeRegular.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeRegular.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeRegular.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeRegular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'UtoImageTree';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/utoImagetree/UtoImageTreeBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+.UtoImageTree {
+    font-family: "UtoImageTree";
+}
+
+.UtoImageTree300 {
+    font-family: "UtoImageTree";
+    font-weight: 300;
+}
+
+.UtoImageTree400 {
+    font-family: "UtoImageTree";
+    font-weight: 400;
+}
+
+.UtoImageTree700 {
+    font-family: "UtoImageTree";
+    font-weight: 700;
+}
+
+:root {
+    --fontC: "IMHyemin";
+    --fontU: "UtoImageTree"
+}
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--fontU);
+    /* overflow: hidden; */
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+body {
+    background-image: url(../img/bg01.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+body::after {
+    content: '';
+    background-color: #86671363;
+    border-radius: 30px;
+    width: 90%;
+    height: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* 절대 위치 요소를 가운데로 이동 */
+    z-index: -1;
+}
+
+/* header */
+#header {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header h1 a {
+    display: inline-block;
+    color: #866713;
+    padding: 20px;
+    font-size: 40px;
+    font-family: var(--fontC);
+}
+
+#header nav {
+    padding-right: 30px;
+
+}
+
+#header nav li {
+    display: inline-block;
+    padding: 1.5px;
+}
+
+#header nav li a {
+    display: inline-block;
+    font-size: 20px;
+    padding: 10px 10px;
+    /* 패딩 값을 조정하여 텍스트와 보더 사이의 간격을 조절합니다. */
+    border: 3px solid #866713;
+    border-radius: 30px;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    line-height: 0.7;
+}
+
+#header nav li.active a {
+    background-color: #BF9A47;
+    color: #FFEECA;
+}
+
+#header nav li a:hover {
+    transition: 0.3s all;
+    background-color: #BF9A47;
+    color: #FFEECA;
+}
+
+/* footer */
+#footer {
+    position: fixed;
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+#footer a {
+    display: block;
+    color: #866713;
+    padding: 30px;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+/* quiz__wrap */
+.quiz__wrap {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.quiz__wrap .quiz {
+    width: 700px;
+    background-color: #fff;
+    padding: 20px 20px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.quiz__header {
+    color: #696969;
+    margin-bottom: 20px;
+}
+
+.quiz__main {
+    float: left;
+    width: 60%;
+    box-sizing: border-box;
+}
+
+.quiz__main .question {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-style: normal;
+    line-height: 1.4;
+}
+
+.quiz__main .question-precode pre,
+.quiz__main .question-precode code {
+    font-size: 18px;
+}
+
+.quiz__main .question em {
+    font-size: 24px;
+    font-style: normal;
+    line-height: 1.4;
+}
+
+.quiz__main .question span {
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+.quiz__main .input input {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #0058f0;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.quiz__main2 {
+    margin-top: 30px;
+    padding: 30px;
+    float: right;
+    width: 40%;
+    box-sizing: border-box;
+}
+
+.quiz__main2 .choices {
+    margin-bottom: 20px;
+}
+
+.quiz__main2 .choices label {
+    display: block;
+    width: 100%;
+}
+
+.quiz__main2 .choices label input {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+.quiz__main2 .choices label span {
+    border: 1px solid #eee;
+    padding: 17px;
+    display: flex;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    font-size: 16px;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.quiz__main2 .choices label span:hover {
+    border-color: #0058f0;
+    color: #0058f0;
+    box-shadow: 1px 1px 5px #0058f071;
+}
+
+.quiz__main2 .choices label span::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 4px #0058f0;
+    margin-right: 13px;
+    transition: all 0.3s;
+}
+
+.quiz__main2 .choices label input:checked+span::before {
+    box-shadow: inset 0 0 0 9px #0058f0;
+}
+
+.quiz__main2 .choices label input:checked+span {
+    border-color: #0058f0;
+    color: #0058f0;
+    box-shadow: 1px 1px 3px #0058f071;
+    background-color: #0058f044;
+
+}
+
+.quiz__footer {
+    clear: both;
+    padding: 15px;
+}
+
+.quiz__footer .answer,
+.quiz__footer .desc {
+    border: 1px solid #0058f0;
+    padding: 20px;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.quiz__footer .answer::before {
+    content: '👍 정답 : ';
+}
+
+.quiz__footer .desc::before {
+    content: '😻 설명 :';
+}
+
+.quiz__footer .confirm {
+    background-color: #0058f0;
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    border: 0;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s;
+}
+
+.quiz__footer .confirm:hover {
+    background-color: transparent;
+    border: 1px dashed #0058f0;
+    color: #0058f0;
+    cursor: pointer;
+}
+
+.quiz__footer .next {
+    background-color: #21488c;
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    border: 0;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s;
+}
+
+.quiz__footer .next:hover {
+    background-color: transparent;
+    border: 1px dashed #21488c;
+    color: #21488c;
+    cursor: pointer;
+}
+
+/* good, bad */
+.quiz__wrap .quiz.good {
+    position: relative;
+}
+
+
+.quiz__wrap .quiz.good::before {
+    content: '';
+    width: 130px;
+    height: 130px;
+    border: 10px solid red;
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 100;
+}
+
+
+.quiz__wrap .quiz.bad {
+    position: relative;
+}
+
+.quiz__wrap .quiz.bad::before {
+    content: '';
+    width: 170px;
+    height: 10px;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    border-radius: 30px;
+    transform: rotate(45deg);
+    z-index: 100;
+}
+
+.quiz__wrap .quiz.bad::after {
+    content: '';
+    width: 170px;
+    height: 10px;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    border-radius: 30px;
+    transform: rotate(-45deg);
+    z-index: 100;
+}
