@@ -209,8 +209,8 @@ body::after {
 }
 
 .quiz__wrap .quiz {
-    width: calc(100% - 400px);
-    height: calc(100vh - 200px);
+    width: calc(100% - 350px);
+    height: calc(100vh - 180px);
     background-color: #fff;
     padding: 30px 30px;
     border-radius: 10px;
