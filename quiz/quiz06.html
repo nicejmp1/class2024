@@ -44,10 +44,38 @@
         // 문제 정보 
         let quizInfo = [];
 
-        // 문제 가져오기
+        // 문제 가져오기 (json 파일을 이용해서 변경)
         const fetchQuiz = () => {
-            fetch("")
+            fetch("https://nicejmp1.github.io/class2024/json/gineungsaJC2005_02.json")
+                .then(res => res.json())
+                .then(items => {
+                    console.log(items);
+                    quizInfo = items.map((item, idx) => {
+                        const formattedQuiz = {
+                            Date: "2005년 2회",
+                            Type: item.subject,
+                            question: item.question,
+                            desc: item.desc,
+                            answer: item.correct_answer
+                        }
+                        // 보기 가져오기 
+                        const choices = [...item.incorrect_answers, item.correct_answer];
+
+                        // 보기 랜덤 섞기
+                        for (let i = choices.length - 1; i > 0; i--) {
+                            const j = Math.floor(Math.random() * (i + 1));
+                            [choices[i], choices[j]] = [choices[j], choices[i]];
+                        }
+
+                        // 보기 추가하기
+                        formattedQuiz.choices = choices;
+
+                        return formattedQuiz;
+                    });
+                    console.log(quizInfo);
+                })
         }
+        fetchQuiz();
     </script>
 </body>
 
