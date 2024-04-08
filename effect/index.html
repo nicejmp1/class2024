@@ -32,11 +32,16 @@
         }
 
         main {
+            width: 100%;
             height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 1%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 10000;
         }
 
         main h1 {
@@ -44,9 +49,20 @@
         }
 
         main nav li {
-            border: 1px solid #000;
-            padding: 10px 20px;
+            text-align: center;
+            border: 1px solid #999265;
+            padding: 10px 30px;
             margin: 2px;
+            background-color: rgba(0, 0, 0, .1);
+            backdrop-filter: blur(10px);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        main nav li:hover {
+            backdrop-filter: blur(0px);
+            background-color: rgba(0, 0, 0, 0);
+
         }
     </style>
 </head>
@@ -55,9 +71,7 @@
     <div id="canvas"></div>
 
     <main>
-        <h1>
-            <a href="index.html">Effect</a>
-        </h1>
+
         <nav>
             <ul>
                 <li><a href="mouse01.html">Mouse</a></li>
@@ -163,6 +177,16 @@
             renderer.render(scene, camera);
         }
         animate();
+
+        // 화면 사이트 설정
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        }
+        window.addEventListener("resize", onWindowResize);
+
+
     </script>
 </body>
 
