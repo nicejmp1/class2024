@@ -229,9 +229,6 @@
 
         // 변수
         let currentIndex = 0;   // 현재 문제애 대한 값
-        let correctAnswers = 0; // 맞춘 문제 수
-        const totalQuestions = quizInfo.length; // 총 문제 수
-
 
         const updateQuiz = (index) => {
             let quizWrapTag = `
@@ -319,6 +316,8 @@
                 }
             });
 
+            let correctAnswers = 0; // 맞춘 문제 수
+            const totalQuestions = quizInfo.length; // 총 문제 수
 
             quizNext.addEventListener("click", () => {
                 if (currentIndex < quizInfo.length - 1) {
