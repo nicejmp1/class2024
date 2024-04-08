@@ -49,11 +49,11 @@
             fetch("https://nicejmp1.github.io/class2024/json/gineungsaJC2005_02.json")
                 .then(res => res.json())
                 .then(items => {
-                    console.log(items);
-                    quizInfo = items.map((item, idx) => {
+                    // console.log(items);
+                    quizInfo = items.map(item => {
                         const formattedQuiz = {
-                            Date: "2005년 2회",
-                            Type: item.subject,
+                            date: "2005년 2회",
+                            type: item.subject,
                             question: item.question,
                             desc: item.desc,
                             answer: item.correct_answer
@@ -70,12 +70,61 @@
                         // 보기 추가하기
                         formattedQuiz.choices = choices;
 
+                        // 결과값 출력
                         return formattedQuiz;
                     });
-                    console.log(quizInfo);
+                    // console.log(quizInfo);
+
+                    // 문제 출력
+                    updateQuiz();
                 })
         }
-        fetchQuiz();
+
+        // 문제 출력
+        const updateQuiz = () => {
+            const quizArray = [];
+
+            quizInfo.forEach((quiz, index) => {
+                quizArray.push(`
+                    <div class="quiz">
+                        <div class="quiz__header">${quizInfo.date} ${quizInfo.type}</div>
+                        <div class="quiz__main">
+                            <div class="question">${index + 1}. ${quizInfo[index].question}</div>
+                                <div class="choices">
+                                    <label for="choice${index} -1">
+                                        <input type="radio" id="choice${index} -1" name="choice-${index}" value="1">
+                                        <span>${quizInfo[index].choices[0]}</span>
+                                    </label>
+                                    <label for="choice${index} -2">
+                                        <input type="radio" id="choice${index} -2" name="choice-${index}" value="2">
+                                        <span>${quizInfo[index].choices[1]}</span>
+                                    </label>
+                                    <label for="choice${index} -3">
+                                        <input type="radio" id="choice${index} -3" name="choice-${index}" value="3">
+                                        <span>${quizInfo[index].choices[2]}</span>
+                                    </label>
+                                    <label for="choice${index} -4">
+                                        <input type="radio" id="choice${index} -4" name="choice-${index}" value="4">
+                                        <span>${quizInfo[index].choices[3]}</span>
+                                    </label>
+                                </div>
+                            <div class="answer none">${quizInfo.answer}</div>
+                            <div class="desc none">${quizInfo.desc}</div>
+                        </div>
+                        <div class="quiz__footer">
+                            <button class="confirm">정답 확인하기</button>
+                            <button class="next none">다음 문제</button>
+                        </div>
+                    </div>
+                `)
+            })
+
+            quizWrap.innerHTML = quizArray.join("");
+        }
+        // 페이지가 로드된 후 실행
+        document.addEventListener("DOMContentLoaded", () => {
+            fetchQuiz();
+        });
     </script>
 </body>
 
