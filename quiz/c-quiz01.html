@@ -5,15 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C-퀴즈 01</title>
-
     <link rel="stylesheet" href="assets/css/quiz.css">
 </head>
 
 <body>
     <header id="header">
-        <h1>
-            <a href="index.html">Quiz</a>
-        </h1>
+        <h1><a href="index.html">Quiz</a></h1>
         <nav>
             <ul>
                 <li class="active"><a href="c-quiz01.html">1</a></li>
@@ -38,109 +35,76 @@
     <!-- //footer -->
 
     <script>
-        // 선택자
-        const quizWrap = document.querySelector(".quiz__wrap");
-        const quizConfirm = document.querySelector(".confirm");
-        const quizNext = document.querySelector(".next");
+        document.addEventListener("DOMContentLoaded", () => {
+            fetchQuiz();
+        });
 
-        // 문제 정보 
-        let quizInfo = [];
-
-        // 문제 가져오기 (json 파일을 이용해서 변경)
         const fetchQuiz = () => {
             fetch("https://nicejmp1.github.io/class2024/json/gineungsaJC2005_02.json")
                 .then(res => res.json())
                 .then(items => {
-                    // console.log(items);
-                    quizInfo = items.map(item => {
+                    const quizWrap = document.querySelector(".quiz__wrap");
+                    const quizInfo = items.map(item => {
                         const formattedQuiz = {
                             date: "2005년 2회",
                             type: item.subject,
                             question: item.question,
                             desc: item.desc,
                             answer: item.correct_answer
-                        }
-                        // 보기 가져오기 
-                        const choices = [...item.incorrect_answers, item.correct_answer];
-
-                        // 보기 랜덤 섞기
-                        for (let i = choices.length - 1; i > 0; i--) {
-                            const j = Math.floor(Math.random() * (i + 1));
-                            [choices[i], choices[j]] = [choices[j], choices[i]];
-                        }
-
-                        // 보기 추가하기
-                        formattedQuiz.choices = choices;
-
-                        // 결과값 출력
+                        };
+                        formattedQuiz.choices = []; // 보기가 없는 경우 빈 배열로 설정
                         return formattedQuiz;
                     });
-                    // console.log(quizInfo);
-
-                    // 문제 출력
-                    updateQuiz();
+                    let currentQuizIndex = 0;
+                    updateQuiz(quizWrap, quizInfo[currentQuizIndex]);
+                    const quizNext = document.querySelector(".next");
+                    quizNext.addEventListener("click", () => {
+                        if (currentQuizIndex < quizInfo.length - 1) { // 현재 인덱스가 마지막 문제가 아닌 경우에만 다음 문제 호출
+                            currentQuizIndex++;
+                            updateQuiz(quizWrap, quizInfo[currentQuizIndex]);
+                        } else {
+                            alert("모든 문제를 다 푸셨습니다!");
+                        }
+                    });
                 })
-        }
+                .catch(error => console.error('Error fetching quiz:', error));
+        };
 
-        let currentQuizIndex = 0;
-        // 문제 출력
-        const updateQuiz = () => {
-            const quiz = quizInfo[currentQuizIndex];
 
+        const updateQuiz = (quizWrap, quiz) => {
             const quizHtml = `
-                    <div class="quiz">
-                        <div class="quiz__header">${quiz.date} ${quiz.type}</div>
-                        <div class="quiz__main">
-                            <div class="question">${currentQuizIndex + 1}. ${quiz.question}</div>
-                            <div class="input">
-                                <input type="text" placeholder="정답을 입력해주세요!">
-                            </div>
-                            <div class="answer none">${quiz.answer}</div>
-                            <div class="desc none">${quiz.desc}</div>
-                        </div>
-                        <div class="quiz__footer">
-                            <button class="confirm">정답 확인하기</button>
-                            <button class="next">다음 문제</button>
-                        </div>
-                    </div>
-                `;
-
+        <div class="quiz">
+            <div class="quiz__header">${quiz.date} ${quiz.type}</div>
+            <div class="quiz__main">
+                <div class="question">${quiz.question}</div>
+                <div class="input">
+                    <input type="text" placeholder="정답을 입력해주세요!">
+                </div>
+                <div class="answer none">${quiz.answer}</div>
+                <div class="desc none">${quiz.desc}</div>
+            </div>
+            <div class="quiz__footer">
+                <button class="confirm">정답 확인하기</button>
+                <button class="next">다음 문제</button>
+            </div>
+        </div>
+    `;
             quizWrap.innerHTML = quizHtml;
 
-            // 클릭 이벤트 핸들러 연결
-            quizConfirm.addEventListener("click", userAnswer);
-            quizNext.addEventListener("click", nextquiz);
-        }
-
-        document.addEventListener("click", () => {
-            const quizElements = document.querySelector(".quiz"); // 모든 퀴즈 요소 선택
-            const quizInput = document.querySelector(".quiz input[type='text']");
-
-            let correctCount = 0; // 맞은 문제의 개수를 세는 변수
-
-            quizElements.forEach((quizElement, index) => {
-                const userAnswer = quizInput[index].value; // 현재 퀴즈의 사용자 입력 가져오기
-                const quizAnswer = quizElement.querySelector(".answer").textContent;
-                const quizDesc = quizElement.querySelector(".desc");
-
-                if (userAnswer == quizAnswer) {
-                    correctCount++;
+            const quizConfirm = document.querySelector(".confirm");
+            quizConfirm.addEventListener("click", () => {
+                const userAnswer = document.querySelector(".quiz input[type='text']").value;
+                const quizDesc = document.querySelector(".quiz .desc");
+                if (userAnswer === quiz.answer) {
                     quizDesc.textContent = "정답입니다.";
                 } else {
                     quizDesc.textContent = "오답입니다.";
                 }
                 quizDesc.classList.remove("none");
             });
+        };
 
 
-
-            const totalScore = ((correctCount / quizElements.length) * 100).toFixed(2); // 점수 계산
-            alert(`당신의 점수는 ${totalScore}점입니다. 맞은 문제 수: ${correctCount}/${quizElements.length}`);
-        });
-        // 페이지가 로드된 후 실행
-        document.addEventListener("DOMContentLoaded", () => {
-            fetchQuiz();
-        });
     </script>
 </body>
 
