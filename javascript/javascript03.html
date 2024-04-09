@@ -843,13 +843,58 @@
             func1();
         }
         // 22. 함수 : 재귀 함수
+        {
+            // 01 반복문을 사용하는 경우  
+            function func(num) {
+                for (let i = 0; i < num; i++) {
+                    console.log("19. 실행되었습니다.");
+                }
+            }
+            func(10);
 
-        // 23. 함수 : 콜백 함
-        // 24. 함수 : 비동기 방식 : 콜백 함
-        // 25. 함수 : 비동기 방식 : 프로미
-        // 26. 함수 : 비동기 방식 : asyne/awai
-        // 27. 함수 : 중첩 함
-        // 28. 함수 : 클로
+            // 02. 재귀함수를 사용하기
+            function func1(num) {
+                if (num < 1) return;
+
+                console.log("20. 실행되었습니다.");
+                func1(num - 1); // 재귀 호출
+            }
+            func1(10);
+        }
+
+        // 23. 함수 : 콜백 함수
+        {
+            // 01 이벤트
+            function func() {
+                console.log("21. 실행되었습니다.");
+            }
+            // btn.addEventListener("click", func);
+
+            // 02  함수를 다른 함수의 인자로 전달
+            function func1() {
+                console.log("22. 실행되었습니다.");
+            }
+            function func2(callback) {
+                callback();
+            }
+            func2(func1);
+
+            // 03 반복문을 사용하는 경우
+            function func3(num) {
+                console.log(num + ". 실행되었습니다.")
+            }
+            function func4(callback) {
+                for (let i = 23; i < 28; i++) {
+                    callback(i)
+                }
+            }
+            func4(func3);
+        }
+        // 24. 함수 : 비동기 방식 : 콜백 함수
+        // 25. 함수 : 비동기 방식 : 프로미스
+        // 26. 함수 : 비동기 방식 : asyne/await
+        // 27. 함수 : 중첩 함수
+        // 28. 함수 : 클로저
 
     </script>
 
