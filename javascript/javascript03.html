@@ -68,7 +68,7 @@
                 <li><a href="#">23. 함수 : 콜백 함수</a></li>
                 <li><a href="#">24. 함수 : 비동기 방식 : 콜백 함수</a></li>
                 <li><a href="#">25. 함수 : 비동기 방식 : 프로미스</a></li>
-                <li><a href="#">26. 함수 : 비동기 방식 : asyne/await</a></li>
+                <li><a href="#">26. 함수 : 비동기 방식 : async/await</a></li>
                 <li><a href="#">27. 함수 : 중첩 함수</a></li>
                 <li><a href="#">28. 함수 : 클로저</a></li>
 
@@ -891,8 +891,58 @@
             func4(func3);
         }
         // 24. 함수 : 비동기 방식 : 콜백 함수
+        {
+            // 동기 : 
+            // 작업이 순서대로
+            // 코드는 위에서 아래로 순차적으로 진행, 한 작업이 끝나면 다음 작업이 시작
+
+
+            // 비동기 : 
+            // 작업이 순서와 관계없이 여러 작업 처리할 수 있음.
+            // 콜백함수, 프로미스, anync/await 등을 사용하여 작업이 완료될 때까지 대기하지 않고 다른 작업을 진행할 수 있음
+
+            // 01. 동기적인 함수 호출
+            function func1() {
+                console.log("29. 실행되었습니다.");
+            }
+            function func2() {
+                console.log("30. 실행되었습니다.");
+            }
+            func1();
+            func2();
+
+            // 02 비동기적인 함수 호출
+            function func3() {
+                setTimeout(() => {
+                    console.log("31. 실행되었습니다.");
+                }, 1000)
+            }
+            function func4() {
+                console.log("32. 실행되었습니다.");
+            }
+            func3();
+            func4();
+
+            // 03 콜백함수 비동기 호출
+            {
+                function func5(callback) {
+                    setTimeout(() => {
+                        console.log("33. 실행되었습니다.");
+                        callback();
+                    }, 1000);
+                }
+                function func6() {
+                    console.log("34. 실행되었습니다.");
+                }
+
+                func5(function () {
+                    func6();
+                });
+            }
+
+        }
         // 25. 함수 : 비동기 방식 : 프로미스
-        // 26. 함수 : 비동기 방식 : asyne/await
+        // 26. 함수 : 비동기 방식 : async/await
         // 27. 함수 : 중첩 함수
         // 28. 함수 : 클로저
 
