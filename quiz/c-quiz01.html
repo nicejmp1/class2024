@@ -29,7 +29,6 @@
 
     <main id="main">
         <div class="quiz__wrap"></div>
-        <div class="quiz__check">정답 확인</div>
     </main>
     <!-- //main -->
 
@@ -41,7 +40,8 @@
     <script>
         // 선택자
         const quizWrap = document.querySelector(".quiz__wrap");
-        const quizCheck = document.querySelector(".quiz__check");
+        const quizConfirm = document.querySelector(".confirm");
+        const quizNext = document.querySelector(".next");
 
         // 문제 정보 
         let quizInfo = [];
@@ -82,16 +82,16 @@
                 })
         }
 
-        let quizhtmlindex = 0;
+        let currentQuizIndex = 0;
         // 문제 출력
         const updateQuiz = () => {
-            const quiz = quizInfo[quizhtmlindex];
+            const quiz = quizInfo[currentQuizIndex];
 
             const quizHtml = `
                     <div class="quiz">
                         <div class="quiz__header">${quiz.date} ${quiz.type}</div>
                         <div class="quiz__main">
-                            <div class="question">${quizhtmlindex + 1}. ${quiz.question}</div>
+                            <div class="question">${currentQuizIndex + 1}. ${quiz.question}</div>
                             <div class="input">
                                 <input type="text" placeholder="정답을 입력해주세요!">
                             </div>
@@ -106,61 +106,37 @@
                 `;
 
             quizWrap.innerHTML = quizHtml;
+
+            // 클릭 이벤트 핸들러 연결
+            quizConfirm.addEventListener("click", userAnswer);
+            quizNext.addEventListener("click", nextquiz);
         }
 
-        // 정답 확인 
-        quizCheck.addEventListener("click", () => {
-            const quizElements = document.querySelector(".quiz");
-            const quizConfirm = document.querySelector(".confirm");
-            const quizNext = document.querySelector(".next");
+        document.addEventListener("click", () => {
+            const quizElements = document.querySelector(".quiz"); // 모든 퀴즈 요소 선택
+            const quizInput = document.querySelector(".quiz input[type='text']");
 
-            let correctCount = 0;   // 맞은 문제의 개수를 세는 변수
-            let currentIndex = 0;   // 현재 문제애 대한 값
+            let correctCount = 0; // 맞은 문제의 개수를 세는 변수
 
-
-            //     // 정답 확인
-            // quizConfirm.forEach((button, num)  => {
-            //     button.addEventListener("click", function () {
-            //         const userAnswer = quizInput[num].value         // 사용자가 쓴 정답
-            //         const correctAnswer = quizInfo[num].infoAnswer //정답지의 정답
-
-            //         if (userAnswer == correctAnswer) {
-            //             alert("정답입니다.");
-            //         } else {
-            //             alert("오답입니다.");
-            //         }
             quizElements.forEach((quizElement, index) => {
-                const quizAnswer = quizElement.querySelector(".answer");
+                const userAnswer = quizInput[index].value; // 현재 퀴즈의 사용자 입력 가져오기
+                const quizAnswer = quizElement.querySelector(".answer").textContent;
                 const quizDesc = quizElement.querySelector(".desc");
 
-                if (quizChecked) {
-                    const userAnswer = quizChecked.value;           // 사용자 정답
-                    const correctAnswer = quizAnswer.textContent;   // 정답지 정답
-
-                    if (userAnswer === correctAnswer) {
-                        quizElement.classList.add("good");
-                        correctCount++;             // 문제 번호 증가
-                    } else {
-                        quizElement.classList.add("bad");
-                        quizAnswer.classList.remove("none");
-                    }
-                    quizDesc.classList.remove("none");
+                if (userAnswer == quizAnswer) {
+                    correctCount++;
+                    quizDesc.textContent = "정답입니다.";
+                } else {
+                    quizDesc.textContent = "오답입니다.";
                 }
+                quizDesc.classList.remove("none");
             });
 
-            quizNext.addEventListener("click", () => {
-                if (currentIndex < quizInfo.length - 1) {
-                    currentIndex++;             // 문제 번호 증가
-                    updateQuiz(currentIndex);   // 퀴즈 반영
-                } else {
-                    alert("퀴즈가 종료되었습니다.");
-                }
-            })
+
 
             const totalScore = ((correctCount / quizElements.length) * 100).toFixed(2); // 점수 계산
             alert(`당신의 점수는 ${totalScore}점입니다. 맞은 문제 수: ${correctCount}/${quizElements.length}`);
         });
-
         // 페이지가 로드된 후 실행
         document.addEventListener("DOMContentLoaded", () => {
             fetchQuiz();
