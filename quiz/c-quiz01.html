@@ -110,8 +110,13 @@
 
         // 정답 확인 
         quizCheck.addEventListener("click", () => {
-            const quizElements = document.querySelectorAll(".quiz");
+            const quizElements = document.querySelector(".quiz");
+            const quizConfirm = document.querySelector(".confirm");
+            const quizNext = document.querySelector(".next");
+
             let correctCount = 0;   // 맞은 문제의 개수를 세는 변수
+            let currentIndex = 0;   // 현재 문제애 대한 값
+
 
             //     // 정답 확인
             // quizConfirm.forEach((button, num)  => {
@@ -125,7 +130,6 @@
             //             alert("오답입니다.");
             //         }
             quizElements.forEach((quizElement, index) => {
-                const quizChecked = quizElement.querySelector(`input[name="choice-${index}"]:checked`); // 체크한 정답
                 const quizAnswer = quizElement.querySelector(".answer");
                 const quizDesc = quizElement.querySelector(".desc");
 
@@ -143,6 +147,15 @@
                     quizDesc.classList.remove("none");
                 }
             });
+
+            quizNext.addEventListener("click", () => {
+                if (currentIndex < quizInfo.length - 1) {
+                    currentIndex++;             // 문제 번호 증가
+                    updateQuiz(currentIndex);   // 퀴즈 반영
+                } else {
+                    alert("퀴즈가 종료되었습니다.");
+                }
+            })
 
             const totalScore = ((correctCount / quizElements.length) * 100).toFixed(2); // 점수 계산
             alert(`당신의 점수는 ${totalScore}점입니다. 맞은 문제 수: ${correctCount}/${quizElements.length}`);
