@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background: linear-gradient(to bottom, rgba(1, 141, 210, 0.63), transparent);
+        }
+
+        /* 속성선택자 */
+        div[class^="bubble-"] {
+            width: 1px;
+            height: 11px;
+            background-color: rgba(1, 141, 210, 0.3);
+            border-radius: 50%;
+            position: absolute;
+            bottom: 6px;
+            animation-name: bubble-move;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+        }
+
+        div[class^="bubble-"]::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(-30deg);
+            width: 85%;
+            height: 85%;
+            border-top: 1px solid rgba(255, 255, 255, 1);
+            border-radius: 50%;
+        }
+
+        .bubble-1 {
+            left: 10%;
+            animation-delay: 1000ms;
+        }
+
+        .bubble-2 {
+            left: 20%;
+            animation-delay: 3000ms;
+        }
+
+        .bubble-3 {
+            left: 30%;
+            animation-delay: 2000ms;
+        }
+
+        .bubble-4 {
+            left: 40%;
+            animation-delay: 100ms;
+        }
+
+        .bubble-5 {
+            left: 50%;
+            animation-delay: 500ms;
+        }
+
+        .bubble-6 {
+            left: 60%;
+            animation-delay: 2500ms;
+        }
+
+        .bubble-7 {
+            left: 70%;
+            animation-delay: 3400ms;
+        }
+
+        .bubble-8 {
+            left: 80%;
+            animation-delay: 4500ms;
+        }
+
+        .bubble-9 {
+            left: 15%;
+            animation-delay: 5500ms;
+        }
+
+        .bubble-10 {
+            left: 24%;
+            animation-delay: 6500ms;
+        }
+
+        .bubble-11 {
+            left: 35%;
+            animation-delay: 2340ms;
+        }
+
+        .bubble-12 {
+            left: 45%;
+            animation-delay: 1230ms;
+        }
+
+        .bubble-13 {
+            left: 55%;
+            animation-delay: 5420ms;
+        }
+
+        .bubble-14 {
+            left: 65%;
+            animation-delay: 4240ms;
+        }
+
+        .bubble-15 {
+            left: 75%;
+            animation-delay: 1540ms;
+        }
+
+        .bubble-16 {
+            left: 85%;
+            animation-delay: 200ms;
+        }
+
+        .bubble-17 {
+            left: 43%;
+            animation-delay: 1430ms;
+        }
+
+        .bubble-18 {
+            left: 23%;
+            animation-delay: 1650ms;
+        }
+
+        .bubble-19 {
+            left: 41%;
+            animation-delay: 1560ms;
+        }
+
+        .bubble-20 {
+            left: 72%;
+            animation-delay: 760ms;
+        }
+
+        .jelly-wrapper {
+            width: 256px;
+            height: 310px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            animation: jelly-movement 10s infinite linear;
+        }
+
+        @keyframes jelly-movement {
+            0% {
+                top: 55%;
+                left: 50%;
+            }
+
+            5% {
+                top: 50%
+            }
+
+            10% {
+                top: 55%
+            }
+
+            15% {
+                top: 50%
+            }
+
+            20% {
+                top: 55%
+            }
+
+            25% {
+                left: calc(100% - 150px);
+                top: 50%;
+            }
+
+            30% {
+                top: 55%
+            }
+
+            35% {
+                top: 50%
+            }
+
+            40% {
+                top: 55%
+            }
+
+            45% {
+                top: 50%
+            }
+
+            50% {
+                left: 50%;
+                top: 55%
+            }
+
+
+            55% {
+                top: 50%
+            }
+
+            60% {
+                top: 55%
+            }
+
+            65% {
+                top: 50%
+            }
+
+            70% {
+                top: 55%
+            }
+
+            75% {
+                left: 150px;
+                top: 50%;
+            }
+
+            80% {
+                top: 55%
+            }
+
+            85% {
+                top: 50%
+            }
+
+            90% {
+                top: 55%
+            }
+
+            95% {
+                top: 50%
+            }
+
+            100% {
+                left: 50%;
+                top: 55%;
+            }
+        }
+
+        @keyframes bubble-move {
+            0% {
+                width: 1px;
+                height: 1px;
+                transform: translateY(0);
+            }
+
+            100% {
+                width: 75px;
+                height: 75px;
+                transform: translateY(-1000%);
+            }
+        }
+
+        .jelly-hair {}
+
+        .jelly-body {
+            width: 100%;
+            height: 250px;
+            background: linear-gradient(to bottom, #009dd2, #afd544);
+            border-top-left-radius: 70px;
+            border-top-right-radius: 90px;
+            animation: body-movement 10s infinite linear;
+        }
+
+        @keyframes body-movement {
+            0% {
+                border-top-left-radius: 70px;
+                border-top-right-radius: 90px;
+            }
+
+            20% {
+                border-top-left-radius: 70px;
+                border-top-right-radius: 90px;
+            }
+
+            25% {
+                border-top-left-radius: 80px;
+                border-top-right-radius: 80px;
+            }
+
+            30% {
+                border-top-left-radius: 90px;
+                border-top-right-radius: 70px;
+            }
+
+            70% {
+                border-top-left-radius: 90px;
+                border-top-right-radius: 70px;
+            }
+
+            75% {
+                border-top-left-radius: 80px;
+                border-top-right-radius: 80px;
+            }
+
+            80% {
+                border-top-left-radius: 70px;
+                border-top-right-radius: 90px;
+            }
+
+            100% {
+                border-top-left-radius: 70px;
+                border-top-right-radius: 90px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="bubble-1"></div>
+        <div class="bubble-2"></div>
+        <div class="bubble-3"></div>
+        <div class="bubble-4"></div>
+        <div class="bubble-5"></div>
+        <div class="bubble-6"></div>
+        <div class="bubble-7"></div>
+        <div class="bubble-8"></div>
+        <div class="bubble-9"></div>
+        <div class="bubble-10"></div>
+
+        <div class="jelly-wrapper">
+            <div class="jelly-hair"></div>
+            <div class="jelly-body">
+                <div class="jelly-inner">
+                    <div class="jelly-eye"></div>
+                    <div class="jelly-mouth"></div>
+                    <div class="jelly-hand"></div>
+                </div>
+            </div>
+            <div class="jelly-tentacle1"></div>
+            <div class="jelly-tentacle2"></div>
+            <div class="jelly-tentacle3"></div>
+            <div class="jelly-tentacle4"></div>
+            <div class="jelly-tentacle5"></div>
+        </div>
+
+        <div class="bubble-11"></div>
+        <div class="bubble-12"></div>
+        <div class="bubble-13"></div>
+        <div class="bubble-14"></div>
+        <div class="bubble-15"></div>
+        <div class="bubble-16"></div>
+        <div class="bubble-17"></div>
+        <div class="bubble-18"></div>
+        <div class="bubble-19"></div>
+        <div class="bubble-20"></div>
+    </div>
+</body>
+
+</html>
