@@ -912,11 +912,11 @@
             func2();
 
             // 02 비동기적인 함수 호출
-            function func3() {
-                setTimeout(() => {
-                    console.log("31. 실행되었습니다.");
-                }, 1000)
-            }
+            // function func3() {
+            //     setTimeout(() => {
+            //         console.log("31. 실행되었습니다.");
+            //     }, 1000)
+            // }
             function func4() {
                 console.log("32. 실행되었습니다.");
             }
@@ -924,25 +924,65 @@
             func4();
 
             // 03 콜백함수 비동기 호출
-            {
-                function func5(callback) {
-                    setTimeout(() => {
-                        console.log("33. 실행되었습니다.");
-                        callback();
-                    }, 1000);
-                }
-                function func6() {
-                    console.log("34. 실행되었습니다.");
-                }
+            // {
+            //     function func5(callback) {
+            //         setTimeout(() => {
+            //             console.log("33. 실행되었습니다.");
+            //             callback();
+            //         }, 1000);
+            //     }
+            //     function func6() {
+            //         console.log("34. 실행되었습니다.");
+            //     }
 
-                func5(function () {
-                    func6();
-                });
-            }
+            //     func5(function () {
+            //         func6();
+            //     });
+            // }
 
         }
         // 25. 함수 : 비동기 방식 : 프로미스
+        {
+            let data = true;
+
+            const func = new Promise((resolve, reject) => {
+                if (data) {
+                    resolve("35. 실행되었습니다.");
+                } else {
+                    reject("36. 실행되었습니다.");
+                }
+            })
+
+            func
+                .then(
+                    result => document.write(result)
+                )
+                .catch(
+                    error => document.write(error)
+                )
+        }
         // 26. 함수 : 비동기 방식 : async/await
+        {
+            // 01 : 일반적인 함수(동기방식)
+            function func() {
+                console.log("35. 실행되었습니다.")
+            }
+            func();
+
+            //02 : 함수(비동기방식)
+            async function func2() {
+                console.log("36. 실행되었습니다.");
+            }
+            func2();
+
+            // 03 : 비동기 방식(fetch())
+            async function func3() {
+                const result = await fetch("https://nicejmp1.github.io/class2024/json/gineungsaJC2005_02.json");
+                const data = await result.json();
+                console.log(data);
+            }
+            func3();
+        }
         // 27. 함수 : 중첩 함수
         // 28. 함수 : 클로저
 
