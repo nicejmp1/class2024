@@ -982,6 +982,18 @@
                 console.log(data);
             }
             func3();
+
+            // 04 : 비동기 + 에러
+            async function func4() {
+                try {
+                    const result = await fetch("https://nicejmp1.github.io/class2024/json/gineungsaJC2005_02.json");
+                    const data = await result.json();
+                    console.log(data);
+                } catch (error) {
+                    console.error(error);
+                }
+            }
+            func4();
         }
         // 27. 함수 : 중첩 함수
         // 28. 함수 : 클로저
