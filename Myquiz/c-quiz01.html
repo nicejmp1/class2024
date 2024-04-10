@@ -12,19 +12,30 @@
     <div id="wrap">
         <header id="header">
             <h1><a href="index.html">Quiz</a></h1>
-            <div id="timer">남은 시간: <span id="time">30</span>분</div>
-            <span id="currentQuestionNumber">1</span> / <span id="totalQuestions"></span>
+            <div id="timer">남은 시간: <span id="time">30분</span></div>
             <nav>
                 <ul>
                     <li class="active"><a href="c-quiz01.html">1</a></li>
+                    <li><a href="c-quiz01.html">2</a></li>
+                    <li><a href="c-quiz01.html">3</a></li>
+                    <li><a href="c-quiz01.html">4</a></li>
                 </ul>
             </nav>
         </header>
         <!-- //header -->
         <main id="main">
+            <div class="quiz__number">
+                <span id="currentQuestionNumber">1</span> / <span id="totalQuestions"></span>
+            </div>
             <div class="quiz__wrap"></div>
-
-            <div id="quizResult"></div>
+            <div id="resultModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <div class="modal-body">
+                        <p id="quizResult"></p>
+                    </div>
+                </div>
+            </div>
         </main>
         <!-- //main -->
         <footer id="footer">
@@ -134,10 +145,33 @@
             clearInterval(timer); // 타이머 중지
             const score = (correctCount / quizInfo.length) * 100;
             const resultElement = document.getElementById("quizResult");
-            resultElement.innerHTML = `<p>총 점수: ${score.toFixed(2)}점</p><p>맞힌 문제 수: ${correctCount}개</p>`;
-            // 결과를 로컬 스토리지에 저장하는 등의 추가적인 작업을 여기에 추가
-        };
+            const resultModal = document.getElementById("resultModal");
+            const quizConfirm = quizWrap.querySelector(".confirm");
+            const quizNext = quizWrap.querySelector(".next");
 
+            alert("퀴즈가 종료되었습니다.")
+            quizConfirm.classList.add("none");
+            quizNext.classList.add("none");
+            resultElement.innerHTML = `<p>총 점수: ${score.toFixed(2)}점</p><p>맞힌 문제 수: ${correctCount}개</p>`;
+            // 모달 창을 보이게 함
+            resultModal.style.display = "block";
+        };
+        // 모달의 닫기 버튼에 대한 처리
+        const closeModal = () => {
+            const resultModal = document.getElementById("resultModal");
+            resultModal.style.display = "none";
+        }
+
+        // 닫기 버튼을 클릭하면 모달을 닫음
+        document.querySelector('.close').onclick = closeModal;
+
+        // 윈도우의 어느 부분이라도 클릭하면 모달을 닫음
+        window.onclick = (event) => {
+            const resultModal = document.getElementById("resultModal");
+            if (event.target == resultModal) {
+                resultModal.style.display = "none";
+            }
+        }
         document.addEventListener("DOMContentLoaded", fetchQuiz);
     </script>
 </body>

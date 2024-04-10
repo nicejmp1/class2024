@@ -160,6 +160,7 @@ a {
     color: #000;
 }
 
+
 /* body */
 body {
     background-size: cover;
@@ -167,15 +168,25 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: relative;
-    background-image: url(../img/bg01.jpg);
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+}
+
+#wrap {
     width: 100%;
     min-height: 100vh;
+    /* 변경: 높이가 내용에 따라 자동으로 늘어남 */
+    padding: 16px;
+    box-sizing: border-box;
+    /* 추가: 박스 모델의 경계선과 패딩이 너비에 포함되도록 설정 */
 }
 
 body::after {
     content: '';
     width: 100%;
-    height: 100%;
+    height: 100vh;
+    min-height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     position: absolute;
     left: 0;
@@ -194,6 +205,16 @@ body::after {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+#timer {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    border: 1px solid #000;
+    text-align: center;
+    padding: 10px 10px;
+    width: 15%;
 }
 
 #header h1 a {
@@ -223,17 +244,53 @@ body::after {
     color: #fff;
 }
 
+#header nav li a:hover {
+    background-color: #000;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    /* 가로 중앙 정렬 */
+    align-items: center;
+    /* 세로 중앙 정렬 */
+}
+
+#main .quiz__number {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    border-radius: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    width: auto;
+}
+
+#main .quiz__number span {
+    padding: 5px 10px;
+}
+
 #header nav li.active a {
     background-color: #fff;
     color: #000;
 }
 
-
 /* footer */
 #footer {
+    box-sizing: border-box;
+    display: block;
     text-align: center;
     font-size: 14px;
     text-transform: uppercase;
+    position: relative;
+    width: 100%;
+    /* 푸터의 너비를 화면 전체로 설정 */
+
 }
 
 #footer a {
@@ -256,11 +313,19 @@ body::after {
 }
 
 .quiz__wrap .quiz {
-    width: 500px;
+    width: auto;
+    max-width: 500px;
     background-color: #fff;
     padding: 30px 30px;
     border-radius: 10px;
-    margin: 10px;
+    margin: 15px;
+    height: auto;
+    /* 내용에 따라 높이 자동 조정 */
+    overflow-y: auto;
+    /* 내용이 넘칠 경우 수직 스크롤바 생성 */
+
+    min-height: auto;
+    /* 필요에 따라 조정 */
 }
 
 .quiz__header {
@@ -270,7 +335,7 @@ body::after {
 
 .quiz__main .question {
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 22px;
     font-style: normal;
     line-height: 1.4;
 }
@@ -372,7 +437,7 @@ body::after {
     border: 1px solid #0058f0;
     padding: 20px;
     border-radius: 3px;
-    font-size: 16px;
+    font-size: 14px;
     color: #666;
     line-height: 1.5;
     margin-bottom: 10px;
@@ -488,4 +553,104 @@ body::after {
     border: 3px solid #21488c;
     background-color: #0058f0;
     color: #fff;
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        /* 모바일에서 기본 글꼴 크기 줄이기 */
+    }
+
+    .quiz__wrap .quiz {
+        width: 100%;
+        /* 모바일에서 퀴즈 박스 너비를 100%로 조정 */
+        margin: 10px 0;
+        /* 상하 마진 추가 */
+    }
+
+    #header nav li a {
+        width: auto;
+        /* 모바일에서 너비 자동 조정 */
+    }
+
+    #main .quiz__number {
+        width: 30%;
+        /* 모바일에서 너비 조정 */
+    }
+}
+
+
+#quizResult p {
+    line-height: 1.5;
+    margin-top: 10px;
+    padding: 10px 10px;
+    display: block;
+}
+
+/* 모달 창 스타일링 */
+.modal {
+    display: none;
+    /* 처음에는 숨겨진 상태 */
+    position: fixed;
+    /* 화면에 고정 */
+    z-index: 100;
+    /* 다른 요소 위에 위치 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* 전체 너비 */
+    height: 100%;
+    /* 전체 높이 */
+    overflow: auto;
+    /* 스크롤 가능하게 */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* 반투명 배경 */
+}
+
+/* 모달 내부 콘텐츠 스타일링 */
+.modal-content {
+    text-align: center;
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* 위에서 15% 떨어진 상태로 가운데 정렬 */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    height: 50%;
+    /* 너비는 80% */
+}
+
+.modal-body {
+    display: flex;
+    /* Flexbox 사용 */
+    flex-direction: column;
+    /* 아이템을 세로로 쌓음 */
+    justify-content: center;
+    /* 수직 가운데 정렬 */
+    align-items: center;
+    /* 수평 가운데 정렬 */
+    height: 100%;
+    /* 부모의 전체 높이를 사용 */
+}
+
+/* 닫기 버튼 스타일링 */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.night {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: rotateZ(45deg);
 }
