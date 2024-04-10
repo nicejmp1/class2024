@@ -1,0 +1,491 @@
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "nanumSquareNeo";
+    font-weight: 300;
+    font-style: normal;
+    src: url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Light.eot");
+    src: url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Light.eot?#iefix") format("embedded-opentype"),
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Light.woff2") format("woff2"),
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Light.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Light.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "nanumSquareNeo";
+    font-weight: 400;
+    font-style: normal;
+    src: url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Regular.eot");
+    src: url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Regular.eot?#iefix") format("embedded-opentype"),
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Regular.woff2") format("woff2"),
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Regular.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Regular.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "nanumSquareNeo";
+    font-weight: 700;
+    font-style: normal;
+    src: url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Bold.eot");
+    src: url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Bold.eot?#iefix") format("embedded-opentype"),
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Bold.woff2") format("woff2"),
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Bold.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Bold.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "nanumSquareNeo";
+    font-weight: 800;
+    font-style: normal;
+    src: url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-ExtraBold.eot");
+    src: url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-ExtraBold.eot?#iefix") format("embedded-opentype"),
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-ExtraBold.woff2") format("woff2"),
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-ExtraBold.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-ExtraBold.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "nanumSquareNeo";
+    font-weight: 900;
+    font-style: normal;
+    src: url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Black.eot");
+    src: url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Black.eot?#iefix") format("embedded-opentype"),
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Black.woff2") format("woff2"),
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Black.woff") format("woff"),
+        url("https://cdn.jsdelivr.net/gh/websfont/nanumSquareNeo/nanumSquareNeo-Black.ttf") format("truetype");
+    font-display: swap;
+}
+
+.nanumSquareNeo {
+    font-family: "nanumSquareNeo";
+}
+
+.nanumSquareNeo300 {
+    font-family: "nanumSquareNeo";
+    font-weight: 300;
+}
+
+.nanumSquareNeo400 {
+    font-family: "nanumSquareNeo";
+    font-weight: 400;
+}
+
+.nanumSquareNeo700 {
+    font-family: "nanumSquareNeo";
+    font-weight: 700;
+}
+
+.nanumSquareNeo800 {
+    font-family: "nanumSquareNeo";
+    font-weight: 800;
+}
+
+.nanumSquareNeo900 {
+    font-family: "nanumSquareNeo";
+    font-weight: 900;
+}
+
+/* 초기 셋팅값 */
+:root {
+    --fontN: "nanumSquareNeo";
+    --fontG: "GmarketSans";
+
+    --black: #000;
+    --black100: #111;
+    --black200: #444;
+    --black300: #666;
+    --black400: #bbb;
+    --black500: #eee;
+
+    --white: #fff;
+    --white100: #f1f1f1;
+    --white200: #e7e7e7;
+    --white300: #dddddd;
+    --white400: #d1d1d1;
+    --white500: #c7c7c7;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: var(--fontN);
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* body */
+body {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    background-image: url(../img/bg01.jpg);
+    width: 100%;
+    min-height: 100vh;
+}
+
+body::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+/* common */
+.none {
+    display: none;
+}
+
+/* header */
+#header {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header h1 a {
+    display: inline-block;
+    color: #fff;
+    padding: 20px;
+    font-size: 30px;
+}
+
+#header nav {
+    padding-right: 20px;
+}
+
+#header nav li {
+    display: inline-block;
+}
+
+#header nav li a {
+    padding: 10px;
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #fff;
+    text-align: center;
+    box-shadow: 1px 1px 0px #fff;
+    line-height: 1;
+    color: #fff;
+}
+
+#header nav li.active a {
+    background-color: #fff;
+    color: #000;
+}
+
+
+/* footer */
+#footer {
+    text-align: center;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+#footer a {
+    display: inline-block;
+    color: #fff;
+    padding: 40px;
+}
+
+#footer a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+/* quiz__wrap */
+.quiz__wrap {
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.quiz__wrap .quiz {
+    width: 500px;
+    background-color: #fff;
+    padding: 30px 30px;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.quiz__header {
+    color: #696969;
+    margin-bottom: 20px;
+}
+
+.quiz__main .question {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-style: normal;
+    line-height: 1.4;
+}
+
+.quiz__main .question em {
+    font-size: 24px;
+    font-style: normal;
+    line-height: 1.4;
+}
+
+.quiz__main .question span {
+    font-size: 24px;
+    line-height: 1.4;
+}
+
+.quiz__main .input input {
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #0058f0;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.quiz__main .choices {
+    margin-bottom: 20px;
+}
+
+.quiz__main .choices label {
+    display: block;
+    width: 100%;
+}
+
+.quiz__main .choices label input {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+.quiz__main .choices label span {
+    border: 1px solid #eee;
+    padding: 17px;
+    display: flex;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    font-size: 16px;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.quiz__main .choices label span:hover {
+    border-color: #0058f0;
+    color: #0058f0;
+    box-shadow: 1px 1px 5px #0058f071;
+}
+
+.quiz__main .choices label span::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 4px #0058f0;
+    margin-right: 13px;
+    transition: all 0.3s;
+}
+
+.quiz__main .choices label input:checked+span::before {
+    box-shadow: inset 0 0 0 9px #0058f0;
+}
+
+.quiz__main .choices label input:checked+span {
+    border-color: #0058f0;
+    color: #0058f0;
+    box-shadow: 1px 1px 3px #0058f071;
+    background-color: #0058f044;
+
+}
+
+.quiz__main .answer {
+    border: 1px solid #0058f0;
+    padding: 20px;
+    background-color: #8bb2f5de;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.quiz__main .answer::before {
+    content: '👍 정답 : ';
+}
+
+.quiz__main .desc {
+    border: 1px solid #0058f0;
+    padding: 20px;
+    border-radius: 3px;
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.quiz__main .desc::before {
+    content: '😻 설명 :';
+}
+
+.quiz__footer .confirm {
+    background-color: #0058f0;
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    border: 0;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s;
+}
+
+.quiz__footer .confirm:hover {
+    background-color: transparent;
+    border: 1px dashed #0058f0;
+    color: #0058f0;
+    cursor: pointer;
+}
+
+.quiz__footer .next {
+    background-color: #21488c;
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    border: 0;
+    font-size: 16px;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s;
+}
+
+.quiz__footer .next:hover {
+    background-color: transparent;
+    border: 1px dashed #21488c;
+    color: #21488c;
+    cursor: pointer;
+}
+
+/* good, bad */
+.quiz__wrap .quiz.good {
+    position: relative;
+}
+
+
+.quiz__wrap .quiz.good::before {
+    content: '';
+    width: 130px;
+    height: 130px;
+    border: 10px solid red;
+    border-radius: 50%;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 100;
+}
+
+
+.quiz__wrap .quiz.bad {
+    position: relative;
+}
+
+.quiz__wrap .quiz.bad::before {
+    content: '';
+    width: 170px;
+    height: 10px;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    border-radius: 30px;
+    transform: rotate(45deg);
+    z-index: 100;
+}
+
+.quiz__wrap .quiz.bad::after {
+    content: '';
+    width: 170px;
+    height: 10px;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    border-radius: 30px;
+    transform: rotate(-45deg);
+    z-index: 100;
+}
+
+.quiz__check {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 100px;
+    height: 100px;
+    line-height: 90px;
+    text-align: center;
+    background-color: #21488c;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 3px solid #0058f0;
+}
+
+.quiz__check:hover {
+    border: 3px solid #21488c;
+    background-color: #0058f0;
+    color: #fff;
+}

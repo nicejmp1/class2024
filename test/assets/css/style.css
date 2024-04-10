@@ -333,6 +333,7 @@ body::after {
 .quiz__footer {
     clear: both;
     padding: 15px;
+    height: 20vh;
 }
 
 .quiz__footer .answer,
@@ -444,4 +445,33 @@ body::after {
     border-radius: 30px;
     transform: rotate(-45deg);
     z-index: 100;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+        /* 모바일에서의 기본 폰트 크기 */
+    }
+
+    .quiz__wrap,
+    .quiz,
+    .quiz__main,
+    .quiz__main2,
+    .quiz__footer {
+        width: 100%;
+        /* 너비를 100%로 설정하여 화면 크기에 맞게 조절 */
+    }
+
+    input[type="radio"],
+    button.confirm {
+        padding: 10px;
+        /* 더 큰 터치 영역을 제공 */
+        font-size: 14px;
+        /* 버튼 내 텍스트 크기 조정 */
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 }

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈 00</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1><a href="index.html">Quiz</a></h1>
+            <div id="timer">남은 시간: <span id="time">30</span>분</div>
+            <span id="currentQuestionNumber">1</span> / <span id="totalQuestions"></span>
+            <nav>
+                <ul>
+                    <li class="active"><a href="c-quiz01.html">1</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- //header -->
+        <main id="main">
+            <div class="quiz__wrap"></div>
+
+            <div id="quizResult"></div>
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <a href="mailto:nicejpm@naver.com">nicejpm@naver.com</a> <!-- 이메일 주소 오타 수정 -->
+        </footer>
+        <!-- //footer -->
+    </div>
+    <script>
+        let quizInfo = []; // 전역 변수로 선언
+        const quizWrap = document.querySelector(".quiz__wrap");
+        const timeDisplay = document.getElementById("time");
+        const currentQuestionNumberElement = document.getElementById('currentQuestionNumber');
+        const totalQuestionsElement = document.getElementById('totalQuestions');
+        let timer; // 시간 제한을 위한 타이머 변수
+        let currentIndex = 0;
+        let correctCount = 0; // 정답 수를 추적하는 변수
+
+        // 인덱스 관련 변수의 위치를 옮기고, 초기화 방식 변경
+        const fetchQuiz = async () => {
+            try {
+                const response = await fetch("https://seodaewon1.github.io/class2024/json/gineungsaJC2005_02.json");
+                if (!response.ok) throw new Error('Network response was not ok');
+                const items = await response.json();
+                quizInfo = items.map(item => ({
+                    date: "2005년 2회",
+                    type: item.subject,
+                    question: item.question,
+                    desc: item.desc,
+                    answer: item.correct_answer
+                }));
+                startTimer(); // 타이머 시작
+                updateQuiz(currentIndex); // 페이지 로드 후 첫 번째 문제를 보여줌
+                // 문제 수 업데이트
+                totalQuestionsElement.textContent = quizInfo.length;
+            } catch (error) {
+                console.error('Fetch error:', error);
+            }
+        };
+
+        const updateQuiz = (index) => {
+            if (index >= quizInfo.length) {
+                endQuiz();
+                return;
+            }
+            // 현재 문제 번호 업데이트 (index + 1)
+            currentQuestionNumberElement.textContent = index + 1;
+            let quizWrapTag = `
+                <div class="quiz">
+                    <div class="quiz__header">${quizInfo[index].date} ${quizInfo[index].type}</div>
+                    <div class="quiz__main">
+                        <div class="question">${index + 1}. ${quizInfo[index].question}</div>
+                        <div class="input">
+                            <input type="text" placeholder="정답을 입력해주세요!">
+                        </div>
+                        <div class="answer none"> ${quizInfo[index].answer}</div>
+                        <div class="desc none">${quizInfo[index].desc}</div>
+                    </div>
+                    <div class="quiz__footer">
+                        <button class="confirm">정답 확인하기</button>
+                        <button class="next none">다음 문제</button>
+                    </div>
+                </div>
+            `;
+            quizWrap.innerHTML = quizWrapTag;
+            const quizConfirm = quizWrap.querySelector(".confirm");
+            const quizNext = quizWrap.querySelector(".next");
+
+            quizConfirm.addEventListener("click", () => {
+                const userAnswer = quizWrap.querySelector("input[type='text']").value;
+                if (userAnswer === quizInfo[currentIndex].answer) {
+                    quizWrap.querySelector(".quiz").classList.add("good");
+                    correctCount++;
+                } else {
+                    quizWrap.querySelector(".quiz").classList.add("bad");
+                    quizWrap.querySelector(".answer").classList.remove("none");
+                }
+                quizConfirm.classList.add("none");
+                quizNext.classList.remove("none");
+                quizWrap.querySelector(".desc").classList.remove("none");
+            });
+
+            quizNext.addEventListener("click", () => {
+                if (currentIndex < quizInfo.length - 1) {
+                    currentIndex++;
+                    updateQuiz(currentIndex);
+                } else {
+                    endQuiz();
+                }
+            });
+        };
+
+        const startTimer = () => {
+            let timeLeft = 1800; // 30분을 초 단위로
+            timer = setInterval(() => {
+                timeLeft--;
+                const minutes = Math.floor(timeLeft / 60);
+                const seconds = timeLeft % 60;
+                timeDisplay.textContent = `${minutes}분 ${seconds < 10 ? '0' : ''}${seconds}초`;
+                if (timeLeft <= 0) {
+                    clearInterval(timer);
+                    endQuiz();
+                }
+            }, 1000);
+        };
+
+        const endQuiz = () => {
+            clearInterval(timer); // 타이머 중지
+            const score = (correctCount / quizInfo.length) * 100;
+            const resultElement = document.getElementById("quizResult");
+            resultElement.innerHTML = `<p>총 점수: ${score.toFixed(2)}점</p><p>맞힌 문제 수: ${correctCount}개</p>`;
+            // 결과를 로컬 스토리지에 저장하는 등의 추가적인 작업을 여기에 추가
+        };
+
+        document.addEventListener("DOMContentLoaded", fetchQuiz);
+    </script>
+</body>
+
+</html>
