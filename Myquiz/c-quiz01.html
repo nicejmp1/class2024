@@ -12,7 +12,10 @@
     <div id="wrap">
         <header id="header">
             <h1><a href="index.html">Quiz</a></h1>
-            <div id="timer">남은 시간: <span id="time">30분</span></div>
+            <div id="timer"><img class="warch" src="assets/img/time.jpg" alt="time">남은 시간 : <span
+                    id="minutes">30</span>분
+                <span id="seconds">00</span>초
+            </div>
             <nav>
                 <ul>
                     <li class="active"><a href="c-quiz01.html">1</a></li>
@@ -128,12 +131,22 @@
         };
 
         const startTimer = () => {
-            let timeLeft = 1800; // 30분을 초 단위로
+            let timeLeft = 15; // 30분을 초 단위로
+            const minutesDisplay = document.getElementById('minutes');
+            const secondsDisplay = document.getElementById('seconds');
             timer = setInterval(() => {
                 timeLeft--;
                 const minutes = Math.floor(timeLeft / 60);
                 const seconds = timeLeft % 60;
-                timeDisplay.textContent = `${minutes}분 ${seconds < 10 ? '0' : ''}${seconds}초`;
+                minutesDisplay.textContent = minutes;
+                secondsDisplay.textContent = `${seconds < 10 ? '0' : ''}${seconds}`;
+                // 10초 이하일 때 초 부분의 텍스트 색상을 빨간색으로 변경
+                if (timeLeft <= 10) {
+                    secondsDisplay.style.color = 'red';
+                } else {
+                    secondsDisplay.style.color = ''; // 기본 색상으로 재설정
+                }
+
                 if (timeLeft <= 0) {
                     clearInterval(timer);
                     endQuiz();
