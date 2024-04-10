@@ -12,10 +12,10 @@
     <div id="wrap">
         <header id="header">
             <h1><a href="index.html">Quiz</a></h1>
-            <div id="timer"><img class="warch" src="assets/img/time.jpg" alt="time">남은 시간 : <span
-                    id="minutes">30</span>분
+            <div id="timer">남은 시간 : <span id="minutes">30</span>분
                 <span id="seconds">00</span>초
             </div>
+
             <nav>
                 <ul>
                     <li class="active"><a href="c-quiz01.html">1</a></li>
@@ -39,6 +39,7 @@
                     </div>
                 </div>
             </div>
+
         </main>
         <!-- //main -->
         <footer id="footer">
@@ -83,9 +84,15 @@
                 endQuiz();
                 return;
             }
+
+            // 페이지 전환 애니메이션을 위한 투명도 조절
+            quizWrap.style.opacity = 0;
+
+
             // 현재 문제 번호 업데이트 (index + 1)
-            currentQuestionNumberElement.textContent = index + 1;
-            let quizWrapTag = `
+            setTimeout(() => {
+                currentQuestionNumberElement.textContent = index + 1; // 현재 문제 번호 업데이트
+                let quizWrapTag = `
                 <div class="quiz">
                     <div class="quiz__header">${quizInfo[index].date} ${quizInfo[index].type}</div>
                     <div class="quiz__main">
@@ -101,37 +108,44 @@
                         <button class="next none">다음 문제</button>
                     </div>
                 </div>
-            `;
-            quizWrap.innerHTML = quizWrapTag;
-            const quizConfirm = quizWrap.querySelector(".confirm");
-            const quizNext = quizWrap.querySelector(".next");
+                `;
+                quizWrap.innerHTML = quizWrapTag;
 
-            quizConfirm.addEventListener("click", () => {
-                const userAnswer = quizWrap.querySelector("input[type='text']").value;
-                if (userAnswer === quizInfo[currentIndex].answer) {
-                    quizWrap.querySelector(".quiz").classList.add("good");
-                    correctCount++;
-                } else {
-                    quizWrap.querySelector(".quiz").classList.add("bad");
-                    quizWrap.querySelector(".answer").classList.remove("none");
-                }
-                quizConfirm.classList.add("none");
-                quizNext.classList.remove("none");
-                quizWrap.querySelector(".desc").classList.remove("none");
-            });
+                setTimeout(() => {
+                    quizWrap.style.opacity = 1; // 페이드 인 효과
 
-            quizNext.addEventListener("click", () => {
-                if (currentIndex < quizInfo.length - 1) {
-                    currentIndex++;
-                    updateQuiz(currentIndex);
-                } else {
-                    endQuiz();
-                }
-            });
-        };
+                }, 10);
 
+                const quizConfirm = quizWrap.querySelector(".confirm");
+                const quizNext = quizWrap.querySelector(".next");
+
+                quizConfirm.addEventListener("click", () => {
+                    const userAnswer = quizWrap.querySelector("input[type='text']").value;
+                    if (userAnswer === quizInfo[currentIndex].answer) {
+                        quizWrap.querySelector(".quiz").classList.add("good");
+                        correctCount++;
+                    } else {
+                        quizWrap.querySelector(".quiz").classList.add("bad");
+                        quizWrap.querySelector(".answer").classList.remove("none");
+                    }
+                    quizConfirm.classList.add("none");
+                    quizNext.classList.remove("none");
+                    quizWrap.querySelector(".desc").classList.remove("none");
+
+                });
+
+                quizNext.addEventListener("click", () => {
+                    if (currentIndex < quizInfo.length - 1) {
+                        currentIndex++;
+                        updateQuiz(currentIndex);
+                    } else {
+                        endQuiz();
+                    }
+                });
+            }, 300);
+        }
         const startTimer = () => {
-            let timeLeft = 15; // 30분을 초 단위로
+            let timeLeft = 1800; // 30분을 초 단위로
             const minutesDisplay = document.getElementById('minutes');
             const secondsDisplay = document.getElementById('seconds');
             timer = setInterval(() => {
