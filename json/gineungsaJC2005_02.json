@@ -420,17 +420,6 @@
     },
     {
         "subject": "정보처리 기능사",
-        "question": "Which is not outer command at DOS?",
-        "incorrect_answers": [
-            "CHKDSK",
-            "DISKCOPY",
-            "SYS"
-        ],
-        "correct_answer": "PROMPT",
-        "desc": "ㅎㅎ"
-    },
-    {
-        "subject": "정보처리 기능사",
         "question": "업무처리를 실시간 시스템(Real-Time System)으로 처리할 필요가 없는 것은?",
         "incorrect_answers": [
             "적의 공중 공격에 대비하여 동시에 여러 지점을 감시하는 시스템",
