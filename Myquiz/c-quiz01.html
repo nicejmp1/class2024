@@ -37,6 +37,7 @@
                     <div class="modal-body">
                         <p id="quizResult"></p>
                     </div>
+                    <div class="fireworks-container"></div>
                 </div>
             </div>
 
@@ -44,9 +45,11 @@
         <!-- //main -->
         <footer id="footer">
             <a href="mailto:nicejpm@naver.com">nicejpm@naver.com</a> <!-- 이메일 주소 오타 수정 -->
+            <button id="quiz__give">퀴즈 종료하기</button>
         </footer>
         <!-- //footer -->
     </div>
+
     <script>
         let quizInfo = []; // 전역 변수로 선언
         const quizWrap = document.querySelector(".quiz__wrap");
@@ -104,6 +107,7 @@
                         <div class="desc none">${quizInfo[index].desc}</div>
                     </div>
                     <div class="quiz__footer">
+                        <div class="points-container"></div> <!-- 포인트 애니메이션을 위한 컨테이너 -->
                         <button class="confirm">정답 확인하기</button>
                         <button class="next none">다음 문제</button>
                     </div>
@@ -118,22 +122,44 @@
 
                 const quizConfirm = quizWrap.querySelector(".confirm");
                 const quizNext = quizWrap.querySelector(".next");
+                const quizGive = document.getElementById("quiz__give");
+
 
                 quizConfirm.addEventListener("click", () => {
                     const userAnswer = quizWrap.querySelector("input[type='text']").value;
                     if (userAnswer === quizInfo[currentIndex].answer) {
                         quizWrap.querySelector(".quiz").classList.add("good");
                         correctCount++;
+                        displayPoints('+10');
                     } else {
                         quizWrap.querySelector(".quiz").classList.add("bad");
                         quizWrap.querySelector(".answer").classList.remove("none");
+                        displayPoints('-10')
                     }
                     quizConfirm.classList.add("none");
                     quizNext.classList.remove("none");
                     quizWrap.querySelector(".desc").classList.remove("none");
-
                 });
 
+                function displayPoints(points) {
+                    const pointsContainer = document.querySelector('.points-container');
+                    const point = document.createElement('div');
+                    point.classList.add('points');
+                    point.textContent = points; // 획득한 포인트 수
+                    pointsContainer.appendChild(point);
+
+                    // 애니메이션이 끝난 후 포인트 요소를 제거합니다.
+                    point.addEventListener('animationend', () => {
+                        pointsContainer.removeChild(point);
+                    });
+                }
+
+
+
+                quizGive.addEventListener("click", () => {
+                    clearInterval(timer);
+                    endQuiz();
+                })
                 quizNext.addEventListener("click", () => {
                     if (currentIndex < quizInfo.length - 1) {
                         currentIndex++;
@@ -168,6 +194,8 @@
             }, 1000);
         };
 
+        let isQuizEnded = false; // 퀴즈가 종료되었는지 추적하는 플래그
+
         const endQuiz = () => {
             clearInterval(timer); // 타이머 중지
             const score = (correctCount / quizInfo.length) * 100;
@@ -176,13 +204,67 @@
             const quizConfirm = quizWrap.querySelector(".confirm");
             const quizNext = quizWrap.querySelector(".next");
 
+            if (isQuizEnded) return; // 이미 종료된 퀴즈라면 함수 실행을 중단
+            isQuizEnded = true; // 퀴즈 종료 플래그 설정
+
             alert("퀴즈가 종료되었습니다.")
             quizConfirm.classList.add("none");
             quizNext.classList.add("none");
-            resultElement.innerHTML = `<p>총 점수: ${score.toFixed(2)}점</p><p>맞힌 문제 수: ${correctCount}개</p>`;
+            resultElement.innerHTML = `
+                고생하셨습니다🎉 
+             <p>총 점수: ${score.toFixed(2)}점</p>
+
+             <p>맞힌 문제 수: ${correctCount}개</p>
+          
+            `;
             // 모달 창을 보이게 함
             resultModal.style.display = "block";
+            // 폭죽 효과를 실행
+            showFireworks();
         };
+
+        function showFireworks() {
+            const container = document.querySelector('.fireworks-container');
+            container.innerHTML = ''; // 이전 폭죽 효과를 초기화합니다.
+
+            for (let i = 0; i < 100; i++) { // 100개의 폭죽 입자를 생성합니다.
+                const particle = document.createElement('div');
+                particle.classList.add('firework-particle');
+                container.appendChild(particle);
+
+                // 랜덤한 방향과 속도를 설정합니다.
+                const angle = Math.random() * Math.PI * 2; // 0에서 2파이(360도) 사이의 값
+                const speed = Math.random() * 120 + 80; // 80에서 200 픽셀 사이의 속도
+                const x = Math.cos(angle) * speed; // x축 이동 거리
+                const y = Math.sin(angle) * speed; // y축 이동 거리
+
+                // CSS 초기 설정
+                particle.style.left = '50%'; // 컨테이너 중앙에서 시작
+                particle.style.top = '50%';
+                particle.style.position = 'absolute';
+                particle.style.background = `hsl(${Math.random() * 360}, 100%, 50%)`; // 색상 랜덤화
+                particle.style.borderRadius = '50%';
+                particle.style.width = '5px';
+                particle.style.height = '5px';
+                particle.style.opacity = 1;
+                particle.style.transform = 'translate(-50%, -50%)'; // 중앙 정렬 보정
+
+                // 애니메이션 적용
+                particle.animate([
+                    { transform: `translate(-50%, -50%) scale(1)`, opacity: 2 },
+                    { transform: `translate(${x}px, ${y}px) scale(0)`, opacity: 0 }
+                ], {
+                    duration: 1000 + Math.random() * 800, // 700ms에서 1000ms 사이의 지속 시간
+                    easing: 'ease-out',
+                    fill: 'forwards'
+                });
+
+                // 애니메이션이 끝나면 입자 제거
+                setTimeout(() => {
+                    particle.remove();
+                }, 1000);
+            }
+        }
         // 모달의 닫기 버튼에 대한 처리
         const closeModal = () => {
             const resultModal = document.getElementById("resultModal");
