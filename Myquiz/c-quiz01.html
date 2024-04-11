@@ -60,7 +60,7 @@
         // 인덱스 관련 변수의 위치를 옮기고, 초기화 방식 변경
         const fetchQuiz = async () => {
             try {
-                const response = await fetch("https://seodaewon1.github.io/class2024/json/gineungsaJC2005_02.json");
+                const response = await fetch("https://nicejmp1.github.io/class2024/json/gineungsaJC2005_02.json");
                 if (!response.ok) throw new Error('Network response was not ok');
                 const items = await response.json();
                 quizInfo = items.map(item => ({
