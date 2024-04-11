@@ -688,6 +688,10 @@ body::after {
 .modal-content {
     text-align: center;
     background-color: #fefefe;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     background-image: url(../img/bg04.jpg);
     margin: 15% auto;
     /* 위에서 15% 떨어진 상태로 가운데 정렬 */

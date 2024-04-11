@@ -4,11 +4,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M-1</title>
+    <title>test</title>
     <style>
         * {
-            margin: 0;
             padding: 0;
+            margin: 0;
+        }
+
+        #wrap {
+            width: 1200px;
+            height: 700px;
+            margin: 0 auto;
+        }
+
+        #header {
+            display: flex;
+        }
+
+        #header .logo {
+            width: 20%;
+            height: 100px;
+            background: #986363;
+        }
+
+        #header .menu {
+            width: 80%;
+            height: 100px;
+            background-color: #be5a5a;
+        }
+
+        #slider {
+            height: 300px;
+            background-color: #bb4141;
+        }
+
+        #content {
+            height: 200px;
+            display: flex;
+        }
+
+        #content .content1 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: #5959;
+        }
+
+        #content .content2 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: rgba(61, 140, 61, 0.6);
+        }
+
+        #content .content3 {
+            width: 33.3333%;
+            height: 200px;
+            background-color: rgba(8, 107, 8, 0.6);
+        }
+
+        #footer {
+            width: 1200px;
+            display: flex;
+        }
+
+        #footer .footer1 {
+            width: 20%;
+            height: 100px;
+            background-color: #4343;
+        }
+
+        #footer .footer2 {
+            width: 60%;
+            height: 100px;
+            background-color: rgba(181, 25, 181, 0.2);
+        }
+
+        #footer .footer3 {
+            width: 20%;
+            height: 100px;
+            background-color: #4343;
         }
 
         li {
@@ -20,134 +93,47 @@
             color: #000;
         }
 
-        #wrap {
-            width: 1200px;
-            height: 700px;
-            /* 블럭구조 가운데 정렬 */
-            margin: 0 auto;
-        }
-
-        #header {
-            width: 1200px;
+        .menu>ul {
             display: flex;
-        }
-
-        #header .logo {
-            width: 20%;
-            height: 100px;
-            background-color: #ef6060;
-        }
-
-        #header .nav {
-            width: 80%;
-            height: 100px;
-            background-color: #d75c5c;
-        }
-
-        #slider {
-            width: 1200px;
-            height: 300px;
-            background-color: #ce4444;
-        }
-
-        #contents {
-            width: 1200px;
-            display: flex;
-        }
-
-        #contents .content1 {
-            width: 33.3333%;
-            height: 200px;
-            background-color: #b86363;
-        }
-
-        #contents .content2 {
-            width: 33.3333%;
-            height: 200px;
-            background-color: #904e4e;
-        }
-
-        #contents .content3 {
-            width: 33.3333%;
-            height: 200px;
-            background-color: #6d3a3a;
-        }
-
-
-        #footer {
-            width: 1200px;
-            display: flex;
-        }
-
-        #footer .footer1 {
-            width: 20%;
-            height: 100px;
-            background-color: #6f4848;
-        }
-
-        #footer .footer2 {
-            width: 60%;
-            height: 100px;
-            background-color: #9c6767;
-        }
-
-        #footer .footer3 {
-            width: 20%;
-            height: 100px;
-            background-color: #ce8686;
-        }
-
-        /* nav */
-        .nav>ul {
-            display: flex;
-            justify-content: right;
             margin-top: 30px;
+            justify-content: right;
         }
 
-        .nav>ul>li>a {
+        .menu>ul>li>a {
             display: inline-block;
             padding: 10px 50px;
             background-color: #b0b0b0;
         }
 
-        .nav>ul>li>a:hover {
-            background-color: #a1a1a1;
+        .menu>ul>li>a:hover {
+            background-color: #c0c0c0;
         }
 
-        .nav>ul>li>ul {
+        .menu>ul>li>ul {
             text-align: center;
-            display: none;
         }
 
-
-        .nav>ul>li>ul>li>a {
+        .menu>ul>li>ul>li>a {
             background-color: #c1c1c1;
             padding: 10px;
             width: 100%;
             display: inline-block;
             box-sizing: border-box;
+            display: none;
         }
 
-        .nav>ul>li>ul>li>a:hover {
-            background-color: #888888;
-        }
-
-        /* 자바스크립트 CSS */
-        .nav>ul>li>ul {
-            display: block;
-            height: 0px;
-            /* height: 158px */
-            overflow: hidden;
-            transition: all 600ms;
+        .menu>ul>li>ul>li>a:hover {
+            background-color: #d1d1d1;
         }
     </style>
 </head>
 
 <body>
     <div id="wrap">
-        <div id="header">
-            <div class="logo"></div>
-            <div class="nav">
+        <header id="header">
+            <h1 class="logo"><img src="Test/King.gif" alt="king" width="100px"></h1>
+
+            <nav class="menu">
                 <ul>
                     <li><a href="#">메뉴1</a>
                         <ul class="submenu">
@@ -182,57 +168,38 @@
                         </ul>
                     </li>
                 </ul>
-            </div>
-        </div>
-        <!-- //header -->
+            </nav>
+        </header>
 
-        <div id="slider">
-        </div>
-        <!-- //slider -->
+        <article id="slider">
 
-        <div id="contents">
-            <div class="content1"></div>
-            <div class="content2"></div>
-            <div class="content3"></div>
-        </div>
-        <!-- //contents -->
+        </article>
 
-        <div id="footer">
+        <section id="content">
+            <article class="content1"></article>
+            <article class="content2"></article>
+            <article class="content3"></article>
+        </section>
+
+        <footer id="footer">
             <div class="footer1"></div>
             <div class="footer2"></div>
             <div class="footer3"></div>
-        </div>
-        <!-- //footer -->
+        </footer>
+        <!--  -->
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-        // $(function () {
-        //     // 선택자
-        //     $(".nav >ul>li").mouseover(function () {
-        //         $(this).find(".submenu").stop().slideDown();
-        //     });
-        //     $(".nav >ul>li").mouseout(function () {
-        //         $(this).find(".submenu").stop().slideUp();
-        //     });
-        // });
-    </script>
-
-    <!-- 자바 스크립트 -->
-    <script>
-        window.onload = function () {
-            const navList = document.querySelectorAll(".nav > ul > li");
-
-            navList.forEach(function (navItem) {
-                navItem.addEventListener("mouseover", function () {
-                    this.querySelector(".submenu").style.height = "158px";
-                })
-
-                navItem.addEventListener("mouseout", function () {
-                    this.querySelector(".submenu").style.height = "0px";
-                })
-            })
-        }
+        $(function () {
+            // 선택자
+            $(".menu >ul>li").mouseover(function () {
+                $(this).find(".submenu").stop().slideDown();
+            });
+            $(".menu >ul>li").mouseout(function () {
+                $(this).find(".submenu").stop().slideUp();
+            });
+        });
     </script>
 </body>
 
