@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>test</title>
+    <title>F-3</title>
     <style>
         * {
             padding: 0;
@@ -12,118 +12,75 @@
         }
 
         #wrap {
-            width: 1200px;
-            height: 700px;
-            margin: 0 auto;
+            width: 100%;
         }
 
         #header {
+            width: 100%;
+            height: 100px;
+        }
+
+        #header .container {
             display: flex;
         }
 
-        #header .logo {
+        #header .container h1 {
             width: 20%;
             height: 100px;
-            background: #986363;
+            background-color: #bbb;
         }
 
-        #header .menu {
+        #header .container nav {
             width: 80%;
             height: 100px;
-            background-color: #be5a5a;
+            background-color: #aaa;
         }
 
         #slider {
-            height: 300px;
-            background-color: #bb4141;
+            width: 100%;
+            height: 350px;
+            background-color: #222;
+            position: relative;
         }
 
-        #content {
-            height: 200px;
-            display: flex;
+        #slider .link {
+            width: 1340px;
+            height: 100px;
+            background-color: #944242;
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
         }
 
-        #content .content1 {
-            width: 33.3333%;
-            height: 200px;
-            background-color: #5959;
+        #contents {
+            width: 100%;
+            height: 400px;
         }
 
-        #content .content2 {
-            width: 33.3333%;
-            height: 200px;
-            background-color: rgba(61, 140, 61, 0.6);
-        }
+        #contents .banner {}
 
-        #content .content3 {
-            width: 33.3333%;
-            height: 200px;
-            background-color: rgba(8, 107, 8, 0.6);
-        }
+        #contents .notice {}
 
         #footer {
-            width: 1200px;
-            display: flex;
-        }
-
-        #footer .footer1 {
-            width: 20%;
-            height: 100px;
-            background-color: #4343;
-        }
-
-        #footer .footer2 {
-            width: 60%;
-            height: 100px;
-            background-color: rgba(181, 25, 181, 0.2);
-        }
-
-        #footer .footer3 {
-            width: 20%;
-            height: 100px;
-            background-color: #4343;
-        }
-
-        li {
-            list-style: none;
-        }
-
-        a {
-            text-decoration: none;
-            color: #000;
-        }
-
-        .menu>ul {
-            display: flex;
-            margin-top: 30px;
-            justify-content: right;
-        }
-
-        .menu>ul>li>a {
-            display: inline-block;
-            padding: 10px 50px;
-            background-color: #b0b0b0;
-        }
-
-        .menu>ul>li>a:hover {
-            background-color: #c0c0c0;
-        }
-
-        .menu>ul>li>ul {
-            text-align: center;
-        }
-
-        .menu>ul>li>ul>li>a {
-            background-color: #c1c1c1;
-            padding: 10px;
             width: 100%;
-            display: inline-block;
-            box-sizing: border-box;
-            display: none;
+            height: 120px;
+
         }
 
-        .menu>ul>li>ul>li>a:hover {
-            background-color: #d1d1d1;
+        #footer .footer1 {}
+
+        #footer .footer2 {}
+
+        #footer .footer2 .footer2-1 {}
+
+        #footer .footer2 .footer2-2 {}
+
+        .container {
+            width: 1340px;
+            height: inherit;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.4);
         }
     </style>
 </head>
@@ -131,76 +88,37 @@
 <body>
     <div id="wrap">
         <header id="header">
-            <h1 class="logo"><img src="Test/King.gif" alt="king" width="100px"></h1>
-
-            <nav class="menu">
-                <ul>
-                    <li><a href="#">메뉴1</a>
-                        <ul class="submenu">
-                            <li><a href="#">서브 메뉴1-1</a></li>
-                            <li><a href="#">서브 메뉴1-2</a></li>
-                            <li><a href="#">서브 메뉴1-3</a></li>
-                            <li><a href="#">서브 메뉴1-4</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">메뉴2</a>
-                        <ul class="submenu">
-                            <li><a href="#">서브 메뉴2-1</a></li>
-                            <li><a href="#">서브 메뉴2-2</a></li>
-                            <li><a href="#">서브 메뉴2-3</a></li>
-                            <li><a href="#">서브 메뉴2-4</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">메뉴3</a>
-                        <ul class="submenu">
-                            <li><a href="#">서브 메뉴3-1</a></li>
-                            <li><a href="#">서브 메뉴3-2</a></li>
-                            <li><a href="#">서브 메뉴3-3</a></li>
-                            <li><a href="#">서브 메뉴3-4</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">메뉴4</a>
-                        <ul class="submenu">
-                            <li><a href="#">서브 메뉴4-1</a></li>
-                            <li><a href="#">서브 메뉴4-2</a></li>
-                            <li><a href="#">서브 메뉴4-3</a></li>
-                            <li><a href="#">서브 메뉴4-4</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
+            <div class="container">
+                <h1></h1>
+                <nav></nav>
+            </div>
         </header>
+        <!-- //header -->
 
         <article id="slider">
-
+            <div class="link"></div>
         </article>
+        <!-- //slider -->
 
-        <section id="content">
-            <article class="content1"></article>
-            <article class="content2"></article>
-            <article class="content3"></article>
-        </section>
+        <main id="contents">
+            <div class="container">
+                <section class="banner"></section>
+                <section class="notice"></section>
+            </div>
+        </main>
+        <!-- //content -->
 
         <footer id="footer">
-            <div class="footer1"></div>
-            <div class="footer2"></div>
-            <div class="footer3"></div>
+            <div class="container">
+                <div class="footer1"></div>
+                <div class="footer2">
+                    <div class="footer2-1"></div>
+                    <div class="footer2-2"></div>
+                </div>
+            </div>
         </footer>
-        <!--  -->
+        <!-- //footer -->
     </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script>
-        $(function () {
-            // 선택자
-            $(".menu >ul>li").mouseover(function () {
-                $(this).find(".submenu").stop().slideDown();
-            });
-            $(".menu >ul>li").mouseout(function () {
-                $(this).find(".submenu").stop().slideUp();
-            });
-        });
-    </script>
 </body>
 
 </html>
