@@ -1,0 +1,182 @@
+@font-face {
+    font-family: "bitbit";
+    font-weight: normal;
+    font-style: normal;
+    src: url("../fonts/DNFBitBit.woff2") format("woff2"),
+        url("../fonts/DNFBitBit.woff") format("woff");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansLight.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 500;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansMedium.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GmarketSans';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.eot?#iefix') format('embedded-opentype'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff2') format('woff2'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.woff') format('woff'),
+        url('https://cdn.jsdelivr.net/gh/webfontworld/gmarket/GmarketSansBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+/* 초기 셋팅값 */
+:root {
+    --fontB: "bitbit";
+    --fontG: "GmarketSans"
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: var(--fontB);
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+#quiz__wrap {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 8px solid #5e54e4;
+    border-radius: 20px;
+}
+
+#quiz__wrap::before {
+    content: "";
+    border: 8px solid #4d42e5;
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 25px;
+    z-index: -1;
+    background-color: #F3ECFF;
+}
+
+/* quiz__start */
+.quiz__start {
+    width: 50vw;
+    height: 70vh;
+    border: 10px solid #fff;
+    background-color: #928BFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    flex-direction: column;
+}
+
+.quiz__start .title {
+    width: 100%;
+    border-bottom: 10px solid #fff;
+    padding: 10px;
+}
+
+.quiz__start .title span {
+    font-family: var(--fontG);
+    color: #fff;
+    font-weight: 400;
+    letter-spacing: 4px;
+}
+
+
+
+.quiz__start .text h1 {
+    font-size: 7vmax;
+    font-weight: normal;
+    text-align: center;
+    color: #fff;
+    line-height: 1;
+    margin-top: 10px;
+}
+
+.quiz__start .text span {
+    font-family: var(--fontG);
+    font-size: 20px;
+    color: #fff;
+}
+
+.quiz__start .text span i {
+    font-family: var(--fontG);
+    font-style: normal;
+    font-size: 20px;
+    color: #FFEC51;
+
+}
+
+.quiz__start .text span strong {
+    font-family: var(--fontG);
+    font-weight: normal;
+    font-size: 20px;
+    color: #40FFAE;
+}
+
+.quiz__start .text ul {
+    margin-top: 10px;
+}
+
+.quiz__start .text li {
+    font-family: var(--fontG);
+    color: #fff;
+    line-height: 1.3;
+}
+
+.quiz__start .btn {
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.quiz__start .btn button {
+    padding: 10px 40px;
+    font-size: 30px;
+    border-radius: 50px;
+    border: 0;
+    background-color: #7067f2;
+    color: #fff;
+    border: 5px solid#fff;
+    cursor: pointer;
+}
+
+@media (max-width:800px) {
+    .quiz__start {
+        width: 100%;
+        height: 100vh;
+    }
+}
