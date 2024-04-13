@@ -11,18 +11,46 @@
             margin: 0;
         }
 
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
+
         #wrap {
             width: 100%;
+            /* overflow: hidden; */
         }
 
         #header {
             width: 100%;
             height: 100px;
+            position: relative;
+        }
+
+        #header::after {
+            content: '';
+            width: 100%;
+            height: 0px;
+            background-color: #555;
+            position: absolute;
+            z-index: 1;
+            left: 0;
+            top: 100px;
+        }
+
+        #header.on::after {
+            height: 156px;
         }
 
         #header .container {
             display: flex;
         }
+
+
 
         #header .container h1 {
             width: 20%;
@@ -39,8 +67,9 @@
         #slider {
             width: 100%;
             height: 350px;
-            background-color: #222;
+            background-color: #714343;
             position: relative;
+            z-index: -1;
         }
 
         #slider .link {
@@ -58,29 +87,91 @@
             height: 400px;
         }
 
-        #contents .banner {}
+        #contents .banner {
+            width: 100%;
+            height: 200px;
+            background-color: #666;
+        }
 
-        #contents .notice {}
+        #contents .notice {
+            width: 100%;
+            height: 200px;
+            background-color: #777;
+        }
 
         #footer {
             width: 100%;
             height: 120px;
-
         }
 
-        #footer .footer1 {}
+        #footer .container {
+            display: flex;
+        }
 
-        #footer .footer2 {}
+        #footer .footer1 {
+            width: 20%;
+            height: 120px;
+            background-color: #ccc;
+        }
 
-        #footer .footer2 .footer2-1 {}
+        #footer .footer2 {
+            width: 80%;
+        }
 
-        #footer .footer2 .footer2-2 {}
+        #footer .footer2 .footer2-1 {
+            width: 100%;
+            height: 60px;
+            background-color: #a32929;
+        }
+
+        #footer .footer2 .footer2-2 {
+            width: 100%;
+            height: 60px;
+            background-color: #742a2a;
+        }
 
         .container {
             width: 1340px;
             height: inherit;
             margin: 0 auto;
             background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .menu>ul {
+            display: flex;
+            justify-content: right;
+            margin-top: 60px;
+        }
+
+        .menu>ul>li>a {
+            display: inline-block;
+            border: 1px solid #000;
+            padding: 10px 30px;
+        }
+
+        .menu>ul>li>a:hover {
+            background-color: #ddd;
+        }
+
+        .menu>ul>li>ul {
+            display: none;
+            position: relative;
+            z-index: 2;
+        }
+
+        .menu>ul>li>ul>li {
+            text-align: center;
+        }
+
+        .menu>ul>li>ul>li>a {
+            display: inline-block;
+            box-sizing: border-box;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .menu>ul>li>ul>li>a:hover {
+            background-color: #eee;
         }
     </style>
 </head>
@@ -90,7 +181,43 @@
         <header id="header">
             <div class="container">
                 <h1></h1>
-                <nav></nav>
+                <nav class="menu">
+                    <ul>
+                        <li><a href="#">메인 메뉴1</a>
+                            <ul class="submenu">
+                                <li><a href="#">서브 메뉴1-1</a></li>
+                                <li><a href="#">서브 메뉴1-2</a></li>
+                                <li><a href="#">서브 메뉴1-3</a></li>
+                                <li><a href="#">서브 메뉴1-4</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="#">메인 메뉴2</a>
+                            <ul class="submenu">
+                                <li><a href="#">서브 메뉴2-1</a></li>
+                                <li><a href="#">서브 메뉴2-2</a></li>
+                                <li><a href="#">서브 메뉴2-3</a></li>
+                                <li><a href="#">서브 메뉴2-4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">메인 메뉴3</a>
+                            <ul class="submenu">
+                                <li><a href="#">서브 메뉴3-1</a></li>
+                                <li><a href="#">서브 메뉴3-2</a></li>
+                                <li><a href="#">서브 메뉴3-3</a></li>
+                                <li><a href="#">서브 메뉴3-4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">메인 메뉴4</a>
+                            <ul class="submenu">
+                                <li><a href="#">서브 메뉴4-1</a></li>
+                                <li><a href="#">서브 메뉴4-2</a></li>
+                                <li><a href="#">서브 메뉴4-3</a></li>
+                                <li><a href="#">서브 메뉴4-4</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
             </div>
         </header>
         <!-- //header -->
@@ -119,6 +246,23 @@
         </footer>
         <!-- //footer -->
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $(".menu>ul>li").mouseover(function () {
+                $(this).find(".submenu").stop().slideDown();
+                $("#header").addClass("on");
+            });
+            $(".menu>ul>li").mouseout(function () {
+                $(this).find(".submenu").stop().slideUp();
+                $("#header").removeClass("on");
+            });
+        });
+
+        window.onload() = function () {
+
+        }
+    </script>
 </body>
 
 </html>

@@ -28,6 +28,7 @@
             </div>
         </div>
         <!-- //quiz__start -->
+
         <div class="quiz__play">
             <span class="number">1/100</span>
             <div class="questioin">
@@ -37,9 +38,9 @@
                 <input type="text" placeholder="정답을 입력하세요!">
             </div>
             <div class="confirm">
-                <button>이전문제</button>
-                <button>확인하기</button>
-                <button>다음문제</button>
+                <button class="">이전문제</button>
+                <button class="check">확인하기</button>
+                <button class="next">다음문제</button>
             </div>
         </div>
         <div class="quiz__finish"></div>
@@ -462,7 +463,28 @@
 
             return blobWrapper.path(spline(points, 1, true)).fill("#000");
         }
+    </script>
 
+    <script>
+        let quizInfo = [
+            {
+                answer: "100",
+            }
+
+        ];
+        const quizWrap = document.querySelector("quiz__wrap");
+        const quizNext = document.querySelector(".next");
+        const quizConfirm = document.querySelector(".check");
+        const quizAnswer = quizInfo.querySelector(".answer");
+
+
+        quizNext.addEventListener("click", () => {
+            alert("next");
+        })
+
+        quizConfirm.addEventListener("click", () => {
+            alert("ckhecd");
+        })
     </script>
 </body>
 

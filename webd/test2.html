@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ko</title>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        #wrap {
+            width: 100%;
+        }
+
+        #header {
+            width: 100%;
+            position: relative;
+        }
+
+        #header::after {
+            content: '';
+            width: 100%;
+            height: 0px;
+            background-color: #a82d2d;
+            position: absolute;
+            top: 100px;
+            left: 0;
+            z-index: 1;
+            transition: all 600ms;
+        }
+
+        #header.on::after {
+            height: 156px;
+        }
+
+        #header .container {
+            display: flex;
+        }
+
+        #header .container .logo {
+            width: 20%;
+            height: 100px;
+            background-color: #345;
+        }
+
+        #header .container .nav {
+            width: 80%;
+            height: 100px;
+            background-color: #444;
+        }
+
+        #slider {
+            width: 100%;
+            height: 350px;
+            background-color: #bbb;
+            position: relative;
+            z-index: -1;
+        }
+
+        #slider .link {
+            position: absolute;
+            width: 1340px;
+            height: 100px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #686;
+            z-index: 1;
+        }
+
+        #contents {
+            width: 100%;
+            height: 400px;
+            background-color: #ccc;
+        }
+
+        #contents .container .content1 {
+            height: 150px;
+            background-color: #aaa;
+        }
+
+        #contents .container .content2 {
+            height: 250px;
+            background-color: #bbb;
+        }
+
+        #footer {
+            width: 100%;
+        }
+
+        #footer .container {
+            display: flex;
+        }
+
+        #footer .container .footer1 {
+            width: 20%;
+            height: 100px;
+            background-color: #6b4a4a;
+        }
+
+        #footer .container .footer2 {
+            width: 60%;
+            height: 100px;
+            background-color: #585858;
+        }
+
+        #footer .container .footer3 {
+            width: 20%;
+            height: 100px;
+            background-color: #673737;
+        }
+
+        .container {
+            width: 1340px;
+            margin: 0 auto;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        .nav>ul {
+            display: flex;
+            box-sizing: border-box;
+            justify-content: right;
+            margin-top: 58px;
+        }
+
+        .nav>ul>li>a {
+            display: inline-block;
+            padding: 10px 40px;
+            border: 1px solid #000;
+        }
+
+        .nav>ul>li>a:hover {
+            background-color: #bbb;
+        }
+
+        .nav>ul>li>ul {
+            display: none;
+            text-align: center;
+            position: relative;
+            z-index: 10;
+        }
+
+        .nav>ul>li>ul>li>a {
+            box-sizing: border-box;
+            display: inline-block;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .nav>ul>li>ul>li>a:hover {
+            background-color: #de8282;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container">
+                <h1 class="logo"></h1>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#">MENU1</a>
+                            <ul class="submenu">
+                                <li><a href="#">SUBMENU 1-1</a></li>
+                                <li><a href="#">SUBMENU 1-2</a></li>
+                                <li><a href="#">SUBMENU 1-3</a></li>
+                                <li><a href="#">SUBMENU 1-4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">MENU2</a>
+                            <ul class="submenu">
+                                <li><a href="#">SUBMENU 2-1</a></li>
+                                <li><a href="#">SUBMENU 2-2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">MENU3</a>
+                            <ul class="submenu">
+                                <li><a href="#">SUBMENU 3-1</a></li>
+                                <li><a href="#">SUBMENU 3-2</a></li>
+                                <li><a href="#">SUBMENU 3-3</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">MENU4</a>
+                            <ul>
+                                <li><a href="#">SUBMENU 4-1</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">MENU5</a>
+                            <ul class="submenu">
+                                <li><a href="#">SUBMENU 5-1</a></li>
+                                <li><a href="#">SUBMENU 5-2</a></li>
+                                <li><a href="#">SUBMENU 5-3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <article id="slider">
+            <div class="link"></div>
+        </article>
+        <!-- //slider -->
+
+        <main id="contents">
+            <div class="container">
+                <section class="content1"></section>
+                <section class="content2"></section>
+                <section class="content3"></section>
+            </div>
+        </main>
+        <!-- //contents -->
+
+        <footer id="footer">
+            <div class="container">
+                <div class="footer1"></div>
+                <div class="footer2"></div>
+                <div class="footer3"></div>
+            </div>
+
+        </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(function () {
+            $(".nav > ul > li").mouseover(function () {
+                $(this).find(".submenu").stop().slideDown();
+                $("#header").addClass("on");
+            })
+            $(".nav > ul > li").mouseout(function () {
+                $(this).find(".submenu").stop().slideUp();
+                $("#header").removeClass("on");
+            })
+        })
+    </script>
+</body>
+
+</html>
