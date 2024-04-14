@@ -199,39 +199,6 @@
     },
     {
         "subject": "정보처리 기능사",
-        "question": "INSA(SNO, NAME) 테이블에서 SNO가 100인 튜플을 삭제하는 SQL 문은?",
-        "incorrect_answers": [
-            "REMOVE FROM INSA WHERE SNO = 100 ;",
-            "DROP TABLE INSA WHERE SNO = 100 ;",
-            "DESTROY INSA WHERE SNO = 100 ;"
-        ],
-        "correct_answer": "DELETE FROM INSA WHERE SNO = 100 ;",
-        "desc": "INSA(SNO, NAME) 테이블에서 SNO가 100인 튜플을 삭제하는 SQL 문은 DELETE FROM INSA WHERE SNO = 100 ; 입니다.."
-    },
-    {
-        "subject": "정보처리 기능사",
-        "question": "아래 보기에서 설명하는 내용과 가장 가까운 데이터베이스는? <br> <img style='width:450px' src='https://github.com/dkseho9121/web2023/blob/main/javascript/quiz/noname01444.gif?raw=true'>",
-        "incorrect_answers": [
-            "네트워크형 데이터베이스",
-            "계층형 데이터베이스",
-            "객체 지향 데이터베이스"
-        ],
-        "correct_answer": "관계형 데이터베이스",
-        "desc": "관계형 데이터베이스입니다."
-    },
-    {
-        "subject": "정보처리 기능사",
-        "question": "SQL 문의 형식 중 옳지 않은 것은?",
-        "incorrect_answers": [
-            "UPDATE - SET - WHERE",
-            "DELETE - FROM - WHERE",
-            "SELECT - FROM - WHERE"
-        ],
-        "correct_answer": "INSERT - SET - WHERE",
-        "desc": "INSERT - SET - WHERE은 SQL문의 형식이 아닙니다."
-    },
-    {
-        "subject": "정보처리 기능사",
         "question": "SQL에서 조건문을 기술할 수 있는 구문은?",
         "incorrect_answers": [
             "LIKE",
@@ -252,17 +219,6 @@
         ],
         "correct_answer": "ALTER TABLE",
         "desc": "테이블 구조를 변경하는데 사용하는 SQL 명령은 ALTER TABLE 입니다."
-    },
-    {
-        "subject": "정보처리 기능사",
-        "question": "데이터베이스를 활용하는 업무처리 프로그램의 개발시 개발 순서로 바른 것은?",
-        "incorrect_answers": [
-            "설계 - 업무분석 - 프로그램 개발 - 테스트 - 운용 및 보수유지",
-            "프로그램 개발 - 설계 - 운용 및 보수유지 - 테스트 - 업무분석",
-            "설계 - 업무분석 - 프로그램 개발 - 운용 및 보수유지 - 테스트"
-        ],
-        "correct_answer": "업무분석 - 설계 - 프로그램 개발 - 테스트 - 운용 및 보수유지",
-        "desc": "업무분석 - 설계 - 프로그램 개발 - 테스트 - 운용 및 보수유지가 올바른 순서입니다."
     },
     {
         "subject": "정보처리 기능사",
@@ -316,7 +272,7 @@
             "OLE(Object Linking and Embedding)",
             "DMA(Direct Memory Access)"
         ],
-        "correct_answer": "PnP(Plug and Play)",
+        "correct_answer": "pnp",
         "desc": "php는 위 보기 내용에서 설명하는 window98의 기능입니다."
     },
     {
@@ -327,7 +283,7 @@
             "하드 부팅 (Hard Booting)",
             "핫 부팅 (Hot Booting)"
         ],
-        "correct_answer": "웜 부팅 (Warm Booting)",
+        "correct_answer": "웜 부팅",
         "desc": "웜 부팅이란 Ctrl + Alt + Del 키를 눌러 재부팅 하는것을 의미합니다."
     },
     {
@@ -338,7 +294,7 @@
             "에디터(Editor)",
             "풀러(Spooler)"
         ],
-        "correct_answer": "스케줄러(Scheduler)",
+        "correct_answer": "스케줄러",
         "desc": "운영체제의 구성 요소 중 프로세스를 생성, 실행, 중단, 소멸 시키는 것은 스케줄러 입니다."
     },
     {
@@ -354,13 +310,13 @@
     },
     {
         "subject": "정보처리 기능사",
-        "question": "Windows 98의 클립보드에 대한 설명으로 옳지 않은 것은?",
+        "question": "Windows 98의 클립보드에 대한 설명으로 붙여넣기 단축키는?",
         "incorrect_answers": [
             "윈도에서 자료를 일시적으로 보관하는 장소를 제공한다",
             "가장 최근에 저장된 파일 하나만을 저장할 수 있다.",
             "클립보드에 현재화면 전체를 복사하는 기능 키는 Print Screen이다."
         ],
-        "correct_answer": "선택된 대상을 클립보드에 오려두기를 할 때 사용되는 단축키는 Ctrl + V 이다.",
+        "correct_answer": "Ctrl + V ",
         "desc": "오려두기는 Ctrl + X 입니다."
     },
     {
@@ -373,17 +329,6 @@
         ],
         "correct_answer": "Kernel",
         "desc": "Unix에서 태스크스케줄링 및 기억장치관리등의 일을 수행하는부분은 Kernel입니다."
-    },
-    {
-        "subject": "정보처리 기능사",
-        "question": "Windows 98에서 파일의 목록을 보는 방법으로서 적당하지 않은 것은?",
-        "incorrect_answers": [
-            "“내 컴퓨터”를 이용하여 파일의 목록을 볼 수 있다.",
-            "“탐색기”를 이용하여 파일의 목록을 볼 수 있다.",
-            "“파일관리자”를 이용하여 파일의 목록을 볼 수 있다."
-        ],
-        "correct_answer": "“작업표시줄”을 이용하여 파일의 목록을 볼 수 있다.",
-        "desc": "Windows 98에서 파일의 목록을 보는 방법으로서 적당하지 않은 것은 “작업표시줄”을 이용하여 파일의 목록을 볼 수 있다.입니다."
     },
     {
         "subject": "정보처리 기능사",
@@ -420,18 +365,7 @@
     },
     {
         "subject": "정보처리 기능사",
-        "question": "업무처리를 실시간 시스템(Real-Time System)으로 처리할 필요가 없는 것은?",
-        "incorrect_answers": [
-            "적의 공중 공격에 대비하여 동시에 여러 지점을 감시하는 시스템",
-            "가솔린 정련에서 온도가 너무 높이 올라가는 경우 폭발을 방지하기 위해 조치를 취하는 시스템",
-            "교통 관리, 비행조정 등과 같은 외부 상태에 대한 신속한 제어를 목적으로 하는 시스템"
-        ],
-        "correct_answer": "고객명단 자료를 월 단위로 묶어 처리하는 시스템",
-        "desc": "업무처리를 실시간 시스템(Real-Time System)으로 처리할 필요가 없는 것은 고객명단 자료를 월 단위로 묶어 처리하는 시스템"
-    },
-    {
-        "subject": "정보처리 기능사",
-        "question": "UNIX에서 입력시 사용되는 “Kill” 명령에 대한 설명으로 옳은 것은?",
+        "question": "UNIX에서 입력시 사용되는 “Kill” 명령에 대한 설명을 말하시오",
         "incorrect_answers": [
             "마지막에 입력한 문자를 지운다.",
             "마지막에 입력한 단어를 지운다.",
