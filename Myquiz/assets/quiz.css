@@ -2,13 +2,33 @@
     font-family: "YANGJIN";
     font-weight: normal;
     font-style: normal;
-    src: url("../fonts/YANGJIN.woff") format("woff"),
-        url("../fonts/YANGJIN.woff2") format("woff2");
+    src: url("../font/YANGJIN.woff") format("woff"),
+        url("../font/YANGJIN.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "DNFBitBit";
+    font-weight: normal;
+    font-style: normal;
+    src: url("../font/DNFBitBit.woff") format("woff"),
+        url("../font/DNFBitBit.woff2") format("woff2");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "MabinogiClassicR";
+    font-weight: normal;
+    font-style: normal;
+    src: url("../font/MabinogiClassicR.woff") format("woff"),
+        url("../font/MabinogiClassicR.woff2") format("woff2");
     font-display: swap;
 }
 
 :root {
     --fontY: "YANGJIN";
+    --fontB: "DNFBitBit";
+    --fontM: "MabinogiClassicR";
 }
 
 * {
@@ -27,6 +47,13 @@ a {
     color: #000;
 }
 
+body {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../assets/quizimg/bg3.jpg);
+}
+
 .none {
     display: none !important;
 }
@@ -38,10 +65,6 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url(../assets/quizimg/bg1.png);
 }
 
 .quiz__start {
@@ -64,7 +87,7 @@ a {
         -3px -3px 0 #3D2416,
         3px -3px 0 #3D2416,
         -3px 3px 0 #3D2416,
-        3px 10px 0 #3D2416;
+        3px 8px 0 #3D2416;
 }
 
 .quiz__start .title h1 {
@@ -100,16 +123,16 @@ a {
 
 #quiz__wrap .canva {
     position: absolute;
-    bottom: 358px;
-    left: 120px;
+    bottom: 330px;
+    left: 52px;
     width: 10px;
     height: 10px;
 }
 
 #quiz__wrap .canva2 {
     position: absolute;
-    bottom: 330px;
-    right: 300px;
+    bottom: 252px;
+    right: 238px;
     width: 10px;
     height: 10px;
 }
@@ -127,31 +150,35 @@ a {
 }
 
 .quiz__play {
-    width: 70vw;
+    width: 40vw;
     min-height: 60vh;
-    border: 10px solid #fff;
-    background-color: #928BFF;
+    border: 10px double #fff;
+    background-color: #AD57B5;
     /* border-radius: 10px; */
     position: relative;
+    border-radius: 30px;
     padding: 24px;
 }
 
 .quiz__play::before {
-    content: '정보처리 기사의 꿈';
+    content: 'Why';
     position: absolute;
-    font-family: var(--fontB);
+    border: 6px double #fff;
+    border-radius: 30px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #5E4CFD;
     left: -15px;
     top: -61px;
     font-family: var(--fontB);
-    font-size: 60px;
-    color: #FECA4F;
+    font-size: 4vmax;
+    color: #FDFDF2;
     text-shadow:
         -3px -3px 0 #3D2416,
         3px -3px 0 #3D2416,
         -3px 3px 0 #3D2416,
         3px 10px 0 #3D2416;
     text-transform: uppercase;
-
 }
 
 .quiz__play::after {
@@ -168,8 +195,32 @@ a {
     text-transform: uppercase;
 }
 
+.quiz__play .quiz__box {
+    text-align: center;
+    top: -60px;
+    left: 50%;
+    transform: translate(-50%);
+    font-family: var(--fontB);
+    box-sizing: border-box;
+    border: 6px double #fff;
+    background-color: #F56199;
+    padding: 5px 20px;
+    border-radius: 30px;
+    position: absolute;
+}
+
+.quiz__play .quiz__box span {
+    font-size: 4vmax;
+    color: #F9F871;
+    text-shadow:
+        -3px -3px 0 #3D2416,
+        3px -3px 0 #3D2416,
+        -3px 3px 0 #3D2416,
+        3px 10px 0 #3D2416;
+}
+
 .quiz__play .quiz__wrap {
-    width: 70vw;
+    width: 40vw;
     height: 60vh;
     display: flex;
     flex-direction: column;
@@ -181,13 +232,24 @@ a {
     margin-top: 30px;
 }
 
+.quiz__play .quiz__wrap .quiz__header {
+    font-size: 13px;
+    font-family: var(--fontY);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: #fff;
+    border-bottom: 3px solid #000;
+}
+
 .quiz__play .quiz__wrap .input input {
     width: calc(100% - 15px);
-    height: 100px;
+    height: 50px;
     border-radius: 20px;
     border: 0;
     text-align: center;
-    font-size: 50px;
+    font-family: var(--fontB);
+    font-size: 30px;
     border: 8px solid #fff;
 }
 
@@ -197,11 +259,12 @@ a {
 
 .quiz__play .confirm {
     text-align: center;
+    font-family: var(--fontM);
     margin-top: 20px;
+
 }
 
 .quiz__play .confirm button {
-    font-family: var(--fontG);
     font-size: 20px;
     padding: 10px 20px;
     border-radius: 50px;
@@ -214,40 +277,96 @@ a {
     cursor: pointer;
 }
 
+.quiz__play .confirm button:hover {
+    background-color: #FF8975;
+}
+
 .quiz__play .number {
-    position: absolute;
-    right: -10px;
-    top: -73px;
-    background-color: #4f44ea;
+    width: 3vw;
     color: #fff;
     text-align: center;
-    font-size: 30px;
+    font-size: 13px;
     border-radius: 5px;
-    padding: 10px 30px;
-    border: 10px solid #fff;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .quiz__play .quiz__wrap .question {
-    font-family: var(--fontG);
+    font-family: var(--fontM);
     color: #fff;
     line-height: 1.3;
-    font-size: 24px;
-    width: 100%;
-    height: 35vh;
+    font-size: 2.4vmax;
+    padding: 10px 20px;
+    width: 80%;
+    height: 20vh;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #FFC05E;
+    border-radius: 20px;
+    text-shadow:
+        -1px -1px 0 #3D2416,
+        1px -1px 0 #3D2416,
+        -1px 1px 0 #3D2416,
+        1px 2px 0 #3D2416;
 }
 
 .quiz__play .question::before {
     content: 'Q.';
-    font-size: 40px;
+    font-size: 2vmax;
     font-weight: bold;
     color: #FFEC51;
 }
 
 /* 미디어 쿼리 */
 @media (max-width:800px) {
+
     .quiz__start {
         width: 100%;
-        height: 100vh;
+        height: 50vh;
+    }
+
+    .quiz__start .title h1 {
+        font-size: 6vmax;
+    }
+
+    .quiz__play {
+        width: calc(75% - 20px);
+        height: 50vh;
+        font-size: 2px;
+    }
+
+    .quiz__play .quiz__wrap {
+        width: 70vw;
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .quiz__play .quiz__wrap .input input {
+        width: 66vw;
+        height: 30px;
+        font-size: 16px;
+        font-family: var(--fontB);
+        font-weight: 300;
+    }
+
+    .quiz__play .confirm button {
+        width: 22vw;
+        height: inherit;
+        font-size: 12px;
+    }
+
+    .quiz__wrap .quiz__header {
+        font-size: 8px;
+    }
+
+    .quiz__wrap .quiz__header .number {
+        font-size: 10px;
     }
 
 }

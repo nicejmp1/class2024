@@ -11,7 +11,7 @@
 <body>
     <div id="quiz__wrap">
         <div class="canva">
-            <img src="assets/img/Group 12.svg" alt="canva">
+            <img src="assets/img/Group 12.svg" alt="canva" style="width: 80px;">
         </div>
         <div class="canva2">
             <img src="assets/img/cc.svg" alt="canva2">
@@ -33,6 +33,7 @@
             </div>
         </div>
         <!-- //quiz__start -->
+
         <div class="quiz__play none">
 
         </div>
@@ -51,7 +52,6 @@
             fetch("https://nicejmp1.github.io/class2024/json/gineungsaJC2005_02.json")
                 .then(res => res.json())
                 .then(items => {
-                    console.log("데이터 전송받음", items);
                     quizInfo = items.map(item => ({
                         data: "2005년 2회",
                         type: item.subject,
@@ -72,6 +72,7 @@
             quizStart.classList.add("none");
             quizPlay.classList.remove("none");
             updateQuiz(currentIndex);
+            document.body.style.backgroundImage = "url(assets/quizimg/bg4.jpg)";
         });
 
         const updateQuiz = (index) => {
@@ -81,10 +82,12 @@
             }
 
             let quizWrapTag = `
-            <span class="number">${index + 1}/${quizInfo.length} ${correctCount}</span>
+            <div class="quiz__box">
+            <span>Why</span>
+            </div>
             <div class="quiz__wrap">
                 <div class="quiz__header">
-                    ${quizInfo[index].data} ${quizInfo[index].type}
+                    ${quizInfo[index].data} ${quizInfo[index].type}  <span class="number">남은 문제: ${index + 1}/${quizInfo.length} 맞은갯수: ${correctCount}</span>
                 </div>
                 <div class="question">${quizInfo[index].question}</div>
                 <div class="quiz__confirm">
