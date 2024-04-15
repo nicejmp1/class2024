@@ -162,14 +162,14 @@ body {
     padding: 24px;
 }
 
-.quiz__play::before {
+/* .quiz__play::before {
     content: '';
     position: absolute;
     border: 6px double #fff;
     border-radius: 30px;
     padding: 10px;
     box-sizing: border-box;
-    background-color: #5E4CFD;
+    background-color: #ea870f;
     left: -15px;
     top: -61px;
     font-family: var(--fontB);
@@ -181,18 +181,22 @@ body {
         -3px 3px 0 #3D2416,
         3px 10px 0 #3D2416;
     text-transform: uppercase;
-}
+} */
 
 .quiz__play::after {
-    content: 'Why';
+    content: 'what';
     position: absolute;
     font-family: var(--fontB);
     right: -63px;
     bottom: -31px;
     font-family: var(--fontB);
-    color: #40FFAE;
+    color: #ea870f;
     font-size: 60px;
-    text-shadow: 5px 5px 0px #fff;
+    text-shadow:
+        -3px -3px 0 #3D2416,
+        3px -3px 0 #3D2416,
+        -3px 3px 0 #3D2416,
+        3px 10px 0 #3D2416;
     transform: rotate(325deg);
     text-transform: uppercase;
 }
