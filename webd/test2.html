@@ -1,15 +1,135 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ko</title>
-
+    <title>test</title>
     <style>
         * {
             padding: 0;
             margin: 0;
+        }
+
+        #wrap {
+            width: 100%;
+        }
+
+        #header {
+            width: 100%;
+            height: 100px;
+        }
+
+        #header .container .logo {
+            width: 20%;
+            height: 100px;
+            background-color: #aaa;
+        }
+
+        #header .container .nav {
+            width: 80%;
+            height: 100px;
+            background-color: rgb(147, 152, 157);
+        }
+
+        #slider {
+            width: 100%;
+            height: 350px;
+            background-color: #bbb;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        #slider .slider {
+            width: 100%;
+            height: 350px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        #slider .slider img {
+            width: 100%;
+            height: 350px;
+        }
+
+        #slider .slider span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid #000;
+            box-sizing: border-box;
+            padding: 10px 10px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        #slider .link {
+            width: 1340px;
+            height: 100px;
+            position: absolute;
+            left: 50%;
+            top: 86%;
+            transform: translate(-50%, -50%);
+            background-color: #1234;
+            z-index: 3;
+        }
+
+        #content {
+            width: 1340px;
+            height: 400px;
+            margin: 0 auto;
+        }
+
+        #content .content1 {
+            width: 100%;
+            height: 200px;
+            background-color: #444;
+        }
+
+        #content .content2 {
+            width: 100%;
+            height: 200px;
+            background-color: #666;
+        }
+
+        #footer {
+            width: 1340px;
+            height: 120px;
+            background-color: #ddd;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        #footer .footer1 {
+            width: 80%;
+            height: 120px;
+            background-color: #555;
+        }
+
+        #footer .footer2 {
+            width: 20%;
+            height: 120px;
+        }
+
+        #footer .footer2 .footer2-1 {
+            width: 100%;
+            height: 60px;
+            background-color: #1234;
+        }
+
+        #footer .footer2 .footer2-2 {
+            width: 100%;
+            height: 60px;
+            background-color: #444
+        }
+
+        .container {
+            width: 1340px;
+            margin: 0 auto;
+            display: flex;
         }
 
         li {
@@ -21,147 +141,46 @@
             color: #000;
         }
 
-        #wrap {
-            width: 100%;
-        }
-
-        #header {
-            width: 100%;
-            position: relative;
-        }
-
-        #header::after {
-            content: '';
-            width: 100%;
-            height: 0px;
-            background-color: #a82d2d;
-            position: absolute;
-            top: 100px;
-            left: 0;
-            z-index: 1;
-            transition: all 600ms;
-        }
-
-        #header.on::after {
-            height: 156px;
-        }
-
-        #header .container {
-            display: flex;
-        }
-
-        #header .container .logo {
-            width: 20%;
-            height: 100px;
-            background-color: #345;
-        }
-
-        #header .container .nav {
-            width: 80%;
-            height: 100px;
-            background-color: #444;
-        }
-
-        #slider {
-            width: 100%;
-            height: 350px;
-            background-color: #bbb;
-            position: relative;
-            z-index: -1;
-        }
-
-        #slider .link {
-            position: absolute;
-            width: 1340px;
-            height: 100px;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: #686;
-            z-index: 1;
-        }
-
-        #contents {
-            width: 100%;
-            height: 400px;
-            background-color: #ccc;
-        }
-
-        #contents .container .content1 {
-            height: 150px;
-            background-color: #aaa;
-        }
-
-        #contents .container .content2 {
-            height: 250px;
-            background-color: #bbb;
-        }
-
-        #footer {
-            width: 100%;
-        }
-
-        #footer .container {
-            display: flex;
-        }
-
-        #footer .container .footer1 {
-            width: 20%;
-            height: 100px;
-            background-color: #6b4a4a;
-        }
-
-        #footer .container .footer2 {
-            width: 60%;
-            height: 100px;
-            background-color: #585858;
-        }
-
-        #footer .container .footer3 {
-            width: 20%;
-            height: 100px;
-            background-color: #673737;
-        }
-
-        .container {
-            width: 1340px;
-            margin: 0 auto;
-            background-color: rgba(0, 0, 0, 0.3);
-        }
-
         .nav>ul {
             display: flex;
-            box-sizing: border-box;
             justify-content: right;
             margin-top: 58px;
+            margin-right: 10px;
         }
 
         .nav>ul>li>a {
             display: inline-block;
-            padding: 10px 40px;
+            padding: 10px 30px;
+            box-sizing: border-box;
             border: 1px solid #000;
         }
 
         .nav>ul>li>a:hover {
-            background-color: #bbb;
+            background-color: #908484;
         }
 
         .nav>ul>li>ul {
-            display: none;
-            text-align: center;
-            position: relative;
             z-index: 10;
         }
 
+        .nav>ul>li>ul>li {
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            display: none;
+        }
+
         .nav>ul>li>ul>li>a {
+            width: 100%;
             box-sizing: border-box;
             display: inline-block;
             padding: 10px;
-            width: 100%;
+            background-color: #eee;
         }
 
         .nav>ul>li>ul>li>a:hover {
-            background-color: #de8282;
+            background-color: #000;
+            color: #fff;
         }
     </style>
 </head>
@@ -173,82 +192,89 @@
                 <h1 class="logo"></h1>
                 <nav class="nav">
                     <ul>
-                        <li><a href="#">MENU1</a>
+                        <li><a href="#">menu1</a>
                             <ul class="submenu">
-                                <li><a href="#">SUBMENU 1-1</a></li>
-                                <li><a href="#">SUBMENU 1-2</a></li>
-                                <li><a href="#">SUBMENU 1-3</a></li>
-                                <li><a href="#">SUBMENU 1-4</a></li>
+                                <li><a href="#">submenu1-1</a></li>
+                                <li><a href="#">submenu1-2</a></li>
+                                <li><a href="#">submenu1-3</a></li>
+                                <li><a href="#">submenu1-4</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">MENU2</a>
-                            <ul class="submenu">
-                                <li><a href="#">SUBMENU 2-1</a></li>
-                                <li><a href="#">SUBMENU 2-2</a></li>
-                            </ul>
+                        <li><a href="#">menu2</a>
+
                         </li>
-                        <li><a href="#">MENU3</a>
-                            <ul class="submenu">
-                                <li><a href="#">SUBMENU 3-1</a></li>
-                                <li><a href="#">SUBMENU 3-2</a></li>
-                                <li><a href="#">SUBMENU 3-3</a></li>
-                            </ul>
+                        <li><a href="#">menu3</a>
+
                         </li>
-                        <li><a href="#">MENU4</a>
-                            <ul>
-                                <li><a href="#">SUBMENU 4-1</a></li>
-                            </ul>
+                        <li><a href="#">menu4</a>
+
                         </li>
-                        <li><a href="#">MENU5</a>
-                            <ul class="submenu">
-                                <li><a href="#">SUBMENU 5-1</a></li>
-                                <li><a href="#">SUBMENU 5-2</a></li>
-                                <li><a href="#">SUBMENU 5-3</a></li>
-                            </ul>
+                        <li><a href="#">menu5</a>
+
                         </li>
                     </ul>
                 </nav>
             </div>
         </header>
-        <!-- //header -->
 
         <article id="slider">
+
+            <div class="slider s1">
+                <img src="https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider01.jpg" alt="이미지1">
+                <span>이미지1</span>
+            </div>
+            <div class="slider s2">
+                <img src="https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider02.jpg" alt="이미지2">
+                <span>이미지2</span>
+            </div>
+            <div class="slider s3">
+                <img src="https://webstoryboy.github.io/webstoryboy/w_webd/slider/slider03.jpg" alt="이미지2">
+                <span>이미지3</span>
+            </div>
             <div class="link"></div>
         </article>
-        <!-- //slider -->
 
-        <main id="contents">
-            <div class="container">
-                <section class="content1"></section>
-                <section class="content2"></section>
-                <section class="content3"></section>
-            </div>
+        <main id="content">
+            <section class="content1"></section>
+            <section class="content2"></section>
+
         </main>
-        <!-- //contents -->
+        <!-- //content -->
 
         <footer id="footer">
-            <div class="container">
-                <div class="footer1"></div>
-                <div class="footer2"></div>
-                <div class="footer3"></div>
+            <div class="footer1"></div>
+            <div class="footer2">
+                <div class="footer2-1"></div>
+                <div class="footer2-2"></div>
             </div>
-
         </footer>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
         $(function () {
-            $(".nav > ul > li").mouseover(function () {
-                $(this).find(".submenu").stop().slideDown();
-                $("#header").addClass("on");
+            $(".nav>ul>li").mouseover(function () {
+                $(".nav>ul>li>ul>li").stop().fadeIn(400);
             })
-            $(".nav > ul > li").mouseout(function () {
-                $(this).find(".submenu").stop().slideUp();
-                $("#header").removeClass("on");
+            $(".nav>ul>li").mouseout(function () {
+                $(".nav>ul>li>ul>li").stop().fadeOut(100);
             })
         })
+
+        $(function () {
+            let currentIndex = 0;
+
+            setInterval(() => {
+                let nextInde = (currentIndex + 1) % 3;
+                $(".slider").eq(currentIndex).fadeOut(3000);
+                $(".slider").eq(nextInde).fadeIn(3000);
+
+                currentIndex = nextInde;
+            }, 3000);
+        })
     </script>
+
+
 </body>
 
 </html>
