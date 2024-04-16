@@ -139,6 +139,20 @@ body {
     height: 10px;
 }
 
+#footer a {
+    display: inline-block;
+    font-family: var(--fontM);
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 17%;
+    color: #fff;
+    text-shadow:
+        -1px -1px 0 #3D2416,
+        1px -1px 0 #3D2416,
+        -1px 1px 0 #3D2416,
+        1px 1px 0 #3D2416;
+}
+
 .quiz__start .btn button {
     padding: 10px 30px;
     box-sizing: border-box;
