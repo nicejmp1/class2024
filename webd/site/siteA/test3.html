@@ -138,6 +138,40 @@
                     <option value="3">마바 건설회사</option>
                 </select>
             </div>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+            <script>
+                $(function () {
+                    let currentIndex = 0;
+                    $(".slider-wrap").append($(".slider").first().clone(true));
+
+                    setInterval(() => {
+                        currentIndex++;
+                        $(".slider-wrap").animate({ marginLeft: -currentIndex * 100 + "%" }, 600);
+
+                        if (currentIndex == 3) {
+                            setTimeout(() => {
+                                $(".slider-wrap").animate({ marginLeft: 0 }, 0);    // 애니메이션 정지
+                                currentIndex = 0;   // 현재 이미지를 초기화
+                            }, 700);
+                        }
+                    }, 3000);
+
+                    // $(".nav>ul>li").mouseover(function () {
+                    //     $(".nav>ul>li>ul").stop().fadeIn(300);
+                    // })
+                    // $(".nav>ul>li").mouseout(function () {
+                    //     $(".nav>ul>li>ul").stop().fadeOut(300);
+                    // })
+
+                    $(".nav>ul>li").mouseover(function () {
+                        $(".nav>ul>li>ul").stop().fadeIn(900);
+                    })
+                    $(".nav>ul>li").mouseout(function () {
+                        $(".nav>ul>li>ul").stop().fadeOut(300);
+                    })
+                })
+            </script>
         </footer>
         <!-- //footer -->
     </div>
