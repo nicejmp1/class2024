@@ -18,8 +18,8 @@ li {
 
 #wrap {
     width: 1200px;
-    height: 700px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 #header {
@@ -63,6 +63,7 @@ li {
 
 #header .nav>ul>li>ul {
     text-align: center;
+    display: none;
 }
 
 #header .nav>ul>li>a:hover {
@@ -90,13 +91,12 @@ li {
     background-color: #bbb;
 }
 
-.slider-wrap .slider {
-    display: none;
-    position: relative;
+.slider-wrap {
+    display: flex;
 }
 
-.slider-wrap .slider:first-child {
-    display: block;
+.slider-wrap .slider {
+    position: relative;
 }
 
 .slider-wrap .slider img {
