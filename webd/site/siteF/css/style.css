@@ -297,6 +297,10 @@ li {
     width: 100%;
 }
 
+#footer {
+    display: flex;
+}
+
 #footer .footer1 {
     width: 20%;
     height: 120px;
