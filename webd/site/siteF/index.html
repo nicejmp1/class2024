@@ -138,25 +138,24 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script>
-
         $(".nav>ul>li").mouseover(function () {
             $(this).find(">ul").stop().slideDown();
-        });
+        })
         $(".nav>ul>li").mouseout(function () {
             $(this).find(">ul").stop().slideUp();
         })
 
-        // 이미지 슬라이드 (페이드 효과)
-        let currentIndex = 0;   //현재 이미지
 
+        // 이미지 슬라이드 (페이드 효과)
+        let currentIndex = 0;
         setInterval(() => {
             let nextIndex = (currentIndex + 1) % 3;
-
             $(".slider").eq(currentIndex).fadeOut(600);
             $(".slider").eq(nextIndex).fadeIn(600);
 
-            currentIndex = nextIndex;
+            currentIndex = nextIndex
         }, 3000);
+
 
         // 탭 메뉴
         const tabBtn = $(".notice .title ul li");   // 버튼 설정
@@ -173,7 +172,6 @@
             $(this).addClass("active").siblings().removeClass("active");
             tabCont.eq(index).show().siblings().hide();
         });
-
 
 
     </script>
