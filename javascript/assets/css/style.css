@@ -220,6 +220,14 @@ li {
     border-bottom: 1px dashed #dcdcdc;
 }
 
+.main__menu h2 {
+    font-size: 20px;
+    font-family: var(--fontG);
+    font-weight: 400;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
 .main__menu ul li a {
     color: #336600;
     line-height: 1.7;
