@@ -100,15 +100,16 @@
 
     <script>
         window.addEventListener("mousemove", function (event) {
-            console.log(event);
+
             /// 선생님이 쓴 코드
-            document.querySelector(".clientX").innerHTML = 100;
-            document.querySelector(".offsetX").innerHTML = 200;
-            document.querySelector(".pageX").innerHTML = 300;
-            document.querySelector(".screenX").innerHTML = 400;
+            document.querySelector(".clientX").innerHTML = event.clientX;
+            document.querySelector(".offsetX").innerHTML = event.offsetX;
+            document.querySelector(".pageX").innerHTML = event.pageX;
+            document.querySelector(".screenX").innerHTML = event.screenX;
 
             // // 내가 쓴 코드
-            // const ClientX = document.querySelector(".clientX");
+            // const ClientX = document.querySelector(".clientX");git status
+
             // const offsetX = document.querySelector(".offsetX");
             // const pageX = document.querySelector(".pageX");
             // const screenX = document.querySelector(".screenX");
