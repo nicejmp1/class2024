@@ -122,6 +122,7 @@
             const quizDesc = quizPlay.querySelector(".desc");
             const modal = document.getElementById("exmodal");
             const span = modal.querySelector(".close");
+            const heart = document.querySelector("path")
 
             quizCheck.addEventListener("click", () => {
                 const inputElements = quizPlay.querySelectorAll("input[type='text']");
@@ -155,7 +156,6 @@
                 quizPlay.querySelector(".quiz__header").classList.remove("bad");
                 quizPlay.querySelector(".quiz__header").classList.remove("good");
             });
-
 
             span.addEventListener("click", () => {
                 modal.style.display = "none"; // 모달 닫기
