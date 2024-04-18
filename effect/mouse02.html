@@ -11,7 +11,7 @@
         rel="stylesheet">
     <style>
         body {
-            cursor: none;
+            /* cursor: none; */
         }
 
         .main__inner {
@@ -27,15 +27,6 @@
             text-align: center;
             font-family: "Catamaran", sans-serif;
             font-weight: 300;
-        }
-
-        .main__inner p em,
-        span,
-        i,
-        strong {
-            font-style: normal;
-            font-family: "Catamaran";
-            font-weight: 900;
         }
 
         .main__info {
@@ -77,78 +68,6 @@
                 background-color 0.3s, border 0.3s, border-radius 0.3s;
         }
 
-        .cursor.span1 {
-            background-color: #ebe07943;
-            border: 1px solid #e3d97f43;
-        }
-
-        .cursor.span1::before {
-            background-color: #C24E00;
-        }
-
-        .cursor.span1::after {
-            background-color: #C24E00;
-        }
-
-        .cursor.span2 {
-            background-color: #15c92a43;
-            border: 1px solid #0e9e1f;
-            transform: scale(0.5);
-        }
-
-        .cursor.span2::before {
-            background-color: #0e9e1f;
-        }
-
-        .cursor.span2::after {
-            background-color: #0e9e1f;
-        }
-
-        .cursor.span3 {
-            background-color: #e071106c;
-            border: 1px solid #9e4a0e;
-            border-radius: 1%;
-            transform: rotate(720deg) scale(3);
-        }
-
-        .cursor.span3::before {
-            background-color: #9e4a0e;
-        }
-
-        .cursor.span3::after {
-            background-color: #9e4a0e;
-        }
-
-        .cursor.span4 {
-            background: linear-gradient(135deg, rgba(74, 20, 213, 0.42) 0%, rgba(158, 74, 14, 0.8) 100%);
-            border: 2px solid #9e4a0e;
-            border-radius: 10px;
-            /* 더 부드러운 모서리 효과 */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            /* 그림자 효과 추가 */
-            transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) scale(1);
-            /* 초기 상태 */
-            transition: transform 2s, background-color 2s, box-shadow 2s;
-            /* 그림자 변화도 애니메이션 적용 */
-            transform-style: preserve-3d;
-            /* 3D 변형 스타일 유지 */
-
-            transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg) scale(1.5);
-            /* 호버 시 3D 회전 및 확대 */
-            background: linear-gradient(135deg, rgba(158, 74, 14, 0.8) 0%, rgba(74, 20, 213, 0.42) 100%);
-            /* 그라데이션 방향 변경 */
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.75);
-            /* 그림자 확대 */
-        }
-
-        .cursor.span4::before {
-            background-color: #9e4a0e;
-        }
-
-        .cursor.span4::after {
-            background-color: #9e4a0e;
-        }
-
         .cursor::before {
             content: '';
             width: 20px;
@@ -170,19 +89,6 @@
             top: 50%;
             transform: translate(-50%, -50%);
         }
-
-        .cursor.span {
-            background-color: #41BFDC;
-            border: 1px solid #28B8C8;
-        }
-
-        .cursor.span::after {
-            background-color: #448C2C;
-        }
-
-        .cursor.span::before {
-            background-color: #359B3D;
-        }
     </style>
 </head>
 
@@ -190,7 +96,7 @@
     <div id="wrap">
         <header id="header">
             <div class="header__inner">
-                <h1>Mouse Effect <em>01</em></h1>
+                <h1>Mouse Effect <em>02</em></h1>
             </div>
         </header>
         <!-- //header -->
@@ -230,10 +136,10 @@
             <div class="footer__inner">
                 <nav>
                     <ul>
-                        <li><a href="">01</a></li>
-                        <li><a href="">02</a></li>
-                        <li><a href="">03</a></li>
-                        <li><a href="">04</a></li>
+                        <li><a href="mouse01.html">01</a></li>
+                        <li><a href="mouse02.html">02</a></li>
+                        <li><a href="mouse03.html">03</a></li>
+                        <li><a href="mouse04.html">04</a></li>
                     </ul>
                 </nav>
             </div>
