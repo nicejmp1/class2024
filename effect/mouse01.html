@@ -17,7 +17,7 @@
         }
 
         .main__inner p {
-            color: #BAE29B;
+            color: #BFEF9A;
             padding: 10vw;
             font-size: 2.4vmax;
             text-align: center;
@@ -44,9 +44,43 @@
             width: 25%;
             text-transform: uppercase;
             font-family: "Catamaran";
-            color: #BAE29B;
+            color: #BFEF9A;
             font-weight: 200;
+        }
 
+        .cursor {
+            width: 100px;
+            height: 100px;
+            background-color: #ffffff32;
+            border: 1px solid #ffffff40;
+            backdrop-filter: blur(3px);
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            border-radius: 50%;
+            z-index: 1000000;
+        }
+
+        .cursor::after {
+            content: '';
+            width: 20px;
+            height: 1px;
+            background-color: #BFEF9A;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .cursor::before {
+            content: '';
+            width: 1px;
+            height: 20px;
+            background-color: #BFEF9A;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     </style>
 </head>
@@ -62,6 +96,7 @@
         <!-- //header -->
 
         <main id="main">
+            <div class="cursor"></div>
             <div class="main__inner">
                 <p>
                     JavaScript is a versatile programming language primarily used for creating interactive web pages. It
@@ -106,18 +141,6 @@
             document.querySelector(".offsetX").innerHTML = event.offsetX;
             document.querySelector(".pageX").innerHTML = event.pageX;
             document.querySelector(".screenX").innerHTML = event.screenX;
-
-            // // 내가 쓴 코드
-            // const ClientX = document.querySelector(".clientX");git status
-
-            // const offsetX = document.querySelector(".offsetX");
-            // const pageX = document.querySelector(".pageX");
-            // const screenX = document.querySelector(".screenX");
-
-            // ClientX.innerHTML = 100;
-            // offsetX.innerHTML = 200;
-            // pageX.innerHTML = 300;
-            // screenX.innerHTML = 400;
 
         });
     </script>
