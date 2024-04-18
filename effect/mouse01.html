@@ -24,6 +24,30 @@
             font-family: "Catamaran";
             font-weight: 600;
         }
+
+        .main__info {
+            left: 16px;
+            top: 60px;
+            font-family: "Catamaran";
+            position: absolute;
+            color: #BAE29B;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        .main__info ul {
+            flex-wrap: wrap;
+            display: flex;
+        }
+
+        .main__info ul li {
+            width: 25%;
+            text-transform: uppercase;
+            font-family: "Catamaran";
+            color: #BAE29B;
+            font-weight: 200;
+
+        }
     </style>
 </head>
 
@@ -50,10 +74,10 @@
             </div>
             <div class="main__info">
                 <ul>
-                    <li>clientX <span>0</span></li>
-                    <li>offsetX <span>0</span></li>
-                    <li>pageX <span>0</span></li>
-                    <li>screenX <span>0</span></li>
+                    <li>clientX <span class="clientX">0</span></li>
+                    <li>offsetX <span class="offsetX">0</span></li>
+                    <li>pageX <span class="pageX">0</span></li>
+                    <li>screenX <span class="screenX">0</span></li>
                 </ul>
             </div>
         </main>
@@ -74,6 +98,28 @@
         <!-- //footer -->
     </div>
 
+    <script>
+        window.addEventListener("mousemove", function (event) {
+            console.log(event);
+            /// 선생님이 쓴 코드
+            document.querySelector(".clientX").innerHTML = 100;
+            document.querySelector(".offsetX").innerHTML = 200;
+            document.querySelector(".pageX").innerHTML = 300;
+            document.querySelector(".screenX").innerHTML = 400;
+
+            // // 내가 쓴 코드
+            // const ClientX = document.querySelector(".clientX");
+            // const offsetX = document.querySelector(".offsetX");
+            // const pageX = document.querySelector(".pageX");
+            // const screenX = document.querySelector(".screenX");
+
+            // ClientX.innerHTML = 100;
+            // offsetX.innerHTML = 200;
+            // pageX.innerHTML = 300;
+            // screenX.innerHTML = 400;
+
+        });
+    </script>
 </body>
 
 </html>
