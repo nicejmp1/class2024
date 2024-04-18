@@ -85,3 +85,8 @@ li {
     font-family: "Montserrat";
     line-height: 1;
 }
+
+.footer__inner ul li.active a {
+    background-color: #BFEF9A;
+    color: #8160A1;
+}

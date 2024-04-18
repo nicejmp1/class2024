@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mouse</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
     <style>
         body {
             /* cursor: none; */
@@ -23,10 +24,12 @@
         .main__inner p {
             color: #BFEF9A;
             padding: 10vw;
-            font-size: 1.8vw;
+            font-size: 20vmax;
             text-align: center;
-            font-family: "Catamaran", sans-serif;
-            font-weight: 300;
+            font-family: "Orbitron";
+            font-weight: 900;
+            margin-left: -20vw;
+            letter-spacing: -1vw;
         }
 
         .main__info {
@@ -103,31 +106,14 @@
         <main id="main">
             <div class="cursor"></div>
             <div class="main__inner">
-                <p>
-                    <span>JavaScript</span> is a programming <span>language</span> used to make web pages interactive.
-                    It runs
-                    directly in
-                    web
-                    browsers, allowing for user interactions and dynamic data updates.
-
-                    Versatile Scripting Language: JavaScript is one of the three core technologies of the web, governing
-                    the behavior of web pages alongside HTML and CSS.
-                    Client-Side Execution: Most JavaScript code runs on the user's computer, enhancing page
-                    responsiveness and speed
-                    Event-Based Programming: JavaScript responds to user <span>interactions</span> like clicks and
-                    scrolls to execute
-                    functions.
-                    <span>DOM Manipulation</span>: JavaScript can dynamically change the structure of HTML documents
-                    through the
-                    Document Object Model (DOM).
-                </p>
+                <p>JavaScript</p>
             </div>
             <div class="main__info">
                 <ul>
-                    <li>clientX <span class="clientX">0</span></li>
-                    <li>offsetX <span class="offsetX">0</span></li>
-                    <li>pageX <span class="pageX">0</span></li>
-                    <li>screenX <span class="screenX">0</span></li>
+                    <li>clientY <span class="clientY">0</span></li>
+                    <li>offsetY <span class="offsetY">0</span></li>
+                    <li>pageY <span class="pageY">0</span></li>
+                    <li>screenY <span class="screenY">0</span></li>
                 </ul>
             </div>
         </main>
@@ -137,7 +123,7 @@
                 <nav>
                     <ul>
                         <li><a href="mouse01.html">01</a></li>
-                        <li><a href="mouse02.html">02</a></li>
+                        <li class="active"><a href="mouse02.html">02</a></li>
                         <li><a href="mouse03.html">03</a></li>
                         <li><a href="mouse04.html">04</a></li>
                     </ul>
@@ -147,72 +133,22 @@
         <!-- //footer -->
     </div>
     <!-- //wrap -->
-
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script>
         // info
         window.addEventListener("mousemove", function (event) {
 
-            /// 선생님이 쓴 코드
-            document.querySelector(".clientX").innerHTML = event.clientX;
-            document.querySelector(".offsetX").innerHTML = event.offsetX;
-            document.querySelector(".pageX").innerHTML = event.pageX;
-            document.querySelector(".screenX").innerHTML = event.screenX;
+            document.querySelector(".clientY").innerHTML = event.clientY;
+            document.querySelector(".offsetY").innerHTML = event.offsetY;
+            document.querySelector(".pageY").innerHTML = event.pageY;
+            document.querySelector(".screenY").innerHTML = event.screenY;
         });
 
-        //mouse 
-        const cursor = document.querySelector(".cursor");
-
-        window.addEventListener("mousemove", function (e) {
-            cursor.style.left = e.clientX - 50 + "px"
-            cursor.style.top = e.clientY - 50 + "px"
+        // use a script tag or an external JS file
+        document.addEventListener("DOMContentLoaded", (event) => {
+            // gsap code here!
         });
 
-        document.querySelector(".main__inner p span:nth-child(1)").addEventListener("mouseover", function () {
-            cursor.classList.add("span1");
-        });
-        document.querySelector(".main__inner p span:nth-child(1)").addEventListener("mouseout", function () {
-            cursor.classList.remove("span1");
-        });
-
-        document.querySelector(".main__inner p span:nth-child(2)").addEventListener("mouseover", function () {
-            cursor.classList.add("span2");
-        });
-        document.querySelector(".main__inner p span:nth-child(2)").addEventListener("mouseout", function () {
-            cursor.classList.remove("span2");
-        });
-
-        document.querySelector(".main__inner p span:nth-child(3)").addEventListener("mouseover", function () {
-            cursor.classList.add("span3");
-        });
-        document.querySelector(".main__inner p span:nth-child(3)").addEventListener("mouseout", function () {
-            cursor.classList.remove("span3");
-        });
-
-        document.querySelector(".main__inner p span:nth-child(4)").addEventListener("mouseover", function () {
-            cursor.classList.add("span4");
-        });
-        document.querySelector(".main__inner p span:nth-child(4)").addEventListener("mouseout", function () {
-            cursor.classList.remove("span4");
-        });
-
-        for (let i = 1; i <= 3; i++) {
-            document.querySelectorAll(".main__inner p span");
-            span.addEventListener("mouseover", function () {
-
-            })
-        }
-
-
-        const spans = Wrap.querySelectorAll(".main__inner p span");
-
-        spans.forEach((span, index) => {
-            span.addEventListener("mouseover", function () {
-                cursor.classList.add("span");
-            });
-            span.addEventListener("mouseout", function () {
-                cursor.classList.remove("span");
-            });
-        });
     </script>
 </body>
 
