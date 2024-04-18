@@ -261,52 +261,50 @@
             cursor.style.top = e.clientY - 50 + "px"
         });
 
-        document.querySelector(".main__inner p span:nth-child(1)").addEventListener("mouseover", function () {
-            cursor.classList.add("span1");
-        });
-        document.querySelector(".main__inner p span:nth-child(1)").addEventListener("mouseout", function () {
-            cursor.classList.remove("span1");
-        });
+        // document.querySelector(".main__inner p span:nth-child(1)").addEventListener("mouseover", function () {
+        //     cursor.classList.add("span1");
+        // });
+        // document.querySelector(".main__inner p span:nth-child(1)").addEventListener("mouseout", function () {
+        //     cursor.classList.remove("span1");
+        // });
 
-        document.querySelector(".main__inner p span:nth-child(2)").addEventListener("mouseover", function () {
-            cursor.classList.add("span2");
-        });
-        document.querySelector(".main__inner p span:nth-child(2)").addEventListener("mouseout", function () {
-            cursor.classList.remove("span2");
-        });
+        // document.querySelector(".main__inner p span:nth-child(2)").addEventListener("mouseover", function () {
+        //     cursor.classList.add("span2");
+        // });
+        // document.querySelector(".main__inner p span:nth-child(2)").addEventListener("mouseout", function () {
+        //     cursor.classList.remove("span2");
+        // });
 
-        document.querySelector(".main__inner p span:nth-child(3)").addEventListener("mouseover", function () {
-            cursor.classList.add("span3");
-        });
-        document.querySelector(".main__inner p span:nth-child(3)").addEventListener("mouseout", function () {
-            cursor.classList.remove("span3");
-        });
+        // document.querySelector(".main__inner p span:nth-child(3)").addEventListener("mouseover", function () {
+        //     cursor.classList.add("span3");
+        // });
+        // document.querySelector(".main__inner p span:nth-child(3)").addEventListener("mouseout", function () {
+        //     cursor.classList.remove("span3");
+        // });
 
-        document.querySelector(".main__inner p span:nth-child(4)").addEventListener("mouseover", function () {
-            cursor.classList.add("span4");
-        });
-        document.querySelector(".main__inner p span:nth-child(4)").addEventListener("mouseout", function () {
-            cursor.classList.remove("span4");
-        });
+        // document.querySelector(".main__inner p span:nth-child(4)").addEventListener("mouseover", function () {
+        //     cursor.classList.add("span4");
+        // });
+        // document.querySelector(".main__inner p span:nth-child(4)").addEventListener("mouseout", function () {
+        //     cursor.classList.remove("span4");
+        // });
 
-        for (let i = 1; i <= 3; i++) {
-            document.querySelectorAll(".main__inner p span");
+        // for (let i = 1; i <= 3; i++) {
+        //     document.querySelectorAll(".main__inner p span");
+        //     span.addEventListener("mouseover", function () {
+
+        //     })
+        // }
+
+        document.querySelectorAll(".main__inner p span").forEach((span, index) => {
             span.addEventListener("mouseover", function () {
-
-            })
-        }
-
-
-        const spans = Wrap.querySelectorAll(".main__inner p span");
-
-        spans.forEach((span, index) => {
-            span.addEventListener("mouseover", function () {
-                cursor.classList.add("span");
+                cursor.classList.add("span" + (index + 1));
             });
             span.addEventListener("mouseout", function () {
-                cursor.classList.remove("span");
+                cursor.classList.remove("span" + (index + 1));
             });
         });
+
     </script>
 </body>
 

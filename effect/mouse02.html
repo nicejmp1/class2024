@@ -145,8 +145,8 @@
         });
 
         // use a script tag or an external JS file
-        document.addEventListener("DOMContentLoaded", (event) => {
-            // gsap code here!
+        document.addEventListener("mousemove", (e) => {
+            gsap.to((".cursor"), { duration: 0.6, left: e.clientX - 50, top: e.clientY - 50 })
         });
 
     </script>
