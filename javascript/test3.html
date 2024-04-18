@@ -4,175 +4,157 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-        }
-
-        #wrap {
-            width: 100%;
-        }
-
-        #header {
-            width: 100%;
-            background-color: #111;
-        }
-
-        #header .header-content {
-            width: 1200px;
-            display: flex;
-            margin: 0 auto;
-        }
-
-        #header .header-content .logo {
-            width: 20%;
-            height: 100px;
-            background-color: #999;
-        }
-
-        #header .header-content .nav {
-            width: 80%;
-            height: 100px;
-            background-color: #888;
-        }
-
-        #slider {
-            width: 100%;
-        }
-
-        #slider .slider-content {
-            width: 1200px;
-            display: flex;
-            margin: 0 auto;
-        }
-
-        #slider .slider-content .section1 {
-            width: 50%;
-            height: 300px;
-            background-color: #735f5f;
-        }
-
-        #slider .slider-content .section2 {
-            width: 50%;
-            height: 300px;
-            background-color: #984b4b;
-        }
-
-        #slider .slider-content .section2 .section2-1 {
-            width: 100%;
-            height: 150px;
-            background-color: #812d2d;
-        }
-
-        #slider .slider-content .section2 .section2-2 {
-            width: 100%;
-            height: 150px;
-            background-color: #cf7777;
-        }
-
-
-        #contents {
-            width: 100%;
-            background-color: #333;
-        }
-
-        #contents .contents-content {
-            width: 1200px;
-            display: flex;
-            margin: 0 auto;
-        }
-
-        #contents .contents-content .content1 {
-            width: 33.3333%;
-            height: 200px;
-            background-color: #bb6d6d;
-        }
-
-        #contents .contents-content .content2 {
-            width: 33.3333%;
-            height: 200px;
-            background-color: #7c5454;
-        }
-
-        #contents .contents-content .content3 {
-            width: 33.3333%;
-            height: 200px;
-            background-color: #8c1515;
-        }
-
-
-        #footer {
-            width: 100%;
-            background-color: #444;
-        }
-
-        #footer .footer-content {
-            width: 1200px;
-            display: flex;
-            margin: 0 auto;
-        }
-
-        #footer .footer-content .footer1 {
-            width: 20%;
-            height: 100px;
-            background-color: #964f4f;
-        }
-
-        #footer .footer-content .footer2 {
-            width: 60%;
-            height: 100px;
-            background-color: #7a2323;
-        }
-
-        #footer .footer-content .footer3 {
-            width: 20%;
-            height: 100px;
-            background-color: #aa0b0b;
-        }
-    </style>
+    <title>반복문</title>
 </head>
 
 <body>
-    <div id="wrap">
-        <header id="header">
-            <div class="header-content">
-                <h1 class="logo"></h1>
-                <nav class="nav"></nav>
-            </div>
-        </header>
-        <!-- //header -->
+    <script>
+        // 1~10까지 출력 for()
 
-        <article id="slider">
-            <div class="slider-content">
-                <section class="section1"></section>
-                <section class="section2">
-                    <div class="section2-1"></div>
-                    <div class="section2-2"></div>
-                </section>
-            </div>
-        </article>
-        <!-- //slider -->
+        for (let i = 1; i <= 10; i++) {
+            console.log(i);
+        }
 
-        <main id="contents">
-            <div class="contents-content">
-                <div class="content1"></div>
-                <div class="content2"></div>
-                <div class="content3"></div>
-            </div>
-        </main>
-        <!-- //contents -->
+        // 5단 출력 
+        {
+            for (let i = 5; i <= 5; i++) {
+                for (let j = 1; j <= 9; j++) {
+                    console.log(i, j);
+                }
+            }
+        }
 
-        <footer id="footer">
-            <div class="footer-content">
-                <div class="footer1"></div>
-                <div class="footer2"></div>
-                <div class="footer3"></div>
-            </div>
-        </footer>
-        <!-- //footer -->
-    </div>
+        // 함수
+        function func() {
+            let i = 5, j = 4, k = 1, l, m;
+            l = i > 10;
+            m = j <= 4 || k <= 1;
+
+            // || (or) && (and)
+
+            console.log(m);
+            console.log(l);
+        }
+        func();
+
+        // 
+        const arr = [100, 200, 300];
+
+        arr.push(600);
+
+        console.log(arr);
+
+        // 반복문
+        let num = 0;
+
+        while (true) {
+            num++;
+            if (num == 5) {
+                continue;
+            }
+
+            if (num < 10) {
+                break;
+            }
+            console.log(num);
+        }
+
+        let num1 = 0;
+        while (true) {
+            num1++
+            if (num1 == 5) {
+                break;
+            }
+            console.log(num1);
+            // 1~4출력
+        }
+        console.log(num1)
+        // 5출력
+
+        // // 연산자
+        // 논리연산자(true, false), 산술연산자(+, -,*, /,%), 대입연산자 (=,==,===,<=), 비트연산자
+
+        // let a = 1;
+        // ++a;
+
+        // console.log(a);
+
+        // // 최고 점수 구하기 / 최저 점수 구하기 / 평균 구하기 
+        // let data = [70, 80, 90, 20, 30, 40];
+        // let best = 0;
+        // let scroe = 0;
+
+        // for (let i = 0; i < data.length; i++) {
+        //     console.log(data[i]);
+
+        //     if (data[i] > 80) {
+        //         best++;
+        //     }
+
+        //     if (score < data[i]) {
+        //         score = data[i];
+        //     }
+
+        // }
+
+        // let data = [70, 80, 90, 20, 30, 40];
+        // let bestCount = 0; // 80점 이상 점수의 개수
+        // let highestScore = data[0]; // 최고 점수
+        // let lowestScore = data[0]; // 최저 점수
+        // let totalScore = 0; // 점수 합계
+
+        // for (let i = 0; i < data.length; i++) {
+        //     console.log(data[i]);
+
+        //     // 최고 점수 업데이트
+        //     if (data[i] > highestScore) {
+        //         highestScore = data[i];
+        //     }
+
+        //     // 최저 점수 업데이트
+        //     if (data[i] < lowestScore) {
+        //         lowestScore = data[i];
+        //     }
+
+        //     // 총 점수 합산
+        //     totalScore += data[i];
+
+        //     // 80점 이상 점수 개수
+        //     if (data[i] >= 80) {
+        //         bestCount++;
+        //     }
+        // }
+
+        // // 평균 점수 계산
+        // let averageScore = totalScore / data.length;
+
+        // // 결과 출력
+        // console.log(`최고 점수: ${highestScore}`);
+        // console.log(`최저 점수: ${lowestScore}`);
+        // console.log(`평균 점수: ${averageScore}`);
+        // console.log(`80점 이상 점수 개수: ${bestCount}`);
+
+        // // 매개변수
+        // function func(num1, num2, num3) {
+        //     if (num1 > num3) return num1
+        //     else return num2
+        // }
+        // func(10, 20, 30);
+
+        // // 정답 : 20;
+
+        function func() {
+            let i = 100, j = 200, k = 300;
+            i /= j;
+            j -= i && i % 100;
+
+            console.log(i);
+            console.log(j);
+        }
+        func();
+
+
+    </script>
 </body>
 
 </html>
