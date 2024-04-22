@@ -45,7 +45,7 @@ li {
     border-bottom: 1px solid #BFEF9A;
 }
 
-.header__inner h1 {
+.header__inner h1 a {
     font-family: "Montserrat";
     color: #BFEF9A;
     font-weight: 200;
@@ -57,6 +57,9 @@ li {
 .header__inner em {
     font-weight: 800;
     font-style: normal;
+    font-size: 18px;
+    color: #BFEF9A;
+    font-family: "Montserrat";
 }
 
 
