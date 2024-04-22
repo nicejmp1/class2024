@@ -93,3 +93,21 @@ li {
     background-color: #BFEF9A;
     color: #8160A1;
 }
+
+.footer__inner .link {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+
+.footer__inner .link a {
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    font-weight: 400;
+    padding-right: 25px;
+    background-image: url(../svg/arrow2.svg);
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+
+}
