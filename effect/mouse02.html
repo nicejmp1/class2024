@@ -71,7 +71,24 @@
                 background-color 0.3s, border 0.3s, border-radius 0.3s;
         }
 
-        .cursor::before {
+        .cursor2 {
+            width: 20px;
+            height: 20px;
+            background-color: #bfef9a78;
+            border: 1px solid #bfef9a44;
+            position: absolute;
+            backdrop-filter: blur(5px);
+            left: -100px;
+            top: -100px;
+            border-radius: 50%;
+            z-index: 10000;
+            user-select: none;
+            pointer-events: none;
+            transition: transform 0.5s,
+                background-color 0.3s, border 0.3s, border-radius 0.3s;
+        }
+
+        /* .cursor::before {
             content: '';
             width: 20px;
             height: 1px;
@@ -91,6 +108,52 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
+        } */
+
+        .cursor.span1 {
+            background-color: rgba(255, 0, 0, 0.397);
+            border: 1px solid #e3d97f43;
+        }
+
+        .cursor.span2 {
+            background-color: rgba(0, 102, 255, 0.397);
+            border: 1px solid #e3d97f43;
+            transform: scale(0.5);
+
+        }
+
+        .cursor.span3 {
+            background-color: rgba(32, 225, 36, 0.397);
+            border: 1px solid #e3d97f43;
+            border-radius: 1%;
+            transform: rotate(720deg) scale(3);
+        }
+
+        .cursor.span4 {
+            background-color: rgba(255, 166, 0, 0.397);
+            border: 1px solid #e3d97f43;
+            border-radius: 10px;
+            transform: rotate(360deg) scale(1);
+        }
+
+        .span1 {
+            color: red;
+        }
+
+        .span2 {
+            color: blue;
+        }
+
+        .span3 {
+            color: green;
+        }
+
+        .span4 {
+            color: orange;
+        }
+
+        .span5 {
+            color: pink;
         }
     </style>
 </head>
@@ -105,8 +168,11 @@
         <!-- //header -->
         <main id="main">
             <div class="cursor"></div>
+            <div class="cursor2"></div>
             <div class="main__inner">
-                <p>JavaScript</p>
+                <p>
+                    <span>J</span><span>a</span><span>v</span><span>a</span><span>S</span>cript
+                </p>
             </div>
             <div class="main__info">
                 <ul>
@@ -152,7 +218,23 @@
         // use a script tag or an external JS file
         document.addEventListener("mousemove", (e) => {
             gsap.to((".cursor"), { duration: 0.6, left: e.clientX - 50, top: e.clientY - 50 })
+            gsap.to(".cursor2", { duration: 0.7, left: e.clientX - 10, top: e.clientY - 10 })
         });
+
+        const cursor = document.querySelector(".cursor");
+        document.querySelectorAll(".main__inner p span").forEach((span, index) => {
+            span.addEventListener("mouseover", function () {
+                cursor.classList.add("span" + (index + 1));
+                span.classList.add("span" + (index + 1));
+            });
+            span.addEventListener("mouseout", function () {
+                cursor.classList.remove("span" + (index + 1));
+                span.classList.remove("span" + (index + 1));
+
+            })
+        });
+
+
 
     </script>
 </body>
