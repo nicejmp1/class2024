@@ -79,5 +79,30 @@ li {
     background-repeat: no-repeat;
     background-position: right center;
     text-transform: uppercase;
+}
 
+/* footer__inner */
+
+.footer__inner nav {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    font-family: "sen";
+}
+
+.footer__inner nav ul {
+    display: flex;
+}
+
+.footer__inner nav li a {
+    margin-right: 5px;
+    padding: 4px 10px;
+    font-size: 16px;
+    font-weight: 200;
+    font-family: "sen";
+}
+
+.footer__inner nav li.active a {
+    text-emphasis: circle;
+    color: #DECC92;
 }

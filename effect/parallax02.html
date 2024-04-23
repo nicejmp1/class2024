@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Effect</title>
+    <link rel="stylesheet" href="assets/css/parallax.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Sen:wght@400..800&display=swap" rel="stylesheet">
+    <style>
+        .main__inner section {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .main__inner section:nth-child(even) {
+            background-color: #00000015;
+        }
+
+        .main__inner section .num {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            font-size: 40px;
+            font-family: "Sen";
+            font-weight: 200;
+            color: #DECC92;
+        }
+
+        .main__inner section .img {
+            width: 200px;
+            height: 200px;
+            background-image: url(assets/img/img03.jpg);
+            background-size: cover;
+            filter: grayscale();
+            margin: 5px;
+        }
+
+        .main__inner section .img.active {
+            background-image: url(assets/img/img02.jpg);
+            filter: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="header__inner">
+                <h1><a href="index.html">Parallax Effect</a><em> 02</em></h1>
+                <p>GSAP scrollTrigger - Pin 애니메이션</p>
+
+                <div class="link">
+                    <ul>
+                        <li><a href="mouse01.html">mouse</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <main id="main">
+            <div class="main__inner">
+                <section id="section01">
+                    <span class="num">01</span>
+                    <div class="img"></div>
+                </section>
+                <!-- //section01-->
+                <section id="section02">
+                    <span class="num">02</span>
+                    <div class="img i1"></div>
+                    <div class="img i2"></div>
+                    <div class="img i3"></div>
+                    <div class="img i4"></div>
+
+                </section>
+                <!-- //section02-->
+                <section id="section03">
+                    <span class="num">03</span>
+                    <div class="img"></div>
+                    <div class="img"></div>
+                    <div class="img"></div>
+                    <div class="img"></div>
+                    <div class="img"></div>
+                    <div class="img"></div>
+                    <div class="img"></div>
+
+                </section>
+                <!-- //section03 -->
+                <section id="section04">
+                    <span class="num">04</span>
+                    <div class="img"></div>
+
+                </section>
+                <!-- //section04-->
+                <section id="section05">
+                    <span class="num">05</span>
+                    <div class="img"></div>
+
+                </section>
+                <!-- //section05-->
+                <section id="section06">
+                    <span class="num">06</span>
+                    <div class="img"></div>
+
+                </section>
+                <!-- //section06-->
+                <section id="section07">
+                    <span class="num">07</span>
+                    <div class="img"></div>
+
+                </section>
+                <!-- //section07-->
+                <section id="section08">
+                    <span class="num">08</span>
+                    <div class="img"></div>
+
+                </section>
+                <!-- //section08-->
+                <section id="section09">
+                    <span class="num">09</span>
+                    <div class="img"></div>
+
+                </section>
+                <!-- //section09 -->
+            </div>
+
+        </main>
+        <!-- //main -->
+        <footer id="footer">
+            <div class="footer__inner">
+                <nav>
+                    <ul>
+                        <li><a href="parallax01.html">01</a></li>
+                        <li class="active"><a href="parallax02.html">02</a></li>
+                        <li><a href="parallax03.html">03</a></li>
+                        <li><a href="parallax04.html">04</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+    <!-- //wrap -->
+
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
+    <script>
+        // 01 : 이미지 애니메이션 주기
+        const ani1 = gsap.timeline();
+
+        ani1.to("#section01 .img", { rotation: 720, scale: 0, borderRadius: 200 })
+            .to("#section01 .img", { rotation: 0, scale: 1, borderRadius: 20 });
+
+        ScrollTrigger.create({
+            animation: ani1,
+            trigger: "#section01",
+            start: "top top",
+            end: "+=2000",
+            scrub: true,
+            pin: true,
+            anticipatePin: 1,
+            markers: false
+        });
+        // .to("#section01 .img", { duration: 1, x: -500, borderRadius: 20 })
+        // .to("#section01 .img", { duration: 2, x: 0, scale: 0.5 })
+        // .to("#section01 .img", { duration: 1, y: -500, rotate: 360 })
+        // .to("#section01 .img", { duration: 1, y: 0, rotate: 720, scale: 1 })
+        // .to("#section01 .img", { duration: 1, y: 500, rotate: 1440, scale: 0.5 })
+        // .to("#section01 .img", { duration: 1, y: 0, rotate: 1440, scale: 1, borderRadius: 200 });
+
+        // 02 : 이미지 순차적으로 나오기
+        const ani2 = gsap.timeline();
+
+        ani2.from("#section02 .i1", { y: -100, autoAlpha: 0, borderRadius: 200 }, 'a')
+            .from("#section02 .i2", { y: 100, autoAlpha: 0, borderRadius: 200 }, '+=2')
+            .from("#section02 .i3", { y: -100, autoAlpha: 0, borderRadius: 200 }, 'a')
+            .from("#section02 .i4", { y: 100, autoAlpha: 0, borderRadius: 200 }, 'b')
+
+        ScrollTrigger.create({
+            animation: ani2,
+            trigger: "#section02",
+            start: "top top",
+            end: "+=2000",
+            scrub: true,
+            pin: true,
+            anticipatePin: 1,
+            markers: false
+        });
+
+        // 03 : 이미지 랜덤으로 나오기
+        const ani3 = gsap.timeline();
+
+        ani3.from("#section03 .img", {
+            y: -100,
+            autoAlpha: 0,
+            borderRadius: 200,
+            scale: 0.5,
+            ease: "power4.out",
+            stagger: {
+                amount: 3,
+                from: "random"
+            }
+        })
+
+        ScrollTrigger.create({
+            animation: ani3,
+            trigger: "#section03",
+            start: "top top",
+            end: "+=3000",
+            scrub: true,
+            pin: true,
+            anticipatePin: 1,
+            markers: true
+        });
+
+
+    </script>
+</body>
+
+</html>
