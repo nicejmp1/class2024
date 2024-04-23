@@ -18,7 +18,10 @@
             overflow: hidden;
         }
 
-        .main__inner section:nth-child(even) {
+        #section02,
+        #section04,
+        #section06,
+        #section08 {
             background-color: #00000015;
         }
 
@@ -198,6 +201,18 @@
         const ani3 = gsap.timeline();
 
         ani3.from("#section03 .img", {
+            y: -100,
+            autoAlpha: 0,
+            borderRadius: 200,
+            scale: 0.5,
+            ease: "power4.out",
+            stagger: {
+                amount: 3,
+                from: "random"
+            }
+        })
+
+        ani3.to("#section03 .img", {
             y: -100,
             autoAlpha: 0,
             borderRadius: 200,
