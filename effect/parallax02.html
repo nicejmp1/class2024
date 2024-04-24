@@ -93,10 +93,91 @@
             border-radius: 50%;
         }
 
+        #section09 {
+            flex-direction: column;
+            background-color: #5F936B;
+        }
+
         #section09 .text {
-            font-size: 2vw;
-            line-height: 1.5;
-            text-transform: uppercase;
+            font-size: 5vw;
+            font-family: "Gruppo";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            padding: 30px;
+            text-align: center;
+            display: none;
+            background-color: #5F936B;
+        }
+
+        #section09 .img {
+            position: absolute;
+            z-index: 1;
+            width: 300px;
+            height: 300px;
+        }
+
+        #section09 #box {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+        }
+
+        #section09 #box .b1 {
+            width: 100%;
+            height: 25%;
+            background-color: #17d844;
+        }
+
+        #section09 #box .b2 {
+            width: 100%;
+            height: 25%;
+            background-color: #5bd778;
+        }
+
+        #section09 #box .b3 {
+            width: 100%;
+            height: 25%;
+            background-color: #81e097;
+        }
+
+        #section09 #box .b4 {
+            width: 100%;
+            height: 25%;
+            background-color: #adf0bc;
+        }
+
+        #section09 #box2 {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+        }
+
+        #section09 #box2 .b5 {
+            width: 100%;
+            height: 25%;
+            background-color: #05b32d;
+        }
+
+        #section09 #box2 .b6 {
+            width: 100%;
+            height: 25%;
+            background-color: #03741d;
+        }
+
+        #section09 #box2 .b7 {
+            width: 100%;
+            height: 25%;
+            background-color: #024612;
+        }
+
+        #section09 #box2 .b8 {
+            width: 100%;
+            height: 25%;
+            background-color: #011906;
         }
     </style>
 </head>
@@ -190,7 +271,28 @@
                 <section id="section09">
                     <span class="num">09</span>
                     <div class="img"></div>
-                    <div class="text"></div>
+                    <div id="box">
+                        <div class="b1"></div>
+                        <div class="b2"></div>
+                        <div class="b3"></div>
+                        <div class="b4"></div>
+                    </div>
+
+                    <div class="text t1">세상이</div>
+                    <div class="text t2">아무리</div>
+                    <div class="text t3">험난하다 해도</div>
+                    <div class="text t4">살아 남을 수 있다</div>
+                    <div class="text t5">노력은</div>
+                    <div class="text t6">배신 하지 않으니 </div>
+                    <div class="text t7">힘들어도 버티면 </div>
+                    <div class="text t8">모든게 다 해결된다 </div>
+
+                    <div id="box2">
+                        <div class="b5"></div>
+                        <div class="b6"></div>
+                        <div class="b7"></div>
+                        <div class="b8"></div>
+                    </div>
 
                 </section>
                 <!-- //section09 -->
@@ -398,7 +500,47 @@
 
         const ani9 = gsap.timeline();
 
-        ani9.to("#section09 .img", { scale: 10 })
+        ani9.to("#section09 .img", { autoAlpha: 0, scale: 3, duration: 2, borderRadius: 100 },)
+            .from("#section09 .b4", { duration: 1, autoAlpha: 0, duration: 1 }, "+=1")
+            .from("#section09 .b3", { duration: 1, autoAlpha: 0, duration: 1 }, "+=1")
+            .from("#section09 .b2", { duration: 1, autoAlpha: 0, duration: 1 }, "+=1")
+            .from("#section09 .b1", { duration: 1, autoAlpha: 0, duration: 1 }, "+=1")
+            // 각 박스가 차례대로 사라지도록 설정
+            .to("#section09 .b1", { duration: 1, autoAlpha: 0, xPercent: 50 }, "+=1")
+            .to("#section09 .b2", { duration: 1, autoAlpha: 0, xPercent: -50 }, "+=1")
+            .to("#section09 .b3", { duration: 1, autoAlpha: 0, xPercent: 50 }, "+=1")
+            .to("#section09 .b4", { duration: 1, autoAlpha: 0, xPercent: -50 }, "+=1") // 시간 겹침을 주어서 더 자연스러운 전환을 만듦
+            // 텍스트 애니메이션
+            .from("#section09 .t1", { display: "block", autoAlpha: 0, duration: 4, y: 50 }, "+=1")
+            .from("#section09 .t2", { display: "block", autoAlpha: 0, duration: 4, y: 50 }, "+=1")
+            .from("#section09 .t3", { display: "block", autoAlpha: 0, duration: 4, y: 50 }, "+=1")
+            .from("#section09 .t4", { display: "block", autoAlpha: 0, duration: 4, y: 50 }, "+=1")
+            .from("#section09 .t5", { display: "block", autoAlpha: 0, duration: 4, y: 50 }, "+=1")
+            .from("#section09 .t6", { display: "block", autoAlpha: 0, duration: 4, xPercent: 50 }, "+=1")
+            .from("#section09 .t7", { display: "block", autoAlpha: 0, duration: 4, xPercent: -50 }, "+=1")
+            .from("#section09 .t8", { display: "block", autoAlpha: 0, duration: 10, y: 50, scale: 600, rotate: 720 }, "+=5")
+
+            .from("#section09 .b5", { duration: 1, autoAlpha: 0, duration: 1 }, "+=1")
+            .from("#section09 .b6", { duration: 1, autoAlpha: 0, duration: 1 }, "+=1")
+            .from("#section09 .b7", { duration: 1, autoAlpha: 0, duration: 1 }, "+=1")
+            .from("#section09 .b8", { duration: 1, autoAlpha: 0, duration: 1 }, "+=1")
+            .to("#section09 .b5", { duration: 1, autoAlpha: 0, xPercent: 50 }, "+=1")
+            .to("#section09 .b6", { duration: 1, autoAlpha: 0, xPercent: -50 }, "+=1")
+            .to("#section09 .b7", { duration: 1, autoAlpha: 0, xPercent: 50 }, "+=1")
+            .to("#section09 .b8", { duration: 1, autoAlpha: 0, xPercent: -50 }, "+=1") // 시간 겹침을 주어서 더 자연스러운 전환을 만듦
+
+
+
+        ScrollTrigger.create({
+            animation: ani9,
+            trigger: "#section09",
+            start: "top top",
+            end: "+=12000",
+            scrub: true,
+            pin: true,
+            anticipatePin: 1,
+            markers: true
+        });
 
     </script>
 </body>
