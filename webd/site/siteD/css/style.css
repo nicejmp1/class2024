@@ -101,8 +101,38 @@ li {
 #main .cont1 .banner {
     width: 230px;
     height: 400px;
-    background-color: #7fb1db;
+    background: url(../images/banner01.jpg) center / cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+#main .cont1 .banner>div {
+    text-align: center;
+    width: 80%;
+    height: 90%;
+    background-color: #00000047;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#main .cont1 .banner>div h3 {
+    color: #fff;
+    font-size: 24px;
+}
+
+#main .cont1 .banner>div p {
+    padding: 10px;
+    color: #fff;
+}
+
+#main .cont1 .banner>div a {
+    color: #000;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
 }
 
 #main .cont2 {
