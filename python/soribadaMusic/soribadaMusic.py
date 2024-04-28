@@ -24,24 +24,28 @@ driver = webdriver.Chrome(service=service, options=options)
 driver.get('https://www.soribada.com/music/chart')
 
 
-time.sleep(2) 
+time.sleep(10) 
 
 search_box = driver.find_element(By.CLASS_NAME, 'music-list')
 
 rankings = search_box.find_elements(By.CLASS_NAME , 'num')
 titles = search_box.find_elements(By.CLASS_NAME , 'song-title')
 artist = search_box.find_elements(By.CLASS_NAME ,  'link-type2-name')
+playicon = driver.find_elements(By.CSS_SELECTOR, ".music-list .listen .img img")
 
 rankList = [rank.text for rank in rankings]
 titleList = [title.text for title in titles]
 artistList = [art.find_element(By.TAG_NAME , 'span').text for art in artist]
+iconList = [img.get_attribute('src') for img in playicon]
 
+print(iconList)
 
 # 데이터 프레임 생성
 chart_df = pd.DataFrame({
     "Ranking" : rankList,
     "Title" : titleList , 
-    "Artist" : artistList
+    "Artist" : artistList,
+    "Playicon" : iconList
 })
 
 

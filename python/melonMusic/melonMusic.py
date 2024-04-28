@@ -9,24 +9,24 @@ soup = bs(res.text, "lxml")
 ranking = soup.select("tbody .wrap.t_center > .rank")
 title = soup.select("tbody .wrap_song_info .ellipsis.rank01 span > a")
 artist = soup.select("tbody .wrap_song_info .ellipsis.rank02 span > a:nth-child(1)")
+playicon = soup.select(".wrap > a > img")
 
-
-rankingList = []
-titleList = []
-artistList = []
-
-print(len(ranking))
-print(len(artist))
-print(len(title))
+# print(len(ranking))
+# print(len(artist))
+# print(len(title))
 
 rankingList = [r.text.strip() for r in ranking]
 titleList = [t.text.strip() for t in title]
 artistList = [a.text.strip() for a in artist]
+iconList = [img['src'].strip() for img in playicon]
+
+print(iconList)
 
 chart_df = pd.DataFrame({
     'Ranking': rankingList,
     'Title': titleList,
-    'Artist': artistList
+    'Artist': artistList,
+    'Playicon': iconList
 })
 
 # JSON 파일로 저장 
