@@ -14,6 +14,7 @@ pip3 list
     pip3 install pandas
     pip3 install selenium
 ```` 
+
 각 라이브러리의 용도와 기능에 대한 설명
 1. requests      
     requests 라이브러리는 Python에서 HTTP 요청을 보내는 기능을 제공합니다. 이를 통해 웹 페이지의 내용을 가져오거나 API를 사용할 수 있습니다. 웹 서버와의 간단한 상호작용을 위해 널리 사용됩니다.
