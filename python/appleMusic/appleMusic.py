@@ -6,9 +6,6 @@ from selenium.webdriver.chrome.options import Options as ChromeOptions
 from webdriver_manager.chrome import ChromeDriverManager
 import pandas as pd
 
-import json
-from collections import OrderedDict
-
 # Chrome 옵션 설정
 options = ChromeOptions()
 options.add_argument("window-size=1920x1080")
@@ -22,24 +19,47 @@ driver.get("https://music.apple.com/kr/playlist/%EC%98%A4%EB%8A%98%EC%9D%98-top-
 
 time.sleep(2) 
 
-search_box = driver.find_element(By.CLASS_NAME, 'music-list')
+# 여러 요소를 찾는 메서드를 사용합니다.
+rankings = driver.find_elements(By.CSS_SELECTOR, '[data-testid="track-ranking"]')
+titles = driver.find_elements(By.CSS_SELECTOR, '[data-testid="track-title"]')
+artists = driver.find_elements(By.CSS_SELECTOR, '.svelte-154tqzm [data-testid="click-action"]')
+# 타이틀의 개수를 출력합니다.
+# print(len(titles))
+# print(len(artist))
 
-rankings = search_box.find_elements(By.CLASS_NAME , '')
-titles = search_box.find_elements(By.CLASS_NAME , 'track-title')
-artist = search_box.find_elements(By.CLASS_NAME ,  'link-type2-name')
-
-rankList = [rank.text for rank in rankings]
+# 브라우저 종료
+rankingList = [rank.text for rank in rankings]
 titleList = [title.text for title in titles]
-artistList = [art.find_element(By.TAG_NAME , 'span').text for art in artist]
+artistList = [artist.text for artist in artists if artist.text.strip() != '']
 
+min_length = min(len(titleList), len(artistList), len(rankingList))
+titleList = titleList[:min_length]
+artistList = artistList[:min_length]
+rankingList = rankingList[:min_length]
 
-# 데이터 프레임 생성
 chart_df = pd.DataFrame({
-    "Ranking" : rankList,
-    "Title" : titleList , 
+    "Rank" : rankingList,
+    "Title" : titleList,
     "Artist" : artistList
 })
 
+chart_df.to_json("appleMusic100.json", force_ascii=False , orient="records")
 
-chart_df.to_json("soriBadaMusicChart.json", force_ascii=False , orient="records")
+
+driver.quit()
+
+# rankList = [rank.text for rank in rankings]
+# titleList = [title.text for title in titles]
+# artistList = [art.find_element(By.TAG_NAME , 'span').text for art in artist]
+
+
+# # 데이터 프레임 생성
+# chart_df = pd.DataFrame({
+#     "Ranking" : rankList,
+#     "Title" : titleList , 
+#     "Artist" : artistList
+# })
+
+
+# chart_df.to_json("appleMusic.json", force_ascii=False , orient="records")
 
