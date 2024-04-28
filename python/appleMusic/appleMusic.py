@@ -48,18 +48,3 @@ chart_df.to_json("appleMusic100.json", force_ascii=False , orient="records")
 
 driver.quit()
 
-# rankList = [rank.text for rank in rankings]
-# titleList = [title.text for title in titles]
-# artistList = [art.find_element(By.TAG_NAME , 'span').text for art in artist]
-
-
-# # 데이터 프레임 생성
-# chart_df = pd.DataFrame({
-#     "Ranking" : rankList,
-#     "Title" : titleList , 
-#     "Artist" : artistList
-# })
-
-
-# chart_df.to_json("appleMusic.json", force_ascii=False , orient="records")
-
