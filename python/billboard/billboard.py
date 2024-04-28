@@ -13,7 +13,7 @@ ranking = soup.select(r".u-letter-spacing-0080\@tablet")
 title = soup.select(".o-chart-results-list-row-container .lrv-u-width-100p  #title-of-a-story ")
 artist = soup.select(".a-truncate-ellipsis-2line")
 img = soup.select(".o-chart-results-list__item > .c-lazy-image > .lrv-a-crop-1x1 > img.c-lazy-image__img")
-print(img)
+# print(img)
 
 rankingList = [r.text.strip() for r in ranking]
 titleList = [t.text.strip() for t in title]
