@@ -4,10 +4,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 from webdriver_manager.chrome import ChromeDriverManager
-import pandas as pd
-
 import json
-from collections import OrderedDict
 
 # Chrome 옵션 설정
 options = ChromeOptions()
@@ -18,35 +15,29 @@ options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) Apple
 service = ChromeService(executable_path=ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service, options=options)
 
-
-
 # 사이트 접속
 driver.get('https://www.soribada.com/music/chart')
-
-
 time.sleep(10) 
 
+# 데이터 추출
 search_box = driver.find_element(By.CLASS_NAME, 'music-list')
-
 rankings = search_box.find_elements(By.CLASS_NAME , 'num')
 titles = search_box.find_elements(By.CLASS_NAME , 'song-title')
-artist = search_box.find_elements(By.CLASS_NAME ,  'link-type2-name')
-playicon = driver.find_elements(By.CSS_SELECTOR, ".music-list .listen .img img")
+artists = search_box.find_elements(By.CLASS_NAME ,  'link-type2-name')
+playicons = driver.find_elements(By.CSS_SELECTOR, ".music-list .listen .img img")
 
-rankList = [rank.text for rank in rankings]
-titleList = [title.text for title in titles]
-artistList = [art.find_element(By.TAG_NAME , 'span').text for art in artist]
-iconList = [img.get_attribute('src') for img in playicon]
+chart_data = []
+for rank, title, artist, playicon in zip(rankings, titles, artists, playicons):
+    chart_data.append({
+        "Ranking": rank.text,
+        "Title": title.text,
+        "Artist": artist.find_element(By.TAG_NAME, 'span').text,
+        "Playicon": playicon.get_attribute('src')
+    })
 
-print(iconList)
+# JSON 파일로 저장
+with open("soriBadaMusicChart.json", "w", encoding='utf-8') as file:
+    json.dump(chart_data, file, ensure_ascii=False, indent=4)
 
-# 데이터 프레임 생성
-chart_df = pd.DataFrame({
-    "Ranking" : rankList,
-    "Title" : titleList , 
-    "Artist" : artistList,
-    "Playicon" : iconList
-})
-
-
-chart_df.to_json("soriBadaMusicChart.json", force_ascii=False , orient="records")
+# 드라이버 종료
+driver.quit()
