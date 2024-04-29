@@ -1,0 +1,87 @@
+[
+    {
+        "title": "한마리치킨",
+        "description": "계동치킨 25년의 전통이 묻어있는 한마리 치킨 누구나 좋아하는 부드럽고 깔끔한 맛입니다.",
+        "imageURL": "http://www.kyedong.com/includes/thumbnail.ashx?image=/uploads/products/k1.jpg&w=546&h=298"
+    },
+    {
+        "title": "날개와 다리 치킨",
+        "description": "날개와 다리만 사랑하는 당신은 욕심쟁이! 신선한 닭다리와 느끼하지 않고 깔끔한 날개치킨을 모아놓은 메뉴입니다.",
+        "imageURL": "http://www.kyedong.com/includes/thumbnail.ashx?image=/uploads/products/k2.jpg&w=546&h=298"
+    },
+    {
+        "title": "날개 치킨",
+        "description": "치킨의 가장 맛있는 부위인 날개와 봉 부위만 모아놓은 날개 치킨! 느끼하지 않고 깔끔한 맛으로 꾸준히 인기있는 계..",
+        "imageURL": "http://www.kyedong.com/includes/thumbnail.ashx?image=/uploads/products/k3.jpg&w=546&h=298"
+    },
+    {
+        "title": "다리 치킨",
+        "description": "신선한 닭다리를 사용하여 담백하고 바삭한 계동 다리치킨! 먹어도 먹어도 질리지 않습니다.",
+        "imageURL": "http://www.kyedong.com/includes/thumbnail.ashx?image=/uploads/products/k4.jpg&w=546&h=298"
+    },
+    {
+        "title": "살만치킨",
+        "description": "100% 신선한 뼈 없는 닭고기에 계동치킨의 담백한 양념이 조화되어, 부드럽고 은은한 살만치킨",
+        "imageURL": "http://www.kyedong.com/includes/thumbnail.ashx?image=/uploads/products/k5_1.jpg&w=546&h=298"
+    },
+    {
+        "title": "한마리치킨",
+        "description": "계동치킨 25년의 전통이 묻어있는 한마리 치킨 누구나 좋아하는 부드럽고 깔끔한 매운맛 치킨",
+        "imageURL": "http://www.kyedong.com/includes/thumbnail.ashx?image=/uploads/products/k1_1.jpg&w=546&h=298"
+    },
+    {
+        "title": "날개와 다리 치킨",
+        "description": "날개와 다리만 사랑하는 당신은 욕심쟁이! 신선한 닭다리와 느끼하지 않고 깔끔한 날개치킨을 모아놓은 메뉴입니다.",
+        "imageURL": "http://www.kyedong.com/includes/thumbnail.ashx?image=/uploads/products/k2_1.jpg&w=546&h=298"
+    },
+    {
+        "title": "날개 치킨",
+        "description": "치킨의 가장 맛있는 부위인 날개와 봉 부위만 모아놓은 날개 치킨! 느끼하지 않고 깔끔한 맛으로 꾸준히 인기있는 계..",
+        "imageURL": "http://www.kyedong.com/includes/thumbnail.ashx?image=/uploads/products/k3_1.jpg&w=546&h=298"
+    },
+    {
+        "title": "다리 치킨",
+        "description": "신선한 닭다리를 사용하여 담백하고 바삭한 계동 다리치킨! 먹어도 먹어도 질리지 않습니다.",
+        "imageURL": "http://www.kyedong.com/includes/thumbnail.ashx?image=/uploads/products/k4_1.jpg&w=546&h=298"
+    },
+    {
+        "title": "살만 치킨",
+        "description": "100% 신선한 뼈 없는 닭고기에 계동치킨의 담백한 양념이 조화되어, 부드럽고 은은한 살만치킨",
+        "imageURL": "http://www.kyedong.com/includes/thumbnail.ashx?image=/uploads/products/k5.jpg&w=546&h=298"
+    },
+    {
+        "title": "심쿵달달치킨",
+        "description": "심쿵달달치킨",
+        "imageURL": "http://www.kyedong.com/includes/thumbnail.ashx?image=/uploads/products/12.jpg&w=546&h=298"
+    },
+    {
+        "title": "후레이크치킨",
+        "description": "후레이크치킨",
+        "imageURL": "http://www.kyedong.com/includes/thumbnail.ashx?image=/uploads/products/11.jpg&w=546&h=298"
+    },
+    {
+        "title": "크런치 후라이드 치킨",
+        "description": "바삭바삭 고소한 맛! 남녀노소 누구나 좋아하는 계동치킨의 크런치 후라이드 치킨",
+        "imageURL": "http://www.kyedong.com/includes/thumbnail.ashx?image=/uploads/products/k6.jpg&w=546&h=298"
+    },
+    {
+        "title": "허브 양념 치킨",
+        "description": "달콤하고 부드러운 맛크런치 후라이드 치킨과 함께 남녀노소 누구나 좋아하는 계동치킨 전통의 양념 치킨",
+        "imageURL": "http://www.kyedong.com/includes/thumbnail.ashx?image=/uploads/products/k7.jpg&w=546&h=298"
+    },
+    {
+        "title": "치킨 샐러드",
+        "description": "치킨 샐러드",
+        "imageURL": "http://www.kyedong.com/includes/thumbnail.ashx?image=/uploads/products/k8.jpg&w=546&h=298"
+    },
+    {
+        "title": "닭똥집",
+        "description": "술안주로 구~웃닭똥집",
+        "imageURL": "http://www.kyedong.com/includes/thumbnail.ashx?image=/uploads/products/kk1.jpg&w=546&h=298"
+    },
+    {
+        "title": "불닭발",
+        "description": "불닭발뼈와 무뼈 두가지 타입으로 즐기세요",
+        "imageURL": "http://www.kyedong.com/includes/thumbnail.ashx?image=/uploads/products/k9.jpg&w=546&h=298"
+    }
+]

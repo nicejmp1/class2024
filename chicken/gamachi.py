@@ -31,7 +31,6 @@ tab_urls = [
     "https://www.gamachi.co.kr/b/menu&sca=%EC%B9%98%ED%82%A8%EB%A9%94%EB%89%B4",
     "https://www.gamachi.co.kr/b/menu&sca=%EC%82%AC%EC%9D%B4%EB%93%9C%EB%A9%94%EB%89%B4",
 ]
-
 base_url = "https://www.gamachi.co.kr"
 all_tabs_data = []
 

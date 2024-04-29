@@ -56,8 +56,8 @@ for main in menu:
     album = main.select_one(".album").text.strip()
     image_url = main.select_one(".thumb img").get('data-src')
 
-    music_data.append({
-        "rank": rank,
+    menu_data.append({
+        "rank": mainmenu,
         "title": title,
         "artist": artist,
         "imageURL": image_url,
