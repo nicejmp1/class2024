@@ -20,8 +20,8 @@ def get_menu_data(url, base_url):
             menuimage = base_url + menuimage
 
         menu_data.append({
-            'Menu': menu.text.strip(),
-            'Sub': sub.text.strip(),
+            'Menutitle': menu.text.strip(),
+            'Subtitle': sub.text.strip(),
             'menuimage': menuimage
         })
 

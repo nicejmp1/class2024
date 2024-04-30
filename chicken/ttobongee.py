@@ -6,77 +6,62 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from bs4 import BeautifulSoup
-import time
 import json
+import time
 from datetime import datetime
 
-# 현재 날짜 가져오기
+# 현재 날짜 가져오기 및 기본 URL 정의
 current_date = datetime.now().strftime("%Y-%m-%d")
-filename = f"chart_flo100_{current_date}.json"
-# 웹드라이브 설치
+base_url = "http://www.ttobongee.com/skin3/"
+filename = f"ttobongee_chicken{current_date}.json"
+
+# 웹드라이버 설정
 options = ChromeOptions()
 service = ChromeService(executable_path=ChromeDriverManager().install())
 browser = webdriver.Chrome(service=service, options=options)
+
+# 메뉴 데이터 추출 함수
+def get_menu_data(browser, base_url):
+    # 페이지 소스 가져오기
+    html_source = browser.page_source
+    soup = BeautifulSoup(html_source, 'html.parser')
+    menu_data = []
+    menu_items = soup.select(".menuList")
+    for item in menu_items:
+        # 제목 추출
+        title = item.find('p', class_='name').text.strip() if item.find('p', class_='name') else 'No Title'
+        # 이미지 URL 추출 (클래스 이름은 확인 필요)
+        image = item.find('img')['src'] if item.find('img') else 'No Image URL'
+        if image.startswith('/'):
+            image = base_url + image
+        # 추출된 데이터를 리스트에 추가
+        menu_data.append({
+            "title": title,
+            "imageURL": image,
+            # 여기에 description을 추가하세요
+        })
+    return menu_data
+
+# 전체 메뉴 데이터를 모을 리스트
+all_menu_data = []
+
+# 페이지 접속
 browser.get("http://www.ttobongee.com/skin3/menu.php")
+WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "content_bg")))
 
-# 페이지가 완전히 로드될 때까지 대기
-WebDriverWait(browser, 10).until(
-    EC.presence_of_element_located((By.CLASS_NAME, "data-wrap"))
-)
+# 탭 전환 및 데이터 추출
+tabs = browser.find_elements(By.CLASS_NAME, "a")
+for tab in tabs:
+    # 탭을 클릭합니다.
+    tab.click()
+    time.sleep(2)  # 데이터 로드를 기다립니다.
 
-# # "더보기" 버튼을 찾아 클릭
-# try:
-#     more_button = WebDriverWait(browser, 10).until(
-#         EC.visibility_of_element_located((By.CSS_SELECTOR, ".btn_list_more"))
-#     )
-#     if more_button:
-#         browser.execute_script("arguments[0].click();", more_button)
-#         print("Clicked '더보기' button.")
-#         time.sleep(3)
-# except Exception as e:
-#     print("Error clicking '더보기':", e)
-
-# time.sleep(3)
-
-# 업데이트된 페이지 소스를 변수에 저장
-html_source_updated = browser.page_source
-soup = BeautifulSoup(html_source_updated, 'html.parser')
-
-# print(soup)
-
-# 데이터 추출
-menu_data = []
-menu = soup.select(".data_wrap .menuList")
-for main in menu:
-    mainmenu = main.select_one(".name").text.strip()
-
-    print(mainmenu)
-    title = main.select_one(".tit__text").text.strip()
-    artist = main.select_one(".artist__link").text.strip()
-    album = main.select_one(".album").text.strip()
-    image_url = main.select_one(".thumb img").get('data-src')
-
-    menu_data.append({
-        "rank": mainmenu,
-        "title": title,
-        "artist": artist,
-        "imageURL": image_url,
-        "album": album
-    })
+    # 탭 전환 후 데이터 추출
+    all_menu_data.extend(get_menu_data(browser, base_url))
 
 # 데이터를 JSON 파일로 저장
 with open(filename, 'w', encoding='utf-8') as f:
-    json.dump(music_data, f, ensure_ascii=False, indent=4)
+    json.dump(all_menu_data, f, ensure_ascii=False, indent=4)
 
 # 브라우저 종료
 browser.quit()
-
-# title = browser.find_elements(By.CSS_SELECTOR, ".tit__text")
-# artist = browser.find_elements(By.CSS_SELECTOR, "span.artist__link.last")
-# ranking = browser.find_elements(By.CSS_SELECTOR, "td.num")
-# # print(len(ranking))
-
-# titleList = [title.text for title in title]
-# artistList = [art.text for art in artist]
-# rankList = [rank.text for rank in ranking]
-

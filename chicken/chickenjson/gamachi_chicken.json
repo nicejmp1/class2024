@@ -1,272 +1,272 @@
 [
     {
-        "Menu": "한마리통닭",
-        "Sub": "바삭하고 촉촉한 가마치 대표메뉴!!",
+        "Menutitle": "한마리통닭",
+        "Subtitle": "바삭하고 촉촉한 가마치 대표메뉴!!",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1028293093_HR3EZfeh_945635a10931828ac48d7d1e4e76286b6d93b69b_368x368.png"
     },
     {
-        "Menu": "두마리통닭",
-        "Sub": "바삭하고 촉촉한 가마치 대표메뉴!!",
+        "Menutitle": "두마리통닭",
+        "Subtitle": "바삭하고 촉촉한 가마치 대표메뉴!!",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1028293093_3gJenUYk_c7bbb11301f35608f77c028e7555ba58eec4c061_368x368.png"
     },
     {
-        "Menu": "후라이드치킨",
-        "Sub": "겉은 바삭! 속은 촉촉! 후라이드 치킨",
+        "Menutitle": "후라이드치킨",
+        "Subtitle": "겉은 바삭! 속은 촉촉! 후라이드 치킨",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-3551210135_crgKLWSl_41b06cba315d31b2708258519c93e63447c12876_368x368.jpg"
     },
     {
-        "Menu": "가마치 후라이드 콤보",
-        "Sub": "통다리와 통날개의 부드러움만 담은 가마치 프리미엄 메뉴",
+        "Menutitle": "가마치 후라이드 콤보",
+        "Subtitle": "통다리와 통날개의 부드러움만 담은 가마치 프리미엄 메뉴",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1030043646_IPnyMCrS_82b5d8367021f9452a45dc1be6a2e35e6efbb72f_368x368.jpg"
     },
     {
-        "Menu": "양념치킨",
-        "Sub": "가마치 양념 치킨",
+        "Menutitle": "양념치킨",
+        "Subtitle": "가마치 양념 치킨",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-3551210135_tr89o6QV_e03222edf8a46d0e1ca623bb30dfb955b56127c7_368x368.jpg"
     },
     {
-        "Menu": "가마치 양념콤보",
-        "Sub": "통다리와 통날개의 부드러움과 매콤달콤한 소스의 만남!",
+        "Menutitle": "가마치 양념콤보",
+        "Subtitle": "통다리와 통날개의 부드러움과 매콤달콤한 소스의 만남!",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1030043646_DStb4Hgv_9f7eed4c248341b4e80778673c3834379724a25e_368x368.jpg"
     },
     {
-        "Menu": "반반콤보",
-        "Sub": "가마치 매콤달콤, 바삭한 반반콤보",
+        "Menutitle": "반반콤보",
+        "Subtitle": "가마치 매콤달콤, 바삭한 반반콤보",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-3551210058_E62xLvzp_ea262c3dd7c7e82b6a08f4c0125c36cda0c2140b_368x368.jpg"
     },
     {
-        "Menu": "간장치킨",
-        "Sub": "달콤 고소한 가마치 신메뉴",
+        "Menutitle": "간장치킨",
+        "Subtitle": "달콤 고소한 가마치 신메뉴",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-3551210135_Q7OriPUl_c37592e88a23ed6efba7f2ffb32ad1c18881c858_368x368.jpg"
     },
     {
-        "Menu": "가마치 마늘간장 콤보",
-        "Sub": "통다리와 통날개의 부드러움에 마늘간장의 풍미를 더하다!",
+        "Menutitle": "가마치 마늘간장 콤보",
+        "Subtitle": "통다리와 통날개의 부드러움에 마늘간장의 풍미를 더하다!",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1030043646_kpjuJaMl_440b32d59f31a60d5f6f5c6a315792b0cb1f5a65_368x368.jpg"
     },
     {
-        "Menu": "가마치순살간장",
-        "Sub": "맛있는 순살간장",
+        "Menutitle": "가마치순살간장",
+        "Subtitle": "맛있는 순살간장",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-3551210135_M7iFmnzf_0445a0f25ed00af678546788a3abb25766717e75_368x368.jpg"
     },
     {
-        "Menu": "청양맵간장치킨",
-        "Sub": "화끈한 청양고추와 간장소스의 조합으로 깊은 풍미의 치킨",
+        "Menutitle": "청양맵간장치킨",
+        "Subtitle": "화끈한 청양고추와 간장소스의 조합으로 깊은 풍미의 치킨",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1028293093_5Un9dNBw_3665d70d65f28dce5193a6094dd6e41aa78baf5b_368x368.png"
     },
     {
-        "Menu": "청양맵간장콤보",
-        "Sub": "화끈한 청양고추와 간장소스의 조합으로 깊은 풍미의 치킨",
+        "Menutitle": "청양맵간장콤보",
+        "Subtitle": "화끈한 청양고추와 간장소스의 조합으로 깊은 풍미의 치킨",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1028293093_yW6Mbspz_f0cc61fbc00f09ffd9926455e795cc3d10a05dc5_368x368.png"
     },
     {
-        "Menu": "가마치즈치킨",
-        "Sub": "고소한 풍미의 가마치즈치킨",
+        "Menutitle": "가마치즈치킨",
+        "Subtitle": "고소한 풍미의 가마치즈치킨",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-3551210135_RGPFxXT1_84eb22eae52ab2e4405e31a892fb1ba50ee977cc_368x368.jpg"
     },
     {
-        "Menu": "가마치즈콤보",
-        "Sub": "통다리와 통날개의 부드러움과 고소한 치즈의 맛을 함께!",
+        "Menutitle": "가마치즈콤보",
+        "Subtitle": "통다리와 통날개의 부드러움과 고소한 치즈의 맛을 함께!",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1030043646_CSVNEkFD_ce1002636acc7fadaab31d028c6082bb4f147dd0_368x368.jpg"
     },
     {
-        "Menu": "가마치순살",
-        "Sub": "겉은 바삭! 속은 촉촉!",
+        "Menutitle": "가마치순살",
+        "Subtitle": "겉은 바삭! 속은 촉촉!",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-3551210135_FEgPDAW5_ec0b07defd83e7ca39a3bb384a53fbe63032a6b2_368x368.jpg"
     },
     {
-        "Menu": "가마치순살양념",
-        "Sub": "겉은 바삭! 속은 촉촉!",
+        "Menutitle": "가마치순살양념",
+        "Subtitle": "겉은 바삭! 속은 촉촉!",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-3551210135_CWJ7bB6M_4f37725c73c8e9278a4c4bda8c21e53a363a9b5f_368x368.jpg"
     },
     {
-        "Menu": "가마치즈순살",
-        "Sub": "고소한 풍미의 가마치즈 순살",
+        "Menutitle": "가마치즈순살",
+        "Subtitle": "고소한 풍미의 가마치즈 순살",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-3551210135_p1DS7bwV_c32ce46b80b9f9291577d95cb9da63bb1180f6c6_368x368.jpg"
     },
     {
-        "Menu": "청양맵간장순살",
-        "Sub": "화끈한 청양고추와 간장소스의 조합으로 깊은 풍미의 치킨",
+        "Menutitle": "청양맵간장순살",
+        "Subtitle": "화끈한 청양고추와 간장소스의 조합으로 깊은 풍미의 치킨",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1028293093_n03ucjNX_bc067f86025e29dbccb60679fdb0d5c94e9c8080_368x368.png"
     },
     {
-        "Menu": "허니마늘파닭",
-        "Sub": "달콤한 꿀과 마늘을 넣은 소스와 알싸한 파채의 환상궁합!",
+        "Menutitle": "허니마늘파닭",
+        "Subtitle": "달콤한 꿀과 마늘을 넣은 소스와 알싸한 파채의 환상궁합!",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1028293093_pe1ms0kX_b4c875c30947ef9b18cf232f01ff00f56ee9e2e6_368x368.png"
     },
     {
-        "Menu": "허니마늘파닭콤보",
-        "Sub": "달콤한 꿀과 마늘을 넣은 소스와 알싸한 파채의 환상궁합!",
+        "Menutitle": "허니마늘파닭콤보",
+        "Subtitle": "달콤한 꿀과 마늘을 넣은 소스와 알싸한 파채의 환상궁합!",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1028293093_GYTDg1Ob_8a2ca4968c430776acdfb1bcd6eeba4ba33d0839_368x368.png"
     },
     {
-        "Menu": "허니마늘순살파닭",
-        "Sub": "달콤한 꿀과 마늘을 넣은 소스와 알싸한 파채의 환상궁합!",
+        "Menutitle": "허니마늘순살파닭",
+        "Subtitle": "달콤한 꿀과 마늘을 넣은 소스와 알싸한 파채의 환상궁합!",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1028293093_muaOSpJH_4d2f827766cec7b1398e78dbd9264223b6edc8b9_368x368.png"
     },
     {
-        "Menu": "레드마라치킨",
-        "Sub": "멈출 수 없는 마라향의 유혹! 그 매콤함에 빠져들다",
+        "Menutitle": "레드마라치킨",
+        "Subtitle": "멈출 수 없는 마라향의 유혹! 그 매콤함에 빠져들다",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1028293093_D8scdG91_b792b47627c0656acbb128117fabd045dfae43a3_368x368.png"
     },
     {
-        "Menu": "레드마라콤보",
-        "Sub": "멈출 수 없는 마라향의 유혹! 그 매콤함에 빠져들다",
+        "Menutitle": "레드마라콤보",
+        "Subtitle": "멈출 수 없는 마라향의 유혹! 그 매콤함에 빠져들다",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1028293093_MZx7FQSh_1c63c84a463672fdf356fb83d167ed40251bbb7d_368x368.png"
     },
     {
-        "Menu": "레드마라순살",
-        "Sub": "멈출 수 없는 마라향의 유혹! 그 매콤함에 빠져들다",
+        "Menutitle": "레드마라순살",
+        "Subtitle": "멈출 수 없는 마라향의 유혹! 그 매콤함에 빠져들다",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1028293093_RVxJBF8P_4efa3ff3197cc11971619f210208c7a93a8842c4_368x368.png"
     },
     {
-        "Menu": "미니텐더",
-        "Sub": "부드러운 닭안심을 사용해 바삭하게 튀겨낸 미니텐더",
+        "Menutitle": "미니텐더",
+        "Subtitle": "부드러운 닭안심을 사용해 바삭하게 튀겨낸 미니텐더",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1028293093_6rUHcY0j_c484ec226638caf8ec07f79a4850eee85f6ada73_368x368.jpg"
     },
     {
-        "Menu": "훈제치킨",
-        "Sub": "맛있고 담백한 우리가족 영양만점 간식!",
+        "Menutitle": "훈제치킨",
+        "Subtitle": "맛있고 담백한 우리가족 영양만점 간식!",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-3551103741_CZfLt1da_40c8030b09ef4b23cf55aa8e56e3e0e277017cd9_368x368.jpg"
     },
     {
-        "Menu": "똥집튀김",
-        "Sub": "고소하고 쫄깃한 가마치 인기메뉴",
+        "Menutitle": "똥집튀김",
+        "Subtitle": "고소하고 쫄깃한 가마치 인기메뉴",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1028293093_rDxJpNiW_45bfad711b18587ccd0722efb04697a67ed75d49_368x368.png"
     },
     {
-        "Menu": "간장똥집튀김",
-        "Sub": "달콤하고 고소한 사이드메뉴",
+        "Menutitle": "간장똥집튀김",
+        "Subtitle": "달콤하고 고소한 사이드메뉴",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1028293093_Vy3DsUvB_accd6497017f9d79e30ec559e440107c0840350d_368x368.png"
     },
     {
-        "Menu": "무뼈매운닭발",
-        "Sub": "쫄깃하고 매콤한 가마치 무뼈매운닭발",
+        "Menutitle": "무뼈매운닭발",
+        "Subtitle": "쫄깃하고 매콤한 가마치 무뼈매운닭발",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-3551210135_xLpRuMrP_e84c399002a387125b97b75321557ce1cc35f4e0_368x368.jpg"
     },
     {
-        "Menu": "무뼈닭발튀김",
-        "Sub": "자꾸 자꾸 손이가~ 맥주 안주 저격!",
+        "Menutitle": "무뼈닭발튀김",
+        "Subtitle": "자꾸 자꾸 손이가~ 맥주 안주 저격!",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-3551210135_Iu75sJXE_ac41e379ed61efcb4844004fce4e6cee71416d6c_368x368.jpg"
     },
     {
-        "Menu": "가마치소떡소떡",
-        "Sub": "옥수수콘 소시지와 쫀득한 쌀떡을 동시에!",
+        "Menutitle": "가마치소떡소떡",
+        "Subtitle": "옥수수콘 소시지와 쫀득한 쌀떡을 동시에!",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1028293093_v10zlB6W_c13565ac85096340ff45daa6f4c78b43df07efaf_368x368.png"
     },
     {
-        "Menu": "모듬감자튀김",
-        "Sub": "바삭한 가마치 감자튀김",
+        "Menutitle": "모듬감자튀김",
+        "Subtitle": "바삭한 가마치 감자튀김",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-3551210135_PgEy7QW1_d8bbafeb62a4b19e49d556dc9df19d5b6728512d_368x368.jpg"
     },
     {
-        "Menu": "막대감자",
-        "Sub": "겉은 바삭 속은 촉촉",
+        "Menutitle": "막대감자",
+        "Subtitle": "겉은 바삭 속은 촉촉",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-3551210135_f7KIR1Hm_c7c3939b1c54f8105e051be6d06d082232447862_368x368.jpg"
     },
     {
-        "Menu": "가마치즈막대감자",
-        "Sub": "바삭함과 고소함을 동시에",
+        "Menutitle": "가마치즈막대감자",
+        "Subtitle": "바삭함과 고소함을 동시에",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-3551210135_jcIfzlW6_68cb9fb5242a1d2268efc573fe0048aa5442e660_368x368.jpg"
     },
     {
-        "Menu": "가마치즈볼",
-        "Sub": "쫄깃한 치즈가 한가득!",
+        "Menutitle": "가마치즈볼",
+        "Subtitle": "쫄깃한 치즈가 한가득!",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-3551210135_B6jrdpFN_f23540241816064698c99be9c739399123a5c2d4_368x368.jpg"
     },
     {
-        "Menu": "스노윙가마치즈볼",
-        "Sub": "치즈 풍미로 고소함 두배",
+        "Menutitle": "스노윙가마치즈볼",
+        "Subtitle": "치즈 풍미로 고소함 두배",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-3551210135_kOQHpvl6_c16e6c5b8de1ff1e1191ac8b3dd70cc8153cb734_368x368.jpg"
     },
     {
-        "Menu": "가마치떡볶이",
-        "Sub": "매콤달콤한 가마치 떡볶이",
+        "Menutitle": "가마치떡볶이",
+        "Subtitle": "매콤달콤한 가마치 떡볶이",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1028293093_MjyL2aPI_b0c914d7210071fbd0a89a2d3cc407df5b611f07_368x368.png"
     },
     {
-        "Menu": "소스",
-        "Sub": "다양한 5가지맛 소스",
+        "Menutitle": "소스",
+        "Subtitle": "다양한 5가지맛 소스",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1028293093_Bk9m6IEi_2354644290d8a765da5b9b5b00703dbf898194b6_368x368.png"
     },
     {
-        "Menu": "가마치어묵탕",
-        "Sub": "시원한 가마치 어묵탕",
+        "Menutitle": "가마치어묵탕",
+        "Subtitle": "시원한 가마치 어묵탕",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1028293093_kraUZCH4_b4759bfa2e49292a8267b5f2843d5869aa5934a5_368x368.png"
     },
     {
-        "Menu": "모듬마른안주",
-        "Sub": "풍부한 안주거리가 한 상에 가득",
+        "Menutitle": "모듬마른안주",
+        "Subtitle": "풍부한 안주거리가 한 상에 가득",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1028293093_3ayl56CG_792b3560fff6e7b593302463676798d4e83d6f8a_368x368.png"
     },
     {
-        "Menu": "똥집튀김",
-        "Sub": "고소하고 쫄깃한 가마치 인기메뉴",
+        "Menutitle": "똥집튀김",
+        "Subtitle": "고소하고 쫄깃한 가마치 인기메뉴",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1028293093_rDxJpNiW_45bfad711b18587ccd0722efb04697a67ed75d49_368x368.png"
     },
     {
-        "Menu": "간장똥집튀김",
-        "Sub": "달콤하고 고소한 사이드메뉴",
+        "Menutitle": "간장똥집튀김",
+        "Subtitle": "달콤하고 고소한 사이드메뉴",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1028293093_Vy3DsUvB_accd6497017f9d79e30ec559e440107c0840350d_368x368.png"
     },
     {
-        "Menu": "무뼈매운닭발",
-        "Sub": "쫄깃하고 매콤한 가마치 무뼈매운닭발",
+        "Menutitle": "무뼈매운닭발",
+        "Subtitle": "쫄깃하고 매콤한 가마치 무뼈매운닭발",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-3551210135_xLpRuMrP_e84c399002a387125b97b75321557ce1cc35f4e0_368x368.jpg"
     },
     {
-        "Menu": "무뼈닭발튀김",
-        "Sub": "자꾸 자꾸 손이가~ 맥주 안주 저격!",
+        "Menutitle": "무뼈닭발튀김",
+        "Subtitle": "자꾸 자꾸 손이가~ 맥주 안주 저격!",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-3551210135_Iu75sJXE_ac41e379ed61efcb4844004fce4e6cee71416d6c_368x368.jpg"
     },
     {
-        "Menu": "가마치소떡소떡",
-        "Sub": "옥수수콘 소시지와 쫀득한 쌀떡을 동시에!",
+        "Menutitle": "가마치소떡소떡",
+        "Subtitle": "옥수수콘 소시지와 쫀득한 쌀떡을 동시에!",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1028293093_v10zlB6W_c13565ac85096340ff45daa6f4c78b43df07efaf_368x368.png"
     },
     {
-        "Menu": "모듬감자튀김",
-        "Sub": "바삭한 가마치 감자튀김",
+        "Menutitle": "모듬감자튀김",
+        "Subtitle": "바삭한 가마치 감자튀김",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-3551210135_PgEy7QW1_d8bbafeb62a4b19e49d556dc9df19d5b6728512d_368x368.jpg"
     },
     {
-        "Menu": "막대감자",
-        "Sub": "겉은 바삭 속은 촉촉",
+        "Menutitle": "막대감자",
+        "Subtitle": "겉은 바삭 속은 촉촉",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-3551210135_f7KIR1Hm_c7c3939b1c54f8105e051be6d06d082232447862_368x368.jpg"
     },
     {
-        "Menu": "가마치즈막대감자",
-        "Sub": "바삭함과 고소함을 동시에",
+        "Menutitle": "가마치즈막대감자",
+        "Subtitle": "바삭함과 고소함을 동시에",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-3551210135_jcIfzlW6_68cb9fb5242a1d2268efc573fe0048aa5442e660_368x368.jpg"
     },
     {
-        "Menu": "가마치즈볼",
-        "Sub": "쫄깃한 치즈가 한가득!",
+        "Menutitle": "가마치즈볼",
+        "Subtitle": "쫄깃한 치즈가 한가득!",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-3551210135_B6jrdpFN_f23540241816064698c99be9c739399123a5c2d4_368x368.jpg"
     },
     {
-        "Menu": "스노윙가마치즈볼",
-        "Sub": "치즈 풍미로 고소함 두배",
+        "Menutitle": "스노윙가마치즈볼",
+        "Subtitle": "치즈 풍미로 고소함 두배",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-3551210135_kOQHpvl6_c16e6c5b8de1ff1e1191ac8b3dd70cc8153cb734_368x368.jpg"
     },
     {
-        "Menu": "가마치떡볶이",
-        "Sub": "매콤달콤한 가마치 떡볶이",
+        "Menutitle": "가마치떡볶이",
+        "Subtitle": "매콤달콤한 가마치 떡볶이",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1028293093_MjyL2aPI_b0c914d7210071fbd0a89a2d3cc407df5b611f07_368x368.png"
     },
     {
-        "Menu": "소스",
-        "Sub": "다양한 5가지맛 소스",
+        "Menutitle": "소스",
+        "Subtitle": "다양한 5가지맛 소스",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1028293093_Bk9m6IEi_2354644290d8a765da5b9b5b00703dbf898194b6_368x368.png"
     },
     {
-        "Menu": "가마치어묵탕",
-        "Sub": "시원한 가마치 어묵탕",
+        "Menutitle": "가마치어묵탕",
+        "Subtitle": "시원한 가마치 어묵탕",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1028293093_kraUZCH4_b4759bfa2e49292a8267b5f2843d5869aa5934a5_368x368.png"
     },
     {
-        "Menu": "모듬마른안주",
-        "Sub": "풍부한 안주거리가 한 상에 가득",
+        "Menutitle": "모듬마른안주",
+        "Subtitle": "풍부한 안주거리가 한 상에 가득",
         "menuimage": "https://www.gamachi.co.kr/data/file/1503987965/thumb-1028293093_3ayl56CG_792b3560fff6e7b593302463676798d4e83d6f8a_368x368.png"
     }
 ]
