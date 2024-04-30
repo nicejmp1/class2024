@@ -137,8 +137,8 @@
     <div id="wrap">
         <header id="header">
             <div class="header__inner">
-                <h1><a href="index.html">Parallax Effect</a><em> 04</em></h1>
-                <p>GSAP scrollTrigger - 이질감 효과 주기</p>
+                <h1><a href="index.html">Parallax Effect</a><em> 05</em></h1>
+                <p>GSAP scrollTrigger - 나타나기</p>
 
                 <div class="link">
                     <ul>
@@ -248,8 +248,8 @@
                         <li><a href="parallax01.html">01</a></li>
                         <li><a href="parallax02.html">02</a></li>
                         <li><a href=" parallax03.html">03</a></li>
-                        <li class="active"><a href="parallax04.html">04</a></li>
-                        <li><a href="parallax05.html">04</a></li>
+                        <li><a href="parallax04.html">04</a></li>
+                        <li class="active"><a href="parallax05.html">05</a></li>
                     </ul>
                 </nav>
             </div>
@@ -261,33 +261,6 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
     <script>
-        // gsap.to(".parallax__item__desc", {
-        //     yPercent: -100,
-        //     ease: "none",
-        //     duration: 0.5,
-        //     scrollTrigger: {
-        //         trigger: ".parallax__item__desc",
-        //         start: "top bottom",
-        //         end: "bottom top",
-        //         markers: true,
-        //         scrub: true
-        //     }
-        // })
-
-        gsap.utils.toArray(".parallax__item__desc").forEach(item => {
-            gsap.to(item, {
-                yPercent: -100,
-                ease: "none",
-                duration: 0.5,
-                scrollTrigger: {
-                    trigger: ".parallax__item__desc",
-                    start: "top bottom",
-                    end: "bottom top",
-                    markers: true,
-                    scrub: true
-                }
-            })
-        });
 
     </script>
 </body>

@@ -50,8 +50,8 @@
         "imageURL": "http://www.ttobongee.com/upload/product/popmenu/1572227637%5E%EB%98%90%EB%B4%89%EC%9D%B4+%EA%B5%AD%EB%AC%BC%EB%96%A1%EB%B3%B6%EC%9D%B4.jpg_pc.jpg"
     },
     {
-        "title": "또봉이+또봉이",
-        "subtitle": "또봉이+또봉이",
+        "title": "또봉이통닭 두 마리",
+        "subtitle": "한국식 후라이드의 참 맛! 기름은 쏘옥~ 빠지고, 겉은 바삭바삭, 탱글탱글한 육즙과 함께 쫄깃한 속살!",
         "imageURL": "http://www.ttobongee.com/upload/product/popmenu/1572227681%5E%EB%98%90%EB%B4%89%EC%9D%B4+%EB%98%90%EB%B4%89%EC%9D%B4.jpg_pc.jpg"
     },
     {
@@ -148,5 +148,85 @@
         "title": "고추마요순살",
         "subtitle": "알싸한 고추와 부드러운 마요의 환상 케미!!",
         "imageURL": "http://www.ttobongee.com/upload/product/singlemenu/1649138519%5E%EA%B3%A0%EC%B6%94%EB%A7%88%EC%9A%94%EC%88%9C%EC%82%B4.jpg_pc.jpg"
+    },
+    {
+        "title": "똥집튀김",
+        "subtitle": "국내산 최상급 근위와 파우더가 만났다! 바삭하고 쫄깃한 식감으로 강력한 마니아층을 형성하고 있는 효자메뉴",
+        "imageURL": "http://www.ttobongee.com/upload/product/singlemenu/1570776050%5E%EB%98%A5%EC%A7%91%ED%8A%80%EA%B9%80.jpg_pc.jpg"
+    },
+    {
+        "title": "양념똥집",
+        "subtitle": "바삭하고 쫄깃한 똥집튀김에 매콤한 양념을 입힌 인기메뉴!",
+        "imageURL": "http://www.ttobongee.com/upload/product/singlemenu/1570777815%5E%EB%98%A5%EC%A7%91%EC%96%91%EB%85%90.jpg_pc.jpg"
+    },
+    {
+        "title": "마늘똥집",
+        "subtitle": "바삭하고 쫄깃한 똥집튀김에 마늘을 더한 인기메뉴!",
+        "imageURL": "http://www.ttobongee.com/upload/product/singlemenu/1570778590%5E%EB%98%A5%EC%A7%91%EB%A7%88%EB%8A%981.jpg_pc.jpg"
+    },
+    {
+        "title": "또봉이통닭+양념통닭또봉이통닭+양념통닭",
+        "subtitle": "한국식 후라이드의 참 맛! 기름은 쏘옥~ 빠지고, 겉은 바삭바삭, 탱글탱글한 육즙과 함께 쫄깃한 속살!",
+        "imageURL": "http://www.ttobongee.com/upload/product/setmenu/1571979273%5E%EB%98%90%EB%B4%89%EC%9D%B4+%EC%96%91%EB%85%90%ED%86%B5%EB%8B%AD.jpg_pc.jpg"
+    },
+    {
+        "title": "또봉이통닭+간장마늘통닭",
+        "subtitle": "한국식 후라이드의 참 맛! 기름은 쏘옥~ 빠지고, 간장마늘, 겉은 바삭바삭, 탱글탱글한 육즙과 함께 쫄깃한 속살!",
+        "imageURL": "http://www.ttobongee.com/upload/product/setmenu/1571979281%5E%EB%98%90%EB%B4%89%EC%9D%B4+%EA%B0%84%EC%9E%A5%EB%A7%88%EB%8A%98%ED%86%B5%EB%8B%AD.jpg_pc.jpg"
+    },
+    {
+        "title": "또봉이통닭+간장마늘통닭",
+        "subtitle": "한국식 후라이드의 참 맛! 기름은 쏘옥~ 빠지고, 간장마늘, 겉은 바삭바삭, 탱글탱글한 육즙과 함께 쫄깃한 속살!",
+        "imageURL": "http://www.ttobongee.com/upload/product/setmenu/1571979281%5E%EB%98%90%EB%B4%89%EC%9D%B4+%EA%B0%84%EC%9E%A5%EB%A7%88%EB%8A%98%ED%86%B5%EB%8B%AD.jpg_pc.jpg"
+    },
+    {
+        "title": "또봉이통닭+또봉이파닭",
+        "subtitle": "한국식 후라이드의 참 맛! 기름은 쏘옥~ 빠지고, 파닭, 겉은 바삭바삭, 탱글탱글한 육즙과 함께 쫄깃한 속살!",
+        "imageURL": "http://www.ttobongee.com/upload/product/setmenu/1571979289%5E%EB%98%90%EB%B4%89%EC%9D%B4+%EB%98%90%EB%B4%89%EC%9D%B4%ED%8C%8C%EB%8B%AD.jpg_pc.jpg"
+    },
+    {
+        "title": "미트칠리마초세트",
+        "subtitle": "미트칠리통닭과 같이 드시면 2배로 맛있는 칠리감자튀김이 함께 제공됩니다. 소스에 콕 찍어서 드시면 순식간에 사라질거에요.",
+        "imageURL": "http://www.ttobongee.com/upload/product/setmenu/1689667628%5E%EB%AF%B8%ED%8A%B8%EC%B9%A0%EB%A6%AC%EB%A7%88%EC%B4%88%EC%84%B8%ED%8A%B8.jpg_pc.jpg"
+    },
+    {
+        "title": "국물떡볶이",
+        "subtitle": "매콤한 국물을 맛보면 그 맛에 중독되어 다시 찾는 국물떡볶이! 추억의 국물떡볶이 맛 그대로",
+        "imageURL": "http://www.ttobongee.com/upload/product/sidemenu/1571385818%5E%EA%B5%AD%EB%AC%BC%EB%96%A1%EB%B3%B6%EC%9D%B41.jpg_pc.jpg"
+    },
+    {
+        "title": "어묵탕",
+        "subtitle": "고급수제 어묵을 엄선해 진하게 끓여낸 또봉이어묵탕!",
+        "imageURL": "http://www.ttobongee.com/upload/product/sidemenu/1571385985%5E%EC%96%B4%EB%AC%B5%ED%83%95.jpg_pc.jpg"
+    },
+    {
+        "title": "미트칠리감자튀김",
+        "subtitle": "시원한 맥주와 찰떡인 미트칠리 감자튀김!",
+        "imageURL": "http://www.ttobongee.com/upload/product/sidemenu/1689667542%5E%EB%AF%B8%ED%8A%B8%EC%B9%A0%EB%A6%AC%EA%B0%90%EC%9E%90%ED%8A%80%EA%B9%80.jpg_pc.jpg"
+    },
+    {
+        "title": "짬뽕탕",
+        "subtitle": "얼근한 해물짬뽕맛과 쫄깃한 우동면발이 술 안주와 간단한 한끼 식사로도 가능 합니다.",
+        "imageURL": "http://www.ttobongee.com/upload/product/sidemenu/1571387499%5E%EC%A7%AC%EB%BD%95%ED%83%95.jpg_pc.jpg"
+    },
+    {
+        "title": "무뼈닭발",
+        "subtitle": "피부미용과 건강까지 챙기는 매운 맛! 뼈가 없어 한입에 먹기 편한 닭발 메뉴로 여성분들이 주로 선호하는 메뉴!",
+        "imageURL": "http://www.ttobongee.com/upload/product/sidemenu/1571388150%5E%EB%AC%B4%EB%BC%88%EB%8B%AD%EB%B0%9C1.jpg_pc.jpg"
+    },
+    {
+        "title": "튤립닭발",
+        "subtitle": "피부미용과 건강까지 챙기는 매운 맛! 매운맛을 좋아하는 분에게 강력추천!",
+        "imageURL": "http://www.ttobongee.com/upload/product/sidemenu/1571388086%5E%ED%8A%A4%EB%A6%BD%EB%8B%AD%EB%B0%9C.jpg_pc.jpg"
+    },
+    {
+        "title": "불막창",
+        "subtitle": "매운게 땡길때 최고! 부드럽고 쫄깃한 식감! 중독성 강한 불 맛을 더해 안주로 일품",
+        "imageURL": "http://www.ttobongee.com/upload/product/sidemenu/1571388086%5E%ED%8A%A4%EB%A6%BD%EB%8B%AD%EB%B0%9C.jpg_pc.jpg"
+    },
+    {
+        "title": "튤립닭발",
+        "subtitle": "피부미용과 건강까지 챙기는 매운 맛! 매운맛을 좋아하는 분에게 강력추천!",
+        "imageURL": "http://www.ttobongee.com/upload/product/sidemenu/1571388086%5E%ED%8A%A4%EB%A6%BD%EB%8B%AD%EB%B0%9C.jpg_pc.jpg"
     }
 ]
