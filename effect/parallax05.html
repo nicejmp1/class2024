@@ -221,12 +221,12 @@
             <!-- //section7 -->
 
             <section id="section8" class="parallax__item">
-                <span class="parallax__item__num">08</span>
-                <h2 class="parallax__item__title">section8</h2>
-                <figure class="parallax__item__imgWrap">
+                <span class="parallax__item__num reveal reveal_TTB" delay-delay="1">08</span>
+                <h2 class="parallax__item__title reveal reveal_LTR" data-delay=".05">section8</h2>
+                <figure class="parallax__item__imgWrap rebeal reveal_BTT">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc reveal reveal_LTR">나는 내가 더 노력할수록 운이 더 좋아진다는 걸 발견했다.</p>
+                <p class="parallax__item__desc reveal reveal_LTR" data-delay="1.5">나는 내가 더 노력할수록 운이 더 좋아진다는 걸 발견했다.</p>
             </section>
             <!-- //section8 -->
 
@@ -250,6 +250,7 @@
                         <li><a href=" parallax03.html">03</a></li>
                         <li><a href="parallax04.html">04</a></li>
                         <li class="active"><a href="parallax05.html">05</a></li>
+                        <li><a href="parallax06.html">06</a></li>
                     </ul>
                 </nav>
             </div>
@@ -261,9 +262,14 @@
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollToPlugin.min.js"></script>
     <script>
+        const hide = (item) => {
+            gsap.set(item, { autoAlpha: 0 })
+        }
+
         const animate = (item) => {
             let x = 0;
             let y = 0;
+            let delay = item.dataset.delay;
 
             if (item.classList.contains("reveal_LTR")) {
                 x = -100;
@@ -282,10 +288,12 @@
 
             gsap.fromTo(item,
                 { autoAlpha: 0, x: x, y: y },
-                { autoAlpha: 1, x: 0, y: 0, duration: 1.25, ease: "expo", overwrite: "auto" });
+                { autoAlpha: 1, x: 0, y: 0, delay, duration: 1.25, ease: "expo", overwrite: "auto" });
         }
 
         gsap.utils.toArray(".reveal").forEach((item) => {
+            hide(item);
+
             ScrollTrigger.create({
                 trigger: item,
                 start: "top 80%",
@@ -293,8 +301,6 @@
                 markers: true,
                 onEnter: () => { animate(item) }
             });
-
-            item.style.opacity = "0"
         });
 
 
