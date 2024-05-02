@@ -43,14 +43,11 @@
                                 <li><a href="#sample01">01. <em>.at()</em> 메서드는 지정한 숫자(index)를 받아, 문자열에서 해당 되는 인덱스의 요소를
                                                 반환합니다.</a></li>
                                 <li><a href="#sample02">02. <em>.charAt()</em> 메서드는 지정한 숫자(index)를 받아, 문자열에서 해당 되는 인덱스의
-                                                단일문자를
-                                                반환합니다.</a></li>
+                                                단일문자를 반환합니다.</a></li>
                                 <li><a href="#sample03">03. <em>.charCodeAt()</em> 메서드는 지정한 숫자(index)를 받아, 문자열에서 해당 되는
-                                                인덱스의 유니코드
-                                                정수 값을 반환합니다.</a></li>
+                                                인덱스의 유니코드 정수 값을 반환합니다.</a></li>
                                 <li><a href="#sample04">04. <em>.codePointAt()</em> 메서드는 지정한 숫자(index)를 받아, 문자열에서 해당 되는
-                                                인덱스의
-                                                유니코드 포인트 정수 값을 반환합니다.</a></li>
+                                                인덱스의 유니코드 포인트 정수 값을 반환합니다.</a></li>
                                 <li><a href="#sample05">05. <em>.concat()</em> 메서드는 매개변수로 전달된 문자열을 받아, 결합된 새로운 문자열을
                                                 반환합니다.</a>
                                 </li>
@@ -128,7 +125,7 @@
 
                 <div class="main__sample container">
                         <div id="sample01" class="sample">
-                                <h3>01. at()</h3>
+                                <h3>01. .at()</h3>
                                 <p class="notice">"문자열".at(위치값)
                                 </p>
                                 <ul>
@@ -157,6 +154,31 @@
                                                 <summary>결과 확인하기</summary>
                                                 <div>
                                                         실행되었습니다. (false)
+                                                </div>
+                                        </details>
+                                </div>
+                        </div>
+                        <!-- //sample01 -->
+
+                        <div id="sample02" class="sample">
+                                <h3>06 .includes()</h3>
+                                <p class="notice">"문자열".at(위치값)
+                                </p>
+                                <ul>
+                                        <li>includes() 함수는 JavaScript에서 배열이나 문자열에서 특정 요소나 문자열이 존재하는지 확인할 때 사용합니다.</li>
+                                        <li>이 함수는 요소나 문자열이 존재하면 true</li>
+                                        <li>존재하지 않으면 false를 반환합니다.</li>
+                                </ul>
+                                <pre><code class="javascript">{
+        const sentence = "Hello, world!";
+        console.log(sentence.includes("world"));  // true
+        console.log(sentence.includes("bye"));    // false                                        
+}</code></pre>
+                                <div class="result">
+                                        <details>
+                                                <summary>결과 확인하기</summary>
+                                                <div>
+
                                                 </div>
                                         </details>
                                 </div>

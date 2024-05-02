@@ -1,0 +1,356 @@
+[
+    {
+        "Title": "치토스치킨",
+        "Subtitle": "치토스 브랜드와 공식 라이선스!시즈닝에 치즈 맛 함량 20% 업그레이드로매콤 달콤 바삭!“넌 좀 반하게 될 거야!“<원산지 : 국내산>",
+        "Money": "20,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/치토스치킨.jpg"
+    },
+    {
+        "Title": "순살 치토스치킨",
+        "Subtitle": "치토스 브랜드와 공식 라이선스!시즈닝에 치즈 맛 함량 20% 업그레이드로매콤 달콤 바삭!“넌 좀 반하게 될 거야!“<원산지 : 국내산> <제주지역 : 브라질산>",
+        "Money": "22,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/치토스순살치킨.jpg"
+    },
+    {
+        "Title": "피카츄치킨세트",
+        "Subtitle": "담백&순살 후라이드에 국내산 돼지고기로 만든피카츄돈까스와 포슬한 식감이 일품인멕시감자로 풍성하게!<원산지:국내산>",
+        "Money": "20,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/피카츄치킨-메뉴.jpg"
+    },
+    {
+        "Title": "매칼닭볶음",
+        "Subtitle": "엄선된 3가지 고춧가루를 블렌딩한 특제 양념으로점심 메뉴는 물론 안주로도 제격인 매칼닭볶음!<원산지 : 국내산>",
+        "Money": "25,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/매칼닭볶음.jpg"
+    },
+    {
+        "Title": "골드찜닭",
+        "Subtitle": "비법 간장으로 만든 금빛의 골드찜닭!<원산지 : 국내산>",
+        "Money": "25,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/골드찜닭.jpg"
+    },
+    {
+        "Title": "핑거립",
+        "Subtitle": "치킨 한 마리에 딱 2조각만 나오는 어깨살 고소하고 담백한 맛!<원산지 : 국내산>",
+        "Money": "7,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/핑거립_홈피메뉴.jpg"
+    },
+    {
+        "Title": "양념치킨",
+        "Subtitle": "양념치킨의 정석, 양념치킨의 원조4가지 신선한 야채와 15가지 특별한 재료가 만나멕시카나만의 시그니처 양념소스로 탄생!<원산지 : 국내산>",
+        "Money": "19,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/양념치킨-누끼.jpg"
+    },
+    {
+        "Title": "땡초치킨",
+        "Subtitle": "맛있게 매운 땡초치킨의 1인자!3가지 고춧가루로 매운맛을 낸 치킨을팬에 볶아 자연스러운 불맛까지 더했다!맛있게 매운맛~<원산지 : 국내산>",
+        "Money": "20,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/땡초치킨-누끼.jpg"
+    },
+    {
+        "Title": "고매치킨",
+        "Subtitle": "매운 맛의 밸런스를 잘 맞췄다.고추 러버들의 입맛 저격,너무 맵지도 않은 딱 적당한 맵기로남녀 노소 누구나 먹을 수 있는 매운 맛<원산지 : 국내산>",
+        "Money": "20,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/고매치킨홈피용누끼.png"
+    },
+    {
+        "Title": "고매치킨(새우튀김 2개)",
+        "Subtitle": "고추의 매콤함이 가득한 고매치킨에 대하급 새우의 탱글함과 튀김의 바삭함을 동시에! <원산지 : 국내산>",
+        "Money": "23,500",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/고매치킨새우튀김.jpg"
+    },
+    {
+        "Title": "고매치킨(순살오징어튀김 2개)",
+        "Subtitle": "고추의 매콤함이 가득한 고매치킨에 오징어 순살의 부드러운 맛과 식감이 일품!<원산지 : 국내산>",
+        "Money": "22,500",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/고매치킨_오징어.jpg"
+    },
+    {
+        "Title": "고매치킨(소떡소떡)",
+        "Subtitle": "고추의 매콤함이 가득한 고매치킨에한입에 쏘옥~ 쫄깃함과 뽀득함의 콜라보 소떡소떡!<원산지 : 국내산>",
+        "Money": "23,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/고매치킨_소떡소떡.jpg"
+    },
+    {
+        "Title": "깐풍요리치킨",
+        "Subtitle": "신선한 야채와 숙성 마늘, 대파로 맛을 낸프리미엄 깐풍기 소스와 치킨에 불향을 입혀 단짠 매콤한 맛!<원산지 : 국내산>",
+        "Money": "21,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/깐풍요리치킨.jpg"
+    },
+    {
+        "Title": "리얼치킨꿔바로우",
+        "Subtitle": "쫀득한 찹쌀피 속 육즙 터지는 부드러운 치킨에과일이 들어간 소스로 새콤달콤한 맛! <원산지 : 국내산>",
+        "Money": "21,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/리얼치킨꿔바로우_누끼.jpg"
+    },
+    {
+        "Title": "마늘알마니치킨",
+        "Subtitle": "지금까지 이런 生마늘치킨은 없었다!어서 와 마늘 큐브는 처음이지?생생한 마늘의 알싸함과 아삭함이후라이드의 바삭함을 만나리얼 마늘치킨으로 탄생!!마늘알마니치킨<원산지 : 국내산>",
+        "Money": "21,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/마늘알마니치킨_뼈.png"
+    },
+    {
+        "Title": "모두의마요치킨",
+        "Subtitle": "갈릭 X 마요 조합은 못 참지!극과 극이 만나 더 새로운 맛!신선한 갈릭찹찹소스로 찍먹, 부먹파들 모두 섭렵!<원산지 : 국내산>",
+        "Money": "20,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/모두의마요치킨-누끼.jpg"
+    },
+    {
+        "Title": "강정치킨",
+        "Subtitle": "달콤함이 두 배, 고소함도 두 배!한 번 먹는 순간 겉바속촉의 대명사로 등극!어린이 간식으로 인기 만점<원산지 : 국내산>",
+        "Money": "19,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/강정치킨-누끼.jpg"
+    },
+    {
+        "Title": "후라이드치킨",
+        "Subtitle": "겉바속촉의 대명사멕시카나만의 특별한 염지방법으로 부드러운 속살과전용 파우더로 바삭함은 두 배로 즐길 수 있는컬이 살아있어 귀와 입이 즐거운 맛!<원산지 : 국내산>",
+        "Money": "18,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/후라이드홈피용누끼.png"
+    },
+    {
+        "Title": "반반치킨",
+        "Subtitle": "기본 메뉴 선택 시 최대 난제!고민 없이 바삭한 후라이드와매콤달콤한 양념치킨 반반으로 고민 종결!<원산지 : 국내산>",
+        "Money": "19,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/후라이드반양념반-반반치킨-누끼.jpg"
+    },
+    {
+        "Title": "눈꽃치즈치킨",
+        "Subtitle": "치즈 시즈닝이 눈꽃처럼 가득 뿌려져입속으로 바삭하게 들어와 사르르 녹는 맛먹을수록 치즈의 고소함과 짭짤함이 그대로 전해져요!<원산지 : 국내산>",
+        "Money": "20,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/뿌리고눈꽃치즈맛-누끼.jpg"
+    },
+    {
+        "Title": "간장치킨",
+        "Subtitle": "짭쪼름한 간장으로계속 먹어도 질리지 않는 마성의 치킨!바삭한 후라이드에 스며든 간장의 맛을 느껴보세요!<원산지 : 국내산>",
+        "Money": "19,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/간장치킨-누끼.jpg"
+    },
+    {
+        "Title": "파닭치킨",
+        "Subtitle": "바삭함과 아삭함을 동시에!매운맛을 살짝 뺀 신선한 파채와오리엔탈소스의 조합으로 부담 없이 즐기세요!<원산지 : 국내산>",
+        "Money": "20,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/파닭-누끼.jpg"
+    },
+    {
+        "Title": "허니벌꿀치킨",
+        "Subtitle": "꿀맛 보장! 달달함이 깊이 있게 배어먹을수록 달콤함이 극대화되는 맛!<원산지 : 국내산>",
+        "Money": "19,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/허니벌꿀치킨-누끼.jpg"
+    },
+    {
+        "Title": "순살 깐풍요리치킨",
+        "Subtitle": "신선한 야채와 숙성 마늘, 대파로 맛을 낸프리미엄 깐풍기 소스와 치킨에 불향을 입혀 단짠 매콤한 맛!",
+        "Money": "23,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/깐풍요리치킨_순살_누끼.jpg"
+    },
+    {
+        "Title": "순살 마늘알마니치킨",
+        "Subtitle": "지금까지 이런 生마늘치킨은 없었다!어서 와 마늘 큐브는 처음이지?생생한 마늘의 알싸함과 아삭함이후라이드의 바삭함을 만나리얼 마늘치킨으로 탄생!!마늘알마니치킨<원산지 : 국내산><제주지역 : 브라질산>",
+        "Money": "23,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/마늘알마니치킨_순살.png"
+    },
+    {
+        "Title": "순살 모두의마요치킨",
+        "Subtitle": "갈릭 X 마요 조합은 못 참지!극과 극이 만나 더 새로운 맛!신선한 갈릭찹찹소스로 찍먹, 부먹파들 모두 섭렵!<원산지 : 국내산><제주지역 : 브라질산>",
+        "Money": "22,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/모두의마요치킨-순살-누끼.jpg"
+    },
+    {
+        "Title": "순살 강정치킨",
+        "Subtitle": "달콤함이 두 배, 고소함도 두 배!한 번 먹는 순간 겉바속촉의 대명사로 등극!어린이 간식으로 인기 만점<원산지 : 국내산><제주지역 : 브라질산>",
+        "Money": "21,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/강정치킨-순살-누끼.jpg"
+    },
+    {
+        "Title": "순살 땡초치킨",
+        "Subtitle": "화끈화끈한 매운맛의 진수!<원산지 : 국내산><제주지역 : 브라질산>",
+        "Money": "22,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/땡초치킨-순살-누끼.jpg"
+    },
+    {
+        "Title": "순살 후라이드",
+        "Subtitle": "순살이라 더 깔끔하고 바삭한 후라이드 치킨!<원산지 : 국내산><제주지역 : 브라질산>",
+        "Money": "20,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/후라이드-순살-누끼.jpg"
+    },
+    {
+        "Title": "순살 양념",
+        "Subtitle": "순살이라 더 깔끔한 매콤달콤 양념 치킨!<원산지 : 국내산><제주지역 : 브라질산>",
+        "Money": "21,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/양념치킨-순살-누끼.jpg"
+    },
+    {
+        "Title": "순살 반반 치킨",
+        "Subtitle": "양념반~! 후라이드반~!<원산지 : 국내산><제주지역 : 브라질산>",
+        "Money": "21,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/순살후라이드반양념반-순살반반치킨-누끼.jpg"
+    },
+    {
+        "Title": "순살 눈꽃치즈치킨",
+        "Subtitle": "치즈 시즈닝이 눈꽃처럼 가득 뿌려져입속으로 바삭하게 들어와 사르르 녹는 맛먹을수록 치즈의 고소함과 짭짤함이 그대로 전해져요!<원산지 : 국내산><제주지역 : 브라질산>",
+        "Money": "22,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/뿌리고눈꽃치즈순살-누끼.jpg"
+    },
+    {
+        "Title": "순살 간장치킨",
+        "Subtitle": "질리지 않는 깔끔한 맛!<원산지 : 국내산><제주지역 : 브라질산>",
+        "Money": "21,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/간장치킨-순살-누끼.jpg"
+    },
+    {
+        "Title": "순살 파닭",
+        "Subtitle": "파채와 특별한 소스를 함께!<원산지 : 국내산><제주지역 : 브라질산>",
+        "Money": "22,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/파닭순살-누끼.jpg"
+    },
+    {
+        "Title": "순살 허니벌꿀치킨",
+        "Subtitle": "꿀맛 보장! 달달함이 깊이 있게 배어먹을수록 달콤함이 극대화되는 맛!<원산지 : 국내산><제주지역 : 브라질산>",
+        "Money": "21,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/허니벌꿀치킨-순살-누끼.jpg"
+    },
+    {
+        "Title": "멕시윙",
+        "Subtitle": "날개의 부드러운 육질을 그대로 느낄 수 있어치킨 매니아들이 자주 찾는 인기 메뉴!<원산지 : 국내산/태국산>",
+        "Money": "21,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/멕시윙-누끼2.jpg"
+    },
+    {
+        "Title": "멕시핀",
+        "Subtitle": "3가지 파우더를 3번 씌워, 3가지 맛을 한번에!야들야들 부드러운 닭다리 부위에바삭한 튀김이 입혀져 겉바속촉이 전해지는 맛!<원산지 : 국내산>",
+        "Money": "21,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/멕시핀-누끼.jpg"
+    },
+    {
+        "Title": "멕시콤보",
+        "Subtitle": "닭다리 + 날개만 모았다!쫄깃하고, 부드러운 두 부위를 한 번에 즐길 수 있어요!<원산지 : 국내산/태국산>",
+        "Money": "21,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/멕시듀오후라이드-누끼.jpg"
+    },
+    {
+        "Title": "리얼붕어빵",
+        "Subtitle": "달콤한 앙금이 꼬리까지 가득바삭하고 찰진 식감을 제대로 살린 리얼붕어빵 배달로 누리는 붕세권~추운 겨울, 이제 더 이상 줄 서지 마세요~",
+        "Money": "3,300",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/KakaoTalk_20231215_151643970_01.png"
+    },
+    {
+        "Title": "깐풍치밥",
+        "Subtitle": "매콤달콤 깐풍소스로 아이들에게도 딱!<원산지 : 국내산>",
+        "Money": "6,500",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/깐풍치밥.jpg"
+    },
+    {
+        "Title": "땡초치밥",
+        "Subtitle": "맵부심 자극하는 땡초치킨 소스가 듬뿍<원산지 : 국내산>",
+        "Money": "6,500",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/땡초치밥.jpg"
+    },
+    {
+        "Title": "고매치밥",
+        "Subtitle": "딱 적당히 매운 고매치킨 소스로맵초보 맵고수 입맛 저격!<원산지 : 국내산>",
+        "Money": "6,500",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/고매치밥.jpg"
+    },
+    {
+        "Title": "단짠감자치즈볼",
+        "Subtitle": "감자와 치즈의 조합은 못 참지!단짠 조합의 진수를 보여주는 맛!",
+        "Money": "4,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/단짠감자치즈볼.jpg"
+    },
+    {
+        "Title": "더블치즈볼",
+        "Subtitle": "체다치즈, 모차렐라치즈가 들어있어한 입 베어 물면 치즈의 묵직함과 쫀득한 맛이 두 배!",
+        "Money": "4,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/더블치즈볼-누끼.jpg"
+    },
+    {
+        "Title": "케이준 V컷 감자",
+        "Subtitle": "튀김 면적이 넓어, 바삭함을 잃지 않는 마성의 감자튀김!뿌려진 케이준 소스로 바삭함과, 촉촉함, 매콤함을 동시에!",
+        "Money": "4,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/케이준V컷감자-누끼.jpg"
+    },
+    {
+        "Title": "멕시감자",
+        "Subtitle": "감자튀김의 정석!얇고 길어 가볍게 먹기 좋은 감자튀김!",
+        "Money": "4,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/멕시감자-누끼.jpg"
+    },
+    {
+        "Title": "모래집 후라이드",
+        "Subtitle": "쫄깃함에 바삭함을 더한 똥집튀김으로 자꾸 손이 가게 만드는 맛!",
+        "Money": "12,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/모래집후라이드-누끼.jpg"
+    },
+    {
+        "Title": "오메이징쉬림프(Full)",
+        "Subtitle": "매콤, 새콤, 달콤 칠리 소스와 빅사이즈의 새우,오징어의 만남으로 맥주안주 원탑!",
+        "Money": "12,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/오메이징쉬림프(FULL).jpg"
+    },
+    {
+        "Title": "오메이징쉬림프(Half)",
+        "Subtitle": "매콤, 새콤, 달콤 칠리 소스와 빅사이즈의 새우,오징어의 만남으로 맥주안주 원탑!",
+        "Money": "7,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/오메이징쉬림프(HALF)-2.jpg"
+    },
+    {
+        "Title": "치즈스틱",
+        "Subtitle": "100% 자연산 치즈가 통으로!입안 가득한 치즈 풍미를 느껴보세요!",
+        "Money": "3,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/치즈스틱1.jpg"
+    },
+    {
+        "Title": "멘보샤",
+        "Subtitle": "바삭한 빵 사이 꽉찬 탱글 새우살로고소하고 바삭한 국민 간식",
+        "Money": "5,500",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/멘보샤.jpg"
+    },
+    {
+        "Title": "소떡소떡",
+        "Subtitle": "쫄깃한 떡과 담백한 소세지의 콜라보!",
+        "Money": "3,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/메뉴등록_기본소떡.jpg"
+    },
+    {
+        "Title": "땡초소떡",
+        "Subtitle": "땡초치킨맛 소떡소떡!",
+        "Money": "3,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/메뉴등록_땡초소떡.jpg"
+    },
+    {
+        "Title": "수작미니핫도그",
+        "Subtitle": "수제로 만들어져, 모든 부위가 바삭함으로 가득!매콤한 치킨에 뿌려 소스에 찍어 먹어도 환상적인 맛!",
+        "Money": "5,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/수작미니핫도그-누끼.jpg"
+    },
+    {
+        "Title": "고추튀김",
+        "Subtitle": "아삭한 고추를 얇게 튀겨매콤함은 그대로, 바삭함은 그대로!",
+        "Money": "4,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/고추튀김-누끼.jpg"
+    },
+    {
+        "Title": "닭치고 닭발",
+        "Subtitle": "중독성 있는 매콤한 소스와숯불 향으로 깊고 진한 맛!",
+        "Money": "15,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/닭치고닭발-누끼.jpg"
+    },
+    {
+        "Title": "꿔바로우소스",
+        "Subtitle": "사과를 더해 새콤달콤한 맛!",
+        "Money": "2,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/꿔바로우소스_누끼.jpg"
+    },
+    {
+        "Title": "마늘큐브소스",
+        "Subtitle": "오직 마늘 러버를 위한 소스!아삭함으로 완전무장한알싸한 生마늘에 신선함 한 스푼 추가!",
+        "Money": "3,000",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/마늘소스.png"
+    },
+    {
+        "Title": "갈릭찹찹소스",
+        "Subtitle": "매콤새콤한 소스에 마늘과 양파가 풍덩!아삭한 식감을 느낄 수 있어요!",
+        "Money": "1,500",
+        "imageURL": "https://www.mexicana.co.kr//USERFILES/product/갈릭찹찹소스-누끼2.jpg"
+    }
+]
