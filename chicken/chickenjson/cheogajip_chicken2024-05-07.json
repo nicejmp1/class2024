@@ -1,0 +1,242 @@
+[
+    {
+        "title": "다리 허니올리고당야채 양념치킨",
+        "sub": "물엿이나 설탕 대신 올리고당과 벌꿀, 생야채를 기반으로 맛을 낸 양념소스가 어우러진 처갓집 대표메뉴",
+        "money": "18,000원+2,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-1926027850_Rj07H9Wq_00f1f3b7ef513e6292c19cf240223f130c1d10c4_280x0.jpg"
+    },
+    {
+        "title": "다리 후라이드치킨",
+        "sub": "국내산 신선육에 독특한 맛의 파우더를 입혀 바삭하고 고소하게 튀겨낸 처갓집양념치킨의 인기메뉴",
+        "money": "18,000원+1,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-1926027850_d0U1HKhL_e6344006c2f0cca8e7a03ea8431c4748059099f9_280x0.jpg"
+    },
+    {
+        "title": "날개 허니올리고당야채 양념치킨",
+        "sub": "물엿이나 설탕 대신 올리고당과 벌꿀, 생야채를 기반으로 맛을 낸 양념소스가 어우러진 처갓집 대표메뉴",
+        "money": "18,000원+2,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-1926027850_yJTDXrWV_fc6c830f7f8ffba2d80c5f840d8d4101e821e8df_280x0.jpg"
+    },
+    {
+        "title": "날개 후라이드치킨",
+        "sub": "국내산 신선육에 독특한 맛의 파우더를 입혀 바삭하고 고소하게 튀겨낸 처갓집양념치킨의 인기메뉴",
+        "money": "18,000원+1,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-1926027850_u5UvKngy_c5084834d203ac03b72880f707d72ec3d94f9212_280x0.jpg"
+    },
+    {
+        "title": "와락윙",
+        "sub": "바삭하게 튀긴 치킨을 깊은 볼에서 간장소스와 함께 강한 불로 볶아내어 달콤짭쪼름한 맛과 향을 느낄수 있는 치킨",
+        "money": "18,000원+2,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-1926027850_x140CrUM_58d1131b482827e02fe5eeaa11bd9fe2940c9022_280x0.jpg"
+    },
+    {
+        "title": "슈프림양념치킨 블랙라벨",
+        "sub": "가다랑어포로 맛을 낸 자연숙성 블랙소스의 깊은 풍미에 슈프림양념의 단짠 매력을 더한 프리미엄 양념치킨",
+        "money": "18,000원+4,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-1926027843_l4sMzvqh_499fd08730afabb0d516fcbaa3614cca3ce49533_280x0.jpg"
+    },
+    {
+        "title": "XO양념치킨",
+        "sub": "\"세상에 없던 감칠맛!\"\n일명 미식가의 소스로 불리며, 음식의 가치를 높여주는 고급스러운 풍미와 감칠맛이 특징입니다.",
+        "money": "18,000원+3,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-3034659209_z34bmQZu_362f06a41a4aa42ca677a6da6537f150b3942ab5_280x0.jpg"
+    },
+    {
+        "title": "치킨치즈볼 골드",
+        "sub": "체다치즈와 슈프림소스가 만나 단짠력 2배!",
+        "money": "2,500원 /6,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-3034659209_hMOK9ClU_66fbdf7ffbde691055c8614fffee52750e4f9fc4_280x0.jpg"
+    },
+    {
+        "title": "치킨치즈볼 골드",
+        "sub": "체다치즈와 슈프림소스가 만나 단짠력 2배!",
+        "money": "17,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-3034659209_z25R1PU8_85be5268b5d48ab845ef51e4978d0fbbe556ac6b_280x0.jpg"
+    },
+    {
+        "title": "치킨치즈볼 레드",
+        "sub": "슈프림소스와 청양고추소스의 하모니",
+        "money": "2,500원 /6,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-3034659209_GqQI6EwP_6826eeb088bb2887ae7a6e3666ce3bf4b073b239_280x0.jpg"
+    },
+    {
+        "title": "치킨치즈볼 레드",
+        "sub": "슈프림소스와 청양고추소스의 하모니",
+        "money": "17,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-3034659209_lDnSZzQu_2a51231203a3341869688fc2586f11fc6ed5ff78_280x0.jpg"
+    },
+    {
+        "title": "치킨치즈볼",
+        "sub": "쌀가루 대신 100% 국내산 닭고기를 사용한 이색 치즈볼",
+        "money": "2,500원 /6,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-3034659209_EjHix2fC_886e3b370a8dd1ba819bebe491d4b3fd7e331565_280x0.jpg"
+    },
+    {
+        "title": "치킨치즈볼 (9개)",
+        "sub": "쌀가루 대신 100% 국내산 닭고기를 사용한 이색 치즈볼",
+        "money": "17,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-3034659209_RMbhU8Jw_dc18ca1a32e7363bad4cbebff29f903d178c93d2_280x0.jpg"
+    },
+    {
+        "title": "100% 청양산 고추치킨",
+        "sub": "\"대한민국 청양고추의 맛있게 매운맛을 보여주마\"\n100% 청양산 햇고추만을 사용하여 깊고 진한 매운맛이 특징",
+        "money": "18,000원+3,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-3743929420_tSvCpd1F_e4afa2f0b03cd9228e795263f5cd70ceb3ced8f9_280x0.jpg"
+    },
+    {
+        "title": "트러플 슈프림 양념치킨",
+        "sub": "세계3대진미 '트러플'과 '슈프림양념치킨'의 만남!",
+        "money": "18,000원+4,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-2109327413_7UoQ5MZh_52aa908ff16e5953e32e77d84adb98bbc1e736dd_280x0.jpg"
+    },
+    {
+        "title": "후라이드치킨",
+        "sub": "국내산 신선육에 독특한 맛의 파우더를 입혀 바삭하고 고소하게 튀겨낸 처갓집양념치킨의 인기메뉴",
+        "money": "18,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-32732614_YWU1n3tP_8a7f0411cdb17502e7a15a8c561440fd9fc4c61a_280x0.png"
+    },
+    {
+        "title": "허니올리고당야채 양념치킨",
+        "sub": "물엿이나 설탕 대신 올리고당과 벌꿀, 생야채를 기반으로 맛을 낸 양념소스가 어우러진 처갓집 대표메뉴",
+        "money": "18,000원+1,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-32732614_OdFcCE2w_3cdb86eca7e220589dfd1d2a60f82022377b6630_280x0.png"
+    },
+    {
+        "title": "매운불 양념치킨",
+        "sub": "캡사이신이 아닌 청양고추의 진하고 깊은 매운맛에 양념치킨의 달콤함까지 겸비한 색다른 양념치킨",
+        "money": "18,000원+2,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-32732614_3Sb5TVAt_cf2897c6e1ab7efa049b82d6a47f80e1ef01ff96_280x0.png"
+    },
+    {
+        "title": "슈프림 양념치킨",
+        "sub": "바삭한 후라이드 치킨 위에 허니올리고당야채양념과 신비의 하얀 소스가 뿌려진 이색적인 양념치킨",
+        "money": "18,000원+3,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-32732614_hzLkAwZi_264576d274a97aab6a5d58685e51590e5e9062f0_280x0.png"
+    },
+    {
+        "title": "핫슈프림 양념치킨",
+        "sub": "처갓집양념치킨의 특제 핫소스에 부드러운 화이트소스가 한번 더 해진 치킨",
+        "money": "18,000원+3,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-32732614_4wtx3QGW_8991f13e83664a8dcdc31141348846b977135e49_280x0.png"
+    },
+    {
+        "title": "치즈슈프림 양념치킨",
+        "sub": "바삭한 후라이드 치킨위에 허니올리고당야채양념과 깊고 진한 치즈소스를 한번 더뿌려낸 세상에 없던 치즈 치킨",
+        "money": "18,000원+3,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-32732614_Jvul8myz_f2e2e7ccb6beb91917c3d7d7c9d2fc2219482439_280x0.png"
+    },
+    {
+        "title": "슈프림골드 양념치킨",
+        "sub": "2018년 동계 특별메뉴! 새하얀 슈프림 소스에 금빛 치즈가루가 한 번 더!",
+        "money": "18,000원+4,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-32732614_79Of2Jzl_b66003f9af38eea6e0ef3aee009807873fbead25_280x0.png"
+    },
+    {
+        "title": "훈제치킨",
+        "sub": "국내산 영계를 선별하여 참나무 향으로 훈연 가공해 기름이 쪽 빠져 담백한 치킨",
+        "money": "18,000원+1,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-32732614_6DjfaSNr_0b84e1edc6e15b8c6d01f7c883a5d659d40f56fd_280x0.png"
+    },
+    {
+        "title": "와락치킨",
+        "sub": "바삭하게 튀긴 치킨을 깊은 볼에서 간장소스와 함께 강한 불로 볶아내어 달콤짭쪼름한 맛과 향을 느낄수 있는 치킨",
+        "money": "18,000원+2,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-32732614_ZeQPzobu_9de18e0cba5bae0fa4972b551c0f44c7067e217c_280x0.png"
+    },
+    {
+        "title": "핫불훈제치킨",
+        "sub": "국내산 영계를 선별하여 참나무 향으로 훈연 가공해 기름이 쪽 빠져 담백한 치킨",
+        "money": "18,000원+3,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-2_copy_23_32732614_6DjfaSNr_0b84e1edc6e15b8c6d01f7c883a5d659d40f56fd_280x0.png"
+    },
+    {
+        "title": "순살 닭강정",
+        "sub": "살코기만을 프라이드하여 달콤살콤한 양념소스로 졸여내어 먹기에도 편하고 맛에서도 훌륭한 우리 아이 영양 간식",
+        "money": "18,000원+3,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-32732614_hiYyFB3J_507fdee7e61a0417df828a52f3714f2f8bd569fa_280x0.png"
+    },
+    {
+        "title": "후라이드 + 허니올리고당야채양념",
+        "sub": "18,000원+1,000원",
+        "money": "18,000원+1,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-2109327413_IcUAQhyW_de8a850bfb4802981654918b12c6c11352e0c90a_280x0.jpg"
+    },
+    {
+        "title": "후라이드 + 매운불양념",
+        "sub": "18,000원+2,000원",
+        "money": "18,000원+2,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-2109327413_5jY9aPFJ_7e387879389585ddc9a04c1dfc4ad2b9be42d96a_280x0.jpg"
+    },
+    {
+        "title": "후라이드 + 슈프림양념",
+        "sub": "18,000원+3,000원",
+        "money": "18,000원+3,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-2109327413_yn3WZJU9_e6fc2991e73f3a254d0b88a91a152c622d222cec_280x0.jpg"
+    },
+    {
+        "title": "후라이드 + 핫슈프림양념",
+        "sub": "18,000원+3,000원",
+        "money": "18,000원+3,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-2109327413_qabFZzV1_c55ea4a1c5635893352a6092ed8ae64b4c6c5b42_280x0.jpg"
+    },
+    {
+        "title": "후라이드 + 치즈슈프림양념",
+        "sub": "18,000원+3,000원",
+        "money": "18,000원+3,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-2109327413_dZOiRoN6_f349880f85aae8c1696c67448d1eca93e508cf9e_280x0.jpg"
+    },
+    {
+        "title": "후라이드 + 슈프림골드양념",
+        "sub": "18,000원+4,000원",
+        "money": "18,000원+4,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-2109327413_m06KrOiY_6d792ce61c5dbcc0b107bf06cc78c038e784c7bf_280x0.jpg"
+    },
+    {
+        "title": "후라이드 + 트러플슈프림양념",
+        "sub": "18,000원+4,000원",
+        "money": "18,000원+4,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-2109327413_OBR2VphS_31185195f1c983ad436e57548fe3ded35b3cdb93_280x0.jpg"
+    },
+    {
+        "title": "근위 후라이드",
+        "sub": "10,000원",
+        "money": "10,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-2109327413_yxcufC9v_b377ffc6c803e9a3ee35c635aa1d505dad5b4784_280x0.jpg"
+    },
+    {
+        "title": "슈프림골드치즈볼",
+        "sub": "입안 가득 터지는 '모짜렐라 & 고다치즈'! 여기에 '슈프림 골드치즈'를 한번더!",
+        "money": "4,000원(5개)",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-3529822605_57wCeNdO_3aa6d7e26a2f7a068b3178c3019528e78f49e6cd_280x0.jpg"
+    },
+    {
+        "title": "근위볶음",
+        "sub": "12,000원",
+        "money": "12,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-2109327413_QmxHPFCW_aeefefe7e0a5aeb94c77b7db780a94b63b83063f_280x0.jpg"
+    },
+    {
+        "title": "후렌치후라이",
+        "sub": "8,000원",
+        "money": "8,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-2109327413_vpisS8qd_f9a216ac7257958ac5c6b1738e9f2dd0117125fc_280x0.jpg"
+    },
+    {
+        "title": "처갓집라이스 - 슈프림",
+        "sub": "국내산 닭가슴살과 8가지 야채 , 5가지 허브로 만든 진한 향과 깊은맛이 가득한 영양 간식",
+        "money": "2,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-2109327413_5goO2zJw_9ba2ca1f0be82334953586b9508f0fc8f5f14f4f_280x0.jpg"
+    },
+    {
+        "title": "처갓집라이스 - 핫슈프림",
+        "sub": "국내산 닭가슴살과 8가지 야채 , 5가지 허브로 만든 진한 향과 깊은맛이 가득한 영양 간식",
+        "money": "2,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-2109327413_NUWMzlYk_6d72242dc13e4cc8af0b2d41a593a5734563fa8f_280x0.jpg"
+    },
+    {
+        "title": "처갓집라이스 - 와락",
+        "sub": "국내산 닭가슴살과 8가지 야채 , 5가지 허브로 만든 진한 향과 깊은맛이 가득한 영양 간식",
+        "money": "2,000원",
+        "imageURL": "https://www.cheogajip.co.kr/data/file/allmenu/thumb-2109327413_80poSNle_b04e1f5dd2b740b60182263a3952441ab70da444_280x0.jpg"
+    }
+]
