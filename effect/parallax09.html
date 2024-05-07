@@ -181,6 +181,40 @@
             background: linear-gradient(to left, #db38b5, #01b3e3, #25ce7b, #fdc741, #ff6b01, #fc4236);
             background-attachment: fixed;
         }
+
+        #parallax__nav {
+            position: fixed;
+            right: 120px;
+            top: 20px;
+            z-index: 10000;
+            background-color: rgba(255, 255, 255, 1);
+            padding: 10px 20px;
+            border-radius: 50px;
+        }
+
+        #parallax__nav li {
+            display: inline;
+        }
+
+        #parallax__nav li a {
+            display: inline-block;
+            width: 34px;
+            height: 34px;
+            padding: 5px;
+            text-align: center;
+            line-height: 34px;
+            border-radius: 50px;
+            background-color: #000;
+            color: #fff;
+            font-family: 'NexonLv1Gothic';
+            text-transform: uppercase;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        #parallax__nav li a.active {
+            background-color: red;
+        }
     </style>
 </head>
 
@@ -188,8 +222,8 @@
     <div id="wrap">
         <header id="header">
             <div class="header__inner">
-                <h1><a href="index.html">Parallax Effect</a><em> 08</em></h1>
-                <p>GSAP scrollTrigger - 진행바</p>
+                <h1><a href="index.html">Parallax Effect</a><em> 09</em></h1>
+                <p>GSAP scrollTrigger - 메뉴 이동 효과</p>
 
                 <div class="link">
                     <ul>
@@ -200,8 +234,24 @@
         </header>
         <!-- //header -->
 
+        <nav id="parallax__nav">
+            <ul>
+                <li><a class="active" href="#section1">s1</a></li>
+                <li><a href="#section2">s2</a></li>
+                <li><a href="#section3">s3</a></li>
+                <li><a href="#section4">s4</a></li>
+                <li><a href="#section5">s5</a></li>
+                <li><a href="#section6">s6</a></li>
+                <li><a href="#section7">s7</a></li>
+                <li><a href="#section8">s8</a></li>
+                <li><a href="#section9">s9</a></li>
+            </ul>
+        </nav>
+
+        <!-- //parallax__nav -->
+
         <main id="parallax__cont">
-            <section id="section1" class="parallax__item" data-bgcolor="#435232">
+            <section id="section1" class="parallax__item">
                 <span class="parallax__item__num">01</span>
                 <h2 class="parallax__item__title">section1</h2>
                 <figure class="parallax__item__imgWrap">
@@ -211,7 +261,7 @@
             </section>
             <!-- //section1 -->
 
-            <section id="section2" class="parallax__item" data-bgcolor="#121212">
+            <section id="section2" class="parallax__item">
                 <span class="parallax__item__num">02</span>
                 <h2 class="parallax__item__title">section2</h2>
                 <figure class="parallax__item__imgWrap">
@@ -221,7 +271,7 @@
             </section>
             <!-- //section2 -->
 
-            <section id="section3" class="parallax__item" data-bgcolor="#123456">
+            <section id="section3" class="parallax__item">
                 <span class="parallax__item__num">03</span>
                 <h2 class="parallax__item__title">section3</h2>
                 <figure class="parallax__item__imgWrap">
@@ -231,7 +281,7 @@
             </section>
             <!-- //section3 -->
 
-            <section id="section4" class="parallax__item" data-bgcolor="#664321">
+            <section id="section4" class="parallax__item">
                 <span class="parallax__item__num">04</span>
                 <h2 class="parallax__item__title">section4</h2>
                 <figure class="parallax__item__imgWrap">
@@ -241,7 +291,7 @@
             </section>
             <!-- //section4 -->
 
-            <section id="section5" class="parallax__item" data-bgcolor="#557423">
+            <section id="section5" class="parallax__item">
                 <span class="parallax__item__num">05</span>
                 <h2 class="parallax__item__title">section5</h2>
                 <figure class="parallax__item__imgWrap">
@@ -251,7 +301,7 @@
             </section>
             <!-- //section5 -->
 
-            <section id="section6" class="parallax__item" data-bgcolor="#3f4857">
+            <section id="section6" class="parallax__item">
                 <span class="parallax__item__num">06</span>
                 <h2 class="parallax__item__title">section6</h2>
                 <figure class="parallax__item__imgWrap">
@@ -261,7 +311,7 @@
             </section>
             <!-- //section6 -->
 
-            <section id="section7" class="parallax__item" data-bgcolor="#6f8d72">
+            <section id="section7" class="parallax__item">
                 <span class="parallax__item__num">07</span>
                 <h2 class="parallax__item__title">section7</h2>
                 <figure class="parallax__item__imgWrap">
@@ -271,7 +321,7 @@
             </section>
             <!-- //section7 -->
 
-            <section id="section8" class="parallax__item" data-bgcolor="#145923">
+            <section id="section8" class="parallax__item">
                 <span class="parallax__item__num">08</span>
                 <h2 class="parallax__item__title">section8</h2>
                 <figure class="parallax__item__imgWrap">
@@ -281,7 +331,7 @@
             </section>
             <!-- //section8 -->
 
-            <section id="section9" class="parallax__item" data-bgcolor="#111">
+            <section id="section9" class="parallax__item">
                 <span class="parallax__item__num">09</span>
                 <h2 class="parallax__item__title">section9</h2>
                 <figure class="parallax__item__imgWrap">
@@ -303,8 +353,8 @@
                         <li><a href="parallax05.html">05</a></li>
                         <li><a href="parallax06.html">06</a></li>
                         <li><a href="parallax07.html">07</a></li>
-                        <li class="active"><a href="parallax08.html">08</a></li>
-                        <li><a href="parallax09.html">08</a></li>
+                        <li><a href="parallax08.html">08</a></li>
+                        <li class="active"><a href="parallax09.html">09</a></li>
                     </ul>
                 </nav>
             </div>
@@ -326,9 +376,36 @@
             ease: "none",
             scrollTrigger: { scrub: 0.3 }
         })
-
     </script>
+    <script>
+        let links = gsap.utils.toArray("#parallax__nav ul li a");
 
+        links.forEach(link => {
+            let element = document.querySelector(link.getAttribute("href")),
+
+                linkST = ScrollTrigger.create({
+                    trigger: element,
+                    start: "top top"
+                });
+
+            ScrollTrigger.create({
+                trigger: element,
+                start: "top center",
+                end: "bottom center",
+                onToggle: self => setActive(link)
+            });
+
+            link.addEventListener("click", e => {
+                e.preventDefault();
+                gsap.to(window, { duration: 1, scrollTo: linkST.start, overwrite: "auto" });
+            });
+        });
+
+        function setActive(link) {
+            links.forEach(el => el.classList.remove("active"));
+            link.classList.add("active");
+        }
+    </script>
 </body>
 
 </html>
