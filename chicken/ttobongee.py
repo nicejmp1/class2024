@@ -1,67 +1,35 @@
-from selenium import webdriver
-from selenium.webdriver.chrome.service import Service as ChromeService
-from selenium.webdriver.chrome.options import Options as ChromeOptions
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from bs4 import BeautifulSoup
+import requests as req
+from bs4 import BeautifulSoup as bs
 import json
-import time
-from datetime import datetime
 
-# 현재 날짜 가져오기 및 기본 URL 정의
-current_date = datetime.now().strftime("%Y-%m-%d")
-base_url = "http://www.ttobongee.com/skin3/"
-filename = f"ttobongee_chicken{current_date}.json"
+def get_menu_data(url):
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'}
+    res = req.get(url, headers=headers)
+    soup = bs(res.text, "lxml")
+    items = soup.select(".order_list_item")  # 메뉴 아이템을 포함하는 전체 컨테이너 선택
 
-# 웹드라이버 설정
-options = ChromeOptions()
-service = ChromeService(executable_path=ChromeDriverManager().install())
-browser = webdriver.Chrome(service=service, options=options)
+    chart_data = []
+    for item in items:
+        m = item.select_one(".tit")
+        s = item.select_one(".detail_txt")
+        p = item.select_one(".price")
+        i = item.select_one(".img_box img")  # 이미지 태그 선택
 
-# 메뉴 데이터 추출 함수
-def get_menu_data(browser, base_url):
-    # 페이지 소스 가져오기
-    html_source = browser.page_source
-    soup = BeautifulSoup(html_source, 'html.parser')
-    menu_data = []
-    menu_items = soup.select(".menuList")
-    for item in menu_items:
-        # 제목 추출
-        title = item.find('p', class_='name').text.strip() if item.find('p', class_='name') else 'No Title'
-        # 이미지 URL 추출 (클래스 이름은 확인 필요)
-        image = item.find('img')['src'] if item.find('img') else 'No Image URL'
-        if image.startswith('/'):
-            image = base_url + image
-        # 추출된 데이터를 리스트에 추가
-        menu_data.append({
-            "title": title,
-            "imageURL": image,
-            # 여기에 description을 추가하세요
+        # 이미지 URL 추출, 없으면 빈 문자열 처리
+        image_url = i['src'].strip() if i and i.has_attr('src') else ""
+        chart_data.append({
+            'Menu': m.text.strip() if m else 'No menu',
+            'Sub': s.text.strip() if s else 'No sub',
+            'Price': p.text.strip() if p else 'No price',
+            'img': image_url
         })
-    return menu_data
+    return chart_data
 
-# 전체 메뉴 데이터를 모을 리스트
-all_menu_data = []
-
-# 페이지 접속
-browser.get("http://www.ttobongee.com/skin3/menu.php")
-WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.CLASS_NAME, "content_bg")))
-
-# 탭 전환 및 데이터 추출
-tabs = browser.find_elements(By.CLASS_NAME, "a")
-for tab in tabs:
-    # 탭을 클릭합니다.
-    tab.click()
-    time.sleep(2)  # 데이터 로드를 기다립니다.
-
-    # 탭 전환 후 데이터 추출
-    all_menu_data.extend(get_menu_data(browser, base_url))
+# URL 정의 및 데이터 추출
+url = "https://m.booking.naver.com/order/bizes/765494/items/4635062?theme=place&entry=pll&area=pll"
+chart_data = get_menu_data(url)
 
 # 데이터를 JSON 파일로 저장
-with open(filename, 'w', encoding='utf-8') as f:
-    json.dump(all_menu_data, f, ensure_ascii=False, indent=4)
+with open("ttobongee.json", "w", encoding='utf-8') as json_file:
+    json.dump(chart_data, json_file, ensure_ascii=False, indent=4)
 
-# 브라우저 종료
-browser.quit()
