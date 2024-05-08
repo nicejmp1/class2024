@@ -1,0 +1,188 @@
+[
+    {
+        "Menu": "치파포 V3대표",
+        "Sub": "",
+        "Price": "20,900원",
+        "img": "https://naverbooking-phinf.pstatic.net/20230712_283/16891437825079T4tr_JPEG/image.jpg?type=f220_220_60_sharpen"
+    },
+    {
+        "Menu": "치파포 V5대표",
+        "Sub": "",
+        "Price": "25,900원",
+        "img": "https://naverbooking-phinf.pstatic.net/20230712_109/168914377797771hBQ_JPEG/image.jpg?type=f220_220_60_sharpen"
+    },
+    {
+        "Menu": "치파포 얼티밋대표",
+        "Sub": "",
+        "Price": "30,900원",
+        "img": "https://naverbooking-phinf.pstatic.net/20230712_168/1689143773602lj4Aa_JPEG/image.jpg?type=f220_220_60_sharpen"
+    },
+    {
+        "Menu": "닭다리 순살만 3가지",
+        "Sub": "",
+        "Price": "24,900원",
+        "img": ""
+    },
+    {
+        "Menu": "치파포 얼티밋대표",
+        "Sub": "",
+        "Price": "30,900원",
+        "img": "https://naverbooking-phinf.pstatic.net/20230712_168/1689143773602lj4Aa_JPEG/image.jpg?type=f220_220_60_sharpen"
+    },
+    {
+        "Menu": "치파포 V3대표",
+        "Sub": "",
+        "Price": "20,900원",
+        "img": "https://naverbooking-phinf.pstatic.net/20230712_283/16891437825079T4tr_JPEG/image.jpg?type=f220_220_60_sharpen"
+    },
+    {
+        "Menu": "치파포 V5대표",
+        "Sub": "",
+        "Price": "25,900원",
+        "img": "https://naverbooking-phinf.pstatic.net/20230712_109/168914377797771hBQ_JPEG/image.jpg?type=f220_220_60_sharpen"
+    },
+    {
+        "Menu": "스파이시커리 반/반",
+        "Sub": "",
+        "Price": "17,900원",
+        "img": ""
+    },
+    {
+        "Menu": "후라이드",
+        "Sub": "",
+        "Price": "16,900원",
+        "img": ""
+    },
+    {
+        "Menu": "쏘이알리오 반/반",
+        "Sub": "",
+        "Price": "17,900원",
+        "img": ""
+    },
+    {
+        "Menu": "오리지널양념 반/반",
+        "Sub": "",
+        "Price": "17,900원",
+        "img": ""
+    },
+    {
+        "Menu": "송송파닭 반/반",
+        "Sub": "",
+        "Price": "18,900원",
+        "img": ""
+    },
+    {
+        "Menu": "블랙크림 반/반",
+        "Sub": "",
+        "Price": "17,900원",
+        "img": ""
+    },
+    {
+        "Menu": "고추블링 반/반",
+        "Sub": "",
+        "Price": "17,900원",
+        "img": ""
+    },
+    {
+        "Menu": "치폴라 반/반",
+        "Sub": "",
+        "Price": "17,900원",
+        "img": ""
+    },
+    {
+        "Menu": "레드빌 반/반",
+        "Sub": "",
+        "Price": "17,900원",
+        "img": ""
+    },
+    {
+        "Menu": "화이트크림 반/반",
+        "Sub": "",
+        "Price": "17,900원",
+        "img": ""
+    },
+    {
+        "Menu": "공격트러플 바베큐",
+        "Sub": "",
+        "Price": "17,900원",
+        "img": ""
+    },
+    {
+        "Menu": "공격간장 바베큐",
+        "Sub": "",
+        "Price": "17,900원",
+        "img": ""
+    },
+    {
+        "Menu": "치즈양념 포테이토",
+        "Sub": "",
+        "Price": "3,000원",
+        "img": ""
+    },
+    {
+        "Menu": "자연산 치즈볼 6개",
+        "Sub": "",
+        "Price": "6,000원",
+        "img": ""
+    },
+    {
+        "Menu": "체다치즈스틱 4개",
+        "Sub": "",
+        "Price": "3,500원",
+        "img": ""
+    },
+    {
+        "Menu": "미니 핫도그 4개",
+        "Sub": "",
+        "Price": "4,500원",
+        "img": ""
+    },
+    {
+        "Menu": "싱싱파채&특제소스",
+        "Sub": "",
+        "Price": "3,000원",
+        "img": ""
+    },
+    {
+        "Menu": "양념우동사리",
+        "Sub": "",
+        "Price": "2,000원",
+        "img": ""
+    },
+    {
+        "Menu": "시그니처 소스 3종",
+        "Sub": "양념/간장/화이트",
+        "Price": "1,500원",
+        "img": ""
+    },
+    {
+        "Menu": "즉석밥",
+        "Sub": "",
+        "Price": "1,500원",
+        "img": ""
+    },
+    {
+        "Menu": "콜라 500ml",
+        "Sub": "",
+        "Price": "1,500원",
+        "img": ""
+    },
+    {
+        "Menu": "콜라 1.25L",
+        "Sub": "",
+        "Price": "2,500원",
+        "img": ""
+    },
+    {
+        "Menu": "맥주",
+        "Sub": "",
+        "Price": "4,000원",
+        "img": ""
+    },
+    {
+        "Menu": "소주",
+        "Sub": "",
+        "Price": "4,000원",
+        "img": ""
+    }
+]
