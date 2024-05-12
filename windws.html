@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="maintest/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Taskbar -->
+    <div class="taskbar">
+        <div class="icons">
+            <div class="icons-left">
+                <a href="#start-menu-modal" id="start-menu"><i class="fab fa-windows"></i></a>
+                <a href="#search" id="search"></a>
+                <a href="#tabs" id="tabs-windows"></a>
+                <a href="#" class="px"></a>
+                <a href="#folder" id="folder" class="border"></a>
+                <a href="#chrome-pop-up" id="chrome" class="border"></a>
+            </div>
+            <div class="icons-right">
+                <a href="#up" id="up" class="small-icons"><i class="fas fa-chevron-up"></i></a>
+                <a href="#sound-modal" id="sound" class="small-icons"></a>
+                <a href="#wifi-modal" id="wifi" class="small-icons"></a>
+                <div class="datetime">
+                    <span class="hour">17:44</span>
+                    <span class="date">25/11/2022</span>
+                </div>
+                <a href="#notifications" id="notifications"><i class="far fa-bell"></i></a>
+                <a href="#" class="clear disabled"></a>
+                <a href="#" id="return"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Desktop -->
+    <div class="desktop">
+        <!-- Icons on the desktop -->
+        <div class="icons-dekstop">
+            <div class="icon-desktop" id="myComputerIcon">
+                <img src="assets/img/face.png" alt="내 컴퓨터">
+                <span>내 컴퓨터</span>
+                </a>
+            </div>
+            <div class="icon-desktop">
+                <a href="javascript/index.html" target="_blank">
+                    <img src="assets/img/icon-javascript.png" alt="자바스크립트">
+                    <span>Javascript</span>
+                </a>
+            </div>
+            <div class="icon-desktop">
+                <a href="mysql/index.html" target="_blank">
+                    <img src="assets/img/icon-mysql.png" alt="MysQL">
+                    <span>MySQL</span>
+                </a>
+            </div>
+            <div class="icon-desktop">
+                <a href="quiz/index.html" target="_blank">
+                    <img src="assets/img/icon-quiz.png" alt="Quiz">
+                    <span>Quiz</span>
+                </a>
+            </div>
+            <div class="icon-desktop">
+                <a href="webd/index.html" target="_blank">
+                    <img src="assets/img/icon-html5.png" alt="html">
+                    <span>Webd</span>
+                </a>
+            </div>
+            <div class="icon-desktop">
+                <a href="css/index.html" target="_blank">
+                    <img src="assets/img/icon-css.png" alt="css">
+                    <span>CSS</span>
+                </a>
+            </div>
+        </div>
+        <div class="desktop2">
+            <div class="icon-desktop">
+                <a href="https://github.com/nicejmp1" target="_blank">
+                    <img src="assets/img/icon-github.png" alt="gitgub">
+                    <span>Github</span>
+                </a>
+            </div>
+            <div class="icon-desktop">
+                <a href="https://nicejmp1.github.io/" target="_blank">
+                    <img src="assets/img/icon-blog.png" alt="blog">
+                    <span>Blog</span>
+                </a>
+            </div>
+            <div class="icon-desktop">
+                <a href="effect/index.html" target="_blank">
+                    <img src="assets/img/icon-effect.jpg" alt="effect">
+                    <span>Effect</span>
+                </a>
+            </div>
+            <div class="icon-desktop">
+                <a href="Myquiz/quizGame.html" target="_blank">
+                    <img src="assets/img/icon-myquiz.png" alt="mysql">
+                    <span>Myquiz</span>
+                </a>
+            </div>
+            <div class="icon-desktop">
+                <a href="http://nicejmp.dothome.co.kr/" target="_blank">
+                    <img src="assets/img/icon-php.png" alt="php">
+                    <span>PHP-WRM</span>
+                </a>
+            </div>
+            <div class="icon-desktop">
+                <a href="https://github.com/nicejmp1/Chiken-Best" target="_blank">
+                    <img src="assets/img/icon-chicken.png" alt="chiken">
+                    <span>Chicken</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="draggableIcon icon">
+
+    </div>
+    <div class="draggableIcon icon">
+
+    </div>
+    <div class="draggableIcon icon">
+
+    </div>
+    <div class="draggableIcon icon">
+
+    </div>
+    <div class="draggableIcon icon">
+
+    </div>
+    <div class="draggableIcon icon">
+
+    </div>
+    </div>
+    <!--//main__icons-->
+
+    <!-- Speakers -->
+    <div id="sound-modal">
+        <div class="sound-text">
+            <span>Speakers</span>
+        </div>
+        <div class="sound-progress">
+            <i class="fas fa-volume-up"></i>
+            <div class="bar-sound"></div>
+            <div class="bar-sound-drag"></div>
+            <span class="data-value">50%</span>
+        </div>
+    </div>
+
+    <!-- Wifi -->
+    <div id="wifi-modal">
+        <div class="list-networks">
+            <div class="networks">
+                <div class="icons-wifi">
+                    <i class="fas fa-wifi"></i>
+                </div>
+                <div class="text-wifi">
+                    <span class="name-wifi">Wifi</span>
+                    <span class="type-wifi">Connected, securised</span>
+                    <span class="propriety">Propriety</span>
+                    <button>Disconnect</button>
+                </div>
+            </div>
+            <div class="networks">
+                <div class="icons-wifi">
+                    <i class="fas fa-wifi"></i>
+                </div>
+                <span class="name-wifi">Wifi</span>
+                <span class="type-wifi">Open</span>
+            </div>
+            <div class="networks">
+                <div class="icons-wifi">
+                    <i class="fas fa-wifi"></i>
+                </div>
+                <span class="name-wifi">Wifi</span>
+                <span class="type-wifi">Open</span>
+            </div>
+            <div class="options-wifi">
+                <div class="options-wifi-text">
+                    <span>Options internet & security</span>
+                    <span>Modify options, for a better connection</span>
+                </div>
+                <div class="options-bloc">
+                    <div class="bloc-options">
+                        <i class="fas fa-wifi"></i>
+                        <span>Wifi</span>
+                    </div>
+                    <div class="bloc-options">
+                        <i class="fas fa-plane"></i>
+                        <span>Plane mode</span>
+                    </div>
+                    <div class="bloc-options">
+                        <i class="fab fa-bluetooth-b"></i>
+                        <span>Bluetooth</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="layer__wrap" id="infoLayer" style="display: none">
+        <div class="layer__inner">
+            <div class="layer">
+                <div class="layer__conts">
+                    <div class="intro">
+                        <h3>박정민</h3>
+                        <span>Frontend & Backend Developer</span>
+                        <a href="#" class="mail">nicejpm@naver.com</a>
+                        <p class="style1">
+                            안녕하세요, 함께 성장하고 도전하는 박정민입니다. 웹 개발자로서 제 목표는 사용자들의 니즈를 정확히 파악하고, 그에 맞는 웹사이트를 제작하는 것입니다.
+                            사용자들의
+                            행동과 트렌드를 지속적으로 관찰하여 새로운 아이디어를 발견하고, 그것을 실현시켜 사용자들이 더 나은 경험을 할 수 있도록 하는것이 목표입니다.
+                        </p>
+                        <p class="style2">
+                            또한 저는 진취적이고 도전적인 성격을 가진 사람으로, 새로운 것을 시도하고 혁신적인 방법을 통해 문제에 도전하는 것을 즐깁니다. 특히 기술적인
+                            분야에서의 도전에 큰
+                            흥미를 느끼고 있으며, 지속적인 학습과 역량 강화에 열정을 가지고 있습니다.
+
+                            학창시절 통신선로 기능반에 들어가 통신선로라는 기술을 슥듭하고 대회에 출전하여 수상한 이력이 있습니다.
+                            남들보다 빠르게 기술을 슥듭할려고 늦게까지 남아 기술을 공부하고 파악하는데 힘을 쏟았습니다.
+
+                            최근에는 리액트를 공부하여 사용자 중심적이고 혁신적인 웹 사이트를 제작하는 데 집중하고 있습니다. 이를 통해 사용자의 요구를 파악하고 그에 맞는
+                            솔루션을 찾는
+                            과정에서 끊임없는 도전과 성장을 경험하고 있습니다.
+
+                            전직장에서의 경험을 통해 커뮤니케이션과 협업 능력 또한 기를 수 있게되었습니다. 문제가 발생했을 때 적극적으로 해결책을 모색하고 팀원들과 소통하며 함께
+                            성과를 이루고
+                            문제를 해결 하는것이 중요하다고 느꼈습니다.
+
+                            또한, 지속적인 자기개발에 힘쓰고 있습니다. 온라인 강의를 통해 새로운 기술을 배우고, 기술 커뮤니티에 참여하여 다른 전문가들과 소통하며 지식을
+                            공유하는 등의 활동을
+                            통해 자신을 계속 발전시키고 있습니다.
+
+                            이러한 경험과 노력을 토대로 프로젝트에 새로운 가치를 더하고 함께 성장하는 기회로 갖고 싶습니다. 저의 열정과 노력을 바탕으로 함께 성장하기를
+                            기대합니다.
+                            감사합니다.
+                        </p>
+                    </div>
+                    <div class="skill">
+                        <h3>Skill</h3>
+                        <dl>
+                            <dt>Html</dt>
+                            <dd>HTML (HyperText Markup Language) : 웹 페이지의 구조와 콘텐츠를 효과적으로 구현할 수 있는 능력을 보유하고 있습니다.
+                                다양한 HTML5 태그와 속성을 활용하여 의미론적이고
+                                접근성이 높은
+                                웹사이트를 개발하는 데 익숙합니다</dd>
+                            <dt>Css</dt>
+                            <dd>CSS (Cascading Style Sheets) : 웹 페이지의 시각적 디자인과 레이아웃을 세련되게 조정할 수 있습니다. Flex와 Grid
+                                시스템을 이용한 반응형 웹 디자인을 구현한
+                                경험이 있으며, CSS 애니메이션과 전환을 활용하여 사용자 경험을 향상시키는 데 능숙합니다.</dd>
+                            <dt>Javascript</dt>
+                            <dd>JavaScript : 동적 웹 페이지 및 어플리케이션 개발에 있어 깊은 이해도를 보유하고 있습니다. 비동기 프로그래밍, ES6+ 문법, DOM 조작
+                                등을 포함한 고급 개념에 능숙합니다. 대규모 프로젝트에서의 성능 최적화와 디버깅에 경험이 풍부합니다</dd>
+                            <dt>Mysql</dt>
+                            <dd>Mysql : 데이터 관리 및 조작에 대한 전문 지식을 갖추고 있습니다. 효율적인 데이터 저장구조 설계와 복잡한 SQL 쿼리 작성에
+                                능숙하며, 데이터 정규화, 백업, 복구 전략의 구현에 경험이 있습니다. 또한, 트랜잭션 관리와 성능 최적화를 위한 인덱싱 기법을 활용하여 대용량
+                                데이터베이스 시스템의 관리 및 운영에 능통합니다.</dd>
+                        </dl>
+                        <dl>
+                            <dt>React</dt>
+                            <dd>React.js : 컴포넌트 기반 아키텍처를 이해하고 있으며, 대규모 어플리케이션 개발에 React를 활용한 경험이 풍부합니다. React Hooks,
+                                상태관리 라이브러리(Redux) 및 최적화 기술에 능숙합니다.</dd>
+                            <dt>vue.js</dt>
+                            <dd>vue.js : 선언적 렌더링과 컴포넌트 시스템을 이용한 인터랙티브한 UI 개발에 경험이 있습니다. Vuex를 활용한 상태 관리와 Vue
+                                Router를 사용한 라우팅에 익숙합니다.</dd>
+                            <dt>Next.js</dt>
+                            <dd>Next.js : 서버 사이드 렌더링(SSR)과 정적 사이트 생성(SSG)에 대한 이해를 바
+                                탕으로 Next.js 프레임워크를 활용한 웹 어플리케이션 개발에 경험이 있습니다. SEO 최적화 및 퍼포먼스 향상을 위한 기술적 전략 구현에
+                                능숙합니다.</dd>
+                        </dl>
+                    </div>
+                    <div class="picture">
+                        <h3>intro</h3>
+                        <ul>
+                            <li><img src="assets/intro/intro01.jpg" alt="소개1"></li>
+                            <li><img src="assets/intro/intro02.jpg" alt="소개2"></li>
+                            <li><img src="assets/intro/intro03.jpg" alt="소개3"></li>
+                            <li><img src="assets/intro/intro04.jpg" alt="소개4"></li>
+                            <li><img src="assets/intro/intro05.jpg" alt="소개5"></li>
+                            <li><img src="assets/intro/intro06.jpg" alt="소개6"></li>
+                            <li><img src="assets/intro/intro07.jpg" alt="소개7"></li>
+                            <li><img src="assets/intro/intro08.jpg" alt="소개8"></li>
+                            <li><img src="assets/intro/intro09.jpg" alt="소개9"></li>
+                            <li><img src="assets/intro/intro10.jpg" alt="소개10"></li>
+                            <li><img src="assets/intro/intro11.jpg" alt="소개11"></li>
+                            <li><img src="assets/intro/intro12.jpg" alt="소개12"></li>
+                            <li><img src="assets/intro/intro13.jpg" alt="소개13"></li>
+                            <li><img src="assets/intro/intro14.jpg" alt="소개14"></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- //layer__conts -->
+                <div class="layer__footer"></div>
+            </div>
+        </div>
+    </div>
+    <!-- //layer__wrap -->
+
+    <!-- Start menu -->
+    <div id="start-menu-modal">
+        <div id="user">
+            <a class="push" href="#"><i class="fas fa-bars"></i></a>
+            <a href="#"><i class="fas fa-user"></i></a>
+            <a href="#"><i class="fas fa-cog"></i></a>
+            <a href="#"><i class="fas fa-power-off"></i></a>
+        </div>
+        <div id="apps">
+            <a class="category" href="#">&</a>
+            <a href="#"><img
+                    src="https://raw.githubusercontent.com/gcazin/pure-css-windows-10-desktop/master/icons/access.png"
+                    alt="access"> <span>Access</span></a>
+            <a href="#"><img
+                    src="https://raw.githubusercontent.com/gcazin/pure-css-windows-10-desktop/master/icons/sublime-text.png"
+                    alt="sublime"> <span>Sublime text 3</span></a>
+        </div>
+        <div id="others">
+            <div class="title-others">
+                Office 365
+            </div>
+            <div class="box-others">
+                <div class="box">
+                    <img src="https://raw.githubusercontent.com/gcazin/pure-css-windows-10-desktop/master/icons/word.png"
+                        alt="">
+                    <span>Word</span>
+                </div>
+                <div class="box">
+                    <img src="https://raw.githubusercontent.com/gcazin/pure-css-windows-10-desktop/master/icons/excel.png"
+                        alt="">
+                    <span>Excel</span>
+                </div>
+                <div class="box">
+                    <img src="https://raw.githubusercontent.com/gcazin/pure-css-windows-10-desktop/master/icons/powerpoint.png"
+                        alt="">
+                    <span>Powerpoint</span>
+                </div>
+                <div class="box">
+                    <img src="https://raw.githubusercontent.com/gcazin/pure-css-windows-10-desktop/master/icons/outlook.png"
+                        alt="">
+                    <span>Outlook</span>
+                </div>
+                <div class="box">
+                    <img src="https://raw.githubusercontent.com/gcazin/pure-css-windows-10-desktop/master/icons/publisher.png"
+                        alt="">
+                    <span>Publisher</span>
+                </div>
+                <div class="box">
+                    <img src="https://raw.githubusercontent.com/gcazin/pure-css-windows-10-desktop/master/icons/onenote.png"
+                        alt="">
+                    <span>OneNote</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // "내 컴퓨터" 아이콘을 위한 클릭 이벤트 리스너 추가
+        document.getElementById('myComputerIcon').addEventListener('click', function () {
+            let layer = document.getElementById('infoLayer');
+            // 레이어의 현재 표시 상태에 따라 보이거나 숨김 처리
+            if (layer.style.display === "none") {
+                layer.style.display = "block"; // 레이어를 보이게 함
+            } else {
+                layer.style.display = "none"; // 레이어를 숨김
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -4,53 +4,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2</title>
-
+    <title>모달 테스트</title>
     <style>
-        .points {
-            position: absolute;
-            color: green;
-            font-weight: bold;
-            animation: moveUp 2s ease-out forwards;
-            /* 애니메이션 이름, 지속 시간, 타이밍 함수, 실행 방식 */
+        .folder {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
-        @keyframes moveUp {
-            from {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        #openModal {
+            width: 100px;
+            height: 100px;
+            background-image: url(assets/img/face.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
 
-            to {
-                opacity: 0;
-                transform: translateY(-100px);
-                /* 위로 100px 움직입니다 */
-            }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .modal-content {
+            position: relative;
+            background-color: #fefefe;
+            margin: 10% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 40%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .close {
+            color: #aaa;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .icons img {
+            width: 100px;
+            margin: 10px;
+            transition: transform 0.2s;
+        }
+
+        .icons img:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
 
 <body>
+    <!-- 모달 버튼 -->
+    <div class="folder">
+        <button id="openModal"></button>
+        <span>폴더열기</span>
+    </div>
 
-
-
-    <div class="points-container"></div> <!-- 포인트 애니메이션을 위한 컨테이너 -->
-
-    <button onclick="gainPoints()">포인트 획득</button> <!-- 포인트를 획득할 버튼 -->
-
+    <!-- 모달 구조 -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>내 폴더</h2>
+            <div class="icons">
+                <a href="https://example.com/path1"><img src="path-to-icon1.png" alt="Icon 1"></a>
+                <a href="https://example.com/path2"><img src="path-to-icon2.png" alt="Icon 2"></a>
+                <a href="https://example.com/path3"><img src="path-to-icon3.png" alt="Icon 3"></a>
+            </div>
+        </div>
+    </div>
     <script>
-        function gainPoints() {
-            const pointsContainer = document.querySelector('.points-container');
-            const point = document.createElement('div');
-            point.classList.add('points');
-            point.textContent = '+100'; // 획득한 포인트 수
-            pointsContainer.appendChild(point);
+        var modal = document.getElementById('myModal');
+        var btn = document.getElementById('openModal');
+        var span = document.getElementsByClassName('close')[0];
 
-            // 애니메이션이 끝난 후 포인트 요소를 제거합니다.
-            point.addEventListener('animationend', () => {
-                pointsContainer.removeChild(point);
-            });
+        btn.onclick = function () {
+            modal.style.display = 'block';
         }
+
+        span.onclick = function () {
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        }
+
     </script>
 </body>
 
